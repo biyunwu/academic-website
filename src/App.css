@@ -4,7 +4,7 @@ body {
 
 .header {
   text-align: center;
-  color: #777777;
+  color: rgba(0, 0, 0, 0.5);
   border-bottom: #dddddd solid 1px; }
   .header header {
     padding: 25px 0; }
@@ -19,23 +19,25 @@ body {
     margin: 0; }
   .header .nav {
     display: inline-flex;
-    padding: 10px 0;
-    font-family: "AvenirNext-DemiBold";
-    font-size: 13px; }
+    padding: 0;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 600; }
     .header .nav .link-seperator {
-      padding: 0 5px 0 5px;
-      font-family: "AvenirNext-UltraLight"; }
+      padding: 0 7px;
+      color: rgba(0, 0, 0, 0.1); }
   .header .nav-item {
     list-style: none; }
     .header .nav-item .nav-link {
-      color: #777777;
+      color: rgba(0, 0, 0, 0.5);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 1px;
       white-space: nowrap; }
+      .header .nav-item .nav-link:hover {
+        color: #000000; }
     .header .nav-item .active {
-      color: #000000;
-      border-bottom: #000000 solid 1px; }
+      color: #000000; }
 
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
