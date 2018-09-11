@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Header from './components/Header';
 import './App.css';
 
 const links = ['home', 'buddhism and psychology', 'freud in china', 'papers', 'cv', 'about']
-class App extends Component {
+class App extends PureComponent {
   state = {
     activePage: 'freud in china'
   }
