@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import './App.css';
 
+const links = ['home', 'buddhism and psychology', 'freud in china', 'papers', 'cv', 'about']
 class App extends Component {
+  state = {
+    activePage: 'freud in china'
+  }
+
   render() {
     return (
-      // <div className="App">
-      //   <header className="App-header">
-      //     <h1 className="App-title">Tao Jiang</h1>
-      //   </header>
-      // </div>
-      <Header />
+      <Header
+        links={links}
+        activePage={this.state.activePage}
+      />
     );
   }
 }
