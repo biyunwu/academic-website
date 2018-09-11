@@ -1,0 +1,56 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.header {
+  text-align: center;
+  color: #777777;
+  border-bottom: #dddddd solid 1px; }
+  .header header {
+    padding: 25px 0; }
+    .header header h1 a {
+      color: #000000;
+      text-decoration: none; }
+  .header .App-title {
+    /* title: */
+    font-family: "NanumBrush";
+    font-size: 48px;
+    color: #000000;
+    margin: 0; }
+  .header .nav {
+    display: inline-flex;
+    padding: 10px 0;
+    font-family: "AvenirNext-DemiBold";
+    font-size: 13px; }
+    .header .nav .link-seperator {
+      padding: 0 5px 0 5px;
+      font-family: "AvenirNext-UltraLight"; }
+  .header .nav-item {
+    list-style: none; }
+    .header .nav-item .nav-link {
+      color: #777777;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap; }
+    .header .nav-item .active {
+      color: #000000;
+      border-bottom: #000000 solid 1px; }
+
+/* .App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+} */
+/* .App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+} */
+/* .App-title {
+  font-size: 1.5em;
+} */
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */

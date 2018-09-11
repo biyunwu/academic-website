@@ -1,0 +1,90 @@
+$navlink-color: #777777;
+$border-color: #dddddd;
+$main-text-color : #000000;
+$active-link-color: #000000;
+$header-title-font: 'NanumBrush';
+$nav-link-font: 'AvenirNext-DemiBold';
+$link-seperator-font: 'AvenirNext-UltraLight';
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  color: $navlink-color;
+  border-bottom: $border-color solid 1px;
+
+  header {
+    padding: 25px 0;
+    
+    h1 a {
+      color: $main-text-color;
+      text-decoration: none;
+    }
+  }
+
+  .App-title {
+    /* title: */
+    font-family: $header-title-font;
+    font-size: 48px;
+    color: $main-text-color;
+    margin: 0;
+  }
+
+  .nav {
+    display: inline-flex;
+    padding: 10px 0;
+    font-family: $nav-link-font;
+    font-size: 13px;
+
+    .link-seperator {
+      padding: 0 5px 0 5px;
+      font-family: $link-seperator-font;
+    }
+  }
+
+  .nav-item {
+    list-style: none;
+
+    .nav-link {
+      color: $navlink-color;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      // padding-bottom: 10px;
+    }
+
+    .active {
+      color: $active-link-color;
+      border-bottom: $active-link-color solid 1px;
+    }
+  }
+}
+
+/* .App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+} */
+
+/* .App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+} */
+
+/* .App-title {
+  font-size: 1.5em;
+} */
+
+
+
+
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
