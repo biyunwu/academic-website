@@ -18,8 +18,9 @@ body {
     color: #000000;
     margin: 0; }
   .header .nav {
-    display: inline-flex;
+    display: block;
     padding: 0;
+    margin: 14px auto;
     font-family: "Proxima Nova";
     font-size: 14px;
     font-weight: 600; }
@@ -27,7 +28,9 @@ body {
       padding: 0 7px;
       color: rgba(0, 0, 0, 0.1); }
   .header .nav-item {
-    list-style: none; }
+    list-style: none;
+    display: inline-block;
+    line-height: 1.8em; }
     .header .nav-item .nav-link {
       color: rgba(0, 0, 0, 0.5);
       text-decoration: none;

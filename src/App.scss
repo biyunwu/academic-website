@@ -34,8 +34,9 @@ body {
   }
 
   .nav {
-    display: inline-flex;
+    display: block;
     padding: 0;
+    margin: 14px auto;
     font-family: $nav-link-font;
     font-size: 14px;
     font-weight: 600;
@@ -48,6 +49,8 @@ body {
 
   .nav-item {
     list-style: none;
+    display: inline-block;
+    line-height: 1.8em;
 
     .nav-link {
       color: $navlink-color;
