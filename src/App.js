@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
+import Header from './components/partials/Header';
 import Home from './components/Home'
 import Buddhism from './components/Buddhsim'
 import Freud from './components/Freud'
@@ -12,61 +13,35 @@ const links =
     ['home', 'buddhism and psychology', 'freud in china', 'papers', 'cv', 'about']
     .map(ele => ele.toLowerCase())
 
-const createPageLink = (pageName) => '/' + pageName.replace(/ /g, "_")
+const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
 
-class App extends PureComponent {
-    state = {
-        activePage: links[0]
-    }
-
-    handleNavLinkClick = (evt) => {
-        this.setState({activePage: evt.target.id})
-    }
+class App extends Component {
 
     render() {
         return (
             <div className='app'>
+                <Header 
+                    links = {links}
+                    // activePage = {this.state.activePage}
+                    // handleNavLinkClick={this.handleNavLinkClick }
+                />
                 <Route exact path='/' render={() => (
-                    <Home
-                        links={links}
-                        activePage={this.state.activePage}
-                        handleNavLinkClick={this.handleNavLinkClick }
-                    />
+                    <Home />
                 )}/>
-                <Route path={createPageLink(links[1])} render={() => (
-                    <Buddhism
-                        links={links}
-                        activePage={this.state.activePage}
-                        handleNavLinkClick={this.handleNavLinkClick }
-                    />
+                <Route path={pageLinks[1]} render={() => (
+                    <Buddhism />
                 )}/>
-                <Route path={createPageLink(links[2])} render={() => (
-                    <Freud
-                        links={links}
-                        activePage={this.state.activePage}
-                        handleNavLinkClick={this.handleNavLinkClick }
-                    />
+                <Route path={pageLinks[2]} render={() => (
+                    <Freud />
                 )}/>
-                <Route path={createPageLink(links[3])} render={() => (
-                    <Papers
-                        links={links}
-                        activePage={this.state.activePage}
-                        handleNavLinkClick={this.handleNavLinkClick }
-                    />
+                <Route path={pageLinks[3]} render={() => (
+                    <Papers />
                 )}/>
-                <Route path={createPageLink(links[4])} render={() => (
-                    <CV
-                        links={links}
-                        activePage={this.state.activePage}
-                        handleNavLinkClick={this.handleNavLinkClick }
-                    />
+                <Route path={pageLinks[4]} render={() => (
+                    <CV />
                 )}/>
-                <Route path={createPageLink(links[5])} render={() => (
-                    <About
-                        links={links}
-                        activePage={this.state.activePage}
-                        handleNavLinkClick={this.handleNavLinkClick }
-                    />
+                <Route path={pageLinks[5]} render={() => (
+                    <About />
                 )}/>
             </div>
         )

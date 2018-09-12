@@ -1,18 +1,17 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-export default class Header extends PureComponent {
-    getLink = (link) => link !== 'home'? link.replace(/ /g, "_") : ''
+export default class Header extends Component {
+    getLink = (link) => link !== 'home'? '/' + link.replace(/ /g, "_") : '/'
 
-    getActivePageClassName = (pageName, link) => pageName !== link ? '' : 'active' 
+    getActivePageClassName = (link) => link !== window.location.pathname ? '' : 'active' 
 
-    generateNavLinks = (links, activePage) => links.map((link, idx) => 
+    generateNavLinks = (links) => links.map((link, idx) => 
             <li className="nav-item" key={idx}>
                 <Link
-                    to={'/' + this.getLink(link)}
-                    className={'nav-link ' + this.getActivePageClassName(activePage, link)}
+                    to={this.getLink(link)}
+                    className={'nav-link ' + this.getActivePageClassName(this.getLink(link))}
                     id={link}
-                    onClick={ evt => this.props.handleNavLinkClick(evt)}
                 >
                     {link}
                 </Link>
@@ -21,8 +20,8 @@ export default class Header extends PureComponent {
     )
 
     render() {
-        const {links, activePage} = this.props
-        const navlinks = this.generateNavLinks(links, activePage)
+        const {links} = this.props
+        const navlinks = this.generateNavLinks(links)
         return (    
             <div className="header">
                 <header>

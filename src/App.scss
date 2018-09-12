@@ -108,16 +108,16 @@ body {
 
     .main-title {
         font-family: $main-title-font, sans-serif;
-        font-size: 36px;
+        font-size: 30px;
         font-weight: 500;
         line-height: 40px;
         font-style: normal;
-        padding: 10px 0;
+        padding: 0 0 10px 0;
         border-bottom: $border-color 1px solid;
     }
 
     .book-text {
-        font-size: 21px;
+        font-size: 18px;
         font-weight: normal;
         font-style: normal;
         line-height: 1.58;
