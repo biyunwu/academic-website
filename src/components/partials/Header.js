@@ -26,7 +26,8 @@ export default class Header extends PureComponent {
         return (    
             <div className="header">
                 <header>
-                    <h1 className="App-title"><a href='/'>Tao Jiang</a></h1>
+                    <h1 className="App-title"><a href='/'>Tao Jiang</a>
+                    </h1>
                     <ul className="nav">
                         {navlinks}
                     </ul>
