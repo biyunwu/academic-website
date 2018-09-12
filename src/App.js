@@ -22,8 +22,6 @@ class App extends Component {
             <div className='app'>
                 <Header 
                     links = {links}
-                    // activePage = {this.state.activePage}
-                    // handleNavLinkClick={this.handleNavLinkClick }
                 />
                 <Route exact path='/' render={() => (
                     <Home />
