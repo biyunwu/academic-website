@@ -35,9 +35,9 @@ body {
 .header {
     text-align: center;
     color: $navlink-color;
-    // background: $background-color;
+    background: $background-color;
     // background: #0abab5;
-    background: #99ECEA;
+    // background: #99ECEA;
     // border-bottom: $border-color solid 1px;
 
     header {
@@ -207,6 +207,13 @@ body {
         font-style: italic;
     }
 
+}
+
+.footer {
+    font-family: 'AvenirNext-Regular';
+    font-size: 14px;
+    text-align: center;
+    border-top: $border-color solid 1px;
 }
 
 @font-face {

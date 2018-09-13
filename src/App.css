@@ -12,7 +12,7 @@ body {
 .header {
   text-align: center;
   color: rgba(0, 0, 0, 0.55);
-  background: #99ECEA; }
+  background: #f5f5f5; }
   .header header {
     padding: 25px 0; }
     .header header h1 a {
@@ -122,6 +122,12 @@ body {
     text-align: right; }
   .book .magazine {
     font-style: italic; }
+
+.footer {
+  font-family: 'AvenirNext-Regular';
+  font-size: 14px;
+  text-align: center;
+  border-top: #dddddd solid 1px; }
 
 @font-face {
   font-family: medium-content-sans-serif-font;

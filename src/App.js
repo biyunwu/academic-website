@@ -7,6 +7,7 @@ import Freud from './components/Freud'
 import Papers from './components/Papers'
 import CV from './components/CV'
 import About from './components/About'
+import Footer from './components/partials/Footer'
 import './App.css'
 
 const links = 
@@ -41,6 +42,7 @@ class App extends Component {
                 <Route path={pageLinks[5]} render={() => (
                     <About />
                 )}/>
+                <Footer />
             </div>
         )
     }
