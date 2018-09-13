@@ -10,7 +10,7 @@ $font-path: './proxima-nova-fonts/';
     font-style: normal;
 }
 
-
+$background-color: #f5f5f5;
 $navlink-color: rgba(0,0,0,0.55);
 $link-seperator-color: rgba(0,0,0,0.1);
 $border-color: #dddddd;
@@ -25,8 +25,8 @@ $main-title-font: 'medium-content-sans-serif-font';
 $main-text-font: 'medium-content-serif-font';
 
 body {
-    max-width: 1200px;
-    margin: 0 auto;
+    // max-width: 1200px;
+    // margin: 0 auto;
     font-family: $main-text-font, serif;
     color: $main-text-color;
 }
@@ -35,13 +35,17 @@ body {
 .header {
     text-align: center;
     color: $navlink-color;
-    border-bottom: $border-color solid 1px;
+    // background: $background-color;
+    // background: #0abab5;
+    background: #99ECEA;
+    // border-bottom: $border-color solid 1px;
 
     header {
         padding: 25px 0;
         
         h1 a {
-        color: $main-text-color;
+        // color: $main-text-color;
+        color: black;
         text-decoration: none;
         }
     }
@@ -92,27 +96,71 @@ body {
 
 // Book
 .book {
-    margin: 1em 2%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: auto;
+    max-width: 1300px;
+    padding: 0 3%;
+    margin: 1em auto;
+    
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        // column-gap: 2em;
+    }
 
     .book-pic-container {
-        grid-column-start: 3;
-        grid-column-end: 4;
+        margin-top: 18px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        text-align: center;
+        margin: 18px 5% 0 5%;
         
-        .book-img {
-            max-width: 80%;
+        .book-img{
+            max-width: 90%;
+            margin: 1em 0; 
+        }
+
+        .book-link {
+            max-width: 60%;
+            display: inline-block;
+            text-decoration: none;
+            border: black solid 2px;
+            color: black;
+            font-family: $nav-link-font;
+            font-size: 14px;
+            padding: 1em;
+
+            &:hover {
+                background: black;
+                // color: rgb(221,138,54);
+                color: white;
+            }
         }
     }
 
     .book-introduction {
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
+    .book-review {
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 5;
+    }
+
+    .hidden {
+        visibility: hidden;
+        height: 0;
+        
+        & > * {
+            visibility: hidden;
+            height: 0;
+        }
     }
 
     .main-title {
-        font-family: $main-title-font, sans-serif;
+        // font-family: $main-title-font, sans-serif;
+        font-family: 'AvenirNext-Regular';
         font-size: 30px;
         font-weight: 500;
         line-height: 40px;
@@ -127,6 +175,24 @@ body {
         font-style: normal;
         line-height: 1.58;
         letter-spacing: -0.003em;
+        // text-align: justify;
+    }
+
+    .review-button {
+        width: 165px;
+        text-align: center;
+        border: black solid 2px;
+        cursor: pointer;
+        color: black;
+        font-family: $nav-link-font;
+        font-size: 14px;
+        padding: 1em;
+        float: right;
+
+        &:hover {
+            background: black;
+            color: white;
+        }
     }
 
     .center {
