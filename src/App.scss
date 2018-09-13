@@ -16,6 +16,7 @@ $link-seperator-color: rgba(0,0,0,0.1);
 $border-color: #dddddd;
 $main-text-color : rgba(0,0,0,.84);
 $active-link-color: #000000;
+$button-color: rgb(39,39,39);
 $header-title-font: 'NanumBrush';
 $nav-link-font: 'Proxima Nova';
 // $main-title-font: 'AvenirNext-Medium';
@@ -35,10 +36,10 @@ body {
 .header {
     text-align: center;
     color: $navlink-color;
-    background: $background-color;
+    // background: $background-color;
     // background: #0abab5;
     // background: #99ECEA;
-    // border-bottom: $border-color solid 1px;
+    border-bottom: $border-color solid 1px;
 
     header {
         padding: 25px 0;
@@ -124,14 +125,14 @@ body {
             max-width: 60%;
             display: inline-block;
             text-decoration: none;
-            border: black solid 2px;
-            color: black;
+            border: $button-color solid 2px;
+            color: $button-color;
             font-family: $nav-link-font;
             font-size: 14px;
             padding: 1em;
 
             &:hover {
-                background: black;
+                background: $button-color;
                 // color: rgb(221,138,54);
                 color: white;
             }
@@ -181,16 +182,16 @@ body {
     .review-button {
         width: 165px;
         text-align: center;
-        border: black solid 2px;
+        border: $button-color solid 2px;
         cursor: pointer;
-        color: black;
+        color: $button-color;
         font-family: $nav-link-font;
         font-size: 14px;
         padding: 1em;
         float: right;
 
         &:hover {
-            background: black;
+            background: $button-color;
             color: white;
         }
     }
@@ -210,10 +211,15 @@ body {
 }
 
 .footer {
-    font-family: 'AvenirNext-Regular';
+    // font-family: $nav-link-font;
+    font-family: $header-title-font;
+    font-weight: 100;
     font-size: 14px;
+    color: $navlink-color;
     text-align: center;
     border-top: $border-color solid 1px;
+    // background: $background-color;
+    padding: 1em;
 }
 
 @font-face {

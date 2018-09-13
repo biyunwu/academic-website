@@ -14,38 +14,9 @@ export default class Home extends PureComponent {
     render () {
         const reviewVisibilityClassName = this.state.reviewHidden? 'hidden' : ''
         const buttonText = this.state.reviewHidden? 'Show Reviews' : 'Close Reviews'
-        return (
-            <div className='book'>
-                <h2 className='main-title'>
-                    Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind
-                </h2>
-                <div className='grid'>
-                    <div className='book-pic-container'>
-                            <img className='book-img' 
-                                src={BuddhismCover} 
-                                alt='The cover of Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind'
-                            />
-                            <a className='book-link' href='http://a.co/d/1nYnDJI'>
-                                Available on Amazon
-                            </a>
-                    </div>
-                    <div className='book-introduction'>
-                        <p className='book-text'>
-                            Are there Buddhist conceptions of the unconscious? If so, are they more Freudian, Jungian, or something else? If not, can Buddhist conceptions be reconciled with the Freudian, Jungian, or other models? These are some of the questions that have motivated modern scholarship to approach ālayavijñāna, the storehouse consciousness, formulated in Yogācāra Buddhism as a subliminal reservoir of tendencies, habits, and future possibilities.
-                        </p>
-                        <p className='book-text'>
-                            Tao Jiang argues convincingly that such questions are inherently problematic because they frame their interpretations of the Buddhist notion largely in terms of responses to modern psychology. He proposes that, if we are to understand ālayavijñāna properly and compare it with the unconscious responsibly, we need to change the way the questions are posed so that ālayavijñāna and the unconscious can first be understood within their own contexts and then recontextualized within a dialogical setting. In so doing, certain paradigmatic assumptions embedded in the original frameworks of Buddhist and modern psychological theories are exposed. Jiang brings together Xuan Zang’s ālayavijñāna and Freud’s and Jung’s unconscious to focus on what the differences are in the thematic concerns of the three theories, why such differences exist in terms of their objectives, and how their methods of theorization contribute to these differences.
-                        </p>
-                        <p className='book-text'>
-                            Contexts and Dialogue puts forth a fascinating, erudite, and carefully argued presentation of the subliminal mind. It proposes a new paradigm in comparative philosophy that examines the what, why, and how in navigating the similarities and differences of philosophical systems through contextualization and recontextualization.
-                        </p>
-                        <imput tyle='button' className='review-button'
-                            onClick={this.toggleReviewVisibility}
-                        >
-                            {buttonText}
-                        </imput>
-                    </div>
-                    <div className={'book-review ' + reviewVisibilityClassName}>
+
+        const review = this.state.reviewHidden? '' :
+                    (<div className={'book-review ' + reviewVisibilityClassName}>
                         <h2 className='main-title center'>Reviews</h2>
                         <p className='book-text'>
                             “Jiang’s book succeeds on three levels: first, it offers an exceptionally clear introduction to Yogācāra Buddhism; second, it illuminates one very general and important difference between the models of mind in Buddhism and western psychology; and finally, it provides the right methodological cue for scholars engaged in comparative philosophical work. One leaves this book convinced that synthetic dialogue between Buddhism and modern psychology is possible, but that it will falter without adequate analysis of the paradigmatic differences that shape their respective projects.” 
@@ -88,7 +59,40 @@ export default class Home extends PureComponent {
                         >
                             Close Reviews
                         </imput>
+                    </div>)
+
+        return (
+            <div className='book'>
+                <h2 className='main-title'>
+                    Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind
+                </h2>
+                <div className='grid'>
+                    <div className='book-pic-container'>
+                            <img className='book-img' 
+                                src={BuddhismCover} 
+                                alt='The cover of Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind'
+                            />
+                            <a className='book-link' href='http://a.co/d/1nYnDJI'>
+                                Available on Amazon
+                            </a>
                     </div>
+                    <div className='book-introduction'>
+                        <p className='book-text'>
+                            Are there Buddhist conceptions of the unconscious? If so, are they more Freudian, Jungian, or something else? If not, can Buddhist conceptions be reconciled with the Freudian, Jungian, or other models? These are some of the questions that have motivated modern scholarship to approach ālayavijñāna, the storehouse consciousness, formulated in Yogācāra Buddhism as a subliminal reservoir of tendencies, habits, and future possibilities.
+                        </p>
+                        <p className='book-text'>
+                            Tao Jiang argues convincingly that such questions are inherently problematic because they frame their interpretations of the Buddhist notion largely in terms of responses to modern psychology. He proposes that, if we are to understand ālayavijñāna properly and compare it with the unconscious responsibly, we need to change the way the questions are posed so that ālayavijñāna and the unconscious can first be understood within their own contexts and then recontextualized within a dialogical setting. In so doing, certain paradigmatic assumptions embedded in the original frameworks of Buddhist and modern psychological theories are exposed. Jiang brings together Xuan Zang’s ālayavijñāna and Freud’s and Jung’s unconscious to focus on what the differences are in the thematic concerns of the three theories, why such differences exist in terms of their objectives, and how their methods of theorization contribute to these differences.
+                        </p>
+                        <p className='book-text'>
+                            Contexts and Dialogue puts forth a fascinating, erudite, and carefully argued presentation of the subliminal mind. It proposes a new paradigm in comparative philosophy that examines the what, why, and how in navigating the similarities and differences of philosophical systems through contextualization and recontextualization.
+                        </p>
+                        <imput tyle='button' className='review-button'
+                            onClick={this.toggleReviewVisibility}
+                        >
+                            {buttonText}
+                        </imput>
+                    </div>
+                    {review}
                 </div>
             </div>
         )
