@@ -55,11 +55,11 @@ export default class Home extends PureComponent {
                             – Journal of Chinese Religion
                         </p>
                         <div className='center'>
-                            <imput tyle='button' className='review-button'
+                            <button className='review-button'
                                 onClick={this.toggleReviewVisibility}
                             >
                                 Close Reviews
-                            </imput>
+                            </button>
                         </div>
                     </div>)
 
@@ -74,7 +74,7 @@ export default class Home extends PureComponent {
                                 src={BuddhismCover} 
                                 alt='The cover of Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind'
                             />
-                            <a className='book-link' href='http://a.co/d/1nYnDJI'>
+                            <a className='book-link' target="_blank" href='http://a.co/d/1nYnDJI' rel="noopener noreferrer">
                                 Available on Amazon
                             </a>
                     </div>
@@ -88,11 +88,13 @@ export default class Home extends PureComponent {
                         <p className='book-text'>
                             Contexts and Dialogue puts forth a fascinating, erudite, and carefully argued presentation of the subliminal mind. It proposes a new paradigm in comparative philosophy that examines the what, why, and how in navigating the similarities and differences of philosophical systems through contextualization and recontextualization.
                         </p>
-                        <imput tyle='button' className='review-button'
-                            onClick={this.toggleReviewVisibility}
-                        >
-                            {buttonText}
-                        </imput>
+                        <div className='center'>
+                            <button className='review-button'
+                                onClick={this.toggleReviewVisibility}
+                            >
+                                {buttonText}
+                            </button>
+                        </div>
                     </div>
                     {review}
                 </div>

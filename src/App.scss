@@ -1,4 +1,4 @@
-$font-path: './proxima-nova-fonts/';
+$font-path: './fonts/';
 @font-face {
     font-family: 'Proxima Nova';
     src: url($font-path + 'AltRegular-webfont.eot');
@@ -8,6 +8,11 @@ $font-path: './proxima-nova-fonts/';
         url($font-path + 'AltRegular-webfont.svg#proxima_nova_altregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Text Light';
+    src: url($font-path + 'SF-Pro-Text-Light.otf');
 }
 
 $background-color: #f5f5f5;
@@ -24,6 +29,13 @@ $main-title-font: 'medium-content-sans-serif-font';
 // $main-title-font: 'elevate-display-font,medium-marketing-display-font,Georgia,Cambria,Times,serif';
 // $main-text-font: 'AvenirNext-Regular';
 $main-text-font: 'medium-content-serif-font';
+$footer-font: 'SF Pro Text Light';
+
+html {
+    * ::selection {
+        background: $link-seperator-color;
+    }
+}
 
 body {
     // max-width: 1200px;
@@ -97,22 +109,38 @@ body {
 
 // Book
 .book {
-    max-width: 1300px;
+    max-width: 1200px;
     padding: 0 3%;
     margin: 1em auto;
     
+    @media (min-width: 600px) { 
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            // column-gap: 2em;
+        }
 
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        // column-gap: 2em;
+        .book-pic-container {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .book-introduction {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+    
+        .book-review {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
     }
 
     .book-pic-container {
         margin-top: 18px;
-        grid-column-start: 1;
-        grid-column-end: 2;
+        // grid-column-start: 1;
+        // grid-column-end: 2;
         text-align: center;
         margin: 18px 5% 0 5%;
         
@@ -139,15 +167,15 @@ body {
         }
     }
 
-    .book-introduction {
-        grid-column-start: 2;
-        grid-column-end: 5;
-    }
+    // .book-introduction {
+    //     grid-column-start: 2;
+    //     grid-column-end: 5;
+    // }
 
-    .book-review {
-        grid-column-start: 1;
-        grid-column-end: 5;
-    }
+    // .book-review {
+    //     grid-column-start: 1;
+    //     grid-column-end: 5;
+    // }
 
     .hidden {
         visibility: hidden;
@@ -161,8 +189,9 @@ body {
 
     .main-title {
         // font-family: $main-title-font, sans-serif;
-        font-family: 'AvenirNext-Regular';
-        font-size: 30px;
+        // font-family: 'AvenirNext-Regular';
+        font-family: $footer-font;
+        font-size: 25px;
         font-weight: 500;
         line-height: 40px;
         font-style: normal;
@@ -176,7 +205,6 @@ body {
         font-style: normal;
         line-height: 1.58;
         letter-spacing: -0.003em;
-        // text-align: justify;
     }
 
     .review-button {
@@ -185,10 +213,11 @@ body {
         border: $button-color solid 2px;
         cursor: pointer;
         color: $button-color;
+        background: white;
         font-family: $nav-link-font;
         font-size: 14px;
         padding: 1em 2em;
-        float: right;
+        // float: right;
 
         &:hover {
             background: $button-color;
@@ -198,7 +227,7 @@ body {
 
     .center {
         text-align: center;
-        margin: 2em 0;
+        // margin: 2em 0;
 
         .review-button {
             float: none;
@@ -216,15 +245,22 @@ body {
 }
 
 .footer {
+    margin-top: 2em;
     // font-family: $nav-link-font;
-    font-family: $header-title-font;
+    // font-family: $header-title-font;
+    font-family: $footer-font;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 11px;
     color: $navlink-color;
     text-align: center;
     border-top: $border-color solid 1px;
     // background: $background-color;
     padding: 1em;
+
+    .taojiang {
+        font-family: $header-title-font;
+        font-size: 150%;
+    }
 }
 
 @font-face {
