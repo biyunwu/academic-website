@@ -104,20 +104,22 @@ body {
     line-height: 1.58;
     letter-spacing: -0.003em; }
   .book .review-button {
-    width: 165px;
     text-align: center;
     border: #272727 solid 2px;
     cursor: pointer;
     color: #272727;
     font-family: "Proxima Nova";
     font-size: 14px;
-    padding: 1em;
+    padding: 1em 2em;
     float: right; }
     .book .review-button:hover {
       background: #272727;
       color: white; }
   .book .center {
-    text-align: center; }
+    text-align: center;
+    margin: 2em 0; }
+    .book .center .review-button {
+      float: none; }
   .book .commentor {
     text-align: right; }
   .book .magazine {

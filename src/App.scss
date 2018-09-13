@@ -180,14 +180,14 @@ body {
     }
 
     .review-button {
-        width: 165px;
+        // width: 165px;
         text-align: center;
         border: $button-color solid 2px;
         cursor: pointer;
         color: $button-color;
         font-family: $nav-link-font;
         font-size: 14px;
-        padding: 1em;
+        padding: 1em 2em;
         float: right;
 
         &:hover {
@@ -198,6 +198,11 @@ body {
 
     .center {
         text-align: center;
+        margin: 2em 0;
+
+        .review-button {
+            float: none;
+        }
     }
 
     .commentor {

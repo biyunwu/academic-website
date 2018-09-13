@@ -54,11 +54,13 @@ export default class Home extends PureComponent {
                         <p className='commentor magazine'>
                             – Journal of Chinese Religion
                         </p>
-                        <imput tyle='button' className='review-button'
-                            onClick={this.toggleReviewVisibility}
-                        >
-                            Close Reviews
-                        </imput>
+                        <div className='center'>
+                            <imput tyle='button' className='review-button'
+                                onClick={this.toggleReviewVisibility}
+                            >
+                                Close Reviews
+                            </imput>
+                        </div>
                     </div>)
 
         return (
