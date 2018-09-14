@@ -79,10 +79,15 @@ body {
     .book .grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto; }
+      grid-template-rows: auto;
+      grid-column-gap: 2em; }
     .book .book-pic-container {
       grid-column-start: 1;
       grid-column-end: 2; }
+      .book .book-pic-container .book-link {
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 2em; }
     .book .book-introduction {
       grid-column-start: 2;
       grid-column-end: 5; }
@@ -91,26 +96,29 @@ body {
       grid-column-end: 5; } }
   .book .book-pic-container {
     margin-top: 18px;
-    margin: 1.5em 2em 0 0; }
+    margin: 1.5em 0 0 0;
+    text-align: center; }
     .book .book-pic-container .book-img {
       max-width: 100%;
       margin: 0; }
     .book .book-pic-container .book-link {
-      max-width: 60%;
-      display: inline-block;
+      display: block;
       text-decoration: none;
       border: #272727 solid 2px;
       color: #272727;
       font-family: "Proxima Nova";
+      text-align: center;
       font-size: 14px;
-      padding: 1em; }
+      padding: 1em;
+      margin-top: 0.5em;
+      transition: background 0.2s, color 0.2s; }
       .book .book-pic-container .book-link:hover {
         background: #272727;
         color: white; }
   .book .book-text {
     text-align: justify;
     word-break: -2px; }
-  .book .book-review > li {
+  .book .book-review > li, .book .more-book-review > li {
     list-style: none; }
   .book .hidden {
     visibility: hidden;
@@ -140,16 +148,13 @@ body {
     background: white;
     font-family: "Proxima Nova";
     font-size: 14px;
-    padding: 1em 2em; }
+    padding: 1em 2em;
+    transition: background 0.2s, color 0.2s; }
     .book .review-button:hover {
       background: #272727;
       color: white; }
     .book .review-button::selection {
       background: none; }
-  .book .center {
-    text-align: center; }
-    .book .center .review-button {
-      float: none; }
   .book .commentor {
     text-align: right; }
   .book .magazine {
@@ -164,6 +169,8 @@ body {
   text-align: center;
   border-top: #dddddd solid 1px;
   padding: 1em; }
+  .footer:hover {
+    color: rgba(0, 0, 0, 0.84); }
   .footer .taojiang {
     font-family: "NanumBrush";
     font-size: 150%; }

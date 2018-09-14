@@ -12,11 +12,10 @@ export default class Home extends PureComponent {
     }
 
     render () {
-        const buttonText = this.state.reviewHidden? 'Show Reviews' : 'Close Reviews'
+        const buttonText = this.state.reviewHidden? 'More Reviews' : 'First Review'
 
-        const review = this.state.reviewHidden? '' :
-                    (<div className='book-review'>
-                        <h2 className='main-title'>Reviews</h2>
+        const moreReviews = this.state.reviewHidden? '' :
+                    (<ul className='more-book-review'>
                         <li>
                             <p className='book-text'>
                                 “Jiang’s book succeeds on three levels: first, it offers an exceptionally clear introduction to Yogācāra Buddhism; second, it illuminates one very general and important difference between the models of mind in Buddhism and western psychology; and finally, it provides the right methodological cue for scholars engaged in comparative philosophical work. One leaves this book convinced that synthetic dialogue between Buddhism and modern psychology is possible, but that it will falter without adequate analysis of the paradigmatic differences that shape their respective projects.” 
@@ -25,14 +24,14 @@ export default class Home extends PureComponent {
                                 – H-Net Reviews
                             </p>
                         </li>
-                        <li>
+                        {/* <li>
                             <p className='book-text'>
                                 “The wonderful sense of conclusion that Jiang brings to the reader is conveyed in the idea that there is much to be learned through interdisciplinary discussion. Jiang emphasizes that this discussion cannot take place at a shallow level, as very little new knowledge can be gained thereby. The point is made that we must learn to engage with different disciplines through what he calls ‘‘context and dialogue.’’ Overall, Jiang’s main argument for the importance of creating a new methodology for cross-disciplinary research in this way is presented very successfully.” 
                             </p>
                             <p className='commentor magazine'>
                                 – Philosophy East & West
                             </p>
-                        </li>
+                        </li> */}
                         <li>
                             <p className='book-text'>
                                 “Jiang’s work … is a cautious reminder about the potential dangers of comparison that is helpful in the current academic climate, where comparative approaches are so popular. All who undertake comparative endeavors (even those who are not interested in Yogācāra Buddhism) should read Jiang’s book.” 
@@ -65,14 +64,7 @@ export default class Home extends PureComponent {
                                 – Dao
                             </p>
                         </li>
-                        <div className='center'>
-                            <button className='review-button'
-                                onClick={this.toggleReviewVisibility}
-                            >
-                                Close Reviews
-                            </button>
-                        </div>
-                    </div>)
+                    </ul>)
 
         return (
             <main className='book'>
@@ -81,6 +73,7 @@ export default class Home extends PureComponent {
                 </h2>
                 <div className='grid'>
                     <div className='book-pic-container'>
+                        <div>
                             <img className='book-img' 
                                 src={BuddhismCover} 
                                 alt='The cover of Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind'
@@ -88,6 +81,7 @@ export default class Home extends PureComponent {
                             <a className='book-link' target="_blank" href='http://a.co/d/1nYnDJI' rel="noopener noreferrer">
                                 Available on Amazon
                             </a>
+                        </div>
                     </div>
                     <div className='book-introduction'>
                         <p className='book-text'>
@@ -111,15 +105,37 @@ export default class Home extends PureComponent {
                         <p className='book-text'>
                             Contexts and Dialogue puts forth a fascinating, erudite, and carefully argued presentation of the subliminal mind. It proposes a new paradigm in comparative philosophy that examines the what, why, and how in navigating the similarities and differences of philosophical systems through contextualization and recontextualization.
                         </p>
-                        <div className='center'>
+                        {/* <div className='center'>
                             <button className='review-button'
                                 onClick={this.toggleReviewVisibility}
                             >
                                 {buttonText}
                             </button>
-                        </div>
+                        </div> */}
                     </div>
-                    {review}
+                    <div className='book-review'>
+                        <h2 className='main-title'>Reviews</h2>
+                        {/* <li> */}
+                            <p className='book-text'>
+                                “The wonderful sense of conclusion that Jiang brings to the reader is conveyed in the idea that there is much to be learned through interdisciplinary discussion. Jiang emphasizes that this discussion cannot take place at a shallow level, as very little new knowledge can be gained thereby. The point is made that we must learn to engage with different disciplines through what he calls ‘‘context and dialogue.’’ Overall, Jiang’s main argument for the importance of creating a new methodology for cross-disciplinary research in this way is presented very successfully.” 
+                            </p>
+                            <p className='commentor magazine'>
+                                – Philosophy East & West
+                            </p>
+                        {/* </li> */}
+
+                        {moreReviews}
+
+                        {/* <div className='center'> */}
+                        
+                            <button className='review-button'
+                                onClick={this.toggleReviewVisibility}
+                            >
+                                {buttonText}
+                            </button>
+                        
+                    </div>
+                    
                 </div>
             </main>
         )

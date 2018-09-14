@@ -125,12 +125,18 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: auto;
-            // column-gap: 2em;
+            grid-column-gap: 2em;
         }
 
         .book-pic-container {
             grid-column-start: 1;
             grid-column-end: 2;
+
+            .book-link {
+                width: 100%;
+                box-sizing: border-box;
+                margin-right: 2em;
+            }
         }
 
         .book-introduction {
@@ -146,10 +152,8 @@ body {
 
     .book-pic-container {
         margin-top: 18px;
-        // grid-column-start: 1;
-        // grid-column-end: 2;
-        // text-align: center;
-        margin: 1.5em 2em 0 0;
+        margin: 1.5em 0 0 0;
+        text-align: center;
         
         .book-img{
             max-width: 100%;
@@ -157,14 +161,16 @@ body {
         }
 
         .book-link {
-            max-width: 60%;
-            display: inline-block;
+            display: block;
             text-decoration: none;
             border: $button-color solid 2px;
             color: $button-color;
             font-family: $nav-link-font;
+            text-align: center;
             font-size: 14px;
             padding: 1em;
+            margin-top: 0.5em;
+            transition: background 0.2s, color 0.2s;
 
             &:hover {
                 background: $button-color;
@@ -179,7 +185,7 @@ body {
         word-break: -2px;
     }
 
-    .book-review > li {
+    .book-review > li, .more-book-review > li {
         list-style: none;
     }
 
@@ -223,7 +229,7 @@ body {
         font-family: $nav-link-font;
         font-size: 14px;
         padding: 1em 2em;
-        // float: right;
+        transition: background 0.2s, color 0.2s;
 
         &:hover {
             background: $button-color;
@@ -232,15 +238,6 @@ body {
 
         &::selection {
             background: none;
-        }
-    }
-
-    .center {
-        text-align: center;
-        // margin: 2em 0;
-
-        .review-button {
-            float: none;
         }
     }
 
@@ -266,6 +263,10 @@ body {
     border-top: $border-color solid 1px;
     // background: $background-color;
     padding: 1em;
+
+    &:hover {
+        color: $main-text-color;
+    }
 
     .taojiang {
         font-family: $header-title-font;
