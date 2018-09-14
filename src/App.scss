@@ -1,20 +1,26 @@
 $font-path: './fonts/';
 @import './fonts/medium-content-sans-serif-font';
 @import './fonts/medium-content-serif-font';
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url($font-path + 'AltRegular-webfont.eot');
-    src: url($font-path + 'AltRegular-webfont.eot?#iefix') format('embedded-opentype'),
-        url($font-path + 'AltRegular-webfont.woff') format('woff'),
-        url($font-path + 'AltRegular-webfont.ttf') format('truetype'),
-        url($font-path + 'AltRegular-webfont.svg#proxima_nova_altregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
+// @font-face {
+//     font-family: 'Proxima Nova';
+//     src: url($font-path + 'AltRegular-webfont.eot');
+//     src: url($font-path + 'AltRegular-webfont.eot?#iefix') format('embedded-opentype'),
+//         url($font-path + 'AltRegular-webfont.woff') format('woff'),
+//         url($font-path + 'AltRegular-webfont.ttf') format('truetype'),
+//         url($font-path + 'AltRegular-webfont.svg#proxima_nova_altregular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
 @font-face {
     font-family: 'SF Pro Text Light';
     src: url($font-path + 'SF-Pro-Text-Light.otf');
+}
+
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url($font-path + 'SF-Pro-Text-Regular.otf');
 }
 
 $background-color: #f5f5f5;
@@ -25,13 +31,13 @@ $main-text-color : rgba(0,0,0,.84);
 $active-link-color: #000000;
 $button-color: rgb(39,39,39);
 $header-title-font: 'NanumBrush';
-$nav-link-font: 'Proxima Nova';
+// $nav-link-font: 'Proxima Nova';
+$nav-link-font: 'SF Pro Text Regular';
 // $main-title-font: 'AvenirNext-Medium';
 $main-title-font: 'medium-content-sans-serif-font';
 // $main-title-font: 'elevate-display-font,medium-marketing-display-font,Georgia,Cambria,Times,serif';
-// $main-text-font: 'AvenirNext-Regular';
 $main-text-font: 'medium-content-serif-font';
-$footer-font: 'SF Pro Text Light';
+$footer-font: 'SF Pro Text Regular';
 
 html {
     * ::selection {
@@ -118,9 +124,28 @@ body {
 .book {
     max-width: 1200px;
     padding: 0 3%;
-    margin: 1em auto;
+    margin: 2.5em auto 1em auto;
+
+    @media all and (max-width: 480px) {
+        // Make the book cover smaller
+        .book-pic-container {
+                padding: 0 20%;
+        }
+    }
+
+    @media all and (min-width: 481px) and (max-width: 1023px) { 
+        .book-pic-container {
+            width: 35%;
+            margin: 0.5em 1em 0 0 !important;
+            float: left;
+        }
+
+        .book-introduction {
+            display: inline;
+        }
+    }
     
-    @media (min-width: 600px) { 
+    @media all and (min-width: 1024px) { 
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -169,7 +194,7 @@ body {
             text-align: center;
             font-size: 14px;
             padding: 1em;
-            margin-top: 0.5em;
+            margin: 0.5em 0;
             transition: background 0.2s, color 0.2s;
 
             &:hover {
@@ -182,11 +207,15 @@ body {
 
     .book-text {
         text-align: justify;
-        word-break: -2px;
+        word-break: keep-all;
     }
 
     .book-review > li, .more-book-review > li {
         list-style: none;
+    }
+
+    .more-book-review {
+        padding: 0;
     }
 
     .hidden {
@@ -219,27 +248,34 @@ body {
         letter-spacing: -0.003em;
     }
 
-    .review-button {
-        // width: 165px;
+    .review-button-container {
         text-align: center;
-        border: $button-color solid 2px;
-        cursor: pointer;
-        color: $button-color;
-        background: white;
-        font-family: $nav-link-font;
-        font-size: 14px;
-        padding: 1em 2em;
-        transition: background 0.2s, color 0.2s;
 
-        &:hover {
-            background: $button-color;
-            color: white;
-        }
-
-        &::selection {
-            background: none;
+        .review-button {
+            width: 25%;
+            min-width: 165px;
+            text-align: center;
+            border: $button-color solid 2px;
+            margin: 2em;
+            cursor: pointer;
+            color: $button-color;
+            background: white;
+            font-family: $nav-link-font;
+            font-size: 14px;
+            padding: 1em 2em;
+            transition: background 0.2s, color 0.2s;
+    
+            &:hover {
+                background: $button-color;
+                color: white;
+            }
+    
+            &::selection {
+                background: none;
+            }
         }
     }
+    
 
     .commentor {
         text-align: right;
