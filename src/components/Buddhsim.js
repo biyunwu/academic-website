@@ -75,7 +75,7 @@ export default class Home extends PureComponent {
                     </div>)
 
         return (
-            <div className='book'>
+            <main className='book'>
                 <h2 className='main-title'>
                     Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind
                 </h2>
@@ -121,7 +121,7 @@ export default class Home extends PureComponent {
                     </div>
                     {review}
                 </div>
-            </div>
+            </main>
         )
     }
 }

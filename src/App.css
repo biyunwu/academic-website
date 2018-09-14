@@ -91,11 +91,10 @@ body {
       grid-column-end: 5; } }
   .book .book-pic-container {
     margin-top: 18px;
-    text-align: center;
-    margin: 18px 5% 0 5%; }
+    margin: 1.5em 2em 0 0; }
     .book .book-pic-container .book-img {
-      max-width: 90%;
-      margin: 1em 0; }
+      max-width: 100%;
+      margin: 0; }
     .book .book-pic-container .book-link {
       max-width: 60%;
       display: inline-block;
@@ -121,7 +120,7 @@ body {
       height: 0; }
   .book .main-title {
     font-family: "SF Pro Text Light";
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 500;
     line-height: 40px;
     font-style: normal;

@@ -148,12 +148,12 @@ body {
         margin-top: 18px;
         // grid-column-start: 1;
         // grid-column-end: 2;
-        text-align: center;
-        margin: 18px 5% 0 5%;
+        // text-align: center;
+        margin: 1.5em 2em 0 0;
         
         .book-img{
-            max-width: 90%;
-            margin: 1em 0; 
+            max-width: 100%;
+            margin: 0; 
         }
 
         .book-link {
@@ -197,7 +197,7 @@ body {
         // font-family: $main-title-font, sans-serif;
         // font-family: 'AvenirNext-Regular';
         font-family: $footer-font;
-        font-size: 25px;
+        font-size: 26px;
         font-weight: 500;
         line-height: 40px;
         font-style: normal;
