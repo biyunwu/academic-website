@@ -15,7 +15,7 @@ export default class Header extends Component {
                 >
                     {link}
                 </Link>
-                { idx !== links.length -1 && <span className='link-seperator'>/</span>}
+                { idx !== links.length -1 && <span className='link-seperator'>|</span>}
             </li>
     )
 

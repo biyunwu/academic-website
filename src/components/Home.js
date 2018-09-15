@@ -1,9 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
+import TJ from './../imgs/tj.jpg'
 
 export default class Home extends PureComponent {
     render () {
         return (
-            <div>
+            <div style={{textAlign: 'center'}}>
+                <img src={TJ} alt='Tao Jiang' style={{width: '100%'}}/>
             </div>
         )
     }
