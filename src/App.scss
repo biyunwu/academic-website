@@ -287,8 +287,16 @@ body {
 
 }
 
+#background-image {
+    background-image: url('./imgs/tj.jpg');
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: local;
+}
+
 .footer {
-    margin-top: 2em;
     // font-family: $nav-link-font;
     // font-family: $header-title-font;
     font-family: $footer-font;

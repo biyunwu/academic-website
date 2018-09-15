@@ -174,8 +174,15 @@ body {
   .book .magazine {
     font-style: italic; }
 
+#background-image {
+  background-image: url("./imgs/tj.jpg");
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local; }
+
 .footer {
-  margin-top: 2em;
   font-family: "SF Pro Text Regular";
   font-weight: 100;
   font-size: 11px;
