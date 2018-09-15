@@ -142,7 +142,7 @@ body {
     line-height: 40px;
     font-style: normal;
     padding: 0 0 10px 0;
-    border-bottom: #dddddd 1px solid; }
+    border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
   .book .book-text {
     font-size: 18px;
     font-weight: normal;
@@ -184,14 +184,14 @@ body {
 
 .footer {
   font-family: "SF Pro Text Regular";
-  font-weight: 100;
   font-size: 11px;
   color: rgba(0, 0, 0, 0.55);
   text-align: center;
   border-top: #dddddd solid 1px;
-  padding: 1em; }
+  margin: 0;
+  padding-bottom: 11px; }
   .footer:hover {
     color: rgba(0, 0, 0, 0.84); }
   .footer .taojiang {
     font-family: "NanumBrush";
-    font-size: 150%; }
+    font-size: 16px; }

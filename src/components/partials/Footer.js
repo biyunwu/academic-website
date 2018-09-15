@@ -6,9 +6,8 @@ export default class Header extends Component {
         const copyright = <p>© {year} <a className='taojiang'>Tao Jiang</a></p>
         return (
             <footer className='footer'>
-                {/* <p>{'Copyright @ Tao Jiang ' + year}</p> */}
-                {copyright}
-                <p>Designed and Developed by Biyun Wu</p>
+                    {copyright}
+                    <p>Designed and Developed by Biyun Wu</p>
             </footer>
         )
     }

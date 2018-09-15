@@ -237,7 +237,8 @@ body {
         line-height: 40px;
         font-style: normal;
         padding: 0 0 10px 0;
-        border-bottom: $border-color 1px solid;
+        // border-bottom: $border-color 1px solid;
+        border-bottom: $link-seperator-color 1px solid;
     }
 
     .book-text {
@@ -293,6 +294,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    // Make the image fixed in the container
     background-attachment: local;
 }
 
@@ -300,13 +302,13 @@ body {
     // font-family: $nav-link-font;
     // font-family: $header-title-font;
     font-family: $footer-font;
-    font-weight: 100;
     font-size: 11px;
     color: $navlink-color;
     text-align: center;
     border-top: $border-color solid 1px;
     // background: $background-color;
-    padding: 1em;
+    margin: 0;
+    padding-bottom: 11px;
 
     &:hover {
         color: $main-text-color;
@@ -314,7 +316,7 @@ body {
 
     .taojiang {
         font-family: $header-title-font;
-        font-size: 150%;
+        font-size: 16px;
     }
 }
 
