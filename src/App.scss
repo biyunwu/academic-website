@@ -24,7 +24,7 @@ $font-path: './fonts/';
 }
 
 $background-color: #f5f5f5;
-$navlink-color: rgba(0,0,0,0.55);
+$navlink-color: rgba(0,0,0,0.45);
 $link-seperator-color: rgba(0,0,0,0.1);
 $border-color: #dddddd;
 $main-text-color : rgba(0,0,0,.84);
@@ -263,8 +263,10 @@ body {
 
     .publisher {
         font-family: $nav-link-font;
+        font-size: 13px;
         color: $navlink-color;
         margin-top: 0;
+        background: $background-color;
     }
 
     .review-button-container {

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 
 export default class Home extends PureComponent {
     state = {
+        // For background img's contianer in Home page
         height: 0
     }
 
