@@ -87,6 +87,7 @@ body {
         display: block;
         padding: 0;
         margin: 14px auto;
+        padding: 0 0.5em;
         font-family: $nav-link-font;
         font-size: 14px;
         font-weight: 600;
@@ -124,7 +125,7 @@ body {
 .book {
     max-width: 1200px;
     padding: 0 3%;
-    margin: 2.5em auto 1em auto;
+    margin: 2.5em auto 2.5em auto;
 
     @media all and (max-width: 480px) {
         // Make the book cover smaller
@@ -138,6 +139,10 @@ body {
             width: 35%;
             margin: 0.5em 1em 0 0 !important;
             float: left;
+
+            .gap {
+                padding-right: 1em;
+            }
         }
 
         .book-introduction {
@@ -156,6 +161,10 @@ body {
         .book-pic-container {
             grid-column-start: 1;
             grid-column-end: 2;
+
+            .gap {
+                padding-right: 1em;
+            }
 
             .book-link {
                 width: 100%;
@@ -199,7 +208,6 @@ body {
 
             &:hover {
                 background: $button-color;
-                // color: rgb(221,138,54);
                 color: white;
             }
         }
@@ -208,6 +216,10 @@ body {
     .book-text {
         text-align: justify;
         word-break: keep-all;
+    }
+
+    .book-review {
+        margin-top: 1em;
     }
 
     .book-review > li, .more-book-review > li {
@@ -249,15 +261,21 @@ body {
         letter-spacing: -0.003em;
     }
 
+    .publisher {
+        font-family: $nav-link-font;
+        color: $navlink-color;
+        margin-top: 0;
+    }
+
     .review-button-container {
         text-align: center;
 
         .review-button {
-            width: 25%;
+            width: 24%;
             min-width: 165px;
             text-align: center;
             border: $button-color solid 2px;
-            margin: 2em;
+            margin: 3em 2em;
             cursor: pointer;
             color: $button-color;
             background: white;
@@ -290,7 +308,7 @@ body {
 
 #background-image {
     background-image: url('./imgs/tj.jpg');
-    height: 70vh;
+    // height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -307,8 +325,7 @@ body {
     text-align: center;
     border-top: $border-color solid 1px;
     // background: $background-color;
-    margin: 0;
-    padding-bottom: 11px;
+    padding: 11px 0;
 
     &:hover {
         color: $main-text-color;

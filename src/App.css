@@ -47,6 +47,7 @@ body {
     display: block;
     padding: 0;
     margin: 14px auto;
+    padding: 0 0.5em;
     font-family: "SF Pro Text Regular";
     font-size: 14px;
     font-weight: 600; }
@@ -71,7 +72,7 @@ body {
 .book {
   max-width: 1200px;
   padding: 0 3%;
-  margin: 2.5em auto 1em auto; }
+  margin: 2.5em auto 2.5em auto; }
   @media all and (max-width: 480px) {
     .book .book-pic-container {
       padding: 0 20%; } }
@@ -80,6 +81,8 @@ body {
       width: 35%;
       margin: 0.5em 1em 0 0 !important;
       float: left; }
+      .book .book-pic-container .gap {
+        padding-right: 1em; }
     .book .book-introduction {
       display: inline; } }
   @media all and (min-width: 1024px) {
@@ -91,6 +94,8 @@ body {
     .book .book-pic-container {
       grid-column-start: 1;
       grid-column-end: 2; }
+      .book .book-pic-container .gap {
+        padding-right: 1em; }
       .book .book-pic-container .book-link {
         width: 100%;
         box-sizing: border-box;
@@ -125,6 +130,8 @@ body {
   .book .book-text {
     text-align: justify;
     word-break: keep-all; }
+  .book .book-review {
+    margin-top: 1em; }
   .book .book-review > li, .book .more-book-review > li {
     list-style: none; }
   .book .more-book-review {
@@ -149,14 +156,18 @@ body {
     font-style: normal;
     line-height: 1.58;
     letter-spacing: -0.003em; }
+  .book .publisher {
+    font-family: "SF Pro Text Regular";
+    color: rgba(0, 0, 0, 0.55);
+    margin-top: 0; }
   .book .review-button-container {
     text-align: center; }
     .book .review-button-container .review-button {
-      width: 25%;
+      width: 24%;
       min-width: 165px;
       text-align: center;
       border: #272727 solid 2px;
-      margin: 2em;
+      margin: 3em 2em;
       cursor: pointer;
       color: #272727;
       background: white;
@@ -176,7 +187,6 @@ body {
 
 #background-image {
   background-image: url("./imgs/tj.jpg");
-  height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -188,8 +198,7 @@ body {
   color: rgba(0, 0, 0, 0.55);
   text-align: center;
   border-top: #dddddd solid 1px;
-  margin: 0;
-  padding-bottom: 11px; }
+  padding: 11px 0; }
   .footer:hover {
     color: rgba(0, 0, 0, 0.84); }
   .footer .taojiang {

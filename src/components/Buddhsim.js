@@ -12,7 +12,7 @@ export default class Home extends PureComponent {
     }
 
     render () {
-        const buttonText = this.state.reviewHidden? 'More Reviews' : 'First Review'
+        const buttonText = this.state.reviewHidden? 'More Reviews' : 'Fewer Review'
 
         const moreReviews = this.state.reviewHidden? '' :
                     (<ul className='more-book-review'>
@@ -65,11 +65,12 @@ export default class Home extends PureComponent {
                 </h2>
                 <div className='grid'>
                     <div className='book-pic-container'>
-                        <div>
+                        <div className='gap'>
                             <img className='book-img' 
                                 src={BuddhismCover} 
                                 alt='The cover of Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind'
                             />
+                            <p className='publisher'>University of Hawaii Press</p>
                             <a className='book-link' target="_blank" href='http://a.co/d/1nYnDJI' rel="noopener noreferrer">
                             Available on Amazon
                             </a>
