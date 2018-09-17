@@ -10,7 +10,9 @@ export default class Book extends PureComponent {
     }
 
     render () {
-        const {bookData, reviewHidden} = this.props.bookData
+        console.log(this.props);
+        const {bookData, cover} = this.props
+        const reviewHidden = this.state.reviewHidden
         const {title, publisher, bookLink, bookIntroduction, primaryReview, otherReviews} = bookData
         const buttonText = reviewHidden? 'More Reviews' : 'Fewer Review'
 
@@ -38,7 +40,7 @@ export default class Book extends PureComponent {
                     <div className='book-pic-container'>
                         <div className='gap'>
                             <img className='book-img' 
-                                src={this.props.cover} 
+                                src={cover} 
                                 alt={`The cover of '${title}'`}
                             />
                             <p className='publisher'>{publisher}</p>
