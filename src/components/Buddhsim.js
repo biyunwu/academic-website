@@ -103,12 +103,12 @@ export default class Buddhism extends PureComponent {
                     {primaryReview && 
                         <div className='book-review'>
                             <h2 className='main-title'>Reviews</h2>
-                                <p className='book-text'>
-                                    {primaryReview.review}
-                                </p>
-                                <p className='commentor magazine'>
-                                    {'– ' + primaryReview.reviewer}
-                                </p>
+                            <p className='book-text'>
+                                {primaryReview.review}
+                            </p>
+                            <p className='commentor magazine'>
+                                {'– ' + primaryReview.reviewer}
+                            </p>
                             {moreReviews}
                         </div>
                     }

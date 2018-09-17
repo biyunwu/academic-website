@@ -2,16 +2,16 @@ $font-path: './fonts/';
 @import './fonts/medium-content-sans-serif-font';
 @import './fonts/medium-content-serif-font';
 
-// @font-face {
-//     font-family: 'Proxima Nova';
-//     src: url($font-path + 'AltRegular-webfont.eot');
-//     src: url($font-path + 'AltRegular-webfont.eot?#iefix') format('embedded-opentype'),
-//         url($font-path + 'AltRegular-webfont.woff') format('woff'),
-//         url($font-path + 'AltRegular-webfont.ttf') format('truetype'),
-//         url($font-path + 'AltRegular-webfont.svg#proxima_nova_altregular') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url($font-path + 'AltRegular-webfont.eot');
+    src: url($font-path + 'AltRegular-webfont.eot?#iefix') format('embedded-opentype'),
+        url($font-path + 'AltRegular-webfont.woff') format('woff'),
+        url($font-path + 'AltRegular-webfont.ttf') format('truetype'),
+        url($font-path + 'AltRegular-webfont.svg#proxima_nova_altregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'SF Pro Text Light';
@@ -190,6 +190,7 @@ body {
         text-align: center;
         
         .book-img{
+            display: block;
             max-width: 100%;
             margin: 0; 
         }
@@ -222,7 +223,7 @@ body {
         margin-top: 1em;
     }
 
-    .book-review > li, .more-book-review > li {
+    .more-book-review {
         list-style: none;
     }
 
@@ -266,6 +267,7 @@ body {
         font-size: 13px;
         color: $navlink-color;
         margin-top: 0;
+        padding: 0.5em;
         background: $background-color;
     }
 
@@ -323,19 +325,33 @@ body {
     // font-family: $header-title-font;
     font-family: $footer-font;
     font-size: 11px;
-    color: $navlink-color;
     text-align: center;
     border-top: $border-color solid 1px;
     // background: $background-color;
     padding: 11px 0;
+    color: $navlink-color;
 
     &:hover {
         color: $main-text-color;
+
+        a {
+            color: $main-text-color;
+        }
+    }
+
+    a {
+        color: $navlink-color;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .taojiang {
         font-family: $header-title-font;
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
