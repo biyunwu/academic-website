@@ -10,26 +10,25 @@ export default class Book extends PureComponent {
     }
 
     render () {
-        console.log(this.props);
         const {bookData, cover} = this.props
-        const reviewHidden = this.state.reviewHidden
         const {title, publisher, bookLink, bookIntroduction, primaryReview, otherReviews} = bookData
+        const {reviewHidden} = this.state
         const buttonText = reviewHidden? 'More Reviews' : 'Fewer Review'
 
-        const moreReviews = reviewHidden? '' :
-                    otherReviews && 
-                    (<ul className='more-book-review'>
-                        {otherReviews.map(review => 
-                            <li key={review.reviewer}>
-                                <p className='book-text'>
-                                    {review.review}
-                                </p>
-                                <p className={review.magazine? 'commentor magazine' : 'commentor'}>
-                                    {'– ' + review.reviewer}
-                                </p>
-                            </li>
-                        )}
-                    </ul>)
+        const moreReviews = 
+            reviewHidden? '' : otherReviews && 
+                (<ul className='more-book-review'>
+                    {otherReviews.map(review => 
+                        <li key={review.reviewer}>
+                            <p className='book-text'>
+                                {review.review}
+                            </p>
+                            <p className={review.magazine? 'commentor magazine' : 'commentor'}>
+                                {'– ' + review.reviewer}
+                            </p>
+                        </li>
+                    )}
+                </ul>)
 
         return (
             <main className='book'>
