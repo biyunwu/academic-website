@@ -1,17 +1,7 @@
 $font-path: './fonts/';
 @import './fonts/medium-content-sans-serif-font';
 @import './fonts/medium-content-serif-font';
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url($font-path + 'AltRegular-webfont.eot');
-    src: url($font-path + 'AltRegular-webfont.eot?#iefix') format('embedded-opentype'),
-        url($font-path + 'AltRegular-webfont.woff') format('woff'),
-        url($font-path + 'AltRegular-webfont.ttf') format('truetype'),
-        url($font-path + 'AltRegular-webfont.svg#proxima_nova_altregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Nanum+Brush+Script');
 
 @font-face {
     font-family: 'SF Pro Text Light';
@@ -31,13 +21,14 @@ $main-text-color : rgba(0,0,0,.84);
 $active-link-color: #000000;
 $button-color: #272727;
 $header-title-font: 'NanumBrush';
+$header-title-font: 'Nanum Brush Script', cursive;
 // $nav-link-font: 'Proxima Nova';
-$nav-link-font: 'SF Pro Text Regular';
+$nav-link-font: 'SF Pro Text Light';
 // $main-title-font: 'AvenirNext-Medium';
 $main-title-font: 'medium-content-sans-serif-font';
 // $main-title-font: 'elevate-display-font,medium-marketing-display-font,Georgia,Cambria,Times,serif';
 $main-text-font: 'medium-content-serif-font';
-$footer-font: 'SF Pro Text Regular';
+$button-font: 'SF Pro Text Regular';
 
 html {
     * ::selection {
@@ -200,7 +191,7 @@ body {
             text-decoration: none;
             border: $button-color solid 2px;
             color: $button-color;
-            font-family: $nav-link-font;
+            font-family: $button-font;
             text-align: center;
             font-size: 14px;
             padding: 1em;
@@ -225,9 +216,6 @@ body {
 
     .more-book-review {
         list-style: none;
-    }
-
-    .more-book-review {
         padding: 0;
     }
 
@@ -244,7 +232,8 @@ body {
     .main-title {
         // font-family: $main-title-font, sans-serif;
         // font-family: 'AvenirNext-Regular';
-        font-family: $footer-font;
+        // font-family: $footer-font;
+        font-family: $nav-link-font;
         font-size: 26px;
         font-weight: 500;
         line-height: 40px;
@@ -265,7 +254,8 @@ body {
     .publisher {
         font-family: $nav-link-font;
         font-size: 13px;
-        color: $navlink-color;
+        // color: $navlink-color;
+        color: $main-text-color;
         margin-top: 0;
         padding: 0.5em;
         background: $background-color;
@@ -283,7 +273,7 @@ body {
             cursor: pointer;
             color: $button-color;
             background: white;
-            font-family: $nav-link-font;
+            font-family: $button-font;
             font-size: 14px;
             padding: 1em 2em;
             transition: background 0.2s, color 0.2s;
@@ -321,9 +311,9 @@ body {
 }
 
 .footer {
-    // font-family: $nav-link-font;
+    font-family: $nav-link-font;
     // font-family: $header-title-font;
-    font-family: $footer-font;
+    // font-family: $footer-font;
     font-size: 11px;
     text-align: center;
     border-top: $border-color solid 1px;
