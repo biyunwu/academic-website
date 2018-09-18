@@ -27,7 +27,7 @@ html button:active, html button:focus {
   box-shadow: none; }
 
 body {
-  font-family: "medium-content-serif-font", serif;
+  font-family: "medium-content-serif-font";
   color: rgba(0, 0, 0, 0.84); }
 
 .header {
@@ -130,6 +130,11 @@ body {
         background: #272727;
         color: white; }
   .book .book-text {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
     text-align: justify;
     word-break: keep-all; }
   .book .book-review {
@@ -151,12 +156,6 @@ body {
     font-style: normal;
     padding: 0 0 10px 0;
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
-  .book .book-text {
-    font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.58;
-    letter-spacing: -0.003em; }
   .book .publisher {
     font-family: "SF Pro Text Light";
     font-size: 13px;

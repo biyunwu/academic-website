@@ -22,7 +22,6 @@ const links =
 const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
 
 class App extends Component {
-
     render() {
         const data = JSON.parse(Data.getData()).data
 

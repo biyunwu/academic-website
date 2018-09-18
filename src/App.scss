@@ -44,7 +44,7 @@ html {
 body {
     // max-width: 1200px;
     // margin: 0 auto;
-    font-family: $main-text-font, serif;
+    font-family: $main-text-font;
     color: $main-text-color;
 }
 
@@ -206,6 +206,11 @@ body {
     }
 
     .book-text {
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.58;
+        letter-spacing: -0.003em;
         text-align: justify;
         word-break: keep-all;
     }
@@ -241,14 +246,6 @@ body {
         padding: 0 0 10px 0;
         // border-bottom: $border-color 1px solid;
         border-bottom: $link-seperator-color 1px solid;
-    }
-
-    .book-text {
-        font-size: 18px;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 1.58;
-        letter-spacing: -0.003em;
     }
 
     .publisher {
