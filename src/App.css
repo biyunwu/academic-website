@@ -73,7 +73,7 @@ body {
 .book {
   max-width: 1200px;
   padding: 0 3%;
-  margin: 2.5em auto 2.5em auto; }
+  margin: 1.5em auto 2.5em auto; }
   @media all and (max-width: 480px) {
     .book .book-pic-container {
       padding: 0 20%; } }
@@ -194,6 +194,23 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: local; }
+
+.about {
+  max-width: 1200px;
+  padding: 0 3%;
+  margin: 1.5em auto 2.5em auto;
+  font-family: "SF Pro Text Light"; }
+  .about h2 {
+    font-family: "SF Pro Text Light";
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 40px;
+    font-style: normal;
+    padding: 0 0 10px 0;
+    border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
+  .about .info-pic {
+    width: 200px;
+    float: left; }
 
 .footer {
   font-family: "SF Pro Text Light";

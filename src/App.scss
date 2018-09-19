@@ -30,6 +30,26 @@ $main-title-font: 'medium-content-sans-serif-font';
 $main-text-font: 'medium-content-serif-font';
 $button-font: 'SF Pro Text Regular';
 
+@mixin limitWidth {
+    max-width: 1200px;
+    padding: 0 3%;
+    margin: 1.5em auto 2.5em auto;
+}
+
+@mixin mainTitle {
+    // font-family: $main-title-font, sans-serif;
+    // font-family: 'AvenirNext-Regular';
+    // font-family: $footer-font;
+    font-family: $nav-link-font;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 40px;
+    font-style: normal;
+    padding: 0 0 10px 0;
+    // border-bottom: $border-color 1px solid;
+    border-bottom: $link-seperator-color 1px solid;
+}
+
 html {
     * ::selection {
         background: $link-seperator-color;
@@ -114,9 +134,10 @@ body {
 
 // Book
 .book {
-    max-width: 1200px;
-    padding: 0 3%;
-    margin: 2.5em auto 2.5em auto;
+    // max-width: 1200px;
+    // padding: 0 3%;
+    // margin: 2.5em auto 2.5em auto;
+    @include limitWidth;
 
     @media all and (max-width: 480px) {
         // Make the book cover smaller
@@ -235,17 +256,7 @@ body {
     }
 
     .main-title {
-        // font-family: $main-title-font, sans-serif;
-        // font-family: 'AvenirNext-Regular';
-        // font-family: $footer-font;
-        font-family: $nav-link-font;
-        font-size: 26px;
-        font-weight: 500;
-        line-height: 40px;
-        font-style: normal;
-        padding: 0 0 10px 0;
-        // border-bottom: $border-color 1px solid;
-        border-bottom: $link-seperator-color 1px solid;
+        @include mainTitle;
     }
 
     .publisher {
@@ -297,6 +308,7 @@ body {
 
 }
 
+// Home
 #background-image {
     background-image: url('./imgs/tj.jpg');
     // height: 70vh;
@@ -305,6 +317,21 @@ body {
     background-position: center center;
     // Make the image fixed in the container
     background-attachment: local;
+}
+
+// About
+.about {
+    @include limitWidth;
+    font-family: $nav-link-font;
+
+    h2 {
+        @include mainTitle;
+    }
+
+    .info-pic {
+        width: 200px;
+        float: left;
+    }
 }
 
 .footer {

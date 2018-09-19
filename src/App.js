@@ -13,6 +13,7 @@ import About from './components/About'
 import Footer from './components/partials/Footer'
 import BuddhismCover from './imgs/buddism-cover.jpg'
 import FreudCover from './imgs/freud.jpg'
+import infoPic from './imgs/about.JPG'
 import './App.css'
 
 const links = 
@@ -57,7 +58,9 @@ class App extends Component {
                     <CV />
                 )}/>
                 <Route path={pageLinks[6]} render={() => (
-                    <About />
+                    <About
+                        infoPic = {infoPic}
+                    />
                 )}/>
                 <Footer />
             </div>
