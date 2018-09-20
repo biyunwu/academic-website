@@ -6,7 +6,7 @@ export default class About extends PureComponent {
         return (
             <main className='about'>
                 <div className='info'>
-                    <h2>Tao Jiang</h2>
+                    {/* <h2>Tao Jiang</h2> */}
                     <img className='info-pic' src={infoPic} alt='Tao Jiang' />
                     <div>
                         <p className='detail-info'>

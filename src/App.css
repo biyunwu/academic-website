@@ -74,6 +74,10 @@ body {
   max-width: 1200px;
   padding: 0 3%;
   margin: 1.5em auto 2.5em auto; }
+  @media all and (max-width: 374px) {
+    .book .book-text {
+      text-align: left !important;
+      word-break: normal !important; } }
   @media all and (max-width: 480px) {
     .book .book-pic-container {
       padding: 0 20%; } }
@@ -218,6 +222,13 @@ body {
     text-align: justify;
     word-break: keep-all; }
 
+#events {
+  text-align: center; }
+  #events iframe {
+    width: 100%;
+    height: 400px;
+    max-width: 650px; }
+
 .footer {
   font-family: "SF Pro Text Light";
   font-size: 11px;
@@ -227,8 +238,11 @@ body {
   color: rgba(0, 0, 0, 0.45); }
   .footer img {
     filter: grayscale(100%); }
+  .footer .icon-gap {
+    display: inline-block;
+    width: 10px; }
   .footer .icon {
-    height: 20px; }
+    height: 15px; }
   .footer:hover {
     color: rgba(0, 0, 0, 0.84); }
     .footer:hover a {

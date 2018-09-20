@@ -8,7 +8,6 @@ import Home from './components/Home'
 import Book from './components/Book'
 import Papers from './components/Papers'
 import Events from './components/Events'
-import CV from './components/CV'
 import About from './components/About'
 import Footer from './components/partials/Footer'
 import BuddhismCover from './imgs/buddism-cover.jpg'
@@ -17,7 +16,7 @@ import infoPic from './imgs/about.JPG'
 import './App.css'
 
 const links = 
-    ['home', 'buddhism and psychology', 'freud in china', 'papers', 'Events','cv', 'about']
+    ['home', 'buddhism and psychology', 'freud in china', 'papers', 'Events', 'about']
     .map(ele => ele.toLowerCase())
 
 const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
@@ -49,15 +48,12 @@ class App extends Component {
                     />
                 )}/>
                 <Route path={pageLinks[3]} render={() => (
-                    <Events />
-                )}/>
-                <Route path={pageLinks[4]} render={() => (
                     <Papers />
                 )}/>
-                <Route path={pageLinks[5]} render={() => (
-                    <CV />
+                <Route path={pageLinks[4]} render={() => (
+                    <Events />
                 )}/>
-                <Route path={pageLinks[6]} render={() => (
+                <Route path={pageLinks[5]} render={() => (
                     <About
                         infoPic = {infoPic}
                     />
