@@ -209,7 +209,7 @@ body {
   .about .info-pic {
     height: 175px;
     float: left;
-    margin-right: 2em; }
+    margin: 0 2em 1.5em 0; }
   .about .clear {
     clear: both; }
   .about .detail-info {
@@ -223,12 +223,18 @@ body {
   font-size: 11px;
   text-align: center;
   border-top: #dddddd solid 1px;
-  padding: 11px 0;
+  padding: 20px 0 11px 0;
   color: rgba(0, 0, 0, 0.45); }
+  .footer img {
+    filter: grayscale(100%); }
+  .footer .icon {
+    height: 20px; }
   .footer:hover {
     color: rgba(0, 0, 0, 0.84); }
     .footer:hover a {
       color: rgba(0, 0, 0, 0.84); }
+    .footer:hover img {
+      filter: none; }
   .footer a {
     color: rgba(0, 0, 0, 0.45);
     cursor: pointer;

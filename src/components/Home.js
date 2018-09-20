@@ -17,7 +17,7 @@ export default class Home extends PureComponent {
     }
 
     updateImageHeight = () => {
-        const headerAndFooterHeight = 248
+        const headerAndFooterHeight = 279
         let height = window.innerHeight - headerAndFooterHeight
         // Smallest height: 200. Prevent the image from being disppeared.
         height =  height >= 200 ? height : 200

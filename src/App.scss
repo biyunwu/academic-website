@@ -333,7 +333,7 @@ body {
     .info-pic {
         height: 175px;
         float: left;
-        margin-right: 2em;
+        margin: 0 2em 1.5em 0;
     }
 
     .clear {
@@ -353,14 +353,26 @@ body {
     text-align: center;
     border-top: $border-color solid 1px;
     // background: $background-color;
-    padding: 11px 0;
+    padding: 20px 0 11px 0;
     color: $navlink-color;
+    
+    img {
+        filter: grayscale(100%);
+    }
+
+    .icon {
+        height: 20px;
+    }
 
     &:hover {
         color: $main-text-color;
 
         a {
             color: $main-text-color;
+        }
+
+        img {
+            filter: none;
         }
     }
 
