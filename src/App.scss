@@ -50,6 +50,13 @@ $button-font: 'SF Pro Text Regular';
     border-bottom: $link-seperator-color 1px solid;
 }
 
+@mixin justifyText {
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+    text-align: justify;
+    word-break: keep-all;
+}
+
 html {
     * ::selection {
         background: $link-seperator-color;
@@ -228,12 +235,7 @@ body {
 
     .book-text {
         font-size: 18px;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 1.58;
-        letter-spacing: -0.003em;
-        text-align: justify;
-        word-break: keep-all;
+        @include justifyText;
     }
 
     .book-review {
@@ -329,8 +331,17 @@ body {
     }
 
     .info-pic {
-        width: 200px;
+        height: 175px;
         float: left;
+        margin-right: 2em;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .detail-info {
+        @include justifyText;
     }
 }
 
