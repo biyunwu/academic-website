@@ -1,17 +1,14 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
+import Moral from './../video/moral.mp4'
 
 export default class Events extends PureComponent {
     render () {
         return (
             <main id='events'>
-                <iframe
-                    title='Video of the event'
-                    src="https://www.youtube.com/embed/IefIdc4ms0o?rel=0&amp;showinfo=0"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen={true}
-                >
-                </iframe>
+                <video controls>
+                    <source src={Moral} type="video/mp4" />
+                    <p>Your browser doesn't support HTML5 video.</p>
+                </video>
             </main>
         )
     }
