@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Logo from './../../imgs/logo.png'
 
 export default class Header extends Component {
     getLink = (link) => link !== 'home'? '/' + link.replace(/ /g, "_") : '/'
@@ -25,8 +26,9 @@ export default class Header extends Component {
         return (    
             <div className="header">
                 <header>
-                    <h1 className="App-title"><a href='/'>Tao Jiang</a>
-                    </h1>
+                    {/* <h1 className="App-title"><a href='/'>Tao Jiang</a>
+                    </h1> */}
+                    <a href='/'><img src={Logo} alt='logo' style={{maxHeight: '50px', display: 'inline-block'}}/></a>
                     <ul className="nav">
                         {navlinks}
                     </ul>

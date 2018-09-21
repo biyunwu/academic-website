@@ -391,6 +391,7 @@ body {
 
         a {
             color: $main-text-color;
+            text-decoration: underline;
         }
 
         img {
@@ -402,16 +403,12 @@ body {
         color: $navlink-color;
         cursor: pointer;
         text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
-    .taojiang {
-        font-family: $header-title-font;
-        font-size: 15px;
-    }
+    // .taojiang {
+    //     font-family: $header-title-font;
+    //     font-size: 15px;
+    // }
 }
 
 

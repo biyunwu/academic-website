@@ -246,15 +246,11 @@ body {
   .footer:hover {
     color: rgba(0, 0, 0, 0.84); }
     .footer:hover a {
-      color: rgba(0, 0, 0, 0.84); }
+      color: rgba(0, 0, 0, 0.84);
+      text-decoration: underline; }
     .footer:hover img {
       filter: none; }
   .footer a {
     color: rgba(0, 0, 0, 0.45);
     cursor: pointer;
     text-decoration: none; }
-    .footer a:hover {
-      text-decoration: underline; }
-  .footer .taojiang {
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 15px; }
