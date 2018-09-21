@@ -236,8 +236,6 @@ body {
   border-top: #dddddd solid 1px;
   padding: 20px 0 11px 0;
   color: rgba(0, 0, 0, 0.45); }
-  .footer img {
-    filter: grayscale(100%); }
   .footer .icon-gap {
     display: inline-block;
     width: 10px; }
@@ -248,8 +246,6 @@ body {
     .footer:hover a {
       color: rgba(0, 0, 0, 0.84);
       text-decoration: underline; }
-    .footer:hover img {
-      filter: none; }
   .footer a {
     color: rgba(0, 0, 0, 0.45);
     cursor: pointer;

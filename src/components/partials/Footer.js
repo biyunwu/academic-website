@@ -3,7 +3,7 @@ import LinkedIn from './../../imgs/linkedin.png'
 import Rutgers from './../../imgs/rutgers.png'
 import GoogleScholar from './../../imgs/google-scholar.png'
 import Academia from './../../imgs/academia.png'
-import Logo from './../../imgs/logo.png'
+// import Logo from './../../imgs/logo.png'
 
 export default class Header extends Component {
     render () {

@@ -372,10 +372,6 @@ body {
     // background: $background-color;
     padding: 20px 0 11px 0;
     color: $navlink-color;
-    
-    img {
-        filter: grayscale(100%);
-    }
 
     .icon-gap {
         display: inline-block;
@@ -392,10 +388,6 @@ body {
         a {
             color: $main-text-color;
             text-decoration: underline;
-        }
-
-        img {
-            filter: none;
         }
     }
 
