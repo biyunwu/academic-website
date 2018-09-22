@@ -3,6 +3,7 @@ import LinkedIn from './../../imgs/linkedin.png'
 import Rutgers from './../../imgs/rutgers.png'
 import GoogleScholar from './../../imgs/google-scholar.png'
 import Academia from './../../imgs/academia.png'
+import Email from './../../imgs/e-mail.svg'
 // import Logo from './../../imgs/logo.png'
 
 export default class Header extends Component {
@@ -29,6 +30,10 @@ export default class Header extends Component {
                     <span className='icon-gap'></span>
                     <a href='https://www.linkedin.com/in/tao-jiang-bb80b837/' target='_blank' rel='noopener noreferrer'>
                         <img className='icon' src={LinkedIn} alt='LinkedIn' />
+                    </a>
+                    <span className='icon-gap'></span>
+                    <a href='mailto:tjiang@rutgers.edu'>
+                        <img className='icon' src={Email} alt='Click to send Email to Tao Jiang' />
                     </a>
                     {copyright}
                     <p>Created by <a href='https://biyunwu.com' target='_blank' rel="noopener noreferrer">Biyun Wu</a></p>

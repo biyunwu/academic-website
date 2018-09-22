@@ -40,14 +40,14 @@ body {
     min-height: 100vh; }
     body .app main {
       flex: 1;
-      margin-top: 0.8em; }
+      margin-top: 0; }
 
 .header {
   text-align: center;
   color: rgba(0, 0, 0, 0.45);
   border-bottom: #dddddd solid 1px; }
   .header header {
-    padding: 25px 0; }
+    padding: 20px 0; }
     .header header img {
       height: 40px; }
     .header header h1 a {
@@ -61,7 +61,7 @@ body {
   .header .nav {
     display: block;
     padding: 0;
-    margin: 14px auto;
+    margin: 10px auto;
     padding: 0 0.5em;
     font-family: "SF Pro Text Light";
     font-size: 14px;
@@ -205,7 +205,6 @@ body {
     font-style: italic; }
 
 #background-image {
-  background-image: url("./imgs/tj.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

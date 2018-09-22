@@ -48,6 +48,11 @@ const data = {
         ]
     },
 
+    bookCoverColors: {
+        buddhism: 'rgb(236, 133, 19)',
+        freud: 'rgb(11, 81, 120)'
+    },
+
     events: {
         date: '2018-06-07',
         location: 'China Institute',

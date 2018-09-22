@@ -89,7 +89,7 @@ body {
         & main {
             flex: 1;
             // Reduce top margin
-            margin-top: 0.8em;
+            margin-top: 0;
         }
     }
 }
@@ -104,7 +104,7 @@ body {
     border-bottom: $border-color solid 1px;
 
     header {
-        padding: 25px 0;
+        padding: 20px 0;
 
         img {
             height: 40px;
@@ -127,7 +127,8 @@ body {
     .nav {
         display: block;
         padding: 0;
-        margin: 14px auto;
+        // margin: 14px auto;
+        margin: 10px auto;
         padding: 0 0.5em;
         font-family: $nav-link-font;
         font-size: 14px;
@@ -342,8 +343,7 @@ body {
 
 // Home
 #background-image {
-    background-image: url('./imgs/tj.jpg');
-    // height: 70vh;
+    // Image url is specified in Home component
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

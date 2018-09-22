@@ -1,28 +1,39 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Logo from './../../imgs/logo.png'
 
 export default class Header extends Component {
-    getLink = (link) => link !== 'home'? '/' + link.replace(/ /g, "_") : '/'
 
-    getActivePageClassName = (link) => link !== window.location.pathname ? '' : 'active' 
-
-    generateNavLinks = (links) => links.map((link, idx) => 
+    generateNavLinks = (links, bookCoverColors) => links.map((link, idx) => 
             <li className="nav-item" key={idx}>
-                <Link
+                <NavLink
                     to={this.getLink(link)}
-                    className={'nav-link ' + this.getActivePageClassName(this.getLink(link))}
+                    // Only homepage use exact pathname
+                    exact={idx===0 ? true : false}
+                    className={'nav-link'}
+                    activeClassName='active'
+                    activeStyle={this.getLinkColor(link, bookCoverColors)}
                     id={link}
                 >
                     {link}
-                </Link>
+                </NavLink>
                 { idx !== links.length -1 && <span className='link-seperator'>|</span>}
             </li>
     )
 
+    getLink = (link) => link !== 'home'? '/' + link.replace(/ /g, "_") : '/'
+
+    getLinkColor = (link, bookCoverColors) => {
+        for (const bookname in bookCoverColors) {
+            if (link.includes(bookname)) {
+                return {color: `${bookCoverColors[bookname]}`}
+            }
+        }
+    }
+
     render() {
-        const {links} = this.props
-        const navlinks = this.generateNavLinks(links)
+        const {links, bookCoverColors} = this.props
+        const navlinks = this.generateNavLinks(links, bookCoverColors)
         return (    
             <div className="header">
                 <header>

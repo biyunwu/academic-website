@@ -29,6 +29,7 @@ class App extends Component {
             <div className='app'>
                 <Header 
                     links = {links}
+                    bookCoverColors = {data.bookCoverColors}
                 />
                 <Route exact path='/' render={() => (
                     <Home />
