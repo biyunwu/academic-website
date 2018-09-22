@@ -57,6 +57,13 @@ $button-font: 'SF Pro Text Regular';
     word-break: keep-all;
 }
 
+@media all and (max-width: 480px) {
+    .book-text, .detail-info {
+        text-align: left !important;
+        word-wrap: normal !important;
+    }
+}
+
 html {
     * ::selection {
         background: $link-seperator-color;
@@ -73,6 +80,18 @@ body {
     // margin: 0 auto;
     font-family: $main-text-font;
     color: $main-text-color;
+
+    .app {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        & main {
+            flex: 1;
+            // Reduce top margin
+            margin-top: 0.8em;
+        }
+    }
 }
 
 // Header
@@ -86,6 +105,10 @@ body {
 
     header {
         padding: 25px 0;
+
+        img {
+            height: 40px;
+        }
         
         h1 a {
         // color: $main-text-color;
@@ -329,9 +352,36 @@ body {
 }
 
 // About
+@media all and (max-width: 480px) {
+    .pic-container {
+        text-align: center;
+    }
+    .info-pic {
+        float: none !important;
+        margin: 0 !important;
+        width: 50%;
+        height: auto !important;
+    }
+}
+@media all and (min-width: 800px) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 4em;
+
+        // .detail-info {
+        //     @include justifyText;
+        // }
+    }
+
+    .info {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
 .about {
     @include limitWidth;
-    font-family: $nav-link-font;
+    font-size: 18px;
 
     h2 {
         @include mainTitle;
@@ -340,15 +390,43 @@ body {
     .info-pic {
         height: 175px;
         float: left;
-        margin: 0 2em 1.5em 0;
+        margin: 6px 1.5em 0.8em 0;
+    }
+
+    .detail-info {
+        @include justifyText;
+
+        #lastname {
+            font-size: 80%;
+        }
+
+        .italic {
+            font-style: italic;
+        }
     }
 
     .clear {
         clear: both;
     }
 
-    .detail-info {
-        @include justifyText;
+    a {
+        // text-decoration: none;
+        color: $main-text-color;
+    }
+
+    .contact {
+        list-style: none;
+        padding: 0;
+
+        // &:hover {
+        //     a {
+        //         text-decoration: underline;
+        //     }
+        // }
+
+        address {
+            font-style: normal;
+        }
     }
 }
 
@@ -357,7 +435,7 @@ body {
     text-align: center;
     video {
         width: 100%;
-        height: 400px;
+        max-height: 400px;
         max-width: 650px;
     }
 }
