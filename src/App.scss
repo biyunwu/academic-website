@@ -348,7 +348,11 @@ body {
     font-size: 18px;
 
     ul {
-        padding-left: 0;
+        // padding-left: 0;
+
+        li {
+            list-style: upper-alpha;
+        }
     }
 }
 

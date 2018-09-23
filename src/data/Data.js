@@ -50,25 +50,54 @@ const data = {
         ]
     },
 
-    papers: [
-        `“The_Problem_of_Authorship_and_the_Project_of_Chinese_Philosophy:_Zhuang_Zhou_and_the_Zhuangzi_between_Sinology_and_Philosophy_in_Western_Academy,” Dao: A Journal of Comparative Philosophy 15.1 (March 2016)`,
-        `“Incommensurability_of_Two_Conceptions_of_Reality:_Dependent_Origination_and_Emptiness_in_Nāgārjuna’s_MMK,” Philosophy East and West 64.1 (January 2014)`,
-        `“Isaiah_Berlin’s_Challenge_to_the_Zhuangzian_Freedom,” Journal of Chinese Philosophy (2012, supplementary issue)`,
-        `“Two_Notions_of_Freedom_in_Classical_Chinese_Thought:_The_Concept_of_Hua_(化)_in_the_Zhuangzi_and_the_Xunzi” Dao: A Journal of Comparative Philosophy X.4 (Winter 2011)`,
-        `“Accessibility_of_the_Subliminal_Mind:_Transcendence_vs._Immanence,” Continental Philosophy Review 38:3-4 (September-December, 2005)`,
-        `“The_Problematic_of_Continuity:_Nishida_Kitarō_and_Aristotle,” Philosophy East & West 55:3 (July 2005)`,
-        `“Ālayavijñāna_and_the_Problematic_of_Continuity_in_the_Cheng_Weishi_Lun,” Journal of Indian Philosophy 33:3 (June 2005)`,
-        `“The_Role_of_History_in_Chan/Zen_Enlightenment,” Dao: A Journal of Comparative Philosophy IV.1 (Winter 2004)`,
-        `“The_Storehouse_Consciousness_and_the_Unconscious:_A_Comparative_Study_of_Xuan_Zang_and_Freud_on_the_Subliminal_Mind,” Journal of the American Academy of Religion 72:1 (March, 2004)`,
-        `“A_Buddhist_Scheme_in_Engaging_Modern_Science:_The_Case_of_Taixu_(1890-1947),” Journal of Chinese Philosophy 29:4 (December, 2002)`,
-        `“The_Problematic_of_Whole/Part_and_the_Horizon_of_the_Enlightened_in_Huayan_Buddhism,” Journal of Chinese Philosophy 28:4 (December, 2001)`,
-        `“Character_is_the_Way:_The_Path_to_Spiritual_Freedom_in_the_Linji_lu,” in Dao Companion to Chinese Buddhist Philosophy, edited by Youru Wang and Sandra Wawrytko, Springer (forthcoming in 2019)`,
-        `“Oneness_and_its_Discontent:_Contesting_Ren_in_Classical_Chinese_Philosophy,” in The Oneness Hypothesis: Beyond the Boundary of Self, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
-        `“Linji_and_William_James_on_Mortality:_Two_Visions_of_Pragmatism,” in Mortality in Traditional China, edited by Amy Olberding and Philip J. Ivanhoe. SUNY (May, 2011)`,
-        `“Augustine_and_Aquinas_on_the_Will” (in Chinese), in Frontiers of Western Philosophy, edited by Jiyuan Yu. Beijing, China: Renmin University Press (2008)`,
-        `“The_Dilemma_of_Skillful_Means_in_Buddhist_Pedagogy:_Desire_and_Education_in_the_Lotus_Sūtra,” in Education and Their Purposes: A Philosophical Dialogue among Cultures, edited by Roger Ames and Peter Hershock (University of Hawaii Press, 2007)`,
-        `“Intimate_Authority:_The_Rule_of_Ritual_in_Classical_Confucian_Political_Discourse,” Chapter Two in Confucian Cultures of Authority in Practice: China, edited by Roger Ames and Peter Hershock.  (State University of New York Press, 2006)`
-    ],
+    papers: {
+        tags: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosoph'],
+        items: [
+            {
+                title: `“Oneness and its Discontent: Contesting Ren in Classical Chinese Philosophy,” in The Oneness Hypothesis: Beyond the Boundary of Self, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
+                tag: 0
+            },{
+                title: `“The Problem of Authorship and the Project of Chinese Philosophy: ZHUANG Zhou and the Zhuangzi between Sinology and Philosophy in Western Academy,” Dao: A Journal of Comparative Philosophy 15.1, 2016`,
+                tag: 0
+            },{
+                title: `“Incommensurability of Two Conceptions of Reality: Dependent Origination and Emptiness in Nāgārjuna’s MMK,” Philosophy East and West 64.1, 2014`,
+                tag: 1
+            },{
+                title: `“Isaiah Berlin’s Challenge to the Zhuangzian Freedom,” Journal of Chinese Philosophy 2012`,
+                tag: [0,2]
+            },{
+                title: `“Linji and William James on Mortality: Two Visions of Pragmatism,” in Mortality in Traditional China, edited by Amy Olberding and Philip J. Ivanhoe. SUNY, 2011`,
+                tag: [0,1,2]
+            },{
+                title: `“The Dilemma of Skillful Means in Buddhist Pedagogy: Desire and Education in the Lotus Sūtra,” in Education and Their Purposes: A Philosophical Dialogue among Cultures, edited by Roger Ames and Peter Hershock, University of Hawaii Press, 2007`,
+                tag: 1
+            },{
+                title: `“Intimate Authority: The Rule of Ritual in Classical Confucian Political Discourse,” Chapter Two in Confucian Cultures of Authority in Practice: China, edited by Roger Ames and Peter Hershock. State University of New York Press, 2006`,
+                tag: 0
+            },{
+                title: `“Ālayavijñāna and the Problematic of Continuity in the Cheng Weishi Lun,” Journal of Indian Philosophy 33:3, 2005`,
+                tag: 1
+            },{
+                title: `“Accessibility of the Subliminal Mind: Transcendence vs. Immanence,” Continental Philosophy Review 38:3-4, 2005`,
+                tag: [1,2]
+            },{
+                title: `“The Problematic of Continuity: Nishida Kitarō and Aristotle,” Philosophy East & West 55:3, 2005`,
+                tag: 2
+            },{
+                title: `“The Storehouse Consciousness and the Unconscious: A Comparative Study of Xuan Zang and Freud on the Subliminal Mind,” Journal of the American Academy of Religion 72:1, 2004`,
+                tag: [1,2]
+            },{
+                title: `“The Role of History in Chan/Zen Enlightenment,” Dao: A Journal of Comparative Philosophy IV.1, 2004`,
+                tag: [0,1]
+            },{
+                title: `“A Buddhist Scheme in Engaging Modern Science: The Case of Taixu (1890-1947),” Journal of Chinese Philosophy 29:4, 2002`,
+                tag: [0,1]
+            },{
+                title: `“The Problematic of Whole/Part and the Horizon of the Enlightened in Huayan Buddhism,” Journal of Chinese Philosophy 28:4, 2001`,
+                tag: [0,1]
+            }
+        ]
+    },
 
     events: {
         date: '2018-06-07',
@@ -78,15 +107,4 @@ const data = {
     }
 }
 
-export const getData = () => JSON.stringify({data})
-
-export const getBooksColors = () => {
-    const bookCoverColors = {}
-    Object.keys(data).forEach(key => {
-        const color = data[key].bookCoverColor
-        if (color) {
-            bookCoverColors[key] = color
-        }
-    })
-    return bookCoverColors
-}
+export const getData = () => JSON.stringify(data)

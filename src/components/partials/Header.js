@@ -37,7 +37,11 @@ export default class Header extends Component {
         return (    
             <div id="header">
                 <header>
-                    <a href='/'><img src={Logo} alt='logo' style={{maxHeight: '50px', display: 'inline-block'}}/></a>
+                    <h1 style={{width: "100%", margin:'0'}}>
+                        <a href='/' style={{verticalAlign: 'middle'}}>
+                            <img src={Logo} alt='logo' style={{display: 'inline-block', verticalAlign: 'middle'}}/>
+                        </a>
+                    </h1>
                     <ul className="nav">
                         {navlinks}
                     </ul>

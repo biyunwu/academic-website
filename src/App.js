@@ -3,13 +3,12 @@ import { Route } from 'react-router-dom'
 import * as Data from './data/Data'
 import Header from './components/partials/Header';
 import Home from './components/Home'
-// import Buddhism from './components/Buddhsim'
-// import Freud from './components/Freud'
 import Book from './components/Book'
 import Papers from './components/Papers'
 import Events from './components/Events'
 import About from './components/About'
 import Footer from './components/partials/Footer'
+import BackgroundImage from './imgs/tj.jpg'
 import BuddhismCover from './imgs/buddism-cover.jpg'
 import FreudCover from './imgs/freud.jpg'
 import infoPic from './imgs/about.JPG'
@@ -35,8 +34,8 @@ class App extends Component {
     }
 
     render() {
-        const data = JSON.parse(Data.getData()).data
-        const booksColors = Data.getBooksColors()
+        const data = JSON.parse(Data.getData())
+        const booksColors = this.getBooksColors(data)
 
         return (
             <div className='app'>
@@ -45,7 +44,9 @@ class App extends Component {
                     booksColors = {booksColors}
                 />
                 <Route exact path='/' render={() => (
-                    <Home />
+                    <Home
+                        backgroundImage = {BackgroundImage}
+                    />
                 )}/>
                 <Route path={pageLinks[1]} render={() => (
                     // <Buddhism />

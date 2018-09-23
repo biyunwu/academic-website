@@ -215,8 +215,8 @@ body {
   margin: 0 auto 2.5em auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
-  #papers-div ul {
-    padding-left: 0; }
+  #papers-div ul li {
+    list-style: upper-alpha; }
 
 @media all and (max-width: 480px) {
   .pic-container {
