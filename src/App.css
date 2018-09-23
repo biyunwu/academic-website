@@ -34,31 +34,38 @@ html button:active, html button:focus {
 body {
   font-family: "medium-content-serif-font";
   color: rgba(0, 0, 0, 0.84); }
+  body h2 {
+    font-family: "SF Pro Text Light";
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 40px;
+    font-style: normal;
+    padding: 0 0 10px 0;
+    border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
   body .app {
     display: flex;
     flex-direction: column;
     min-height: 100vh; }
     body .app main {
-      flex: 1;
-      margin-top: 0; }
+      flex: 1; }
 
-.header {
+#header {
   text-align: center;
   color: rgba(0, 0, 0, 0.45);
   border-bottom: #dddddd solid 1px; }
-  .header header {
+  #header header {
     padding: 20px 0; }
-    .header header img {
+    #header header img {
       height: 40px; }
-    .header header h1 a {
+    #header header h1 a {
       color: black;
       text-decoration: none; }
-  .header .App-title {
+  #header .App-title {
     /* title: */
     font-family: "Nanum Brush Script", cursive;
     font-size: 48px;
     margin: 0; }
-  .header .nav {
+  #header .nav {
     display: block;
     padding: 0;
     margin: 10px auto;
@@ -66,28 +73,28 @@ body {
     font-family: "SF Pro Text Light";
     font-size: 14px;
     font-weight: 600; }
-    .header .nav .link-seperator {
+    #header .nav .link-seperator {
       padding: 0 7px;
       color: rgba(0, 0, 0, 0.1); }
-  .header .nav-item {
+  #header .nav-item {
     list-style: none;
     display: inline-block;
     line-height: 1.8em; }
-    .header .nav-item .nav-link {
+    #header .nav-item .nav-link {
       color: rgba(0, 0, 0, 0.45);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 1px;
       white-space: nowrap; }
-      .header .nav-item .nav-link:hover {
+      #header .nav-item .nav-link:hover {
         color: rgba(0, 0, 0, 0.84); }
-    .header .nav-item .active {
+    #header .nav-item .active {
       color: #000000; }
 
 .book {
   max-width: 1200px;
   padding: 0 3%;
-  margin: 1.5em auto 2.5em auto; }
+  margin: 0 auto 2.5em auto; }
   @media all and (max-width: 374px) {
     .book .book-text {
       text-align: left !important;
@@ -164,14 +171,6 @@ body {
     .book .hidden > * {
       visibility: hidden;
       height: 0; }
-  .book .main-title {
-    font-family: "SF Pro Text Light";
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 40px;
-    font-style: normal;
-    padding: 0 0 10px 0;
-    border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
   .book .publisher {
     font-family: "SF Pro Text Light";
     font-size: 13px;
@@ -210,6 +209,15 @@ body {
   background-position: center center;
   background-attachment: local; }
 
+#papers-div {
+  max-width: 1200px;
+  padding: 0 3%;
+  margin: 0 auto 2.5em auto;
+  color: rgba(0, 0, 0, 0.84);
+  font-size: 18px; }
+  #papers-div ul {
+    padding-left: 0; }
+
 @media all and (max-width: 480px) {
   .pic-container {
     text-align: center; }
@@ -231,16 +239,8 @@ body {
 .about {
   max-width: 1200px;
   padding: 0 3%;
-  margin: 1.5em auto 2.5em auto;
+  margin: 0 auto 2.5em auto;
   font-size: 18px; }
-  .about h2 {
-    font-family: "SF Pro Text Light";
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 40px;
-    font-style: normal;
-    padding: 0 0 10px 0;
-    border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
   .about .info-pic {
     height: 175px;
     float: left;

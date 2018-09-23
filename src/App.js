@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import * as Data from './Data'
+import * as Data from './data/Data'
 import Header from './components/partials/Header';
 import Home from './components/Home'
 // import Buddhism from './components/Buddhsim'
@@ -22,14 +22,27 @@ const links =
 const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
 
 class App extends Component {
+
+    getBooksColors = (data) => {
+        const bookCoverColors = {}
+        Object.keys(data).forEach(key => {
+            const color = data[key].bookCoverColor
+            if (color) {
+                bookCoverColors[key] = color
+            }
+        })
+        return bookCoverColors
+    }
+
     render() {
         const data = JSON.parse(Data.getData()).data
+        const booksColors = Data.getBooksColors()
 
         return (
             <div className='app'>
                 <Header 
                     links = {links}
-                    bookCoverColors = {data.bookCoverColors}
+                    booksColors = {booksColors}
                 />
                 <Route exact path='/' render={() => (
                     <Home />
@@ -49,7 +62,9 @@ class App extends Component {
                     />
                 )}/>
                 <Route path={pageLinks[3]} render={() => (
-                    <Papers />
+                    <Papers
+                        papers = {data.papers}
+                    />
                 )}/>
                 <Route path={pageLinks[4]} render={() => (
                     <Events />

@@ -32,7 +32,7 @@ export default class Book extends PureComponent {
 
         return (
             <main className='book'>
-                <h2 className='main-title'>
+                <h2>
                     {title}
                 </h2>
                 <div className='grid'>
@@ -59,7 +59,7 @@ export default class Book extends PureComponent {
 
                     {primaryReview && 
                         <div className='book-review'>
-                            <h2 className='main-title'>Reviews</h2>
+                            <h2>Reviews</h2>
                                 <p className='book-text'>
                                     {primaryReview.review}
                                 </p>

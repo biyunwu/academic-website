@@ -33,21 +33,7 @@ $button-font: 'SF Pro Text Regular';
 @mixin limitWidth {
     max-width: 1200px;
     padding: 0 3%;
-    margin: 1.5em auto 2.5em auto;
-}
-
-@mixin mainTitle {
-    // font-family: $main-title-font, sans-serif;
-    // font-family: 'AvenirNext-Regular';
-    // font-family: $footer-font;
-    font-family: $nav-link-font;
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 40px;
-    font-style: normal;
-    padding: 0 0 10px 0;
-    // border-bottom: $border-color 1px solid;
-    border-bottom: $link-seperator-color 1px solid;
+    margin: 0 auto 2.5em auto;
 }
 
 @mixin justifyText {
@@ -81,6 +67,16 @@ body {
     font-family: $main-text-font;
     color: $main-text-color;
 
+    h2 {
+        font-family: $nav-link-font;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 40px;
+        font-style: normal;
+        padding: 0 0 10px 0;
+        border-bottom: $link-seperator-color 1px solid;
+    }
+
     .app {
         display: flex;
         flex-direction: column;
@@ -88,14 +84,12 @@ body {
 
         & main {
             flex: 1;
-            // Reduce top margin
-            margin-top: 0;
         }
     }
 }
 
 // Header
-.header {
+#header {
     text-align: center;
     color: $navlink-color;
     // background: $background-color;
@@ -288,10 +282,6 @@ body {
         }
     }
 
-    .main-title {
-        @include mainTitle;
-    }
-
     .publisher {
         font-family: $nav-link-font;
         font-size: 13px;
@@ -351,6 +341,17 @@ body {
     background-attachment: local;
 }
 
+// Papers
+#papers-div {
+    @include limitWidth;
+    color: $main-text-color;
+    font-size: 18px;
+
+    ul {
+        padding-left: 0;
+    }
+}
+
 // About
 @media all and (max-width: 480px) {
     .pic-container {
@@ -382,10 +383,6 @@ body {
 .about {
     @include limitWidth;
     font-size: 18px;
-
-    h2 {
-        @include mainTitle;
-    }
 
     .info-pic {
         height: 175px;
