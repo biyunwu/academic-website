@@ -69,7 +69,7 @@ const data = {
                 title: `“Linji and William James on Mortality: Two Visions of Pragmatism,” in Mortality in Traditional China, edited by Amy Olberding and Philip J. Ivanhoe. SUNY, 2011`,
                 tags: [0,1,2]
             },{
-                title: `“The Dilemma of Skillful Means in Buddhist Pedagogy: Desire and Education in the Lotus Sūtra,” in Education and Their Purposes: A Philosophical Dialogue among Cultures, edited by Roger Ames and Peter Hershock, University of Hawaii Press, 2007`,
+                title: `“The Dilemma of Skillful Means in Buddhist Pedagogy: Desire and Educations in the Lotus Sūtra,” in Education and Their Purposes: A Philosophical Dialogue among Cultures, edited by Roger Ames and Peter Hershock, University of Hawaii Press, 2007`,
                 tags: 1
             },{
                 title: `“Intimate Authority: The Rule of Ritual in Classical Confucian Political Discourse,” Chapter Two in Confucian Cultures of Authority in Practice: China, edited by Roger Ames and Peter Hershock. State University of New York Press, 2006`,

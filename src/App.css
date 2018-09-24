@@ -216,36 +216,36 @@ body {
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
   #papers-div div.options {
-    text-align: center; }
+    text-align: center;
+    margin: 1em 0; }
   #papers-div .tag-button-container, #papers-div .tag {
     font-size: 35px; }
   #papers-div div.tag-button-container {
-    display: inline-block; }
-    #papers-div div.tag-button-container button {
+    display: inline-block;
+    margin-top: 5px; }
+    #papers-div div.tag-button-container div {
       width: 180px;
       border: none;
-      cursor: pointer;
       font-family: "SF Pro Text Regular";
       font-size: 14px;
       color: white;
-      padding: 0.5em; }
-      #papers-div div.tag-button-container button:hover {
+      padding: 0.5em;
+      margin: 0 5px;
+      border-radius: 2px; }
+      #papers-div div.tag-button-container div:hover {
         color: white; }
-  @media all and (min-width: 481px) {
-    #papers-div div.tag-button-container + div.tag-button-container {
-      margin-left: 10px; } }
   #papers-div ul {
-    padding-left: 0;
+    padding-left: 20px;
     line-height: 1.58;
     letter-spacing: -0.003em;
     text-align: justify;
     word-break: keep-all; }
-    #papers-div ul li {
-      list-style: none; }
-      #papers-div ul li p {
-        margin: 0 0 1.5em 0; }
-      #papers-div ul li span.tag {
-        line-height: 0; }
+    #papers-div ul li p {
+      margin: 2em 0; }
+    #papers-div ul li span.tag-container {
+      margin: 0 0 0 5px; }
+    #papers-div ul li span.tag {
+      line-height: 0; }
 
 @media all and (max-width: 480px) {
   .pic-container {

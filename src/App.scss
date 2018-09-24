@@ -349,6 +349,7 @@ body {
 
     div.options {
         text-align: center;
+        margin: 1em 0;
     }
 
     .tag-button-container, .tag {
@@ -357,15 +358,17 @@ body {
 
     div.tag-button-container {
         display: inline-block;
+        margin-top: 5px;
 
-        button {
+        div {
             width: 180px;
             border: none;
-            cursor: pointer;
             font-family: $button-font;
             font-size: 14px;
             color: white;
             padding: 0.5em;
+            margin: 0 5px;
+            border-radius: 2px;
 
             &:hover {
                 color: white;
@@ -373,25 +376,28 @@ body {
         }
     }
 
-    @media all and (min-width: 481px) {
-        div.tag-button-container+div.tag-button-container{
-            margin-left: 10px;
-        }
-    }
+    // @media all and (min-width: 481px) {
+    //     div.tag-button-container+div.tag-button-container{
+    //         margin-left: 10px;
+    //     }
+    // }
 
     ul {
-        padding-left: 0;
+        padding-left: 20px;
         @include justifyText;
 
         li {
-            list-style: none;
+            // list-style: none;
 
             p {
-                margin: 0 0 1.5em 0;
+                margin: 2em 0;
+            }
+
+            span.tag-container {
+                margin: 0 0 0 5px;
             }
 
             span.tag {
-                // font-size: 25px;
                 line-height: 0;
             }
         }
