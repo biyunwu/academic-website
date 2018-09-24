@@ -40,7 +40,6 @@ body {
     font-weight: 500;
     line-height: 40px;
     font-style: normal;
-    padding: 0 0 10px 0;
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
   body .app {
     display: flex;

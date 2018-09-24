@@ -55,46 +55,60 @@ const data = {
         items: [
             {
                 title: `“Oneness and its Discontent: Contesting Ren in Classical Chinese Philosophy,” in The Oneness Hypothesis: Beyond the Boundary of Self, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
-                tags: 0
+                tags: 0,
+                pathname: 'Contesting_Ren_in_Classical_Chinese_Philosophy.pdf'
             },{
                 title: `“The Problem of Authorship and the Project of Chinese Philosophy: ZHUANG Zhou and the Zhuangzi between Sinology and Philosophy in Western Academy,” Dao: A Journal of Comparative Philosophy 15.1, 2016`,
-                tags: 0
+                tags: 0,
+                pathname: 'Problem_of_Authorship.pdf'
             },{
                 title: `“Incommensurability of Two Conceptions of Reality: Dependent Origination and Emptiness in Nāgārjuna’s MMK,” Philosophy East and West 64.1, 2014`,
-                tags: 1
+                tags: 1,
+                pathname: 'Incommensurability_of_Two_Conceptions_of_Reality.pdf'
             },{
                 title: `“Isaiah Berlin’s Challenge to the Zhuangzian Freedom,” Journal of Chinese Philosophy 2012`,
-                tags: [0,2]
+                tags: [0,2],
+                pathname: 'Zhuangzi_and_Berlin_on_freedom_JCP.pdf'
             },{
                 title: `“Linji and William James on Mortality: Two Visions of Pragmatism,” in Mortality in Traditional China, edited by Amy Olberding and Philip J. Ivanhoe. SUNY, 2011`,
-                tags: [0,1,2]
+                tags: [0,1,2],
+                pathname: 'Linji_and_William_James_on_Mortality.pdf'
             },{
                 title: `“The Dilemma of Skillful Means in Buddhist Pedagogy: Desire and Educations in the Lotus Sūtra,” in Education and Their Purposes: A Philosophical Dialogue among Cultures, edited by Roger Ames and Peter Hershock, University of Hawaii Press, 2007`,
-                tags: 1
+                tags: 1,
+                pathname: 'Dilemma_of_Skillful_Means_in_Buddhist_Pedagogy.pdf'
             },{
                 title: `“Intimate Authority: The Rule of Ritual in Classical Confucian Political Discourse,” Chapter Two in Confucian Cultures of Authority in Practice: China, edited by Roger Ames and Peter Hershock. State University of New York Press, 2006`,
-                tags: 0
+                tags: 0,
+                pathname: 'Intimate_Authority.pdf'
             },{
                 title: `“Ālayavijñāna and the Problematic of Continuity in the Cheng Weishi Lun,” Journal of Indian Philosophy 33:3, 2005`,
-                tags: 1
+                tags: 1,
+                pathname: 'Ālayavijñāna_and_continuity_JIP.pdf'
             },{
                 title: `“Accessibility of the Subliminal Mind: Transcendence vs. Immanence,” Continental Philosophy Review 38:3-4, 2005`,
-                tags: [1,2]
+                tags: [1,2],
+                pathname: 'Accessibility_of_the_subliminal_mind.pdf'
             },{
                 title: `“The Problematic of Continuity: Nishida Kitarō and Aristotle,” Philosophy East & West 55:3, 2005`,
-                tags: 2
+                tags: 2,
+                pathname: 'Nishida_and_Aristotle_on_continuity_PEW.pdf'
             },{
                 title: `“The Storehouse Consciousness and the Unconscious: A Comparative Study of Xuan Zang and Freud on the Subliminal Mind,” Journal of the American Academy of Religion 72:1, 2004`,
-                tags: [1,2]
+                tags: [1,2],
+                pathname: 'Ālayavijñāna_and_unconscious_JAAR.pdf'
             },{
                 title: `“The Role of History in Chan/Zen Enlightenment,” Dao: A Journal of Comparative Philosophy IV.1, 2004`,
-                tags: [0,1]
+                tags: [0,1],
+                pathname: 'Role_of_History_in_Chan_Zen_Enlightenment.pdf'
             },{
                 title: `“A Buddhist Scheme in Engaging Modern Science: The Case of Taixu (1890-1947),” Journal of Chinese Philosophy 29:4, 2002`,
-                tags: [0,1]
+                tags: [0,1],
+                pathname: 'Taixu_and_modern_science_JCP.pdf'
             },{
                 title: `“The Problematic of Whole/Part and the Horizon of the Enlightened in Huayan Buddhism,” Journal of Chinese Philosophy 28:4, 2001`,
-                tags: [0,1]
+                tags: [0,1],
+                pathname: 'Whole-part_in_Huayan_JCP.pdf'
             }
         ]
     },
