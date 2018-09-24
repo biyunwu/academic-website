@@ -220,9 +220,14 @@ body {
       word-break: normal; } }
   #papers-div div.options {
     text-align: center;
-    margin: 1em 0; }
+    margin: 1em 0 0 0;
+    position: sticky;
+    top: 0px;
+    background: white;
+    width: 100%; }
   #papers-div .tag-label-container, #papers-div .tag {
-    font-size: 35px; }
+    font-size: 35px;
+    padding-bottom: 10px; }
   #papers-div div.tag-label-container {
     display: inline-block;
     margin-top: 5px; }
@@ -243,7 +248,8 @@ body {
     text-align: justify;
     word-break: keep-all; }
     #papers-div ul li p {
-      margin: 2em 0; }
+      margin: 0 0 2em 0.5em;
+      text-indent: -0.4em; }
     #papers-div ul li span.tag-container {
       margin: 0 0 0 5px; }
     #papers-div ul li span.tag {
@@ -298,7 +304,9 @@ body {
       font-style: normal; }
 
 #events {
-  text-align: center; }
+  max-width: 1200px;
+  padding: 0 3%;
+  margin: 0 auto 2.5em auto; }
   #events video {
     width: 100%;
     max-height: 400px;

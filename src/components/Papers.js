@@ -43,8 +43,6 @@ export default class Papers extends PureComponent {
         <div className='tag-label-container' key={category}>
             <div id={'color'+idx} key={'color'+idx}
                 style={{backgroundColor: tagColors[idx]}}
-                // onMouseEnter={e => e.target.style.background=`${tagColors[idx]}`}
-                // onMouseLeave={e => e.target.style.background='white'}
             >
                 {category}
             </div>

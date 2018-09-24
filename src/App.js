@@ -68,7 +68,9 @@ class App extends Component {
                     />
                 )}/>
                 <Route path={pageLinks[4]} render={() => (
-                    <Events />
+                    <Events
+                        events = {data.events}
+                    />
                 )}/>
                 <Route path={pageLinks[5]} render={() => (
                     <About

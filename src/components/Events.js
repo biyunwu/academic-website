@@ -1,14 +1,29 @@
 import React, { PureComponent } from 'react'
-const filePath = 'https://media.githubusercontent.com/media/biyunwu/academic-web/master/src/data/video/moral.mp4'
 
 export default class Events extends PureComponent {
-    render () {
-        return (
-            <main id='events'>
+
+    generateEventDetail = (event) => 
+        <li key={event.location}>
+            {event.introduction}
+            {event.videoLink &&
                 <video controls>
-                    <source src={filePath} type="video/mp4" />
+                    <source src={event.videoLink} type="video/mp4" />
                     <p>Your browser doesn't support HTML5 video.</p>
                 </video>
+            }
+        </li>
+
+    render () {
+        const {academic, pub} = this.props.events
+        const academicEvents = academic.map(event => this.generateEventDetail(event))
+        const publicEvents = pub.map(event => this.generateEventDetail(event))
+        return (
+            <main id='events'>
+                <h2>A Few Events</h2>
+                <ul>
+                    {academicEvents}
+                    {publicEvents}
+                </ul>
             </main>
         )
     }

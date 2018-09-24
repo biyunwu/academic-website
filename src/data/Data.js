@@ -114,10 +114,22 @@ const data = {
     },
 
     events: {
-        date: '2018-06-07',
-        location: 'China Institute',
-        subject: `Religion and the Rebuilding of China's Moral Foundations`,
-        introduction: ``
+        academic: [
+            {
+                location: 'Rutgers University, New Brunswick, NJ',
+                subject: 'Chinese Philosophy Project',
+                introduction: `In order to promote a better understanding of Chinese philosophy, Tao Jiang launched the Rutgers Workshop on Chinese Philosophy (RWCP) in 2012 with Stephen Angle (Wesleyan) and Ruth Chang (Rutgers) (Dean Zimmerman took over from Ruth Chang as a co-director in 2018 when Change moves to Oxford). RWCP is designed to build a bridge between Chinese philosophy and Western analytic philosophy, promoting critical engagement and constructive dialogue between the two sides, with the hope of bringing the study of Chinese philosophy into the mainstream of philosophical discourse within the Western academy. It is run every other April. Here the *https://rccs.rutgers.edu/news/159-fourth-rutgers-workshop-on-chinese-philosophy-rwcp#!IMG_1460**link*** to the most recent meeting.`
+
+            }
+        ],
+        pub: [
+            {
+                location: 'New York, NY',
+                subject: `Religion and the Rebuilding of China's Moral Foundations`,
+                introduction: `On June 7, 2018, Tao JIANG participated in *https://rccs.rutgers.edu/news/166-tao-jiang-participated-in-a-panel-discussion-at-the-china-institute-in-nyc**a panel discussion at the China Institute*** on "Religion and the Rebuilding of China's Moral Foundations," with freelance writer Ian Johnson (Pulitzer-prize winner and the author of The Souls of China: The Return of Religion after Mao), moderated by Los Angeles Times journalist Barbara Demick (former LA Times Beijing and Seoul bureau chief and the author of Nothing to Envy: Ordinary Lives in North Korea). The event received an extensive *https://www.singtaousa.com/ny/436-%E7%B4%90%E7%B4%84/792717-%E5%B8%8C%E6%9C%9B%E7%94%A8%E5%82%B3%E7%B5%B1%E5%83%B9%E5%80%BC%E8%A7%80%E9%87%8D%E5%BB%BA%E4%BF%A1%E4%BB%B0%E9%AB%94%E7%B3%BB+%E4%B8%AD%E5%9C%8B%E5%B0%8D%E5%AE%97%E6%95%99%E5%8C%85%E5%AE%B9%E5%BA%A6%E6%9C%89%E6%98%8E%E9%A1%AF%E6%8F%90%E9%AB%98/**coverage in the Sing Tao Daily*** 星島日報, a newspaper widely circulated in the Chinese community.`,
+                videoLink: 'https://media.githubusercontent.com/media/biyunwu/academic-web/master/src/data/video/moral.mp4'
+            }
+        ]
     }
 }
 
