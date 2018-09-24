@@ -347,11 +347,53 @@ body {
     color: $main-text-color;
     font-size: 18px;
 
+    div.options {
+        text-align: center;
+    }
+
+    .tag-button-container, .tag {
+        font-size: 35px;
+    }
+
+    div.tag-button-container {
+        display: inline-block;
+
+        button {
+            width: 180px;
+            border: none;
+            cursor: pointer;
+            font-family: $button-font;
+            font-size: 14px;
+            color: white;
+            padding: 0.5em;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    @media all and (min-width: 481px) {
+        div.tag-button-container+div.tag-button-container{
+            margin-left: 10px;
+        }
+    }
+
     ul {
-        // padding-left: 0;
+        padding-left: 0;
+        @include justifyText;
 
         li {
-            list-style: upper-alpha;
+            list-style: none;
+
+            p {
+                margin: 0 0 1.5em 0;
+            }
+
+            span.tag {
+                // font-size: 25px;
+                line-height: 0;
+            }
         }
     }
 }

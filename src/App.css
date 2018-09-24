@@ -215,8 +215,37 @@ body {
   margin: 0 auto 2.5em auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
-  #papers-div ul li {
-    list-style: upper-alpha; }
+  #papers-div div.options {
+    text-align: center; }
+  #papers-div .tag-button-container, #papers-div .tag {
+    font-size: 35px; }
+  #papers-div div.tag-button-container {
+    display: inline-block; }
+    #papers-div div.tag-button-container button {
+      width: 180px;
+      border: none;
+      cursor: pointer;
+      font-family: "SF Pro Text Regular";
+      font-size: 14px;
+      color: white;
+      padding: 0.5em; }
+      #papers-div div.tag-button-container button:hover {
+        color: white; }
+  @media all and (min-width: 481px) {
+    #papers-div div.tag-button-container + div.tag-button-container {
+      margin-left: 10px; } }
+  #papers-div ul {
+    padding-left: 0;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+    text-align: justify;
+    word-break: keep-all; }
+    #papers-div ul li {
+      list-style: none; }
+      #papers-div ul li p {
+        margin: 0 0 1.5em 0; }
+      #papers-div ul li span.tag {
+        line-height: 0; }
 
 @media all and (max-width: 480px) {
   .pic-container {

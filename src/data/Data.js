@@ -51,50 +51,50 @@ const data = {
     },
 
     papers: {
-        tags: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosoph'],
+        categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosophy'],
         items: [
             {
                 title: `“Oneness and its Discontent: Contesting Ren in Classical Chinese Philosophy,” in The Oneness Hypothesis: Beyond the Boundary of Self, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
-                tag: 0
+                tags: 0
             },{
                 title: `“The Problem of Authorship and the Project of Chinese Philosophy: ZHUANG Zhou and the Zhuangzi between Sinology and Philosophy in Western Academy,” Dao: A Journal of Comparative Philosophy 15.1, 2016`,
-                tag: 0
+                tags: 0
             },{
                 title: `“Incommensurability of Two Conceptions of Reality: Dependent Origination and Emptiness in Nāgārjuna’s MMK,” Philosophy East and West 64.1, 2014`,
-                tag: 1
+                tags: 1
             },{
                 title: `“Isaiah Berlin’s Challenge to the Zhuangzian Freedom,” Journal of Chinese Philosophy 2012`,
-                tag: [0,2]
+                tags: [0,2]
             },{
                 title: `“Linji and William James on Mortality: Two Visions of Pragmatism,” in Mortality in Traditional China, edited by Amy Olberding and Philip J. Ivanhoe. SUNY, 2011`,
-                tag: [0,1,2]
+                tags: [0,1,2]
             },{
                 title: `“The Dilemma of Skillful Means in Buddhist Pedagogy: Desire and Education in the Lotus Sūtra,” in Education and Their Purposes: A Philosophical Dialogue among Cultures, edited by Roger Ames and Peter Hershock, University of Hawaii Press, 2007`,
-                tag: 1
+                tags: 1
             },{
                 title: `“Intimate Authority: The Rule of Ritual in Classical Confucian Political Discourse,” Chapter Two in Confucian Cultures of Authority in Practice: China, edited by Roger Ames and Peter Hershock. State University of New York Press, 2006`,
-                tag: 0
+                tags: 0
             },{
                 title: `“Ālayavijñāna and the Problematic of Continuity in the Cheng Weishi Lun,” Journal of Indian Philosophy 33:3, 2005`,
-                tag: 1
+                tags: 1
             },{
                 title: `“Accessibility of the Subliminal Mind: Transcendence vs. Immanence,” Continental Philosophy Review 38:3-4, 2005`,
-                tag: [1,2]
+                tags: [1,2]
             },{
                 title: `“The Problematic of Continuity: Nishida Kitarō and Aristotle,” Philosophy East & West 55:3, 2005`,
-                tag: 2
+                tags: 2
             },{
                 title: `“The Storehouse Consciousness and the Unconscious: A Comparative Study of Xuan Zang and Freud on the Subliminal Mind,” Journal of the American Academy of Religion 72:1, 2004`,
-                tag: [1,2]
+                tags: [1,2]
             },{
                 title: `“The Role of History in Chan/Zen Enlightenment,” Dao: A Journal of Comparative Philosophy IV.1, 2004`,
-                tag: [0,1]
+                tags: [0,1]
             },{
                 title: `“A Buddhist Scheme in Engaging Modern Science: The Case of Taixu (1890-1947),” Journal of Chinese Philosophy 29:4, 2002`,
-                tag: [0,1]
+                tags: [0,1]
             },{
                 title: `“The Problematic of Whole/Part and the Horizon of the Enlightened in Huayan Buddhism,” Journal of Chinese Philosophy 28:4, 2001`,
-                tag: [0,1]
+                tags: [0,1]
             }
         ]
     },
