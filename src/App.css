@@ -214,24 +214,27 @@ body {
   margin: 0 auto 2.5em auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
+  @media all and (max-width: 480px) {
+    #papers-div p {
+      text-align: left;
+      word-break: normal; } }
   #papers-div div.options {
     text-align: center;
     margin: 1em 0; }
-  #papers-div .tag-button-container, #papers-div .tag {
+  #papers-div .tag-label-container, #papers-div .tag {
     font-size: 35px; }
-  #papers-div div.tag-button-container {
+  #papers-div div.tag-label-container {
     display: inline-block;
     margin-top: 5px; }
-    #papers-div div.tag-button-container div {
+    #papers-div div.tag-label-container div {
       width: 180px;
       border: none;
       font-family: "SF Pro Text Regular";
       font-size: 14px;
       color: white;
-      padding: 0.5em;
-      margin: 0 5px;
-      border-radius: 2px; }
-      #papers-div div.tag-button-container div:hover {
+      padding: 0.5em 0;
+      margin: 0 5px; }
+      #papers-div div.tag-label-container div:hover {
         color: white; }
   #papers-div ul {
     padding-left: 20px;
@@ -245,6 +248,8 @@ body {
       margin: 0 0 0 5px; }
     #papers-div ul li span.tag {
       line-height: 0; }
+    #papers-div ul li .download-icon {
+      height: 20px; }
 
 @media all and (max-width: 480px) {
   .pic-container {

@@ -347,16 +347,23 @@ body {
     color: $main-text-color;
     font-size: 18px;
 
+    @media all and (max-width: 480px) {
+        p {
+            text-align: left;
+            word-break: normal;
+        }
+    }
+
     div.options {
         text-align: center;
         margin: 1em 0;
     }
 
-    .tag-button-container, .tag {
+    .tag-label-container, .tag {
         font-size: 35px;
     }
 
-    div.tag-button-container {
+    div.tag-label-container {
         display: inline-block;
         margin-top: 5px;
 
@@ -366,21 +373,15 @@ body {
             font-family: $button-font;
             font-size: 14px;
             color: white;
-            padding: 0.5em;
+            padding: 0.5em 0;
             margin: 0 5px;
-            border-radius: 2px;
+            // border-radius: 2px;
 
             &:hover {
                 color: white;
             }
         }
     }
-
-    // @media all and (min-width: 481px) {
-    //     div.tag-button-container+div.tag-button-container{
-    //         margin-left: 10px;
-    //     }
-    // }
 
     ul {
         padding-left: 20px;
@@ -399,6 +400,10 @@ body {
 
             span.tag {
                 line-height: 0;
+            }
+
+            .download-icon {
+                height: 20px;
             }
         }
     }
