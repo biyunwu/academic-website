@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import ReactMarkdown from 'react-markdown'
 import Download from './../imgs/download.svg'
 
 // const tagColors = ['rgb(150, 41, 49)', '#81d8d0', 'rgb(31, 33, 70)']
@@ -13,23 +14,17 @@ export default class Papers extends PureComponent {
     generatePaperInfo = (title, tags, pathname, idx) => {
         return (
             <li key={idx}>
-                <p>
-                    {title}
-                    <br />
-                    <a href={hostPath + pathname}
-                        target='_blank' 
-                        rel='noopener noreferrer'
-                    >
-                        <img 
-                            className='download-icon'
-                            src={Download}
-                            alt='Click to download'
-                        />
-                    </a>
-                    <span className='tag-container'>
-                        {this.getTags(tags)}    
-                    </span>
-                </p>
+                    <ReactMarkdown
+                        source={title}
+                    />
+                    <div className='indent'>
+                        <a href={hostPath + pathname} target='_blank' rel='noopener noreferrer'>
+                            <img className='download-icon' src={Download} alt='Click to download'/>
+                        </a>
+                        <span className='tag-container'>
+                            {this.getTags(tags)}    
+                        </span>
+                    </div>
             </li>
         )
     }

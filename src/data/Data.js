@@ -54,59 +54,59 @@ const data = {
         categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosophy'],
         items: [
             {
-                title: `“Oneness and its Discontent: Contesting Ren in Classical Chinese Philosophy,” in The Oneness Hypothesis: Beyond the Boundary of Self, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
+                title: `“Oneness and its Discontent: Contesting Ren in Classical Chinese Philosophy,” in *The Oneness Hypothesis: Beyond the Boundary of Self*, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
                 tags: 0,
                 pathname: 'Contesting_Ren_in_Classical_Chinese_Philosophy.pdf'
             },{
-                title: `“The Problem of Authorship and the Project of Chinese Philosophy: ZHUANG Zhou and the Zhuangzi between Sinology and Philosophy in Western Academy,” Dao: A Journal of Comparative Philosophy 15.1, 2016`,
+                title: `“The Problem of Authorship and the Project of Chinese Philosophy: ZHUANG Zhou and the Zhuangzi between Sinology and Philosophy in Western Academy,” *Dao: A Journal of Comparative Philosophy* 15.1, 2016`,
                 tags: 0,
                 pathname: 'Problem_of_Authorship.pdf'
             },{
-                title: `“Incommensurability of Two Conceptions of Reality: Dependent Origination and Emptiness in Nāgārjuna’s MMK,” Philosophy East and West 64.1, 2014`,
+                title: `“Incommensurability of Two Conceptions of Reality: Dependent Origination and Emptiness in Nāgārjuna’s MMK,” *Philosophy East and West* 64.1, 2014`,
                 tags: 1,
                 pathname: 'Incommensurability_of_Two_Conceptions_of_Reality.pdf'
             },{
-                title: `“Isaiah Berlin’s Challenge to the Zhuangzian Freedom,” Journal of Chinese Philosophy 2012`,
+                title: `“Isaiah Berlin’s Challenge to the Zhuangzian Freedom,” *Journal of Chinese Philosophy* 2012`,
                 tags: [0,2],
                 pathname: 'Zhuangzi_and_Berlin_on_freedom_JCP.pdf'
             },{
-                title: `“Linji and William James on Mortality: Two Visions of Pragmatism,” in Mortality in Traditional China, edited by Amy Olberding and Philip J. Ivanhoe. SUNY, 2011`,
+                title: `“Linji and William James on Mortality: Two Visions of Pragmatism,” in *Mortality in Traditional China*, edited by Amy Olberding and Philip J. Ivanhoe. SUNY, 2011`,
                 tags: [0,1,2],
                 pathname: 'Linji_and_William_James_on_Mortality.pdf'
             },{
-                title: `“The Dilemma of Skillful Means in Buddhist Pedagogy: Desire and Educations in the Lotus Sūtra,” in Education and Their Purposes: A Philosophical Dialogue among Cultures, edited by Roger Ames and Peter Hershock, University of Hawaii Press, 2007`,
+                title: `“The Dilemma of Skillful Means in Buddhist Pedagogy: Desire and Educations in the Lotus Sūtra,” in *Educations and Their Purposes: A Philosophical Dialogue among Cultures*, edited by Roger Ames and Peter Hershock, University of Hawaii Press, 2007`,
                 tags: 1,
                 pathname: 'Dilemma_of_Skillful_Means_in_Buddhist_Pedagogy.pdf'
             },{
-                title: `“Intimate Authority: The Rule of Ritual in Classical Confucian Political Discourse,” Chapter Two in Confucian Cultures of Authority in Practice: China, edited by Roger Ames and Peter Hershock. State University of New York Press, 2006`,
+                title: `“Intimate Authority: The Rule of Ritual in Classical Confucian Political Discourse,” Chapter Two in *Confucian Cultures of Authority in Practice: China*, edited by Roger Ames and Peter Hershock. State University of New York Press, 2006`,
                 tags: 0,
                 pathname: 'Intimate_Authority.pdf'
             },{
-                title: `“Ālayavijñāna and the Problematic of Continuity in the Cheng Weishi Lun,” Journal of Indian Philosophy 33:3, 2005`,
+                title: `“Ālayavijñāna and the Problematic of Continuity in the Cheng Weishi Lun,” *Journal of Indian Philosophy* 33:3, 2005`,
                 tags: 1,
                 pathname: 'Ālayavijñāna_and_continuity_JIP.pdf'
             },{
-                title: `“Accessibility of the Subliminal Mind: Transcendence vs. Immanence,” Continental Philosophy Review 38:3-4, 2005`,
+                title: `“Accessibility of the Subliminal Mind: Transcendence vs. Immanence,” *Continental Philosophy Review* 38:3-4, 2005`,
                 tags: [1,2],
                 pathname: 'Accessibility_of_the_subliminal_mind.pdf'
             },{
-                title: `“The Problematic of Continuity: Nishida Kitarō and Aristotle,” Philosophy East & West 55:3, 2005`,
+                title: `“The Problematic of Continuity: Nishida Kitarō and Aristotle,” *Philosophy East & West* 55:3, 2005`,
                 tags: 2,
                 pathname: 'Nishida_and_Aristotle_on_continuity_PEW.pdf'
             },{
-                title: `“The Storehouse Consciousness and the Unconscious: A Comparative Study of Xuan Zang and Freud on the Subliminal Mind,” Journal of the American Academy of Religion 72:1, 2004`,
+                title: `“The Storehouse Consciousness and the Unconscious: A Comparative Study of Xuan Zang and Freud on the Subliminal Mind,” *Journal of the American Academy of Religion* 72:1, 2004`,
                 tags: [1,2],
                 pathname: 'Ālayavijñāna_and_unconscious_JAAR.pdf'
             },{
-                title: `“The Role of History in Chan/Zen Enlightenment,” Dao: A Journal of Comparative Philosophy IV.1, 2004`,
+                title: `“The Role of History in Chan/Zen Enlightenment,” *Dao: A Journal of Comparative Philosophy* IV.1, 2004`,
                 tags: [0,1],
                 pathname: 'Role_of_History_in_Chan_Zen_Enlightenment.pdf'
             },{
-                title: `“A Buddhist Scheme in Engaging Modern Science: The Case of Taixu (1890-1947),” Journal of Chinese Philosophy 29:4, 2002`,
+                title: `“A Buddhist Scheme in Engaging Modern Science: The Case of Taixu (1890-1947),” *Journal of Chinese Philosophy* 29:4, 2002`,
                 tags: [0,1],
                 pathname: 'Taixu_and_modern_science_JCP.pdf'
             },{
-                title: `“The Problematic of Whole/Part and the Horizon of the Enlightened in Huayan Buddhism,” Journal of Chinese Philosophy 28:4, 2001`,
+                title: `“The Problematic of Whole/Part and the Horizon of the Enlightened in Huayan Buddhism,” *Journal of Chinese Philosophy* 28:4, 2001`,
                 tags: [0,1],
                 pathname: 'Whole-part_in_Huayan_JCP.pdf'
             }
@@ -118,7 +118,7 @@ const data = {
             {
                 location: 'Rutgers University, New Brunswick, NJ',
                 subject: 'Chinese Philosophy Project',
-                introduction: `In order to promote a better understanding of Chinese philosophy, Tao Jiang launched the Rutgers Workshop on Chinese Philosophy (RWCP) in 2012 with Stephen Angle (Wesleyan) and Ruth Chang (Rutgers) (Dean Zimmerman took over from Ruth Chang as a co-director in 2018 when Change moves to Oxford). RWCP is designed to build a bridge between Chinese philosophy and Western analytic philosophy, promoting critical engagement and constructive dialogue between the two sides, with the hope of bringing the study of Chinese philosophy into the mainstream of philosophical discourse within the Western academy. It is run every other April. Here the *https://rccs.rutgers.edu/news/159-fourth-rutgers-workshop-on-chinese-philosophy-rwcp#!IMG_1460**link*** to the most recent meeting.`
+                introduction: `In order to promote a better understanding of Chinese philosophy, Tao Jiang launched the Rutgers Workshop on Chinese Philosophy (RWCP) in 2012 with Stephen Angle (Wesleyan) and Ruth Chang (Rutgers) (Dean Zimmerman took over from Ruth Chang as a co-director in 2018 when Change moves to Oxford). RWCP is designed to build a bridge between Chinese philosophy and Western analytic philosophy, promoting critical engagement and constructive dialogue between the two sides, with the hope of bringing the study of Chinese philosophy into the mainstream of philosophical discourse within the Western academy. It is run every other April. Here the [link](https://rccs.rutgers.edu/news/159-fourth-rutgers-workshop-on-chinese-philosophy-rwcp#!IMG_1460) to the most recent meeting.`
 
             }
         ],
@@ -126,10 +126,14 @@ const data = {
             {
                 location: 'New York, NY',
                 subject: `Religion and the Rebuilding of China's Moral Foundations`,
-                introduction: `On June 7, 2018, Tao JIANG participated in *https://rccs.rutgers.edu/news/166-tao-jiang-participated-in-a-panel-discussion-at-the-china-institute-in-nyc**a panel discussion at the China Institute*** on "Religion and the Rebuilding of China's Moral Foundations," with freelance writer Ian Johnson (Pulitzer-prize winner and the author of The Souls of China: The Return of Religion after Mao), moderated by Los Angeles Times journalist Barbara Demick (former LA Times Beijing and Seoul bureau chief and the author of Nothing to Envy: Ordinary Lives in North Korea). The event received an extensive *https://www.singtaousa.com/ny/436-%E7%B4%90%E7%B4%84/792717-%E5%B8%8C%E6%9C%9B%E7%94%A8%E5%82%B3%E7%B5%B1%E5%83%B9%E5%80%BC%E8%A7%80%E9%87%8D%E5%BB%BA%E4%BF%A1%E4%BB%B0%E9%AB%94%E7%B3%BB+%E4%B8%AD%E5%9C%8B%E5%B0%8D%E5%AE%97%E6%95%99%E5%8C%85%E5%AE%B9%E5%BA%A6%E6%9C%89%E6%98%8E%E9%A1%AF%E6%8F%90%E9%AB%98/**coverage in the Sing Tao Daily*** 星島日報, a newspaper widely circulated in the Chinese community.`,
+                introduction: `On June 7, 2018, Tao JIANG participated in [a panel discussion at the China Institute](https://rccs.rutgers.edu/news/166-tao-jiang-participated-in-a-panel-discussion-at-the-china-institute-in-nyc) on “Religion and the Rebuilding of China's Moral Foundations,” with freelance writer Ian Johnson (Pulitzer-prize winner and the author of *The Souls of China: The Return of Religion after Mao*), moderated by Los Angeles Times journalist Barbara Demick (former LA Times Beijing and Seoul bureau chief and the author of *Nothing to Envy: Ordinary Lives in North Korea*). The event received an extensive [coverage in the Sing Tao Daily](https://www.singtaousa.com/ny/436-%E7%B4%90%E7%B4%84/792717-%E5%B8%8C%E6%9C%9B%E7%94%A8%E5%82%B3%E7%B5%B1%E5%83%B9%E5%80%BC%E8%A7%80%E9%87%8D%E5%BB%BA%E4%BF%A1%E4%BB%B0%E9%AB%94%E7%B3%BB+%E4%B8%AD%E5%9C%8B%E5%B0%8D%E5%AE%97%E6%95%99%E5%8C%85%E5%AE%B9%E5%BA%A6%E6%9C%89%E6%98%8E%E9%A1%AF%E6%8F%90%E9%AB%98/) 星島日報, a newspaper widely circulated in the Chinese community.`,
                 videoLink: 'https://media.githubusercontent.com/media/biyunwu/academic-web/master/src/data/video/moral.mp4'
             }
         ]
+    },
+
+    about: {
+
     }
 }
 

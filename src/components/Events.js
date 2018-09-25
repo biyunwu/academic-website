@@ -1,10 +1,15 @@
 import React, { PureComponent } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default class Events extends PureComponent {
 
     generateEventDetail = (event) => 
         <li key={event.location}>
-            {event.introduction}
+            <ReactMarkdown
+                source={event.introduction}
+                renderers={{link: this.LinkRenderer}}
+                // linkTarget = '_blank'
+            />
             {event.videoLink &&
                 <video controls>
                     <source src={event.videoLink} type="video/mp4" />
@@ -12,6 +17,8 @@ export default class Events extends PureComponent {
                 </video>
             }
         </li>
+
+    LinkRenderer = (props) => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
 
     render () {
         const {academic, pub} = this.props.events

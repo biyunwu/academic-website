@@ -12,7 +12,7 @@ export default class Header extends Component {
         const currYear = (new Date()).getFullYear()
         const year = establishYear < currYear ? `${establishYear} - ${currYear}` : currYear.toString()
         // const copyright = <p>© {year} <span className='taojiang'>Tao Jiang</span></p>
-        const copyright = <p>© {year} Tao Jiang</p>
+        const copyright = <p className='footer-text'>© {year} Tao Jiang</p>
         // const copyright = <p>© {year} <img src={Logo} alt='Logo of Tao Jiang' style={{display: 'inline-block', height: '1em'}}/></p>
         return (
             <footer className='footer'>
@@ -32,7 +32,7 @@ export default class Header extends Component {
                         <img className='icon' src={LinkedIn} alt='LinkedIn' />
                     </a>
                     {copyright}
-                    <p>Created by <a href='https://biyunwu.com' target='_blank' rel="noopener noreferrer">Biyun Wu</a></p>
+                    <p className='footer-text'>Created by <a href='https://biyunwu.com' target='_blank' rel="noopener noreferrer">Biyun Wu</a></p>
             </footer>
         )
     }

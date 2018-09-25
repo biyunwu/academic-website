@@ -39,20 +39,31 @@ $button-font: 'SF Pro Text Regular';
 @mixin justifyText {
     line-height: 1.58;
     letter-spacing: -0.003em;
-    text-align: justify;
-    word-break: keep-all;
+    // text-align: justify;
+    // word-break: keep-all;
 }
 
 @media all and (max-width: 480px) {
-    .book-text, .detail-info {
-        text-align: left !important;
-        word-wrap: normal !important;
+    p {
+        text-align: left;
+        word-break: normal;
+    }
+}
+
+@media all and (min-width: 481px) {
+    p {
+        text-align: justify;
+        word-break: keep-all;
     }
 }
 
 html {
     * ::selection {
         background: $link-seperator-color;
+    }
+
+    a {
+        color: $main-text-color;
     }
 
     button:active, button:focus {
@@ -102,12 +113,6 @@ body {
 
         img {
             height: 40px;
-        }
-        
-        h1 a {
-        // color: $main-text-color;
-        color: black;
-        text-decoration: none;
         }
     }
 
@@ -396,8 +401,12 @@ body {
             // list-style: none;
 
             p {
-                margin: 0 0 2em 0.5em;
+                margin: 0 0 0 0.5em;
                 text-indent: -0.4em;
+            }
+
+            div.indent {
+                margin: 0.2em 0 2em 0.5em;
             }
 
             span.tag-container {
@@ -432,10 +441,6 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 4em;
-
-        // .detail-info {
-        //     @include justifyText;
-        // }
     }
 
     .info {
@@ -453,7 +458,7 @@ body {
         margin: 6px 1.5em 0.8em 0;
     }
 
-    .detail-info {
+    p {
         @include justifyText;
 
         #lastname {
@@ -467,11 +472,6 @@ body {
 
     .clear {
         clear: both;
-    }
-
-    a {
-        // text-decoration: none;
-        color: $main-text-color;
     }
 
     .contact {
@@ -493,6 +493,11 @@ body {
 // Events
 #events {
     @include limitWidth;
+
+    p {
+        line-height: 1.58;
+        font-size: 18px;
+    }
 
     video {
         width: 100%;
@@ -534,6 +539,10 @@ body {
         color: $navlink-color;
         cursor: pointer;
         text-decoration: none;
+    }
+
+    .footer-text {
+        text-align: center;
     }
 
     // .taojiang {

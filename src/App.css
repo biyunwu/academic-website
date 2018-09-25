@@ -20,12 +20,20 @@
   src: url("./fonts/SF-Pro-Text-Regular.otf"); }
 
 @media all and (max-width: 480px) {
-  .book-text, .detail-info {
-    text-align: left !important;
-    word-wrap: normal !important; } }
+  p {
+    text-align: left;
+    word-break: normal; } }
+
+@media all and (min-width: 481px) {
+  p {
+    text-align: justify;
+    word-break: keep-all; } }
 
 html * ::selection {
   background: rgba(0, 0, 0, 0.1); }
+
+html a {
+  color: rgba(0, 0, 0, 0.84); }
 
 html button:active, html button:focus {
   outline: none;
@@ -56,9 +64,6 @@ body {
     padding: 20px 0; }
     #header header img {
       height: 40px; }
-    #header header h1 a {
-      color: black;
-      text-decoration: none; }
   #header .App-title {
     /* title: */
     font-family: "Nanum Brush Script", cursive;
@@ -156,9 +161,7 @@ body {
   .book .book-text {
     font-size: 18px;
     line-height: 1.58;
-    letter-spacing: -0.003em;
-    text-align: justify;
-    word-break: keep-all; }
+    letter-spacing: -0.003em; }
   .book .book-review {
     margin-top: 1em; }
   .book .more-book-review {
@@ -244,12 +247,12 @@ body {
   #papers-div ul {
     padding-left: 20px;
     line-height: 1.58;
-    letter-spacing: -0.003em;
-    text-align: justify;
-    word-break: keep-all; }
+    letter-spacing: -0.003em; }
     #papers-div ul li p {
-      margin: 0 0 2em 0.5em;
+      margin: 0 0 0 0.5em;
       text-indent: -0.4em; }
+    #papers-div ul li div.indent {
+      margin: 0.2em 0 2em 0.5em; }
     #papers-div ul li span.tag-container {
       margin: 0 0 0 5px; }
     #papers-div ul li span.tag {
@@ -284,19 +287,15 @@ body {
     height: 175px;
     float: left;
     margin: 6px 1.5em 0.8em 0; }
-  .about .detail-info {
+  .about p {
     line-height: 1.58;
-    letter-spacing: -0.003em;
-    text-align: justify;
-    word-break: keep-all; }
-    .about .detail-info #lastname {
+    letter-spacing: -0.003em; }
+    .about p #lastname {
       font-size: 80%; }
-    .about .detail-info .italic {
+    .about p .italic {
       font-style: italic; }
   .about .clear {
     clear: both; }
-  .about a {
-    color: rgba(0, 0, 0, 0.84); }
   .about .contact {
     list-style: none;
     padding: 0; }
@@ -307,6 +306,9 @@ body {
   max-width: 1200px;
   padding: 0 3%;
   margin: 0 auto 2.5em auto; }
+  #events p {
+    line-height: 1.58;
+    font-size: 18px; }
   #events video {
     width: 100%;
     max-height: 400px;
@@ -333,3 +335,5 @@ body {
     color: rgba(0, 0, 0, 0.45);
     cursor: pointer;
     text-decoration: none; }
+  .footer .footer-text {
+    text-align: center; }
