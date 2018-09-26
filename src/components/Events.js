@@ -18,14 +18,16 @@ export default class Events extends PureComponent {
                     renderers={{link: this.LinkRenderer}}
                     // linkTarget = '_blank'
                 />
-                <div className='video-container'>
-                    {event.videoLink &&
-                        <video controls>
+                {/* {event.videoLink && <button className='video-button'>Watch Video</button>} */}
+                {event.videoLink &&
+                    <div className='video-container'>
+                        <div dangerouslySetInnerHTML={{ __html: event.videoLink }}></div>
+                        {/* <video controls>
                             <source src={event.videoLink} type="video/mp4" />
                             <p>Your browser doesn't support HTML5 video.</p>
-                        </video>
-                    }
-                </div>             
+                        </video> */}
+                    </div>       
+                }
             </div>
         </div>
         
