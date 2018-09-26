@@ -338,7 +338,8 @@ body {
 
 // Home
 #background-image {
-    // Image url is specified in Home component
+    background-image: url('./imgs/tj.jpg');
+    // Image url can be also specified in Home component
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
