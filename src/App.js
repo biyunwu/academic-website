@@ -43,12 +43,7 @@ class App extends Component {
                     links = {links}
                     booksColors = {booksColors}
                 />
-                {/* <Route exact path='/' render={() => (
-                    <Home
-                        backgroundImage = {BackgroundImage}
-                    />
-                )}/> */}
-                <Route path='/' render={() => (
+                <Route exact path='/' render={() => (
                     <Home
                         backgroundImage = {BackgroundImage}
                     />
