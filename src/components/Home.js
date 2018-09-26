@@ -12,7 +12,6 @@ export default class Home extends PureComponent {
                 // style={{backgroundImage: `url(${BackgroundImage})`}}
                 // style={{backgroundImage: `url('https://raw.githubusercontent.com/biyunwu/academic-website/master/src/imgs/tj.jpg')`}}
             >
-                <p style={{visibility: 'hidden'}}>Background image</p>
             </main>
         )
     }
