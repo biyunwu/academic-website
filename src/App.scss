@@ -290,6 +290,7 @@ body {
     .publisher {
         font-family: $nav-link-font;
         font-size: 13px;
+        text-align: center;
         // color: $navlink-color;
         color: $main-text-color;
         margin-top: 0;
@@ -353,7 +354,52 @@ body {
     color: $main-text-color;
     font-size: 18px;
 
-    @media all and (max-width: 480px) {
+    @media all and (min-width: 780px) {
+        & {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-column-gap: 2em;
+        }
+
+        div.options {
+            grid-column-start: 5;
+            grid-column-end: 6;
+        }
+
+        div.papers {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+        }
+
+        div.sticky {
+            position: sticky;
+            top: 0px;
+        }
+    }
+
+    @media all and (max-width: 779px) {
+        div.options {
+            position: sticky;
+            top: 0px;
+            margin-top: 1em;
+            text-align: center !important;
+            
+
+            h2 {
+                visibility: hidden;
+                height: 0;
+                margin: 0;
+            }
+        }
+
+        div.label {
+            width: auto !important;
+            padding: 0.5em 0.5em !important;
+        }
+
+
         p {
             text-align: left;
             word-break: normal;
@@ -362,30 +408,31 @@ body {
 
     div.options {
         text-align: center;
-        margin: 1em 0 0 0;
-        position: sticky;
-        top: 0px;
+        // margin: 1em 0 0 0;
+        text-align: left;
+        // position: sticky;
+        // top: 0px;
         background: white;
         width: 100%;
     }
 
     .tag-label-container, .tag {
-        font-size: 35px;
-        padding-bottom: 10px;
+        font-size: 2em;
+        text-align: center;
     }
 
     div.tag-label-container {
         display: inline-block;
         margin-top: 5px;
 
-        div {
+        div.label {
             width: 180px;
             border: none;
             font-family: $button-font;
             font-size: 14px;
             color: white;
             padding: 0.5em 0;
-            margin: 0 5px;
+            margin-bottom: 1em;
             // border-radius: 2px;
 
             &:hover {

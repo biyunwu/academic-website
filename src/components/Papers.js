@@ -11,6 +11,17 @@ const tagColors = ['#DC3023', 'rgb(240, 157, 56)','rgb(0, 216, 208)']
 const hostPath = 'https://raw.github.com/biyunwu/academic-web/master/src/data/papers/'
 
 export default class Papers extends PureComponent {
+
+    state = {
+        isMobileDevice : true
+    }
+
+    componentDidMount () {
+        if (window.innerWidth >= 480) {
+            this.setState({isMobileDevice: false})
+        }
+    }
+
     generatePaperInfo = (title, tags, pathname, idx) => {
         return (
             <li key={idx}>
@@ -36,10 +47,11 @@ export default class Papers extends PureComponent {
 
     getTagLabel = (category, idx) => 
         <div className='tag-label-container' key={category}>
-            <div id={'color'+idx} key={'color'+idx}
+            <div id={'color'+idx} className='label' key={'color'+idx}
                 style={{backgroundColor: tagColors[idx]}}
             >
-                {category}
+                {/* Make the label string shorter on mobile devices */}
+                {this.state.isMobileDevice? category.replace(/Philosophy/, 'Phil.') : category}
             </div>
         </div>
 
@@ -50,13 +62,18 @@ export default class Papers extends PureComponent {
 
         return (
             <main id='papers-div'>
-                <h2>A Few Papers</h2>
                 <div className='options'>
-                    {tagLabels}
+                    <h2>Categories</h2>
+                    <div className='sticky'>
+                        {tagLabels}
+                    </div>
                 </div>
-                <ul>
-                    {papers}
-                </ul>
+                <div className='papers'>
+                    <h2>A Few Papers</h2>
+                    <ul>
+                        {papers}
+                    </ul>
+                </div>
             </main>
         )
     }

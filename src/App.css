@@ -176,6 +176,7 @@ body {
   .book .publisher {
     font-family: "SF Pro Text Light";
     font-size: 13px;
+    text-align: center;
     color: rgba(0, 0, 0, 0.84);
     margin-top: 0;
     padding: 0.5em;
@@ -217,32 +218,58 @@ body {
   margin: 0 auto 2.5em auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
-  @media all and (max-width: 480px) {
+  @media all and (min-width: 780px) {
+    #papers-div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 2em; }
+    #papers-div div.options {
+      grid-column-start: 5;
+      grid-column-end: 6; }
+    #papers-div div.papers {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 1; }
+    #papers-div div.sticky {
+      position: sticky;
+      top: 0px; } }
+  @media all and (max-width: 779px) {
+    #papers-div div.options {
+      position: sticky;
+      top: 0px;
+      margin-top: 1em;
+      text-align: center !important; }
+      #papers-div div.options h2 {
+        visibility: hidden;
+        height: 0;
+        margin: 0; }
+    #papers-div div.label {
+      width: auto !important;
+      padding: 0.5em 0.5em !important; }
     #papers-div p {
       text-align: left;
       word-break: normal; } }
   #papers-div div.options {
     text-align: center;
-    margin: 1em 0 0 0;
-    position: sticky;
-    top: 0px;
+    text-align: left;
     background: white;
     width: 100%; }
   #papers-div .tag-label-container, #papers-div .tag {
-    font-size: 35px;
-    padding-bottom: 10px; }
+    font-size: 2em;
+    text-align: center; }
   #papers-div div.tag-label-container {
     display: inline-block;
     margin-top: 5px; }
-    #papers-div div.tag-label-container div {
+    #papers-div div.tag-label-container div.label {
       width: 180px;
       border: none;
       font-family: "SF Pro Text Regular";
       font-size: 14px;
       color: white;
       padding: 0.5em 0;
-      margin: 0 5px; }
-      #papers-div div.tag-label-container div:hover {
+      margin-bottom: 1em; }
+      #papers-div div.tag-label-container div.label:hover {
         color: white; }
   #papers-div ul {
     padding-left: 20px;

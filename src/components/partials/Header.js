@@ -4,7 +4,7 @@ import Logo from './../../imgs/logo.png'
 
 export default class Header extends Component {
 
-    generateNavLinks = (links, booksColors) => links.map((link, idx) => 
+    generateNavLinks = (links, themeColors) => links.map((link, idx) => 
             <li className="nav-item" key={idx}>
                 <NavLink
                     to={this.getLink(link)}
@@ -12,7 +12,7 @@ export default class Header extends Component {
                     exact={idx===0 ? true : false}
                     className={'nav-link'}
                     activeClassName='active'
-                    activeStyle={this.getLinkColor(link, booksColors)}
+                    activeStyle={this.getLinkColor(link, themeColors)}
                     id={link}
                 >
                     {link}
@@ -23,17 +23,17 @@ export default class Header extends Component {
 
     getLink = (link) => link !== 'home'? '/' + link.replace(/ /g, "_") : '/'
 
-    getLinkColor = (link, booksColors) => {
-        for (const bookname in booksColors) {
-            if (link.includes(bookname)) {
-                return {color: `${booksColors[bookname]}`}
+    getLinkColor = (link, themeColors) => {
+        for (const pagename in themeColors) {
+            if (link.includes(pagename)) {
+                return {color: `${themeColors[pagename]}`}
             }
         }
     }
 
     render() {
-        const {links, booksColors} = this.props
-        const navlinks = this.generateNavLinks(links, booksColors)
+        const {links, themeColors} = this.props
+        const navlinks = this.generateNavLinks(links, themeColors)
         return (    
             <div id="header">
                 <header>

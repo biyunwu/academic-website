@@ -22,26 +22,26 @@ const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
 
 class App extends Component {
 
-    getBooksColors = (data) => {
-        const bookCoverColors = {}
+    getPageThemeColors = (data) => {
+        const themeColors = {}
         Object.keys(data).forEach(key => {
-            const color = data[key].bookCoverColor
+            const color = data[key].themeColor
             if (color) {
-                bookCoverColors[key] = color
+                themeColors[key] = color
             }
         })
-        return bookCoverColors
+        return themeColors
     }
 
     render() {
         const data = JSON.parse(Data.getData())
-        const booksColors = this.getBooksColors(data)
+        const pageThemeColors = this.getPageThemeColors(data)
 
         return (
             <div className='app'>
                 <Header 
                     links = {links}
-                    booksColors = {booksColors}
+                    themeColors = {pageThemeColors}
                 />
                 <Route exact path='/' render={() => (
                     <Home

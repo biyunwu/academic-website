@@ -3,7 +3,7 @@ const data = {
         title: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind`,
         publisher: `University of Hawaii Press`,
         bookLink: `http://a.co/d/1nYnDJI`,
-        bookCoverColor: 'rgb(236, 133, 19)',
+        themeColor: 'rgb(236, 133, 19)',
         bookIntroduction: [
             `Are there Buddhist conceptions of the unconscious? If so, are they more Freudian, Jungian, or something else? If not, can Buddhist conceptions be reconciled with the Freudian, Jungian, or other models? These are some of the questions that have motivated modern scholarship to approach ālayavijñāna, the storehouse consciousness, formulated in Yogācāra Buddhism as a subliminal reservoir of tendencies, habits, and future possibilities.`,
             `Tao Jiang argues convincingly that such questions are inherently problematic because they frame their interpretations of the Buddhist notion largely in terms of responses to modern psychology. He proposes that, if we are to understand ālayavijñāna properly and compare it with the unconscious responsibly, we need to change the way the questions are posed so that ālayavijñāna and the unconscious can first be understood within their own contexts and then recontextualized within a dialogical setting. In so doing, certain paradigmatic assumptions embedded in the original frameworks of Buddhist and modern psychological theories are exposed. Jiang brings together Xuan Zang’s ālayavijñāna and Freud’s and Jung’s unconscious to focus on what the differences are in the thematic concerns of the three theories, why such differences exist in terms of their objectives, and how their methods of theorization contribute to these differences.`,
@@ -42,7 +42,8 @@ const data = {
         title: `The Reception and Rendition of Freud in China: China’s Freudian Slip`,
         publisher: `Routledge`,
         bookLink: `http://a.co/d/g77CGA7`,
-        bookCoverColor: 'rgb(11, 81, 120)',
+        // bookCoverColor: 'rgb(11, 81, 120)',
+        themeColor: '#DC3023',
         bookIntroduction: [
             `Although Freud makes only occasional, brief references to China and Chinese culture in his works, for almost a hundred years many leading Chinese intellectuals have studied and appropriated various Freudian theories. However, whilst some features of Freud’s views have been warmly embraced from the start and appreciated for their various explanatory and therapeutic values, other aspects have been vigorously criticized as implausible or inapplicable to the Chinese context.`,
             `This book explores the history, reception, and use of Freud and his theories in China, and makes an original and substantial contribution to our understanding of the Chinese people and their culture as well as to our appreciation of western attempts to understand the people and culture of China. The essays are organised around three key areas of research. First, it examines the historical background concerning the China-Freud connection in the 20th century, before going on to use reconstructed Freudian theories in order to provide a modernist critique of Chinese culture. Finally, the book deploys traditional Chinese thought in order to challenge various aspects of the Freudian project. Both Freudianism’s universal appeal and its cultural particularity are in full display throughout the book. At the same time, the allure of Chinese cultural and literary expressions, both in terms of their commonality with other cultures and their distinctive characteristics, are also scrutinized.`,
@@ -52,6 +53,7 @@ const data = {
 
     papers: {
         categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosophy'],
+        themeColor: 'rgb(0, 216, 208)',
         items: [
             {
                 title: `“Oneness and its Discontent: Contesting Ren in Classical Chinese Philosophy,” in *The Oneness Hypothesis: Beyond the Boundary of Self*, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
@@ -124,7 +126,7 @@ const data = {
         ],
         pub: [
             {
-                location: 'New York, NY',
+                location: 'China Institute, New York, NY',
                 subject: `Religion and the Rebuilding of China's Moral Foundations`,
                 introduction: `On June 7, 2018, Tao Jiang participated in [a panel discussion at the China Institute](https://rccs.rutgers.edu/news/166-tao-jiang-participated-in-a-panel-discussion-at-the-china-institute-in-nyc) on “Religion and the Rebuilding of China's Moral Foundations,” with freelance writer Ian Johnson (Pulitzer-prize winner and the author of *The Souls of China: The Return of Religion after Mao*), moderated by Los Angeles Times journalist Barbara Demick (former LA Times Beijing and Seoul bureau chief and the author of *Nothing to Envy: Ordinary Lives in North Korea*). The event received an extensive [coverage in the Sing Tao Daily](https://www.singtaousa.com/ny/436-%E7%B4%90%E7%B4%84/792717-%E5%B8%8C%E6%9C%9B%E7%94%A8%E5%82%B3%E7%B5%B1%E5%83%B9%E5%80%BC%E8%A7%80%E9%87%8D%E5%BB%BA%E4%BF%A1%E4%BB%B0%E9%AB%94%E7%B3%BB+%E4%B8%AD%E5%9C%8B%E5%B0%8D%E5%AE%97%E6%95%99%E5%8C%85%E5%AE%B9%E5%BA%A6%E6%9C%89%E6%98%8E%E9%A1%AF%E6%8F%90%E9%AB%98/) 星島日報, a newspaper widely circulated in the Chinese community.`,
                 // videoLink: 'https://media.githubusercontent.com/media/biyunwu/academic-web/master/src/data/video/moral.mp4'
