@@ -206,7 +206,6 @@ body {
     font-style: italic; }
 
 #background-image {
-  background-image: url("./imgs/tj.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
