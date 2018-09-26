@@ -9,7 +9,8 @@
     "react-dom": "^16.5.0",
     "react-markdown": "^3.6.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "react-snap": "^1.19.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -19,6 +20,7 @@
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap"
   }
 }
