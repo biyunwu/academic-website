@@ -22,15 +22,19 @@ export default class Events extends PureComponent {
                     renderers={{link: this.LinkRenderer}}
                     // linkTarget = '_blank'
                 />
-                {event.videoLink && <button className='video-button' onClick={e => this.updateVideoToShowidx(idx)}>Watch Video</button>}
-                {event.videoLink && this.state.videoToShowIdx === idx &&
-                    <div className='video-container'>
-                        <div dangerouslySetInnerHTML={{ __html: event.videoLink }}></div>
-                        {/* <video controls>
-                            <source src={event.videoLink} type="video/mp4" />
-                            <p>Your browser doesn't support HTML5 video.</p>
-                        </video> */}
-                    </div>       
+                {event.videoLink &&
+                    <div>
+                        {this.state.videoToShowIdx === idx &&
+                            <div className='video-container'>
+                                <div dangerouslySetInnerHTML={{ __html: event.videoLink }}></div>
+                                {/* <video controls>
+                                    <source src={event.videoLink} type="video/mp4" />
+                                    <p>Your browser doesn't support HTML5 video.</p>
+                                </video> */}
+                            </div>       
+                        }
+                        <button className='video-button' onClick={e => this.updateVideoToShowidx(idx)}>{this.state.videoToShowIdx !== idx? 'Watch Video' : 'Hide Video'}</button>
+                    </div>
                 }
             </div>
         </div>

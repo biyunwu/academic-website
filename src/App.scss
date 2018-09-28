@@ -57,10 +57,15 @@ $button-font: 'SF Pro Text Regular';
 }
 
 html {
+    * {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
     * ::selection {
         background: $link-seperator-color;
     }
-
+    
     a {
         // color: $main-text-color;
         color: rgb(54, 123, 246);
@@ -347,6 +352,7 @@ body {
     background-position: center center;
     // Make the image fixed in the container
     background-attachment: local;
+    min-height: 200px;
 }
 
 // Papers
@@ -512,7 +518,7 @@ body {
         @include justifyText;
 
         #lastname {
-            font-size: 80%;
+            font-size: 85%;
         }
 
         .italic {
@@ -545,8 +551,8 @@ body {
     @include limitWidth;
 
     h3 {
-        font-family: $button-font;
-        font-size: 20px;
+        font-family: $nav-link-font;
+        font-size: 24px;
         font-weight: 100;
     }
 
@@ -588,7 +594,7 @@ body {
 
     button.video-button {
         border: $main-text-color solid 1px;
-        margin-bottom: 1em;
+        margin-top: 1em;
         cursor: pointer;
 
         width: 20%;

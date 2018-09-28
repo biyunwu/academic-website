@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import LinkedIn from './../../imgs/linkedin.png'
+import LinkedIn from './../../imgs/linkedin.svg'
 import Rutgers from './../../imgs/rutgers.png'
 // import GoogleScholar from './../../imgs/google-scholar.png'
 // import Academia from './../../imgs/academia.png'
