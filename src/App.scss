@@ -42,14 +42,19 @@ $button-font: 'SF Pro Text Regular';
     // word-break: keep-all;
 }
 
-@media all and (max-width: 480px) {
+@mixin sticky {
+    position: sticky;
+    top: 0px;
+}
+
+@media only screen and (max-width: 480px) {
     p {
         text-align: left;
         word-break: normal;
     }
 }
 
-@media all and (min-width: 481px) {
+@media only screen and (min-width: 481px) {
     p {
         text-align: justify;
         word-break: keep-all;
@@ -57,6 +62,9 @@ $button-font: 'SF Pro Text Regular';
 }
 
 html {
+    /* Prevent font scaling in landscape while allowing user zoom */
+    -webkit-text-size-adjust: 100%;
+
     * {
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
@@ -68,8 +76,15 @@ html {
     
     a {
         // color: $main-text-color;
-        color: rgb(54, 123, 246);
+        // color: rgb(54, 123, 246);
+        color: rgb(236, 133, 19);
+        // color: rgb(0, 216, 208);
         text-decoration: none;
+
+        &:hover {
+            color: rgb(0, 216, 208);
+            text-decoration: underline;
+        }
     }
 
     button:active, button:focus {
@@ -175,21 +190,21 @@ body {
     // margin: 2.5em auto 2.5em auto;
     @include limitWidth;
 
-    @media all and (max-width: 374px) {
+    @media only screen and (max-width: 374px) {
         .book-text {
             text-align: left !important;
             word-break: normal !important;
         }
     }
 
-    @media all and (max-width: 480px) {
+    @media only screen and (max-width: 480px) {
         // Make the book cover smaller
         .book-pic-container {
             padding: 0 20%;
         }
     }
 
-    @media all and (min-width: 481px) and (max-width: 1023px) { 
+    @media only screen and (min-width: 481px) and (max-width: 1023px) { 
         .book-pic-container {
             width: 35%;
             margin: 0.5em 1em 0 0 !important;
@@ -205,7 +220,7 @@ body {
         }
     }
     
-    @media all and (min-width: 1024px) { 
+    @media only screen and (min-width: 1024px) { 
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -361,7 +376,7 @@ body {
     color: $main-text-color;
     font-size: 18px;
 
-    @media all and (min-width: 780px) {
+    @media only screen and (min-width: 780px) {
         & {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -381,15 +396,13 @@ body {
         }
 
         div.sticky {
-            position: sticky;
-            top: 0px;
+            @include sticky;
         }
     }
 
-    @media all and (max-width: 779px) {
+    @media only screen and (max-width: 779px) {
         div.options {
-            position: sticky;
-            top: 0px;
+            @include sticky;
             margin-top: 1em;
             text-align: center !important;
             
@@ -439,7 +452,7 @@ body {
             font-size: 14px;
             color: white;
             padding: 0.5em 0;
-            margin-bottom: 1em;
+            margin-bottom: 0.5em;
             // border-radius: 2px;
 
             &:hover {
@@ -469,8 +482,11 @@ body {
             }
 
             span.tag {
-                line-height: 0;
-                font-size: 2rem;
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                margin-right: 5px;
             }
 
             .download-icon {
@@ -481,7 +497,7 @@ body {
 }
 
 // About
-@media all and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .pic-container {
         text-align: center;
     }
@@ -492,7 +508,7 @@ body {
         height: auto !important;
     }
 }
-@media all and (min-width: 800px) {
+@media only screen and (min-width: 800px) {
     .about {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -554,6 +570,15 @@ body {
         font-family: $nav-link-font;
         font-size: 24px;
         font-weight: 100;
+        
+        @media only screen and (max-width: 480px) {
+            & {
+                @include sticky;
+                background: white;
+                padding: 0.3em 0;
+                margin: 0.6em 0;
+            }
+        }
     }
 
     p {
@@ -570,10 +595,11 @@ body {
         margin-left: 3px;
         padding-left: 1em;
         box-sizing: border-box;
-        border-left: $link-seperator-color solid 2px;
+        // border-left: $link-seperator-color solid 2px;
+        // border-left: rgba(0, 216, 208, 0.2) solid 2px;
     }
 
-    @media all and (min-width: 481px) {
+    @media only screen and (min-width: 481px) {
         // div.introduction {
         //     margin-left: 1.2em;
         // }
@@ -582,14 +608,22 @@ body {
             margin: 2em 0;
         }
 
+        div.event-container:not(:last-of-type) {
+            border-bottom: $link-seperator-color solid 1px;
+        }
+
         p.location {
             text-align: right;
+            margin: -1em 0 -0.5em 0;
         }
     }
 
     img.location-icon {
-        height: 13px;
+        height: 18px;
         margin-right: 5px;
+        // Make the icon vertically align with the text
+        padding-bottom: 3px;
+        vertical-align: middle;
     }
 
     button.video-button {

@@ -55,7 +55,7 @@ export default class Events extends PureComponent {
         const allEventsDetails = allEvents.map((event, idx) => this.generateEventDetail(event, idx))
         return (
             <main id='events'>
-                <h2>A Few Events</h2>
+                {/* <h2>Some Events</h2> */}
                 {/* {academicEvents}
                 {publicEvents} */}
                 {allEventsDetails}

@@ -20,12 +20,12 @@ export default class Header extends Component {
                         <img className='icon' src={GoogleScholar} alt='Google Scholar' />
                     </a>
                     <span className='icon-gap'></span> */}
-                    <a href='https://rccs.rutgers.edu/people/director' target='_blank' rel='noopener noreferrer'>
-                        <img className='icon' src={Rutgers} alt='Rutgers' />
-                    </a>
-                    <span className='icon-gap'></span>
                     <a href='mailto:tjiang@rutgers.edu'>
                         <img className='icon' src={Email} alt='Click to send Email to Tao Jiang' />
+                    </a>
+                    <span className='icon-gap'></span>
+                    <a href='https://rccs.rutgers.edu/people/director' target='_blank' rel='noopener noreferrer'>
+                        <img className='icon' src={Rutgers} alt='Rutgers' />
                     </a>
                     <span className='icon-gap'></span>
                     <a href='https://www.linkedin.com/in/tao-jiang-bb80b837/' target='_blank' rel='noopener noreferrer'>

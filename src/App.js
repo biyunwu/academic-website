@@ -22,6 +22,23 @@ const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
 
 class App extends Component {
 
+    state = {
+        viewportWidth: 0
+    }
+
+    componentDidMount () {
+        this.updateViewportWidth()
+        window.addEventListener('resize', this.updateViewportWidth)
+    }
+
+    componentWillUnmount () {
+        window.removeEventListener('resize', this.updateViewportWidth)
+    }
+
+    updateViewportWidth = () => {
+        this.setState({viewportWidth: window.innerWidth})
+    }
+
     getPageThemeColors = (data) => {
         const themeColors = {}
         Object.keys(data).forEach(key => {
@@ -34,6 +51,7 @@ class App extends Component {
     }
 
     render() {
+        const {viewportWidth} = this.state
         const data = JSON.parse(Data.getData())
         const pageThemeColors = this.getPageThemeColors(data)
 
@@ -65,6 +83,7 @@ class App extends Component {
                 <Route path={pageLinks[3]} render={() => (
                     <Papers
                         papers = {data.papers}
+                        viewportWidth = {viewportWidth}
                     />
                 )}/>
                 <Route path={pageLinks[4]} render={() => (

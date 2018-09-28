@@ -18,30 +18,33 @@
   font-family: 'SF Pro Text Regular';
   src: url("./fonts/SF-Pro-Text-Regular.otf"); }
 
-@media all and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   p {
     text-align: left;
     word-break: normal; } }
 
-@media all and (min-width: 481px) {
+@media only screen and (min-width: 481px) {
   p {
     text-align: justify;
     word-break: keep-all; } }
 
-html * {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
-
-html * ::selection {
-  background: rgba(0, 0, 0, 0.1); }
-
-html a {
-  color: #367bf6;
-  text-decoration: none; }
-
-html button:active, html button:focus {
-  outline: none;
-  box-shadow: none; }
+html {
+  /* Prevent font scaling in landscape while allowing user zoom */
+  -webkit-text-size-adjust: 100%; }
+  html * {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility; }
+  html * ::selection {
+    background: rgba(0, 0, 0, 0.1); }
+  html a {
+    color: #ec8513;
+    text-decoration: none; }
+    html a:hover {
+      color: #00d8d0;
+      text-decoration: underline; }
+  html button:active, html button:focus {
+    outline: none;
+    box-shadow: none; }
 
 body {
   font-family: "medium-content-serif-font";
@@ -103,14 +106,14 @@ body {
   max-width: 1200px;
   padding: 0 3%;
   margin: 0 auto 2.5em auto; }
-  @media all and (max-width: 374px) {
+  @media only screen and (max-width: 374px) {
     .book .book-text {
       text-align: left !important;
       word-break: normal !important; } }
-  @media all and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     .book .book-pic-container {
       padding: 0 20%; } }
-  @media all and (min-width: 481px) and (max-width: 1023px) {
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
     .book .book-pic-container {
       width: 35%;
       margin: 0.5em 1em 0 0 !important;
@@ -119,7 +122,7 @@ body {
         padding-right: 1em; }
     .book .book-introduction {
       display: inline; } }
-  @media all and (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     .book .grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -223,7 +226,7 @@ body {
   margin: 0 auto 2.5em auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
-  @media all and (min-width: 780px) {
+  @media only screen and (min-width: 780px) {
     #papers-div {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -239,7 +242,7 @@ body {
     #papers-div div.sticky {
       position: sticky;
       top: 0px; } }
-  @media all and (max-width: 779px) {
+  @media only screen and (max-width: 779px) {
     #papers-div div.options {
       position: sticky;
       top: 0px;
@@ -273,7 +276,7 @@ body {
       font-size: 14px;
       color: white;
       padding: 0.5em 0;
-      margin-bottom: 1em; }
+      margin-bottom: 0.5em; }
       #papers-div div.tag-label-container div.label:hover {
         color: white; }
   #papers-div ul {
@@ -288,12 +291,15 @@ body {
     #papers-div ul li span.tag-container {
       margin: 0 0 0 5px; }
     #papers-div ul li span.tag {
-      line-height: 0;
-      font-size: 2rem; }
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 5px; }
     #papers-div ul li .download-icon {
       height: 20px; }
 
-@media all and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .pic-container {
     text-align: center; }
   .info-pic {
@@ -302,7 +308,7 @@ body {
     width: 50%;
     height: auto !important; } }
 
-@media all and (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -343,6 +349,13 @@ body {
     font-family: "SF Pro Text Light";
     font-size: 24px;
     font-weight: 100; }
+    @media only screen and (max-width: 480px) {
+      #events h3 {
+        position: sticky;
+        top: 0px;
+        background: white;
+        padding: 0.3em 0;
+        margin: 0.6em 0; } }
   #events p {
     line-height: 1.58;
     font-size: 18px; }
@@ -352,16 +365,20 @@ body {
   #events div.event-detail {
     margin-left: 3px;
     padding-left: 1em;
-    box-sizing: border-box;
-    border-left: rgba(0, 0, 0, 0.1) solid 2px; }
-  @media all and (min-width: 481px) {
+    box-sizing: border-box; }
+  @media only screen and (min-width: 481px) {
     #events div.event-container {
       margin: 2em 0; }
+    #events div.event-container:not(:last-of-type) {
+      border-bottom: rgba(0, 0, 0, 0.1) solid 1px; }
     #events p.location {
-      text-align: right; } }
+      text-align: right;
+      margin: -1em 0 -0.5em 0; } }
   #events img.location-icon {
-    height: 13px;
-    margin-right: 5px; }
+    height: 18px;
+    margin-right: 5px;
+    padding-bottom: 3px;
+    vertical-align: middle; }
   #events button.video-button {
     border: rgba(0, 0, 0, 0.84) solid 1px;
     margin-top: 1em;

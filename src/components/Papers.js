@@ -16,10 +16,12 @@ export default class Papers extends PureComponent {
         isMobileDevice : true
     }
 
-    componentDidMount () {
-        if (window.innerWidth >= 480) {
-            this.setState({isMobileDevice: false})
+    // Update state according to parent props
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if((nextProps.viewportWidth < 480) !== prevState.isMobileDevice) {
+            return { isMobileDevice: !prevState.isMobileDevice };
         }
+        return null;
     }
 
     generatePaperInfo = (title, tags, pathname, idx) => {
@@ -42,8 +44,8 @@ export default class Papers extends PureComponent {
 
     getTags = (tags, classname) =>
         tags.length > 1
-        ? tags.map((num, idx) => <span className='tag' style={{color: tagColors[num]}} key={classname || idx}>■</span>)
-        : <span className='tag' style={{color: tagColors[tags]}}>■</span>
+        ? tags.map((num, idx) => <span className='tag' style={{background: tagColors[num]}} key={classname || idx}></span>)
+        : <span className='tag' style={{background: tagColors[tags]}}></span>
 
     getTagLabel = (category, idx) => 
         <div className='tag-label-container' key={category}>
@@ -51,25 +53,38 @@ export default class Papers extends PureComponent {
                 style={{backgroundColor: tagColors[idx]}}
             >
                 {/* Make the label string shorter on mobile devices */}
-                {this.state.isMobileDevice? category.replace(/Philosophy/, 'Phil.') : category}
+                {this.state.isMobileDevice? category.replace(/osophy/, '.') : category}
             </div>
         </div>
 
     render () {
         const {categories, items} = this.props.papers
+        const {viewportWidth} = this.props
+        const widthLimiter = 780
         const tagLabels = categories.map((category, idx) => this.getTagLabel(category, idx))
         const papers = items.map((item, idx) => this.generatePaperInfo(item.title, item.tags, item.pathname, idx))
 
         return (
             <main id='papers-div'>
-                <div className='options'>
-                    <h2>Categories</h2>
-                    <div className='sticky'>
-                        {tagLabels}
+                {
+                    viewportWidth >= widthLimiter &&
+                    <div className='options'>
+                        <h2>Categories</h2>
+                        <div className='sticky'>
+                            {tagLabels}
+                        </div>
                     </div>
-                </div>
+                }
                 <div className='papers'>
                     <h2>A Few Papers</h2>
+                    {
+                        viewportWidth < widthLimiter &&
+                        <div className='options'>
+                            <div className='sticky'>
+                                {tagLabels}
+                            </div>
+                        </div>
+                    }
                     <ul>
                         {papers}
                     </ul>
