@@ -63,7 +63,9 @@ html {
     }
 
     a {
-        color: $main-text-color;
+        // color: $main-text-color;
+        color: rgb(54, 123, 246);
+        text-decoration: none;
     }
 
     button:active, button:focus {
@@ -416,7 +418,7 @@ body {
         width: 100%;
     }
 
-    .tag-label-container, .tag {
+    .tag-label-container {
         font-size: 2em;
         text-align: center;
     }
@@ -463,6 +465,7 @@ body {
 
             span.tag {
                 line-height: 0;
+                font-size: 2rem;
             }
 
             .download-icon {
@@ -587,6 +590,25 @@ body {
     button.video-button {
         border: $main-text-color solid 1px;
         margin-bottom: 1em;
+        cursor: pointer;
+
+        width: 20%;
+        min-width: 145px;
+        text-align: center;
+        border: $button-color solid 2px;
+        cursor: pointer;
+        color: $button-color;
+        background: white;
+        font-family: $button-font;
+        font-size: 14px;
+        padding: 1em 2em;
+        transition: background 0.2s, color 0.2s;
+
+        &:hover {
+            background: $button-color;
+            color: white;
+        }
+
     }
 
     // Styles in div.video-container and iframe are derived from 'https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed'

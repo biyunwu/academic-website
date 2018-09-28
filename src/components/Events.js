@@ -4,7 +4,11 @@ import LocationIcon from './../imgs/location.svg'
 
 export default class Events extends PureComponent {
 
-    generateEventDetail = (event) => 
+    state = {
+        videoToShowIdx: undefined
+    }
+
+    generateEventDetail = (event, idx) => 
         <div className='event-container' key={event.location}>
             <h3 className='subject'>{event.subject}</h3>
             <div className='event-detail'>
@@ -18,8 +22,8 @@ export default class Events extends PureComponent {
                     renderers={{link: this.LinkRenderer}}
                     // linkTarget = '_blank'
                 />
-                {/* {event.videoLink && <button className='video-button'>Watch Video</button>} */}
-                {event.videoLink &&
+                {event.videoLink && <button className='video-button' onClick={e => this.updateVideoToShowidx(idx)}>Watch Video</button>}
+                {event.videoLink && this.state.videoToShowIdx === idx &&
                     <div className='video-container'>
                         <div dangerouslySetInnerHTML={{ __html: event.videoLink }}></div>
                         {/* <video controls>
@@ -31,18 +35,26 @@ export default class Events extends PureComponent {
             </div>
         </div>
         
-
     LinkRenderer = (props) => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
+
+    updateVideoToShowidx = (buttonIdx) => {
+        buttonIdx === this.state.videoToShowIdx
+        ? this.setState({videoToShowIdx: undefined})
+        : this.setState({videoToShowIdx: buttonIdx})
+    }
 
     render () {
         const {academic, pub} = this.props.events
-        const academicEvents = academic.map(event => this.generateEventDetail(event))
-        const publicEvents = pub.map(event => this.generateEventDetail(event))
+        const allEvents = academic.concat(pub)
+        // const academicEvents = academic.map((event, idx) => this.generateEventDetail(event, idx))
+        // const publicEvents = pub.map((event, idx) => this.generateEventDetail(event, idx))
+        const allEventsDetails = allEvents.map((event, idx) => this.generateEventDetail(event, idx))
         return (
             <main id='events'>
                 <h2>A Few Events</h2>
-                {academicEvents}
-                {publicEvents}
+                {/* {academicEvents}
+                {publicEvents} */}
+                {allEventsDetails}
             </main>
         )
     }

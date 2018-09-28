@@ -33,7 +33,8 @@ html * ::selection {
   background: rgba(0, 0, 0, 0.1); }
 
 html a {
-  color: rgba(0, 0, 0, 0.84); }
+  color: #367bf6;
+  text-decoration: none; }
 
 html button:active, html button:focus {
   outline: none;
@@ -255,7 +256,7 @@ body {
     text-align: left;
     background: white;
     width: 100%; }
-  #papers-div .tag-label-container, #papers-div .tag {
+  #papers-div .tag-label-container {
     font-size: 2em;
     text-align: center; }
   #papers-div div.tag-label-container {
@@ -283,7 +284,8 @@ body {
     #papers-div ul li span.tag-container {
       margin: 0 0 0 5px; }
     #papers-div ul li span.tag {
-      line-height: 0; }
+      line-height: 0;
+      font-size: 2rem; }
     #papers-div ul li .download-icon {
       height: 20px; }
 
@@ -358,7 +360,22 @@ body {
     margin-right: 5px; }
   #events button.video-button {
     border: rgba(0, 0, 0, 0.84) solid 1px;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    cursor: pointer;
+    width: 20%;
+    min-width: 145px;
+    text-align: center;
+    border: #272727 solid 2px;
+    cursor: pointer;
+    color: #272727;
+    background: white;
+    font-family: "SF Pro Text Regular";
+    font-size: 14px;
+    padding: 1em 2em;
+    transition: background 0.2s, color 0.2s; }
+    #events button.video-button:hover {
+      background: #272727;
+      color: white; }
   #events div.video-container {
     position: relative;
     width: 100%;
