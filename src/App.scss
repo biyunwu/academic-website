@@ -1,7 +1,6 @@
 $font-path: './fonts/';
 @import './fonts/medium-content-sans-serif-font';
 @import './fonts/medium-content-serif-font';
-@import url('https://fonts.googleapis.com/css?family=Nanum+Brush+Script');
 
 @font-face {
     font-family: 'SF Pro Text Light';
@@ -20,7 +19,7 @@ $border-color: #dddddd;
 $main-text-color : rgba(0,0,0,.84);
 $active-link-color: #000000;
 $button-color: #272727;
-$header-title-font: 'NanumBrush';
+// $header-title-font: 'NanumBrush';
 $header-title-font: 'Nanum Brush Script', cursive;
 // $nav-link-font: 'Proxima Nova';
 $nav-link-font: 'SF Pro Text Light';
