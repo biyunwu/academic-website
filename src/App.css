@@ -30,10 +30,9 @@
 
 html {
   /* Prevent font scaling in landscape while allowing user zoom */
-  -webkit-text-size-adjust: 100%; }
-  html * {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility; }
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
   html * ::selection {
     background: rgba(0, 0, 0, 0.1); }
   html a {
@@ -154,13 +153,15 @@ body {
     .book .book-pic-container .book-link {
       display: block;
       text-decoration: none;
-      border: #272727 solid 2px;
-      color: #272727;
-      font-family: "SF Pro Text Regular";
-      text-align: center;
-      font-size: 14px;
       padding: 1em;
       margin: 0.5em 0;
+      text-align: center;
+      border: #272727 solid 2px;
+      cursor: pointer;
+      color: #272727;
+      background: white;
+      font-family: "SF Pro Text Regular";
+      font-size: 14px;
       transition: background 0.2s, color 0.2s; }
       .book .book-pic-container .book-link:hover {
         background: #272727;
@@ -193,21 +194,19 @@ body {
     .book .review-button-container .review-button {
       width: 24%;
       min-width: 165px;
+      margin: 3em 2em;
+      padding: 1em 2em;
       text-align: center;
       border: #272727 solid 2px;
-      margin: 3em 2em;
       cursor: pointer;
       color: #272727;
       background: white;
       font-family: "SF Pro Text Regular";
       font-size: 14px;
-      padding: 1em 2em;
       transition: background 0.2s, color 0.2s; }
       .book .review-button-container .review-button:hover {
         background: #272727;
         color: white; }
-      .book .review-button-container .review-button::selection {
-        background: none; }
   .book .commentor {
     text-align: right; }
   .book .magazine {
@@ -263,12 +262,11 @@ body {
     text-align: left;
     background: white;
     width: 100%; }
-  #papers-div .tag-label-container {
-    font-size: 2em;
-    text-align: center; }
   #papers-div div.tag-label-container {
     display: inline-block;
-    margin-top: 5px; }
+    text-align: center; }
+    #papers-div div.tag-label-container:not(:last-child) {
+      margin-right: 2px; }
     #papers-div div.tag-label-container div.label {
       width: 180px;
       border: none;
@@ -276,9 +274,7 @@ body {
       font-size: 14px;
       color: white;
       padding: 0.5em 0;
-      margin-bottom: 0.5em; }
-      #papers-div div.tag-label-container div.label:hover {
-        color: white; }
+      margin: 0.5em 0; }
   #papers-div ul {
     padding-left: 20px;
     line-height: 1.58;
@@ -299,29 +295,30 @@ body {
     #papers-div ul li .download-icon {
       height: 20px; }
 
-@media only screen and (max-width: 480px) {
-  .pic-container {
-    text-align: center; }
-  .info-pic {
-    float: none !important;
-    margin: 0 !important;
-    width: 50%;
-    height: auto !important; } }
-
-@media only screen and (min-width: 800px) {
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 4em; }
-  .info {
-    grid-column-start: 1;
-    grid-column-end: 4; } }
-
 .about {
   max-width: 1200px;
   padding: 0 3%;
   margin: 0 auto 2.5em auto;
   font-size: 18px; }
+  @media only screen and (max-width: 480px) {
+    .about .pic-container {
+      text-align: center; }
+    .about .info-pic {
+      float: none !important;
+      margin: 0 !important;
+      width: 50%;
+      height: auto !important; } }
+  @media only screen and (min-width: 800px) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 4em; }
+    .about .info {
+      grid-column-start: 1;
+      grid-column-end: 4; } }
+  @media only screen and (max-width: 799px) {
+    .about address * {
+      text-align: center; } }
   .about .info-pic {
     height: 175px;
     float: left;
@@ -337,7 +334,8 @@ body {
     clear: both; }
   .about .contact {
     list-style: none;
-    padding: 0; }
+    padding: 0;
+    font-family: "SF Pro Text Regular"; }
     .about .contact address {
       font-style: normal; }
 
@@ -366,11 +364,11 @@ body {
     margin-left: 3px;
     padding-left: 1em;
     box-sizing: border-box; }
+  #events div.event-container:not(:last-of-type) {
+    border-bottom: rgba(0, 0, 0, 0.1) solid 1px; }
   @media only screen and (min-width: 481px) {
     #events div.event-container {
       margin: 2em 0; }
-    #events div.event-container:not(:last-of-type) {
-      border-bottom: rgba(0, 0, 0, 0.1) solid 1px; }
     #events p.location {
       text-align: right;
       margin: -1em 0 -0.5em 0; } }
@@ -380,11 +378,10 @@ body {
     padding-bottom: 3px;
     vertical-align: middle; }
   #events button.video-button {
-    border: rgba(0, 0, 0, 0.84) solid 1px;
-    margin-top: 1em;
-    cursor: pointer;
     width: 20%;
+    margin-top: 1em;
     min-width: 145px;
+    padding: 1em 2em;
     text-align: center;
     border: #272727 solid 2px;
     cursor: pointer;
@@ -392,7 +389,6 @@ body {
     background: white;
     font-family: "SF Pro Text Regular";
     font-size: 14px;
-    padding: 1em 2em;
     transition: background 0.2s, color 0.2s; }
     #events button.video-button:hover {
       background: #272727;
@@ -416,10 +412,11 @@ body {
 .footer {
   font-family: "SF Pro Text Light";
   font-size: 11px;
+  color: rgba(0, 0, 0, 0.45);
   text-align: center;
   border-top: #dddddd solid 1px;
   padding: 20px 0 11px 0;
-  color: rgba(0, 0, 0, 0.45); }
+  margin-bottom: 1em; }
   .footer .icon-gap {
     display: inline-block;
     width: 10px; }

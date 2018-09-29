@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default class Book extends PureComponent {
     state = {
@@ -50,10 +51,13 @@ export default class Book extends PureComponent {
                     </div>
 
                     <div className='book-introduction'>
-                        {bookIntroduction && bookIntroduction.map((text, idx) =>
-                            <p className='book-text' key={`${title} intriduction ${idx}`}>
-                                {text}
-                            </p>
+                        {bookIntroduction && bookIntroduction.map((text, idx) =>        
+                            <ReactMarkdown
+                                className='book-text'
+                                key={`${title} introduction ${idx}`}
+                                source={text}
+                            />
+
                         )}
                     </div>
 

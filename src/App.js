@@ -23,7 +23,8 @@ const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
 class App extends Component {
 
     state = {
-        viewportWidth: 0
+        viewportWidth: 0,
+        maxMobileWidth: 500
     }
 
     componentDidMount () {
@@ -51,7 +52,7 @@ class App extends Component {
     }
 
     render() {
-        const {viewportWidth} = this.state
+        const {viewportWidth, maxMobileWidth} = this.state
         const data = JSON.parse(Data.getData())
         const pageThemeColors = this.getPageThemeColors(data)
 
@@ -84,6 +85,7 @@ class App extends Component {
                     <Papers
                         papers = {data.papers}
                         viewportWidth = {viewportWidth}
+                        maxMobileWidth = {maxMobileWidth}
                     />
                 )}/>
                 <Route path={pageLinks[4]} render={() => (

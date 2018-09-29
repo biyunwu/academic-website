@@ -2,11 +2,6 @@ import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Download from './../imgs/download.svg'
 
-// const tagColors = ['rgb(150, 41, 49)', '#81d8d0', 'rgb(31, 33, 70)']
-// const tagColors = ['#F05654', '#81d8d0', 'rgb(31, 33, 70)']
-// const tagColors = ['#FF4C00', 'rgb(240, 157, 56)','#81d8d0']
-// const tagColors = ['#FF3300', 'rgb(240, 157, 56)','#81d8d0']
-// const tagColors = ['#DC3023', 'rgb(240, 157, 56)','#81d8d0']
 const tagColors = ['#DC3023', 'rgb(240, 157, 56)','rgb(0, 216, 208)']
 const hostPath = 'https://raw.github.com/biyunwu/academic-web/master/src/data/papers/'
 
@@ -18,7 +13,7 @@ export default class Papers extends PureComponent {
 
     // Update state according to parent props
     static getDerivedStateFromProps(nextProps, prevState) {
-        if((nextProps.viewportWidth < 480) !== prevState.isMobileDevice) {
+        if((nextProps.viewportWidth <= nextProps.maxMobileWidth) !== prevState.isMobileDevice) {
             return { isMobileDevice: !prevState.isMobileDevice };
         }
         return null;
@@ -52,16 +47,17 @@ export default class Papers extends PureComponent {
             <div id={'color'+idx} className='label' key={'color'+idx}
                 style={{backgroundColor: tagColors[idx]}}
             >
-                {/* Make the label string shorter on mobile devices */}
-                {this.state.isMobileDevice? category.replace(/osophy/, '.') : category}
+                {category}
             </div>
         </div>
 
     render () {
-        const {categories, items} = this.props.papers
+        const {categories, shortCategories, items} = this.props.papers
         const {viewportWidth} = this.props
         const widthLimiter = 780
-        const tagLabels = categories.map((category, idx) => this.getTagLabel(category, idx))
+        const tagLabels = this.state.isMobileDevice
+            ? shortCategories.map((category, idx) => this.getTagLabel(category, idx))
+            : categories.map((category, idx) => this.getTagLabel(category, idx))
         const papers = items.map((item, idx) => this.generatePaperInfo(item.title, item.tags, item.pathname, idx))
 
         return (

@@ -19,13 +19,9 @@ $border-color: #dddddd;
 $main-text-color : rgba(0,0,0,.84);
 $active-link-color: #000000;
 $button-color: #272727;
-// $header-title-font: 'NanumBrush';
 $header-title-font: 'Nanum Brush Script', cursive;
-// $nav-link-font: 'Proxima Nova';
 $nav-link-font: 'SF Pro Text Light';
-// $main-title-font: 'AvenirNext-Medium';
 $main-title-font: 'medium-content-sans-serif-font';
-// $main-title-font: 'elevate-display-font,medium-marketing-display-font,Georgia,Cambria,Times,serif';
 $main-text-font: 'medium-content-serif-font';
 $button-font: 'SF Pro Text Regular';
 
@@ -47,6 +43,22 @@ $button-font: 'SF Pro Text Regular';
     top: 0px;
 }
 
+@mixin buttonStyle {
+    text-align: center;
+    border: $button-color solid 2px;
+    cursor: pointer;
+    color: $button-color;
+    background: white;
+    font-family: $button-font;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+@mixin buttonHoverStyle {
+    background: $button-color;
+    color: white;
+}
+
 @media only screen and (max-width: 480px) {
     p {
         text-align: left;
@@ -65,10 +77,9 @@ html {
     /* Prevent font scaling in landscape while allowing user zoom */
     -webkit-text-size-adjust: 100%;
 
-    * {
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-    }
+    // Reduce font rendering difference across browsers
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 
     * ::selection {
         background: $link-seperator-color;
@@ -268,18 +279,12 @@ body {
         .book-link {
             display: block;
             text-decoration: none;
-            border: $button-color solid 2px;
-            color: $button-color;
-            font-family: $button-font;
-            text-align: center;
-            font-size: 14px;
             padding: 1em;
             margin: 0.5em 0;
-            transition: background 0.2s, color 0.2s;
+            @include buttonStyle;
 
             &:hover {
-                background: $button-color;
-                color: white;
+                @include buttonHoverStyle;
             }
         }
     }
@@ -325,28 +330,15 @@ body {
         .review-button {
             width: 24%;
             min-width: 165px;
-            text-align: center;
-            border: $button-color solid 2px;
             margin: 3em 2em;
-            cursor: pointer;
-            color: $button-color;
-            background: white;
-            font-family: $button-font;
-            font-size: 14px;
             padding: 1em 2em;
-            transition: background 0.2s, color 0.2s;
+            @include buttonStyle;
     
             &:hover {
-                background: $button-color;
-                color: white;
-            }
-    
-            &::selection {
-                background: none;
+                @include buttonHoverStyle;
             }
         }
     }
-    
 
     .commentor {
         text-align: right;
@@ -360,8 +352,7 @@ body {
 
 // Home
 #background-image {
-    // background-image: url('imgs/tj.jpg');
-    // Image url can be also specified in Home component
+    // Image url is specified in Home component
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -428,22 +419,18 @@ body {
 
     div.options {
         text-align: center;
-        // margin: 1em 0 0 0;
         text-align: left;
-        // position: sticky;
-        // top: 0px;
         background: white;
         width: 100%;
     }
 
-    .tag-label-container {
-        font-size: 2em;
-        text-align: center;
-    }
-
     div.tag-label-container {
         display: inline-block;
-        margin-top: 5px;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 2px;
+        }
 
         div.label {
             width: 180px;
@@ -452,12 +439,7 @@ body {
             font-size: 14px;
             color: white;
             padding: 0.5em 0;
-            margin-bottom: 0.5em;
-            // border-radius: 2px;
-
-            &:hover {
-                color: white;
-            }
+            margin: 0.5em 0;
         }
     }
 
@@ -466,8 +448,6 @@ body {
         @include justifyText;
 
         li {
-            // list-style: none;
-
             p {
                 margin: 0 0 0 0.5em;
                 text-indent: -0.4em;
@@ -497,32 +477,38 @@ body {
 }
 
 // About
-@media only screen and (max-width: 480px) {
-    .pic-container {
-        text-align: center;
-    }
-    .info-pic {
-        float: none !important;
-        margin: 0 !important;
-        width: 50%;
-        height: auto !important;
-    }
-}
-@media only screen and (min-width: 800px) {
-    .about {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 4em;
-    }
-
-    .info {
-        grid-column-start: 1;
-        grid-column-end: 4;
-    }
-}
 .about {
     @include limitWidth;
     font-size: 18px;
+
+    @media only screen and (max-width: 480px) {
+        .pic-container {
+            text-align: center;
+        }
+        .info-pic {
+            float: none !important;
+            margin: 0 !important;
+            width: 50%;
+            height: auto !important;
+        }
+    }
+    @media only screen and (min-width: 800px) {
+        & {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 4em;
+        }
+    
+        .info {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+    @media only screen and (max-width: 799px) {
+        address *{
+            text-align: center;
+        }
+    }
 
     .info-pic {
         height: 175px;
@@ -549,12 +535,7 @@ body {
     .contact {
         list-style: none;
         padding: 0;
-
-        // &:hover {
-        //     a {
-        //         text-decoration: underline;
-        //     }
-        // }
+        font-family: $button-font;
 
         address {
             font-style: normal;
@@ -599,17 +580,14 @@ body {
         // border-left: rgba(0, 216, 208, 0.2) solid 2px;
     }
 
+    div.event-container:not(:last-of-type) {
+        border-bottom: $link-seperator-color solid 1px;
+    }
+
     @media only screen and (min-width: 481px) {
-        // div.introduction {
-        //     margin-left: 1.2em;
-        // }
 
         div.event-container {
             margin: 2em 0;
-        }
-
-        div.event-container:not(:last-of-type) {
-            border-bottom: $link-seperator-color solid 1px;
         }
 
         p.location {
@@ -627,27 +605,15 @@ body {
     }
 
     button.video-button {
-        border: $main-text-color solid 1px;
-        margin-top: 1em;
-        cursor: pointer;
-
         width: 20%;
+        margin-top: 1em;
         min-width: 145px;
-        text-align: center;
-        border: $button-color solid 2px;
-        cursor: pointer;
-        color: $button-color;
-        background: white;
-        font-family: $button-font;
-        font-size: 14px;
         padding: 1em 2em;
-        transition: background 0.2s, color 0.2s;
-
+        @include buttonStyle;
+        
         &:hover {
-            background: $button-color;
-            color: white;
+            @include buttonHoverStyle;
         }
-
     }
 
     // Styles in div.video-container and iframe are derived from 'https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed'
@@ -681,10 +647,11 @@ body {
 .footer {
     font-family: $nav-link-font;
     font-size: 11px;
+    color: $navlink-color;
     text-align: center;
     border-top: $border-color solid 1px;
     padding: 20px 0 11px 0;
-    color: $navlink-color;
+    margin-bottom: 1em;
 
     .icon-gap {
         display: inline-block;
