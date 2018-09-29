@@ -55,27 +55,42 @@ body {
     line-height: 40px;
     font-style: normal;
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
-  body .app {
+  body #app {
     display: flex;
     flex-direction: column;
     min-height: 100vh; }
-    body .app main {
+    body #app main {
       flex: 1; }
 
-#header {
+#burger {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+#sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  transition: 0.5s; }
+  #sidebar ul {
+    list-style: none;
+    padding: 0; }
+
+.mask {
+  background: rgba(0, 0, 0, 0.1); }
+
+header {
   text-align: center;
   color: rgba(0, 0, 0, 0.45);
-  border-bottom: #dddddd solid 1px; }
-  #header header {
-    padding: 20px 0; }
-    #header header img {
-      height: 40px; }
-  #header .App-title {
-    /* title: */
-    font-family: "Nanum Brush Script", cursive;
-    font-size: 48px;
-    margin: 0; }
-  #header .nav {
+  border-bottom: #dddddd solid 1px;
+  padding: 20px 0; }
+  header img {
+    height: 40px; }
+  header .nav {
     display: block;
     padding: 0;
     margin: 10px auto;
@@ -83,22 +98,22 @@ body {
     font-family: "SF Pro Text Light";
     font-size: 14px;
     font-weight: 600; }
-    #header .nav .link-seperator {
+    header .nav .link-seperator {
       padding: 0 7px;
       color: rgba(0, 0, 0, 0.1); }
-  #header .nav-item {
+  header .nav-item {
     list-style: none;
     display: inline-block;
     line-height: 1.8em; }
-    #header .nav-item .nav-link {
+    header .nav-item .nav-link {
       color: rgba(0, 0, 0, 0.45);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 1px;
       white-space: nowrap; }
-      #header .nav-item .nav-link:hover {
+      header .nav-item .nav-link:hover {
         color: rgba(0, 0, 0, 0.84); }
-    #header .nav-item .active {
+    header .nav-item .active {
       color: #000000; }
 
 .book {

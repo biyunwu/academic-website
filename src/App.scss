@@ -120,7 +120,7 @@ body {
         border-bottom: $link-seperator-color 1px solid;
     }
 
-    .app {
+    #app {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -130,29 +130,43 @@ body {
         }
     }
 }
+// Burger icon
+#burger {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+// Sidebar
+#sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    transition: 0.5s;
+    ul {
+        list-style: none;
+        padding: 0;
+        
+    }
+}
+
+.mask {
+    background: rgba(0,0,0,0.1);
+}
 
 // Header
-#header {
+header {
     text-align: center;
     color: $navlink-color;
-    // background: $background-color;
-    // background: #0abab5;
-    // background: #99ECEA;
     border-bottom: $border-color solid 1px;
+    padding: 20px 0;
 
-    header {
-        padding: 20px 0;
-
-        img {
-            height: 40px;
-        }
-    }
-
-    .App-title {
-        /* title: */
-        font-family: $header-title-font;
-        font-size: 48px;
-        margin: 0;
+    img {
+        height: 40px;
     }
 
     .nav {
@@ -394,6 +408,9 @@ body {
     @media only screen and (max-width: 779px) {
         div.options {
             @include sticky;
+            // position: fixed;
+            // bottom: 0;
+            // margin-left: -0.5rem;
             margin-top: 1em;
             text-align: center !important;
             
