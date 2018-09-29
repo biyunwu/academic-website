@@ -41,9 +41,11 @@ html {
     html a:hover {
       color: #00d8d0;
       text-decoration: underline; }
-  html button:active, html button:focus {
-    outline: none;
-    box-shadow: none; }
+  html button {
+    background: none; }
+    html button:active, html button:focus {
+      outline: none;
+      box-shadow: none; }
 
 body {
   font-family: "medium-content-serif-font";
@@ -56,6 +58,7 @@ body {
     font-style: normal;
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
   body #app {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     min-height: 100vh; }
@@ -63,25 +66,27 @@ body {
       flex: 1; }
 
 #burger {
-  position: absolute;
-  left: 0;
-  top: 0; }
+  position: fixed;
+  height: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: red;
+  z-index: 2; }
 
 #sidebar {
-  height: 100%;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: whitesmoke;
+  background-color: #00d8d0;
   overflow-x: hidden;
-  transition: 0.5s; }
+  transition: 0.3s; }
+  #sidebar a {
+    color: rgba(0, 0, 0, 0.84); }
   #sidebar ul {
     list-style: none;
     padding: 0; }
-
-.mask {
-  background: rgba(0, 0, 0, 0.1); }
 
 header {
   text-align: center;
@@ -174,7 +179,6 @@ header {
       border: #272727 solid 2px;
       cursor: pointer;
       color: #272727;
-      background: white;
       font-family: "SF Pro Text Regular";
       font-size: 14px;
       transition: background 0.2s, color 0.2s; }
@@ -215,7 +219,6 @@ header {
       border: #272727 solid 2px;
       cursor: pointer;
       color: #272727;
-      background: white;
       font-family: "SF Pro Text Regular";
       font-size: 14px;
       transition: background 0.2s, color 0.2s; }
@@ -362,13 +365,6 @@ header {
     font-family: "SF Pro Text Light";
     font-size: 24px;
     font-weight: 100; }
-    @media only screen and (max-width: 480px) {
-      #events h3 {
-        position: sticky;
-        top: 0px;
-        background: white;
-        padding: 0.3em 0;
-        margin: 0.6em 0; } }
   #events p {
     line-height: 1.58;
     font-size: 18px; }
@@ -401,7 +397,6 @@ header {
     border: #272727 solid 2px;
     cursor: pointer;
     color: #272727;
-    background: white;
     font-family: "SF Pro Text Regular";
     font-size: 14px;
     transition: background 0.2s, color 0.2s; }

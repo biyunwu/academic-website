@@ -40,6 +40,9 @@ class App extends Component {
 
     updateViewportWidth = () => {
         this.setState({viewportWidth: window.innerWidth})
+        if (window.innerWidth > this.state.maxMobileWidth){
+            this.setState({isSidebarOpen: false})
+        }
     }
 
     getPageThemeColors = (data) => {
@@ -62,7 +65,7 @@ class App extends Component {
         const isMobileDevice = viewportWidth <= maxMobileWidth
         const data = JSON.parse(Data.getData())
         const pageThemeColors = this.getPageThemeColors(data)
-        const sidebarStyle = isSidebarOpen ? {width: 'auto'} : {width: '0'}
+        const sidebarStyle = isSidebarOpen ? {height: 'auto'} : {height: '0'}
 
         return (
             <div>
@@ -84,10 +87,11 @@ class App extends Component {
                         <Siderbar
                             links = {links}
                             themeColors = {pageThemeColors}
+                            closeSidebar = {this.updateSidebarStatus}
                         />
                     </div>
                 }
-                <div id='app' className={isSidebarOpen? 'mask' : ''}>
+                <div id='app' onClick={isSidebarOpen && this.updateSidebarStatus}>
                     <Header 
                         links = {links}
                         themeColors = {pageThemeColors}

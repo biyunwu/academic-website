@@ -48,7 +48,7 @@ $button-font: 'SF Pro Text Regular';
     border: $button-color solid 2px;
     cursor: pointer;
     color: $button-color;
-    background: white;
+    // background: white;
     font-family: $button-font;
     font-size: 14px;
     transition: background 0.2s, color 0.2s;
@@ -97,10 +97,13 @@ html {
             text-decoration: underline;
         }
     }
+    button {
+        background: none;
 
-    button:active, button:focus {
-        outline: none;
-        box-shadow: none;
+        &:active, &:focus {
+            outline: none;
+            box-shadow: none;
+        }
     }
 }
 
@@ -121,6 +124,7 @@ body {
     }
 
     #app {
+        z-index: 1;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -132,21 +136,27 @@ body {
 }
 // Burger icon
 #burger {
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: fixed;
+    height: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: red;
+    z-index: 2;
 }
 
 // Sidebar
 #sidebar {
-    height: 100%;
+    a {
+        color: $main-text-color;
+    }
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: whitesmoke;
+    background-color: rgb(0, 216, 208);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     ul {
         list-style: none;
         padding: 0;
@@ -154,9 +164,20 @@ body {
     }
 }
 
-.mask {
-    background: rgba(0,0,0,0.1);
-}
+// .overlay {
+//     position: fixed;
+//     display: none;
+//     min-width: 100%;
+//     min-height: 100%;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     // z-index: 1;
+//     &, .sticky {
+//         background: rgba(0,0,0,0.1);
+//     }
+// }
 
 // Header
 header {
@@ -568,16 +589,18 @@ header {
         font-family: $nav-link-font;
         font-size: 24px;
         font-weight: 100;
-        
-        @media only screen and (max-width: 480px) {
-            & {
-                @include sticky;
-                background: white;
-                padding: 0.3em 0;
-                margin: 0.6em 0;
-            }
-        }
     }
+
+    // h3.sticky {
+    //     @media only screen and (max-width: 480px) {
+    //         & {
+    //             @include sticky;
+    //             background: white;
+    //             padding: 0.3em 0;
+    //             margin: 0.6em 0;
+    //         }
+    //     }
+    // }
 
     p {
         line-height: 1.58;

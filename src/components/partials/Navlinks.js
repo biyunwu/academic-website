@@ -13,6 +13,7 @@ export default class NavLinks extends Component {
                 activeClassName='active'
                 activeStyle={this.getLinkColor(link, themeColors)}
                 id={idx}
+                onClick={isInSidebar && this.props.closeSidebar}
             >
                 {link}
             </NavLink>

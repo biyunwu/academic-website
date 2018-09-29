@@ -3,12 +3,13 @@ import Navlinks from './Navlinks'
 
 export default class Sidebar extends Component {
     render () {
-        const {links, themeColors} = this.props
+        const {links, themeColors, closeSidebar} = this.props
         return (
             <Navlinks
                 links={links}
                 themeColors={themeColors}
                 isInSidebar = {true}
+                closeSidebar = {closeSidebar}
             />
         )
     }
