@@ -11,6 +11,10 @@ export default class Papers extends PureComponent {
         isMobileDevice : true
     }
 
+    componentDidMount () {
+        window.scrollTo(0,0)
+    }
+
     // Update state according to parent props
     static getDerivedStateFromProps(nextProps, prevState) {
         if((nextProps.viewportWidth <= nextProps.maxMobileWidth) !== prevState.isMobileDevice) {

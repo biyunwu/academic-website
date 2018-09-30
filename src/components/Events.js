@@ -8,6 +8,10 @@ export default class Events extends PureComponent {
         videoToShowIdx: undefined
     }
 
+    componentDidMount () {
+        window.scrollTo(0,0)
+    }
+
     generateEventDetail = (event, idx) => 
         <div className='event-container' key={event.location}>
             <h3 className='subject'>{event.subject}</h3>
@@ -55,7 +59,7 @@ export default class Events extends PureComponent {
         const allEventsDetails = allEvents.map((event, idx) => this.generateEventDetail(event, idx))
         return (
             <main id='events'>
-                {/* <h2>Some Events</h2> */}
+                <h2>Some Events</h2>
                 {/* {academicEvents}
                 {publicEvents} */}
                 {allEventsDetails}

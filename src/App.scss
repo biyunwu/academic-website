@@ -1,6 +1,7 @@
 $font-path: './fonts/';
 @import './fonts/medium-content-sans-serif-font';
 @import './fonts/medium-content-serif-font';
+@import './hamburgers/hamburgers.scss';
 
 @font-face {
     font-family: 'SF Pro Text Light';
@@ -15,7 +16,8 @@ $font-path: './fonts/';
 $background-color: #f5f5f5;
 $navlink-color: rgba(0,0,0,0.45);
 $link-seperator-color: rgba(0,0,0,0.1);
-$border-color: #dddddd;
+// $border-color: #dddddd;
+$border-color: rgba(0,0,0,0.1);
 $main-text-color : rgba(0,0,0,.84);
 $active-link-color: #000000;
 $button-color: #272727;
@@ -86,10 +88,7 @@ html {
     }
     
     a {
-        // color: $main-text-color;
-        // color: rgb(54, 123, 246);
         color: rgb(236, 133, 19);
-        // color: rgb(0, 216, 208);
         text-decoration: none;
 
         &:hover {
@@ -137,47 +136,52 @@ body {
 // Burger icon
 #burger {
     position: fixed;
-    height: 10px;
-    right: 10px;
-    bottom: 10px;
-    background: red;
+    right: 0px;
+    bottom: 0px;
     z-index: 2;
 }
 
 // Sidebar
 #sidebar {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $nav-link-font;
+    letter-spacing: 1px;
+
     a {
         color: $main-text-color;
     }
+
+    a.active {
+        color: $main-text-color !important;
+        text-decoration: underline;
+    }
+
     width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0, 216, 208);
+    // background-color: rgb(0, 216, 208);
+    background-color: rgb(236, 133, 19);
     overflow-x: hidden;
     transition: 0.3s;
+
     ul {
         list-style: none;
         padding: 0;
         
+        li {
+            margin: 2em 0;
+        }
+    }
+
+    button {
+        margin-top: 1em;
+        padding: 1em 3em;
+        border: $main-text-color solid 1px;
     }
 }
-
-// .overlay {
-//     position: fixed;
-//     display: none;
-//     min-width: 100%;
-//     min-height: 100%;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     // z-index: 1;
-//     &, .sticky {
-//         background: rgba(0,0,0,0.1);
-//     }
-// }
 
 // Header
 header {
@@ -587,20 +591,9 @@ header {
 
     h3 {
         font-family: $nav-link-font;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 100;
     }
-
-    // h3.sticky {
-    //     @media only screen and (max-width: 480px) {
-    //         & {
-    //             @include sticky;
-    //             background: white;
-    //             padding: 0.3em 0;
-    //             margin: 0.6em 0;
-    //         }
-    //     }
-    // }
 
     p {
         line-height: 1.58;
@@ -620,8 +613,14 @@ header {
         // border-left: rgba(0, 216, 208, 0.2) solid 2px;
     }
 
-    div.event-container:not(:last-of-type) {
-        border-bottom: $link-seperator-color solid 1px;
+    div.event-container:not(:last-of-type)::after {
+        // border-bottom: $link-seperator-color solid 1px;
+        content: ""; // This is necessary for the pseudo element to work.
+        display: block; // This will put the pseudo element on its own line. 
+        margin: 0 auto; // Center the border
+        width: 50%;
+        padding-top: 1em;
+        border-bottom: 1px solid $link-seperator-color;
     }
 
     @media only screen and (min-width: 481px) {

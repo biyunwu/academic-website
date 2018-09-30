@@ -65,33 +65,34 @@ class App extends Component {
         const isMobileDevice = viewportWidth <= maxMobileWidth
         const data = JSON.parse(Data.getData())
         const pageThemeColors = this.getPageThemeColors(data)
-        const sidebarStyle = isSidebarOpen ? {height: 'auto'} : {height: '0'}
+        const sidebarStyle = isSidebarOpen ? {height: '100%'} : {height: '0'}
+        const menuBaseClassName = "hamburger hamburger--collapse"
+        const menuClassName = isSidebarOpen ? menuBaseClassName.concat(" is-active") : menuBaseClassName
 
         return (
             <div>
                 {isMobileDevice &&
-                    <button id='burger'
-                        onClick={this.updateSidebarStatus}
-                    >
+                    // <button id='burger' onClick={this.updateSidebarStatus}></button>
+                    <button id='burger' className={menuClassName} type="button"
+                        aria-label="Menu" aria-controls="sidebar"
+                        onClick={this.updateSidebarStatus}>
+                        <span className="hamburger-box">
+                            <span className="hamburger-inner"></span>
+                        </span>
                     </button>
                 }
                 {isMobileDevice && 
-                    <div id='sidebar'
-                        style={sidebarStyle}
-                    >
-                        <button
-                            onClick = {this.updateSidebarStatus}
-                        >
-                            Close
-                        </button>
+                    <div id='sidebar' style={sidebarStyle}>
+                        <Header isMobileDevice={true}/>
                         <Siderbar
                             links = {links}
                             themeColors = {pageThemeColors}
                             closeSidebar = {this.updateSidebarStatus}
                         />
+                        <button onClick = {this.updateSidebarStatus}>Close</button>
                     </div>
                 }
-                <div id='app' onClick={isSidebarOpen && this.updateSidebarStatus}>
+                <div id='app' onClick={isSidebarOpen? this.updateSidebarStatus : undefined}>
                     <Header 
                         links = {links}
                         themeColors = {pageThemeColors}

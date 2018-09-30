@@ -1,6 +1,10 @@
 import React, { PureComponent } from 'react';
 
 export default class About extends PureComponent {
+    componentDidMount () {
+        window.scrollTo(0,0)
+    }
+    
     render () {
         const {infoPic} = this.props
         return (

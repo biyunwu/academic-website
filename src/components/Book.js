@@ -6,6 +6,10 @@ export default class Book extends PureComponent {
         reviewHidden: true
     }
 
+    componentDidMount () {
+        window.scrollTo(0,0)
+    }
+
     toggleReviewVisibility = () => {
         this.state.reviewHidden ? this.setState({reviewHidden: false}) : this.setState({reviewHidden: true})
     }
