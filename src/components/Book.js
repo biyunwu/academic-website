@@ -2,27 +2,41 @@ import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
 
 export default class Book extends PureComponent {
-    state = {
-        reviewHidden: true
-    }
+    // state = {
+    //     reviewHidden: true
+    // }
 
     componentDidMount () {
         window.scrollTo(0,0)
     }
 
-    toggleReviewVisibility = () => {
-        this.state.reviewHidden ? this.setState({reviewHidden: false}) : this.setState({reviewHidden: true})
-    }
+    // toggleReviewVisibility = () => {
+    //     this.state.reviewHidden ? this.setState({reviewHidden: false}) : this.setState({reviewHidden: true})
+    // }
 
     render () {
         const {bookData, cover} = this.props
         const {title, publisher, bookLink, bookIntroduction, primaryReview, otherReviews} = bookData
-        const {reviewHidden} = this.state
-        const buttonText = reviewHidden? 'More Reviews' : 'Fewer Review'
+        // const {reviewHidden} = this.state
+        // const buttonText = reviewHidden? 'More Reviews' : 'Fewer Review'
 
-        const moreReviews = 
-            reviewHidden? '' : otherReviews && 
-                (<ul className='more-book-review'>
+        // const moreReviews = 
+        //     reviewHidden? '' : otherReviews && 
+        //         (<ul className='more-book-review'>
+        //             {otherReviews.map(review => 
+        //                 <li key={review.reviewer}>
+        //                     <p className='book-text'>
+        //                         {review.review}
+        //                     </p>
+        //                     <p className={review.magazine? 'commentor magazine' : 'commentor'}>
+        //                         {'– ' + review.reviewer}
+        //                     </p>
+        //                 </li>
+        //             )}
+        //         </ul>)
+
+        const moreReviews = otherReviews && 
+                <ul className='more-book-review'>
                     {otherReviews.map(review => 
                         <li key={review.reviewer}>
                             <p className='book-text'>
@@ -33,7 +47,7 @@ export default class Book extends PureComponent {
                             </p>
                         </li>
                     )}
-                </ul>)
+                </ul>
 
         return (
             <main className='book'>
@@ -80,14 +94,14 @@ export default class Book extends PureComponent {
 
                 </div>
                 {
-                    primaryReview && otherReviews &&
-                    <div className='review-button-container'>
-                        <button className='review-button'
-                            onClick={this.toggleReviewVisibility}
-                        >
-                            {buttonText}
-                        </button>
-                    </div>
+                    // primaryReview && otherReviews &&
+                    // <div className='review-button-container'>
+                    //     <button className='review-button'
+                    //         onClick={this.toggleReviewVisibility}
+                    //     >
+                    //         {buttonText}
+                    //     </button>
+                    // </div>
                 }
             </main>
         )

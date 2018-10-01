@@ -4,9 +4,9 @@ import LocationIcon from './../imgs/location.svg'
 
 export default class Events extends PureComponent {
 
-    state = {
-        videoToShowIdx: undefined
-    }
+    // state = {
+    //     videoToShowIdx: undefined
+    // }
 
     componentDidMount () {
         window.scrollTo(0,0)
@@ -28,7 +28,7 @@ export default class Events extends PureComponent {
                 />
                 {event.videoLink &&
                     <div>
-                        {this.state.videoToShowIdx === idx &&
+                        {/* {this.state.videoToShowIdx === idx && */}
                             <div className='video-container'>
                                 <div dangerouslySetInnerHTML={{ __html: event.videoLink }}></div>
                                 {/* <video controls>
@@ -36,8 +36,8 @@ export default class Events extends PureComponent {
                                     <p>Your browser doesn't support HTML5 video.</p>
                                 </video> */}
                             </div>       
-                        }
-                        <button className='video-button' onClick={e => this.updateVideoToShowidx(idx)}>{this.state.videoToShowIdx !== idx? 'Watch Video' : 'Hide Video'}</button>
+                        {/* } */}
+                        {/* <button className='video-button' onClick={e => this.updateVideoToShowidx(idx)}>{this.state.videoToShowIdx !== idx? 'Watch Video' : 'Hide Video'}</button> */}
                     </div>
                 }
             </div>

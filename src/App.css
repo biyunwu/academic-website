@@ -765,6 +765,9 @@ body {
     line-height: 40px;
     font-style: normal;
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid; }
+    @media only screen and (min-width: 501px) {
+      body h2 {
+        padding-top: 10px; } }
   body #app {
     z-index: 1;
     display: flex;
@@ -820,7 +823,10 @@ header {
   text-align: center;
   color: rgba(0, 0, 0, 0.45);
   border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
-  padding: 25px 0 15px 0; }
+  padding: 40px 0 30px 0; }
+  @media only screen and (max-width: 500px) {
+    header {
+      padding: 25px 0 15px 0; } }
   header img {
     height: 40px; }
   header ul.nav {
@@ -963,7 +969,7 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: local;
-  min-height: 200px; }
+  min-height: 350px; }
 
 #papers-div {
   max-width: 1200px;
