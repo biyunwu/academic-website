@@ -69,6 +69,10 @@ class App extends Component {
         // Refer to Hamburgers library: https://github.com/jonsuh/hamburgers
         const menuBaseClassName = "hamburger hamburger--collapse"
         const menuClassName = isSidebarOpen ? menuBaseClassName.concat(" is-active") : menuBaseClassName
+        // When sidebar is open, prevent the burger icon from moving when the page is being scrolling up and down.
+        const burgerStyle =  isSidebarOpen ? {position: 'fixed'} : {position: 'absolute'}
+        // Prevent page from scrolling when the sidebar is open.
+        const mainContenStyle=isSidebarOpen? {overflow: 'hidden', position: 'fixed'} : {}
 
         return (
             <div>
@@ -77,12 +81,10 @@ class App extends Component {
                         <button id='burger' className={menuClassName} type="button"
                             aria-label="Menu" aria-controls="sidebar"
                             onClick={this.updateSidebarStatus}
-                            style={isSidebarOpen? {} : {background: 'rgba(255, 255, 255, 0.6)'}}
+                            style={burgerStyle}
                         >
                             <span className="hamburger-box">
-                                <span className="hamburger-inner">
-                                    {isSidebarOpen? '' : 'Menu'}
-                                </span>
+                                <span className="hamburger-inner"></span>
                             </span>
                         </button>
                         <div id='sidebar' style={sidebarStyle}>
@@ -97,7 +99,7 @@ class App extends Component {
                         </div>
                     </React.Fragment>
                 }
-                <div id='app' onClick={isSidebarOpen? this.updateSidebarStatus : undefined}>
+                <div id='app' style={mainContenStyle}>
                     <Header 
                         links = {links}
                         themeColors = {pageThemeColors}

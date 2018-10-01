@@ -38,7 +38,7 @@ export default class Header extends Component {
                         </React.Fragment>
                     }
                     {copyright}
-                    <p className='footer-text'>Created by <a href='https://biyunwu.com' target='_blank' rel="noopener noreferrer">Biyun Wu</a></p>
+                    <p className='footer-text'>Created by <a id='developer' href='https://biyunwu.com' target='_blank' rel="noopener noreferrer">Biyun Wu</a></p>
             </footer>
         )
     }

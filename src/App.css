@@ -774,14 +774,9 @@ body {
       flex: 1; }
 
 #burger {
-  position: fixed;
-  right: 10px;
-  bottom: 5vh;
-  z-index: 2;
-  font-family: "SF Pro Text Light";
-  font-size: 12px;
-  color: black;
-  border-radius: 50%; }
+  left: 0;
+  top: 20px;
+  z-index: 3; }
 
 #sidebar {
   text-align: center;
@@ -790,7 +785,7 @@ body {
   letter-spacing: 1px;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: #ec8513;
@@ -808,16 +803,16 @@ body {
     padding: 0; }
     #sidebar ul li {
       margin: 2em 0; }
+  #sidebar ul.nav {
+    flex: 1; }
   #sidebar .footer {
     bottom: 0;
     width: 100%;
     text-align: center; }
-    #sidebar .footer a {
+    #sidebar .footer #developer {
       color: rgba(0, 0, 0, 0.45); }
-    #sidebar .footer:hover a {
+    #sidebar .footer:hover #developer {
       color: rgba(0, 0, 0, 0.84); }
-  #sidebar ul.nav {
-    flex: 1; }
 
 header {
   text-align: center;
