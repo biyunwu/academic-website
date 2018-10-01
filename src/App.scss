@@ -141,6 +141,7 @@ body {
         z-index: 1;
         display: flex;
         flex-direction: column;
+        width: 100%;
         min-height: 100vh;
 
         & main {
@@ -150,7 +151,8 @@ body {
 }
 // Burger icon
 #burger {
-    // Position value is specified in App.js
+    // Position value is set to be fixed in App.js when sidebar is open.
+    position: absolute;
     left: 0;
     top: 20px;
     z-index: 3;
@@ -231,7 +233,7 @@ header {
         display: block;
         padding: 0;
         margin: 0 0 10px 0;
-        padding: 0 0.5em;
+        padding: 0 5px;
         font-family: $nav-link-font;
         font-size: 14px;
         font-weight: 600;
