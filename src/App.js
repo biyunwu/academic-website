@@ -57,7 +57,7 @@ class App extends Component {
     }
 
     updateSidebarStatus = () => {
-        this.setState({isSidebarOpen: !this.state.isSidebarOpen})
+        this.setState(prevState => ({isSidebarOpen: !prevState.isSidebarOpen}))
     }
 
     render() {
@@ -66,31 +66,36 @@ class App extends Component {
         const data = JSON.parse(Data.getData())
         const pageThemeColors = this.getPageThemeColors(data)
         const sidebarStyle = isSidebarOpen ? {height: '100%'} : {height: '0'}
+        // Refer to Hamburgers library: https://github.com/jonsuh/hamburgers
         const menuBaseClassName = "hamburger hamburger--collapse"
         const menuClassName = isSidebarOpen ? menuBaseClassName.concat(" is-active") : menuBaseClassName
 
         return (
             <div>
                 {isMobileDevice &&
-                    // <button id='burger' onClick={this.updateSidebarStatus}></button>
-                    <button id='burger' className={menuClassName} type="button"
-                        aria-label="Menu" aria-controls="sidebar"
-                        onClick={this.updateSidebarStatus}>
-                        <span className="hamburger-box">
-                            <span className="hamburger-inner"></span>
-                        </span>
-                    </button>
-                }
-                {isMobileDevice && 
-                    <div id='sidebar' style={sidebarStyle}>
-                        <Header isMobileDevice={true}/>
-                        <Siderbar
-                            links = {links}
-                            themeColors = {pageThemeColors}
-                            closeSidebar = {this.updateSidebarStatus}
-                        />
-                        <button onClick = {this.updateSidebarStatus}>Close</button>
-                    </div>
+                    <React.Fragment>
+                        <button id='burger' className={menuClassName} type="button"
+                            aria-label="Menu" aria-controls="sidebar"
+                            onClick={this.updateSidebarStatus}
+                            style={isSidebarOpen? {} : {background: 'rgba(255, 255, 255, 0.6)'}}
+                        >
+                            <span className="hamburger-box">
+                                <span className="hamburger-inner">
+                                    {isSidebarOpen? '' : 'Menu'}
+                                </span>
+                            </span>
+                        </button>
+                        <div id='sidebar' style={sidebarStyle}>
+                            <Header isMobileDevice={true}/>
+                            <Siderbar
+                                links = {links}
+                                themeColors = {pageThemeColors}
+                                closeSidebar = {this.updateSidebarStatus}
+                            />
+                            {/* <button onClick = {this.updateSidebarStatus}>Close</button> */}
+                            <Footer isMobileDevice = {isMobileDevice}/>
+                        </div>
+                    </React.Fragment>
                 }
                 <div id='app' onClick={isSidebarOpen? this.updateSidebarStatus : undefined}>
                     <Header 

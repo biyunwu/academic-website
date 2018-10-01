@@ -1,18 +1,8 @@
 $font-path: './fonts/';
 @import './fonts/medium-content-sans-serif-font';
 @import './fonts/medium-content-serif-font';
-@import './hamburgers/hamburgers.scss';
 
-@font-face {
-    font-family: 'SF Pro Text Light';
-    src: url($font-path + 'SF-Pro-Text-Light.otf');
-}
-
-@font-face {
-    font-family: 'SF Pro Text Regular';
-    src: url($font-path + 'SF-Pro-Text-Regular.otf');
-}
-
+$sidebarColor: rgb(236, 133, 19);
 $background-color: #f5f5f5;
 $navlink-color: rgba(0,0,0,0.45);
 $link-seperator-color: rgba(0,0,0,0.1);
@@ -26,6 +16,29 @@ $nav-link-font: 'SF Pro Text Light';
 $main-title-font: 'medium-content-sans-serif-font';
 $main-text-font: 'medium-content-serif-font';
 $button-font: 'SF Pro Text Regular';
+
+// customized Burger icon settings should be done first. More details: https://github.com/jonsuh/hamburgers
+$hamburger-padding-x           : 10px;
+$hamburger-padding-y           : 16px;
+$hamburger-layer-width         : 30px;
+$hamburger-layer-height        : 1px;
+$hamburger-layer-spacing       : 6px;
+$hamburger-layer-color         : $sidebarColor;
+$hamburger-layer-border-radius : 0px;
+$hamburger-hover-opacity       : 1;
+$hamburger-active-layer-color  : $main-text-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+@import './hamburgers/hamburgers.scss';
+
+@font-face {
+    font-family: 'SF Pro Text Light';
+    src: url($font-path + 'SF-Pro-Text-Light.otf');
+}
+
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url($font-path + 'SF-Pro-Text-Regular.otf');
+}
 
 @mixin limitWidth {
     max-width: 1200px;
@@ -78,6 +91,8 @@ $button-font: 'SF Pro Text Regular';
 html {
     /* Prevent font scaling in landscape while allowing user zoom */
     -webkit-text-size-adjust: 100%;
+    // Remove Gray Highlight When Tapping Links in Mobile Safari: https://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 
     // Reduce font rendering difference across browsers
     -webkit-font-smoothing: antialiased;
@@ -136,9 +151,13 @@ body {
 // Burger icon
 #burger {
     position: fixed;
-    right: 0px;
-    bottom: 0px;
+    right: 10px;
+    bottom: 5vh;
     z-index: 2;
+    font-family: $nav-link-font;
+    font-size: 12px;
+    color: black;
+    border-radius: 50%;
 }
 
 // Sidebar
@@ -162,8 +181,8 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    // background-color: rgb(0, 216, 208);
-    background-color: rgb(236, 133, 19);
+
+    background-color: $sidebarColor;
     overflow-x: hidden;
     transition: 0.3s;
 
@@ -176,10 +195,29 @@ body {
         }
     }
 
-    button {
-        margin-top: 1em;
-        padding: 1em 3em;
-        border: $main-text-color solid 1px;
+    .footer {
+        // position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+
+        a {
+            color: $navlink-color;
+        }
+
+        &:hover {
+            a {
+                color: $main-text-color;
+            }
+        }
+    }
+
+    // Push footer to the bottom
+    display: flex;
+    flex-direction: column;
+
+    & ul.nav {
+        flex: 1;
     }
 }
 
@@ -188,17 +226,16 @@ header {
     text-align: center;
     color: $navlink-color;
     border-bottom: $border-color solid 1px;
-    padding: 20px 0;
+    padding: 25px 0 15px 0;
 
     img {
         height: 40px;
     }
 
-    .nav {
+    ul.nav {
         display: block;
         padding: 0;
-        // margin: 14px auto;
-        margin: 10px auto;
+        margin: 0 0 10px 0;
         padding: 0 0.5em;
         font-family: $nav-link-font;
         font-size: 14px;
@@ -235,9 +272,6 @@ header {
 
 // Book
 .book {
-    // max-width: 1200px;
-    // padding: 0 3%;
-    // margin: 2.5em auto 2.5em auto;
     @include limitWidth;
 
     @media only screen and (max-width: 374px) {
@@ -356,7 +390,6 @@ header {
         font-family: $nav-link-font;
         font-size: 13px;
         text-align: center;
-        // color: $navlink-color;
         color: $main-text-color;
         margin-top: 0;
         padding: 0.5em;
@@ -433,9 +466,6 @@ header {
     @media only screen and (max-width: 779px) {
         div.options {
             @include sticky;
-            // position: fixed;
-            // bottom: 0;
-            // margin-left: -0.5rem;
             margin-top: 1em;
             text-align: center !important;
             
@@ -451,7 +481,6 @@ header {
             width: auto !important;
             padding: 0.5em 0.5em !important;
         }
-
 
         p {
             text-align: left;
@@ -609,12 +638,9 @@ header {
         margin-left: 3px;
         padding-left: 1em;
         box-sizing: border-box;
-        // border-left: $link-seperator-color solid 2px;
-        // border-left: rgba(0, 216, 208, 0.2) solid 2px;
     }
 
     div.event-container:not(:last-of-type)::after {
-        // border-bottom: $link-seperator-color solid 1px;
         content: ""; // This is necessary for the pseudo element to work.
         display: block; // This will put the pseudo element on its own line. 
         margin: 0 auto; // Center the border
@@ -657,7 +683,6 @@ header {
 
     // Styles in div.video-container and iframe are derived from 'https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed'
     // to make the embeded Youtube video responsive.
-
     div.video-container {
         position: relative;
         width: 100%;
@@ -686,6 +711,7 @@ header {
 .footer {
     font-family: $nav-link-font;
     font-size: 11px;
+    text-transform: uppercase;
     color: $navlink-color;
     text-align: center;
     border-top: $border-color solid 1px;

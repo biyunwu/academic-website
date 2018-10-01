@@ -26,17 +26,17 @@ export default class Papers extends PureComponent {
     generatePaperInfo = (title, tags, pathname, idx) => {
         return (
             <li key={idx}>
-                    <ReactMarkdown
-                        source={title}
-                    />
-                    <div className='indent'>
-                        <a href={hostPath + pathname} target='_blank' rel='noopener noreferrer'>
-                            <img className='download-icon' src={Download} alt='Click to download'/>
-                        </a>
-                        <span className='tag-container'>
-                            {this.getTags(tags)}    
-                        </span>
-                    </div>
+                <ReactMarkdown
+                    source={title}
+                />
+                <div className='indent'>
+                    <a href={hostPath + pathname} target='_blank' rel='noopener noreferrer'>
+                        <img className='download-icon' src={Download} alt='Click to download'/>
+                    </a>
+                    <span className='tag-container'>
+                        {this.getTags(tags)}    
+                    </span>
+                </div>
             </li>
         )
     }

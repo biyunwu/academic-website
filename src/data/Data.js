@@ -54,7 +54,7 @@ const data = {
     papers: {
         categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosophy'],
         shortCategories: ['Chinese Phil.', 'Buddhist Phil.', 'Comparative Phil.'],
-        // themeColor: 'rgb(0, 216, 208)',
+        themeColor: 'rgb(0, 216, 208)',
         items: [
             {
                 title: `“Oneness and its Discontent: Contesting Ren in Classical Chinese Philosophy,” in *The Oneness Hypothesis: Beyond the Boundary of Self*, edited by Philip J. Ivanhoe, Owen Flanagan, Victoria Harrison, Hagop Sarkissian, and Eric Schwitzgebel, Columbia University Press, 2018`,
