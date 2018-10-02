@@ -42,8 +42,12 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 @mixin limitWidth {
     max-width: 1200px;
-    padding: 0 3%;
-    margin: 0 auto 2.5em auto;
+    padding: 0 3% 2.5em 3%;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 1200px) {
+        padding: 0 1% 2.5em 1%;
+    }
 }
 
 @mixin justifyText {
@@ -119,6 +123,20 @@ html {
             box-shadow: none;
         }
     }
+
+    // For canvas animation
+    canvas {
+        position: fixed;
+        z-index: -1;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #main-header, main {
+        background-color: rgba(255, 255, 255, 0.9);
+    } 
 }
 
 body {
@@ -149,6 +167,7 @@ body {
 
         & main {
             flex: 1;
+            // background: white;
         }
     }
 }

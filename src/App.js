@@ -87,7 +87,7 @@ class App extends Component {
                             </span>
                         </button>
                         <div id='sidebar' style={sidebarStyle}>
-                            <Header isMobileDevice={true}/>
+                            <Header isMobileDevice = {true} isSidebarOpen = {true}/>
                             <Siderbar
                                 links = {links}
                                 themeColors = {pageThemeColors}

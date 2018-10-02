@@ -4,7 +4,7 @@ import Logo from './../../imgs/logo.png'
 
 export default class Header extends Component {
     render() {
-        const {links, themeColors, isMobileDevice} = this.props
+        const {links, themeColors, isMobileDevice, isSidebarOpen} = this.props
         const navlinks = isMobileDevice
             ? ''
             :   <Navlinks
@@ -13,7 +13,7 @@ export default class Header extends Component {
                 />
 
         return (    
-            <header>
+            <header id={isSidebarOpen? '' : 'main-header'}>
                 <h1 style={{width: "100%", margin:'0'}}>
                     <a href='/' style={{verticalAlign: 'middle'}}>
                         <img src={Logo} alt='logo'/>

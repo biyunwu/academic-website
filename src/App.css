@@ -754,6 +754,15 @@ html {
     html button:active, html button:focus {
       outline: none;
       box-shadow: none; }
+  html canvas {
+    position: fixed;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%; }
+  html #main-header, html main {
+    background-color: rgba(255, 255, 255, 0.9); }
 
 body {
   font-family: "medium-content-serif-font";
@@ -857,8 +866,11 @@ header {
 
 .book {
   max-width: 1200px;
-  padding: 0 3%;
-  margin: 0 auto 2.5em auto; }
+  padding: 0 3% 2.5em 3%;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1200px) {
+    .book {
+      padding: 0 1% 2.5em 1%; } }
   @media only screen and (max-width: 374px) {
     .book .book-text {
       text-align: left !important;
@@ -973,10 +985,13 @@ header {
 
 #papers-div {
   max-width: 1200px;
-  padding: 0 3%;
-  margin: 0 auto 2.5em auto;
+  padding: 0 3% 2.5em 3%;
+  margin: 0 auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
+  @media only screen and (min-width: 1200px) {
+    #papers-div {
+      padding: 0 1% 2.5em 1%; } }
   @media only screen and (min-width: 780px) {
     #papers-div {
       display: grid;
@@ -1049,9 +1064,12 @@ header {
 
 .about {
   max-width: 1200px;
-  padding: 0 3%;
-  margin: 0 auto 2.5em auto;
+  padding: 0 3% 2.5em 3%;
+  margin: 0 auto;
   font-size: 18px; }
+  @media only screen and (min-width: 1200px) {
+    .about {
+      padding: 0 1% 2.5em 1%; } }
   @media only screen and (max-width: 480px) {
     .about .pic-container {
       text-align: center; }
@@ -1093,8 +1111,11 @@ header {
 
 #events {
   max-width: 1200px;
-  padding: 0 3%;
-  margin: 0 auto 2.5em auto; }
+  padding: 0 3% 2.5em 3%;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1200px) {
+    #events {
+      padding: 0 1% 2.5em 1%; } }
   #events h3 {
     font-family: "SF Pro Text Light";
     font-size: 22px;
