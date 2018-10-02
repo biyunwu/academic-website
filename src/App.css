@@ -740,9 +740,12 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  background-color: #f5f7f9; }
   html * ::selection {
     background: rgba(0, 0, 0, 0.1); }
+  html img::selection {
+    background: none; }
   html a {
     color: #ec8513;
     text-decoration: none; }
@@ -761,8 +764,8 @@ html {
     margin: 0;
     height: 100%;
     width: 100%; }
-  html #main-header, html main {
-    background-color: rgba(255, 255, 255, 0.9); }
+  html main {
+    background-color: rgba(255, 255, 255, 0.95); }
 
 body {
   font-family: "medium-content-serif-font";
@@ -831,7 +834,6 @@ body {
 header {
   text-align: center;
   color: rgba(0, 0, 0, 0.45);
-  border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
   padding: 40px 0 30px 0; }
   @media only screen and (max-width: 500px) {
     header {
@@ -865,19 +867,21 @@ header {
       color: #000000; }
 
 .book {
-  max-width: 1200px;
-  padding: 0 3% 2.5em 3%;
+  max-width: 1000px;
+  padding: 0 3%;
   margin: 0 auto; }
   @media only screen and (min-width: 1200px) {
     .book {
-      padding: 0 1% 2.5em 1%; } }
+      padding: 0 1%; } }
   @media only screen and (max-width: 374px) {
     .book .book-text {
       text-align: left !important;
       word-break: normal !important; } }
   @media only screen and (max-width: 480px) {
-    .book .book-pic-container {
-      padding: 0 20%; } }
+    .book {
+      margin: 0 !important; }
+      .book .book-pic-container {
+        padding: 0 20%; } }
   @media only screen and (min-width: 481px) and (max-width: 1023px) {
     .book .book-pic-container {
       width: 35%;
@@ -984,14 +988,14 @@ header {
   min-height: 350px; }
 
 #papers-div {
-  max-width: 1200px;
-  padding: 0 3% 2.5em 3%;
+  max-width: 1000px;
+  padding: 0 3%;
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
   @media only screen and (min-width: 1200px) {
     #papers-div {
-      padding: 0 1% 2.5em 1%; } }
+      padding: 0 1%; } }
   @media only screen and (min-width: 780px) {
     #papers-div {
       display: grid;
@@ -1027,7 +1031,6 @@ header {
   #papers-div div.options {
     text-align: center;
     text-align: left;
-    background: white;
     width: 100%; }
   #papers-div div.tag-label-container {
     display: inline-block;
@@ -1063,13 +1066,13 @@ header {
       height: 20px; }
 
 .about {
-  max-width: 1200px;
-  padding: 0 3% 2.5em 3%;
+  max-width: 1000px;
+  padding: 0 3%;
   margin: 0 auto;
   font-size: 18px; }
   @media only screen and (min-width: 1200px) {
     .about {
-      padding: 0 1% 2.5em 1%; } }
+      padding: 0 1%; } }
   @media only screen and (max-width: 480px) {
     .about .pic-container {
       text-align: center; }
@@ -1110,12 +1113,12 @@ header {
       font-style: normal; }
 
 #events {
-  max-width: 1200px;
-  padding: 0 3% 2.5em 3%;
+  max-width: 1000px;
+  padding: 0 3%;
   margin: 0 auto; }
   @media only screen and (min-width: 1200px) {
     #events {
-      padding: 0 1% 2.5em 1%; } }
+      padding: 0 1%; } }
   #events h3 {
     font-family: "SF Pro Text Light";
     font-size: 22px;
@@ -1185,7 +1188,6 @@ header {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.45);
   text-align: center;
-  border-top: rgba(0, 0, 0, 0.1) solid 1px;
   padding: 20px 0 11px 0;
   margin-bottom: 1em; }
   .footer .icon-gap {

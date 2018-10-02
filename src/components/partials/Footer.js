@@ -52,7 +52,7 @@ export default class Header extends Component {
 
                     <span className='icon-gap'></span>
                     <a href='https://rccs.rutgers.edu/people/director' target='_blank' rel='noopener noreferrer'>
-                        Rutgers RCCS
+                        Rutgers
                     </a>
                     <span className='icon-gap'></span>
                     <a href='https://www.linkedin.com/in/tao-jiang-bb80b837/' target='_blank' rel='noopener noreferrer'>

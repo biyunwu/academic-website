@@ -41,13 +41,20 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 }
 
 @mixin limitWidth {
-    max-width: 1200px;
-    padding: 0 3% 2.5em 3%;
+    max-width: 1000px;
+    padding: 0 3%;
     margin: 0 auto;
 
     @media only screen and (min-width: 1200px) {
-        padding: 0 1% 2.5em 1%;
+        padding: 0 1%;
     }
+
+    // Prevent text overflow its parent container: https://stackoverflow.com/questions/5241369/word-wrap-a-link-so-it-doesnt-overflow-its-parent-div-width
+    // white-space: pre-wrap; /* css-3 */    
+    // white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    // white-space: -pre-wrap; /* Opera 4-6 */    
+    // white-space: -o-pre-wrap; /* Opera 7 */    
+    // word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 @mixin justifyText {
@@ -102,8 +109,14 @@ html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 
+    background-color: rgb(245, 247, 249);
+
     * ::selection {
         background: $link-seperator-color;
+    }
+
+    img::selection {
+        background: none;
     }
     
     a {
@@ -134,8 +147,11 @@ html {
         width: 100%;
     }
 
-    #main-header, main {
-        background-color: rgba(255, 255, 255, 0.9);
+    // #main-header, main {
+    //     background-color: rgba(255, 255, 255, 0.95);
+    // } 
+    main {
+        background-color: rgba(255, 255, 255, 0.95);
     } 
 }
 
@@ -165,7 +181,7 @@ body {
         width: 100%;
         min-height: 100vh;
 
-        & main {
+        main {
             flex: 1;
             // background: white;
         }
@@ -244,7 +260,7 @@ body {
 header {
     text-align: center;
     color: $navlink-color;
-    border-bottom: $border-color solid 1px;
+    // border-bottom: $border-color solid 1px;
     padding: 40px 0 30px 0;
 
     @media only screen and (max-width: 500px) {
@@ -296,6 +312,7 @@ header {
 // Book
 .book {
     @include limitWidth;
+    
 
     @media only screen and (max-width: 374px) {
         .book-text {
@@ -309,6 +326,8 @@ header {
         .book-pic-container {
             padding: 0 20%;
         }
+
+        margin: 0 !important;
     }
 
     @media only screen and (min-width: 481px) and (max-width: 1023px) { 
@@ -514,7 +533,6 @@ header {
     div.options {
         text-align: center;
         text-align: left;
-        background: white;
         width: 100%;
     }
 
@@ -737,7 +755,7 @@ header {
     text-transform: uppercase;
     color: $navlink-color;
     text-align: center;
-    border-top: $border-color solid 1px;
+    // border-top: $border-color solid 1px;
     padding: 20px 0 11px 0;
     margin-bottom: 1em;
 
