@@ -118,6 +118,9 @@ html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 
+    // For iPhone X and newer modles.
+    padding: env(safe-area-inset);
+
     background-color: rgb(245, 247, 249);
 
     * ::selection {

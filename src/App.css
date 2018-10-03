@@ -741,6 +741,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  padding: env(safe-area-inset);
   background-color: #f5f7f9; }
   html * ::selection {
     background: rgba(0, 0, 0, 0.1); }
