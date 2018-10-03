@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <!-- <title>Tao Jiang</title>
-        <meta name="description" content="Tao JIANG is a scholar of classical Chinese philosophy, Mahāyāna Buddhist philosophy, and comparative philosophy at Rutgers University. Jiang's approach to philosophy is to treat it as a way to study a particular form of intellectual life and the people who conceive of it." /> -->
+        <title>Tao Jiang</title>
+        <meta name="description" content="Tao JIANG is a scholar of classical Chinese philosophy, Mahāyāna Buddhist philosophy, and comparative philosophy at Rutgers University. Jiang's approach to philosophy is to treat it as a way to study a particular form of intellectual life and the people who conceive of it." />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
         <meta name="theme-color" content="#000000">
         <!--
@@ -52,7 +52,7 @@
             }(window.location))
         </script>
     </head>
-    <canvas aria-hidden = 'true'></canvas>
+    <canvas aria-hidden = "true"></canvas>
     <body>
         <noscript>
         You need to enable JavaScript to run this app.
@@ -68,7 +68,7 @@
             dpr = window.devicePixelRatio || 1,
             width = window.innerWidth,
             height = window.innerHeight,
-            RIBBON_WIDE,
+            RIBBON_WIDE = 90,
             path,
             math = Math,
             r = 0,
@@ -79,18 +79,33 @@
         canvasRibbon.height = height * dpr;
         ctx.scale(dpr, dpr);
         // Transparency
-        ctx.globalAlpha = 0.3;
+        ctx.globalAlpha = 0.2;
         function init() {
             ctx.clearRect(0, 0, width, height);
-            // Prevent canvas rendering in homepage.
-            if (window.location.pathname !== '/') {
-                RIBBON_WIDE = window.innerWidth <= 500 ? 90 : 161;
-                path = [{x: 0, y: height * 0.7 + RIBBON_WIDE}, {x: 0, y: height * 0.7 - RIBBON_WIDE}];
-                while (path[1].x < width + RIBBON_WIDE) {
-                    draw(path[0], path[1])
+            width = window.innerWidth;
+            height = window.innerHeight;
+            
+            // RIBBON_WIDE = window.innerWidth <= 500 ? 90 : 161;
+            path = [{x: 0, y: height * 0.7 + RIBBON_WIDE}, {x: 0, y: height * 0.7 - RIBBON_WIDE}];
+
+            var status = checkStatus();
+
+            function checkStatus() {
+                // Prevent canvas rendering in homepage.
+                return window.location.pathname !== '/' && path[1].x < width + RIBBON_WIDE;
+            }
+
+            function nextFrame() {
+                if (status) {
+                    draw(path[0], path[1]);
+                    status = checkStatus();
+                    setTimeout(nextFrame, 500/width * 100);
                 }
             }
+
+            setTimeout(nextFrame, 0);
         }
+
         function draw(start, end) {
             ctx.beginPath();
             ctx.moveTo(start.x, start.y);
@@ -105,13 +120,16 @@
             path[0] = path[1];
             path[1] = {x: nextX, y: nextY}
         }
+
         function geneY(y) {
             var temp = y + (random() * 2 - 1.1) * RIBBON_WIDE;
             return (temp > height || temp < 0) ? geneY(y) : temp
         }
-        document.onclick = init;
-        // document.ontouchstart = init;
+        document.onclick = function(e) {if (e.target.classList.contains("nav-link")) {init()}};
+        // document.onclick = init;
         window.onresize = init;
+        window.addEventListener("orientationchange", init, false)
+        // document.querySelectorAll('.nav-link').forEach(function(link){link.addEventListener("onclick", init)});
         init();
     </script>
 </html>

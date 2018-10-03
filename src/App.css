@@ -764,9 +764,6 @@ html {
     margin: 0;
     height: 100%;
     width: 100%; }
-    @media only screen and (min-width: 1000px) {
-      html canvas {
-        padding-top: 29%; } }
   html main {
     background-color: rgba(255, 255, 255, 0.95); }
 
