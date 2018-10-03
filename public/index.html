@@ -60,14 +60,16 @@
         <div id="root"></div>
     </body>
     <script>
+        // The canvas animation is modified based on a rewriten code which is originated from Evan You's blog.
+        // https://github.com/zproo/canvas-ribbon
         document.addEventListener('touchmove', function (e) {
             e.preventDefault()
         });
-        var canvasRibbon = document.getElementsByTagName('canvas')[0],
+        let canvasRibbon = document.getElementsByTagName('canvas')[0],
             ctx = canvasRibbon.getContext('2d'),
             dpr = window.devicePixelRatio || 1,
-            width = window.innerWidth,
-            height = window.innerHeight,
+            width,
+            height,
             RIBBON_WIDE = 90,
             path,
             math = Math,
@@ -75,26 +77,27 @@
             PI_2 = math.PI * 2,
             cos = math.cos,
             random = math.random;
-        canvasRibbon.width = width * dpr;
-        canvasRibbon.height = height * dpr;
-        ctx.scale(dpr, dpr);
-        // Transparency
-        ctx.globalAlpha = 0.2;
-        function init() {
-            ctx.clearRect(0, 0, width, height);
+        updateData();
+
+        function updateData () {
             width = window.innerWidth;
             height = window.innerHeight;
-            
+            ctx.clearRect(0, 0, width, height);
+            canvasRibbon.width = width * dpr;
+            canvasRibbon.height = height * dpr;
+            ctx.scale(dpr, dpr);
+            ctx.globalAlpha = 0.2;
+        }
+
+        function init() {
+            updateData();
             // RIBBON_WIDE = window.innerWidth <= 500 ? 90 : 161;
             path = [{x: 0, y: height * 0.7 + RIBBON_WIDE}, {x: 0, y: height * 0.7 - RIBBON_WIDE}];
-
-            var status = checkStatus();
-
+            let status = checkStatus();
             function checkStatus() {
                 // Prevent canvas rendering in homepage.
                 return window.location.pathname !== '/' && path[1].x < width + RIBBON_WIDE;
             }
-
             function nextFrame() {
                 if (status) {
                     draw(path[0], path[1]);
@@ -102,7 +105,6 @@
                     setTimeout(nextFrame, 500/width * 100);
                 }
             }
-
             setTimeout(nextFrame, 0);
         }
 
@@ -116,6 +118,7 @@
             ctx.closePath();
             r -= PI_2 / -50;
             ctx.fillStyle = '#' + (cos(r) * 127 + 128 << 16 | cos(r + PI_2 / 3) * 127 + 128 << 8 | cos(r + PI_2 / 3 * 2) * 127 + 128).toString(16);
+            if (ctx.fillStyle === "#000000") {ctx.fillStyle = "rgb(236, 133, 19)"} 
             ctx.fill();
             path[0] = path[1];
             path[1] = {x: nextX, y: nextY}
@@ -126,10 +129,8 @@
             return (temp > height || temp < 0) ? geneY(y) : temp
         }
         document.onclick = function(e) {if (e.target.classList.contains("nav-link")) {init()}};
-        // document.onclick = init;
         window.onresize = init;
-        window.addEventListener("orientationchange", init, false)
-        // document.querySelectorAll('.nav-link').forEach(function(link){link.addEventListener("onclick", init)});
+        window.addEventListener("orientationchange", init);
         init();
     </script>
 </html>

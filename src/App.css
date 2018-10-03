@@ -741,7 +741,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  padding: env(safe-area-inset);
   background-color: #f5f7f9; }
   html * ::selection {
     background: rgba(0, 0, 0, 0.1); }
@@ -763,12 +762,15 @@ html {
     z-index: -1;
     padding: 0;
     margin: 0;
+    left: 0;
     height: 100%;
     width: 100%; }
   html main {
     background-color: rgba(255, 255, 255, 0.95); }
 
 body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   font-family: "medium-content-serif-font";
   color: rgba(0, 0, 0, 0.84); }
   body h2 {
@@ -786,7 +788,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh; }
+    min-height: 90vh; }
     body #app main {
       flex: 1; }
 
@@ -965,7 +967,7 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: local;
-  min-height: 350px; }
+  min-height: 300px; }
 
 #papers-div {
   max-width: 1000px;

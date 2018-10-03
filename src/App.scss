@@ -45,6 +45,18 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     padding: 0 3%;
     margin: 0 auto;
 
+    // @media only screen and (max-width: 500px) {
+    //     // For iPhone X and newer models: https://github.com/webpack-contrib/sass-loader/issues/528#issuecomment-362259216
+    //     @supports(padding: max(0px)) {
+    //         & {
+    //             margin-left: m#{a}x(12px, env(safe-area-inset-left));
+    //             margin-left: m#{a}x(12px, env(safe-area-inset-right));
+    //             // padding-left: max(12px, env(safe-area-inset-left));
+    //             // padding-right: max(12px, env(safe-area-inset-right));
+    //         }
+    //     }
+    // }
+
     @media only screen and (min-width: 1200px) {
         padding: 1% 2% 0 2%;
     }
@@ -118,8 +130,8 @@ html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 
-    // For iPhone X and newer modles.
-    padding: env(safe-area-inset);
+    // To cover the whole screen on iPhone X and newer models on landscape mode.
+    // padding: env(safe-area-inset);
 
     background-color: rgb(245, 247, 249);
 
@@ -155,6 +167,7 @@ html {
         z-index: -1;
         padding: 0;
         margin: 0;
+        left: 0; // For iPhone X to show ribbon from the very left even under the notch.
         height: 100%;
         width: 100%;
 
@@ -172,6 +185,10 @@ html {
 }
 
 body {
+    // For iPhone X and newer modles.
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+
     // max-width: 1200px;
     // margin: 0 auto;
     font-family: $main-text-font;
@@ -195,7 +212,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
-        min-height: 100vh;
+        min-height: 90vh;
 
         main {
             flex: 1;
@@ -521,7 +538,7 @@ header {
     background-position: center center;
     // Make the image fixed in the container
     background-attachment: local;
-    min-height: 350px;
+    min-height: 300px;
 }
 
 // Papers
