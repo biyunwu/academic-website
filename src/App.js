@@ -138,6 +138,7 @@ class App extends Component {
                     <Route path={pageLinks[5]} render={() => (
                         <About
                             infoPic = {infoPic}
+                            about = {data.about}
                         />
                     )}/>
                     <Footer />

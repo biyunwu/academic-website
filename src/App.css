@@ -764,6 +764,9 @@ html {
     margin: 0;
     height: 100%;
     width: 100%; }
+    @media only screen and (min-width: 1000px) {
+      html canvas {
+        padding-top: 29%; } }
   html main {
     background-color: rgba(255, 255, 255, 0.95); }
 
@@ -872,46 +875,25 @@ header {
   margin: 0 auto; }
   @media only screen and (min-width: 1200px) {
     .book {
-      padding: 0 1%; } }
+      padding: 1% 2% 0 2%; } }
   @media only screen and (max-width: 374px) {
     .book .book-text {
       text-align: left !important;
       word-break: normal !important; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 500px) {
     .book {
       margin: 0 !important; }
       .book .book-pic-container {
         padding: 0 20%; } }
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+  @media only screen and (min-width: 501px) {
     .book .book-pic-container {
-      width: 35%;
+      width: 26%;
       margin: 0.5em 1em 0 0 !important;
       float: left; }
       .book .book-pic-container .gap {
         padding-right: 1em; }
     .book .book-introduction {
       display: inline; } }
-  @media only screen and (min-width: 1024px) {
-    .book .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-column-gap: 2em; }
-    .book .book-pic-container {
-      grid-column-start: 1;
-      grid-column-end: 2; }
-      .book .book-pic-container .gap {
-        padding-right: 1em; }
-      .book .book-pic-container .book-link {
-        width: 100%;
-        box-sizing: border-box;
-        margin-right: 2em; }
-    .book .book-introduction {
-      grid-column-start: 2;
-      grid-column-end: 5; }
-    .book .book-review {
-      grid-column-start: 1;
-      grid-column-end: 5; } }
   .book .book-pic-container {
     margin-top: 18px;
     margin: 1.5em 0 0 0;
@@ -995,7 +977,7 @@ header {
   font-size: 18px; }
   @media only screen and (min-width: 1200px) {
     #papers-div {
-      padding: 0 1%; } }
+      padding: 1% 2% 0 2%; } }
   @media only screen and (min-width: 780px) {
     #papers-div {
       display: grid;
@@ -1072,7 +1054,7 @@ header {
   font-size: 18px; }
   @media only screen and (min-width: 1200px) {
     .about {
-      padding: 0 1%; } }
+      padding: 1% 2% 0 2%; } }
   @media only screen and (max-width: 480px) {
     .about .pic-container {
       text-align: center; }
@@ -1118,7 +1100,7 @@ header {
   margin: 0 auto; }
   @media only screen and (min-width: 1200px) {
     #events {
-      padding: 0 1%; } }
+      padding: 1% 2% 0 2%; } }
   #events h3 {
     font-family: "SF Pro Text Light";
     font-size: 22px;

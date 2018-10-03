@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
+import {Helmet} from "react-helmet"
 
 export default class Book extends PureComponent {
     // state = {
@@ -16,7 +17,7 @@ export default class Book extends PureComponent {
 
     render () {
         const {bookData, cover} = this.props
-        const {title, publisher, bookLink, bookIntroduction, primaryReview, otherReviews} = bookData
+        const {seoTitle, seoDescription, title, publisher, bookLink, bookIntroduction, primaryReview, otherReviews} = bookData
         // const {reviewHidden} = this.state
         // const buttonText = reviewHidden? 'More Reviews' : 'Fewer Review'
 
@@ -51,6 +52,10 @@ export default class Book extends PureComponent {
 
         return (
             <main className='book'>
+                <Helmet>
+                    <title>{seoTitle}</title>
+                    <meta name="description" content={seoDescription} />
+                </Helmet>
                 <h2>
                     {title}
                 </h2>

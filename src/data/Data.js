@@ -1,5 +1,7 @@
 const data = {
     buddhism: {
+        seoTitle: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind, by Tao Jiang`,
+        seoDescription: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind is a fascinating study of the subliminal mind across cultural boundaries. It proposes a new paradigm in comparative approach to ideas through contextualization and recontextualization.`,
         title: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind`,
         publisher: `University of Hawaii Press`,
         bookLink: `http://a.co/d/1nYnDJI`,
@@ -39,6 +41,8 @@ const data = {
     },
 
     freud: {
+        seoTitle: 'The Reception and Rendition of Freud in China',
+        seoDescription: 'The Reception and Rendition of Freud in China explores the history, reception, and use of Freud and his theories in China, and makes an original and substantial contribution to our understanding of the Chinese people and their culture as well as to our appreciation of western attempts to understand the people and culture of China.',
         title: `The Reception and Rendition of Freud in China: China’s Freudian Slip`,
         publisher: `Routledge`,
         bookLink: `http://a.co/d/g77CGA7`,
@@ -52,6 +56,8 @@ const data = {
     },
 
     papers: {
+        seoTitle: 'Some papers by Tao Jiang',
+        seoDescription: 'Select papers by Tao Jiang on Buddhist philosophy, Chinese philosophy and comparative philosophy.',
         categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosophy'],
         shortCategories: ['Chinese Phil.', 'Buddhist Phil.', 'Comparative Phil.'],
         themeColor: 'rgb(0, 216, 208)',
@@ -117,6 +123,8 @@ const data = {
     },
 
     events: {
+        seoTitle: `Tao Jiang's events`,
+        seoDescription: 'Notable public events featuring Tao Jiang',
         academic: [
             {
                 location: 'Rutgers University, New Brunswick, NJ',
@@ -137,7 +145,14 @@ const data = {
     },
 
     about: {
-
+        seoTitle: `Tao Jiang's bio`,
+        seoDescription: `Tao Jiang's bio`,
+        name: 'Tao Jiang',
+        details: [
+            `Tao JIANG grew up in the ancient city of [Chengdu](https://www.nytimes.com/2016/03/06/t-magazine/chengdu-china-travel-guide.html) in China’s southwest, “where the pace is slow, the food is spicy and there’s always time for a good gossip over a cup of tea.” When he was a boy, Jiang often dreamt of “leading an adventurous life in a faraway place,” which probably explains why he became a scholar in America, venturing into classical Chinese philosophy, Mahāyāna Buddhist philosophy, and comparative philosophy. Jiang’s approach to philosophy is to treat it as a way to study a particular form of intellectual and moral culture and the people who conceive of it. He is associate professor in the [Department of Religion](http://religion.rutgers.edu/tao-jiang) and an associate member of the graduate faculty in the Department of Philosophy at Rutgers, the State University of New Jersey in New Brunswick, US. He is director of the multidisciplinary [Rutgers Center for Chinese Studies](https://rccs.rutgers.edu).`,
+            `Jiang is the author of *Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind* and the co-editor of *The Reception and Rendition of Freud in China: China’s Freudian Slip*. His articles have appeared in leading Asian and comparative philosophy journals and several major anthologies. Currently he is completing a monograph on classical Chinese philosophy.`,
+            `Jiang co-directs the Rutgers Workshop on Chinese Philosophy and co-chairs the Neo-Confucian Studies Seminar at Columbia University. He is currently serving in the program committee of the American Academy of Religion.`
+        ]
     }
 }
 

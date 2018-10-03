@@ -46,7 +46,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     margin: 0 auto;
 
     @media only screen and (min-width: 1200px) {
-        padding: 0 1%;
+        padding: 1% 2% 0 2%;
     }
 
     // Prevent text overflow its parent container: https://stackoverflow.com/questions/5241369/word-wrap-a-link-so-it-doesnt-overflow-its-parent-div-width
@@ -78,6 +78,15 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     font-family: $button-font;
     font-size: 14px;
     transition: background 0.2s, color 0.2s;
+}
+
+@mixin blockSeperator {
+    content: ""; // This is necessary for the pseudo element to work.
+    display: block; // This will put the pseudo element on its own line. 
+    margin: 0 auto; // Center the border
+    width: 50%;
+    padding-top: 1em;
+    border-bottom: 1px solid $link-seperator-color;
 }
 
 @mixin buttonHoverStyle {
@@ -145,6 +154,10 @@ html {
         margin: 0;
         height: 100%;
         width: 100%;
+
+        @media only screen and (min-width: 1000px) {
+            padding-top: 29%;
+        }
     }
 
     // #main-header, main {
@@ -202,6 +215,8 @@ body {
     text-transform: uppercase;
     font-family: $nav-link-font;
     letter-spacing: 1px;
+    // border-bottom: $border-color solid 1px;
+
 
     a {
         color: $main-text-color;
@@ -243,6 +258,7 @@ body {
         bottom: 0;
         width: 100%;
         text-align: center;
+        // border-top: $border-color solid 1px;
 
         #developer {
             color: $navlink-color;
@@ -321,7 +337,8 @@ header {
         }
     }
 
-    @media only screen and (max-width: 480px) {
+    // The following two sets of media querries are modified based on the following querries which are commented out.
+    @media only screen and (max-width: 500px) {
         // Make the book cover smaller
         .book-pic-container {
             padding: 0 20%;
@@ -330,9 +347,9 @@ header {
         margin: 0 !important;
     }
 
-    @media only screen and (min-width: 481px) and (max-width: 1023px) { 
+    @media only screen and (min-width: 501px) { 
         .book-pic-container {
-            width: 35%;
+            width: 26%;
             margin: 0.5em 1em 0 0 !important;
             float: left;
 
@@ -345,40 +362,65 @@ header {
             display: inline;
         }
     }
+
+    // @media only screen and (max-width: 480px) {
+    //     // Make the book cover smaller
+    //     .book-pic-container {
+    //         padding: 0 20%;
+    //     }
+
+    //     margin: 0 !important;
+    // }
+
+    // @media only screen and (min-width: 481px) and (max-width: 1023px) { 
+    //     .book-pic-container {
+    //         width: 35%;
+    //         margin: 0.5em 1em 0 0 !important;
+    //         float: left;
+
+    //         .gap {
+    //             padding-right: 1em;
+    //         }
+    //     }
+
+    //     .book-introduction {
+    //         display: inline;
+    //     }
+    // }
     
-    @media only screen and (min-width: 1024px) { 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            grid-column-gap: 2em;
-        }
+    // @media only screen and (min-width: 1024px) { 
+    //     .grid {
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr 1fr 1fr;
+    //         grid-template-rows: auto;
+    //         grid-column-gap: 2em;
+    //     }
 
-        .book-pic-container {
-            grid-column-start: 1;
-            grid-column-end: 2;
+    //     .book-pic-container {
+    //         grid-column-start: 1;
+    //         grid-column-end: 2;
 
-            .gap {
-                padding-right: 1em;
-            }
+    //         .gap {
+    //             padding-right: 1em;
+    //         }
 
-            .book-link {
-                width: 100%;
-                box-sizing: border-box;
-                margin-right: 2em;
-            }
-        }
+    //         .book-link {
+    //             width: 100%;
+    //             box-sizing: border-box;
+    //             margin-right: 2em;
+    //         }
+    //     }
 
-        .book-introduction {
-            grid-column-start: 2;
-            grid-column-end: 5;
-        }
+    //     .book-introduction {
+    //         grid-column-start: 2;
+    //         grid-column-end: 5;
+    //     }
     
-        .book-review {
-            grid-column-start: 1;
-            grid-column-end: 5;
-        }
-    }
+    //     .book-review {
+    //         grid-column-start: 1;
+    //         grid-column-end: 5;
+    //     }
+    // }
 
     .book-pic-container {
         margin-top: 18px;
@@ -457,6 +499,10 @@ header {
     .commentor {
         text-align: right;
     }
+
+    // p.commentor:not(:last-of-type)::after {
+    //     @include blockSeperator;
+    // }
 
     .magazine {
         font-style: italic;
@@ -682,12 +728,13 @@ header {
     }
 
     div.event-container:not(:last-of-type)::after {
-        content: ""; // This is necessary for the pseudo element to work.
-        display: block; // This will put the pseudo element on its own line. 
-        margin: 0 auto; // Center the border
-        width: 50%;
-        padding-top: 1em;
-        border-bottom: 1px solid $link-seperator-color;
+        // content: ""; // This is necessary for the pseudo element to work.
+        // display: block; // This will put the pseudo element on its own line. 
+        // margin: 0 auto; // Center the border
+        // width: 50%;
+        // padding-top: 1em;
+        // border-bottom: 1px solid $link-seperator-color;
+        @include blockSeperator;
     }
 
     @media only screen and (min-width: 481px) {

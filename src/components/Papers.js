@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
+import {Helmet} from "react-helmet"
 import Download from './../imgs/download.svg'
 
 const tagColors = ['#DC3023', 'rgb(240, 157, 56)','rgb(0, 216, 208)']
@@ -56,7 +57,7 @@ export default class Papers extends PureComponent {
         </div>
 
     render () {
-        const {categories, shortCategories, items} = this.props.papers
+        const {seoTitle, seoDescription, categories, shortCategories, items} = this.props.papers
         const {viewportWidth} = this.props
         const widthLimiter = 780
         const tagLabels = this.state.isMobileDevice
@@ -66,6 +67,10 @@ export default class Papers extends PureComponent {
 
         return (
             <main id='papers-div'>
+                <Helmet>
+                    <title>{seoTitle}</title>
+                    <meta name="description" content={seoDescription} />
+                </Helmet>
                 {
                     viewportWidth >= widthLimiter &&
                     <div className='options'>

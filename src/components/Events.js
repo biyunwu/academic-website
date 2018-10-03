@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
+import {Helmet} from "react-helmet"
 import LocationIcon from './../imgs/location.svg'
 
 export default class Events extends PureComponent {
@@ -52,13 +53,17 @@ export default class Events extends PureComponent {
     }
 
     render () {
-        const {academic, pub} = this.props.events
+        const {seoTitle, seoDescription, academic, pub} = this.props.events
         const allEvents = academic.concat(pub)
         // const academicEvents = academic.map((event, idx) => this.generateEventDetail(event, idx))
         // const publicEvents = pub.map((event, idx) => this.generateEventDetail(event, idx))
         const allEventsDetails = allEvents.map((event, idx) => this.generateEventDetail(event, idx))
         return (
             <main id='events'>
+                <Helmet>
+                    <title>{seoTitle}</title>
+                    <meta name="description" content={seoDescription} />
+                </Helmet>
                 <h2>Some Events</h2>
                 {/* {academicEvents}
                 {publicEvents} */}

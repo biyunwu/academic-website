@@ -1,29 +1,41 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
+import ReactMarkdown from 'react-markdown'
+import {Helmet} from "react-helmet"
 
 export default class About extends PureComponent {
     componentDidMount () {
         window.scrollTo(0,0)
     }
+
+    // Helper method
+    LinkRenderer = (props) => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
     
     render () {
-        const {infoPic} = this.props
+        const {infoPic, about} = this.props
+        const {seoTitle, seoDescription} = about
+        const {name, details} = about
+        const detailsContent = details.map((detail, idx) => 
+            <ReactMarkdown
+                className='detail-info'
+                key={`detail${idx}`}
+                source={detail}
+                renderers={{link: this.LinkRenderer}}
+            />
+        )
+
         return (
             <main className='about'>
+                <Helmet>
+                    <title>{seoTitle}</title>
+                    <meta name="description" content={seoDescription} />
+                </Helmet>
                 <div className='info'>
-                    <h2>About Tao Jiang</h2>
+                    <h2>About {name}</h2>
                     <div className='pic-container'>
-                        <img className='info-pic' src={infoPic} alt='Tao Jiang' />
+                        <img className='info-pic' src={infoPic} alt={name} />
                     </div>
                     <div>
-                        <p className='detail-info'>
-                            Tao J<span id='lastname'>IANG</span> is a scholar of classical Chinese philosophy, Mahāyāna Buddhist philosophy, and comparative philosophy. He is associate professor in the <a target='_blank' rel="noopener noreferrer" href='https://religion.rutgers.edu/graduate/graduate-faculty/892-tao-jiang-4'>Department of Religion</a> and an associate member of the graduate faculty in the Department of Philosophy at Rutgers, the State University of New Jersey in New Brunswick, US. He is director of the multidisciplinary <a target='_blank' rel="noopener noreferrer" href='https://rccs.rutgers.edu/'>Rutgers Center for Chinese Studies</a>.
-                        </p>
-                        <p className='detail-info'>
-                            Jiang is the author of <span className='italic'>Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind</span> and the co-editor of <span className='italic'>The Reception and Rendition of Freud in China: China’s Freudian Slip</span>. His articles have appeared in <span className='italic'>Philosophy East & West</span>, <span className='italic'>Journal of the American Academy of Religion</span>, <span className='italic'>Journal of Chinese Philosophy</span>, <span className='italic'>Journal of Indian Philosophy</span>, <span className='italic'>Dao</span> and several anthologies. Currently he is completing a monograph on classical Chinese philosophy.
-                        </p>
-                        <p className='detail-info'>
-                            Jiang co-directs the Rutgers Workshop on Chinese Philosophy and co-chairs the Neo-Confucian Studies Seminar at Columbia University. He is currently serving on the program committee of the American Academy of Religion.
-                        </p>
+                        {detailsContent}
                     </div>
                     <div className='clear'></div>
                     {/* <div className='clear'></div> */}
