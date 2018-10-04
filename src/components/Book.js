@@ -17,7 +17,7 @@ export default class Book extends PureComponent {
 
     render () {
         const {bookData, cover} = this.props
-        const {seoTitle, seoDescription, title, publisher, bookLink, bookIntroduction, primaryReview, otherReviews} = bookData
+        const {seoTitle, seoDescription, title, publisher, bookLink, bookIntroduction, reviews} = bookData
         // const {reviewHidden} = this.state
         // const buttonText = reviewHidden? 'More Reviews' : 'Fewer Review'
 
@@ -36,16 +36,21 @@ export default class Book extends PureComponent {
         //             )}
         //         </ul>)
 
-        const moreReviews = otherReviews && 
+        const moreReviews = reviews && 
                 <ul className='more-book-review'>
-                    {otherReviews.map(review => 
-                        <li key={review.reviewer}>
+                    {reviews.map(review => 
+                        <li key={review.reviewer} className='review-item'>
                             <p className='book-text'>
                                 {review.review}
+                                <br/>
+                                <br/>
+                                <span className={review.magazine? 'commentor magazine' : 'commentor'}>
+                                    {'– ' + review.reviewer}
+                                </span>
                             </p>
-                            <p className={review.magazine? 'commentor magazine' : 'commentor'}>
+                            {/* <p className={review.magazine? 'commentor magazine' : 'commentor'}>
                                 {'– ' + review.reviewer}
-                            </p>
+                            </p> */}
                         </li>
                     )}
                 </ul>
@@ -67,6 +72,7 @@ export default class Book extends PureComponent {
                                 alt={`The cover of '${title}'`}
                             />
                             <p className='publisher'>{publisher}</p>
+                            {/* <button>Read</button> */}
                             <a className='book-link' target="_blank" href={bookLink} rel="noopener noreferrer">
                                 Available on Amazon
                             </a>
@@ -84,15 +90,15 @@ export default class Book extends PureComponent {
                         )}
                     </div>
 
-                    {primaryReview && 
+                    {reviews && 
                         <div className='book-review'>
                             <h2>Reviews</h2>
-                                <p className='book-text'>
+                                {/* <p className='book-text'>
                                     {primaryReview.review}
                                 </p>
                                 <p className='commentor magazine'>
                                     {'– ' + primaryReview.reviewer}
-                                </p>
+                                </p> */}
                             {moreReviews}
                         </div>
                     }

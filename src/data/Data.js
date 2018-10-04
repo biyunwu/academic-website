@@ -11,12 +11,12 @@ const data = {
             `Tao Jiang argues convincingly that such questions are inherently problematic because they frame their interpretations of the Buddhist notion largely in terms of responses to modern psychology. He proposes that, if we are to understand *ālayavijñāna* properly and compare it with the unconscious responsibly, we need to change the way the questions are posed so that *ālayavijñāna* and the unconscious can first be understood within their own contexts and then recontextualized within a dialogical setting. In so doing, certain paradigmatic assumptions embedded in the original frameworks of Buddhist and modern psychological theories are exposed. Jiang brings together Xuan Zang’s *ālayavijñāna* and Freud’s and Jung’s unconscious to focus on what the differences are in the thematic concerns of the three theories, why such differences exist in terms of their objectives, and how their methods of theorization contribute to these differences.`,
             `Contexts and Dialogue puts forth a fascinating, erudite, and carefully argued presentation of the subliminal mind. It proposes a new paradigm in comparative philosophy that examines the what, why, and how in navigating the similarities and differences of philosophical systems through contextualization and recontextualization.`
         ],
-        primaryReview: {
-            review: `“The wonderful sense of conclusion that Jiang brings to the reader is conveyed in the idea that there is much to be learned through interdisciplinary discussion. Jiang emphasizes that this discussion cannot take place at a shallow level, as very little new knowledge can be gained thereby. The point is made that we must learn to engage with different disciplines through what he calls ‘‘context and dialogue.’’ Overall, Jiang’s main argument for the importance of creating a new methodology for cross-disciplinary research in this way is presented very successfully.”`,
-            reviewer: 'Philosophy East & West',
-            magazine: true
-        },
-        otherReviews: [
+        reviews: [
+            {
+                review: `“The wonderful sense of conclusion that Jiang brings to the reader is conveyed in the idea that there is much to be learned through interdisciplinary discussion. Jiang emphasizes that this discussion cannot take place at a shallow level, as very little new knowledge can be gained thereby. The point is made that we must learn to engage with different disciplines through what he calls ‘‘context and dialogue.’’ Overall, Jiang’s main argument for the importance of creating a new methodology for cross-disciplinary research in this way is presented very successfully.”`,
+                reviewer: 'Philosophy East & West',
+                magazine: true
+            },
             {
                 review: `“Jiang’s book succeeds on three levels: first, it offers an exceptionally clear introduction to Yogācāra Buddhism; second, it illuminates one very general and important difference between the models of mind in Buddhism and western psychology; and finally, it provides the right methodological cue for scholars engaged in comparative philosophical work. One leaves this book convinced that synthetic dialogue between Buddhism and modern psychology is possible, but that it will falter without adequate analysis of the paradigmatic differences that shape their respective projects.”`,
                 reviewer: 'H-Net Reviews',

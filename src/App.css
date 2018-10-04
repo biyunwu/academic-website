@@ -725,12 +725,12 @@
   font-family: 'SF Pro Text Regular';
   src: url("./fonts/SF-Pro-Text-Regular.otf"); }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
   p {
     text-align: left;
     word-break: normal; } }
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 501px) {
   p {
     text-align: justify;
     word-break: keep-all; } }
@@ -790,7 +790,13 @@ body {
     width: 100%;
     min-height: 90vh; }
     body #app main {
-      flex: 1; }
+      flex: 1;
+      box-sizing: border-box;
+      width: 100%; }
+  body p {
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto; }
 
 #burger {
   position: absolute;
@@ -885,15 +891,36 @@ header {
       margin: 0 !important; }
       .book .book-pic-container {
         padding: 0 20%; } }
-  @media only screen and (min-width: 501px) {
+  @media only screen and (min-width: 501px) and (max-width: 850px) {
     .book .book-pic-container {
-      width: 26%;
+      width: 35%;
       margin: 0.5em 1em 0 0 !important;
       float: left; }
       .book .book-pic-container .gap {
         padding-right: 1em; }
     .book .book-introduction {
       display: inline; } }
+  @media only screen and (min-width: 851px) {
+    .book .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 1em; }
+    .book .book-pic-container {
+      grid-column-start: 1;
+      grid-column-end: 2; }
+      .book .book-pic-container .gap {
+        padding-right: 1em; }
+      .book .book-pic-container .book-link {
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 2em; }
+    .book .book-introduction {
+      grid-column-start: 2;
+      grid-column-end: 5; }
+    .book .book-review {
+      grid-column-start: 1;
+      grid-column-end: 5; } }
   .book .book-pic-container {
     margin-top: 18px;
     margin: 1.5em 0 0 0;
@@ -957,8 +984,31 @@ header {
       .book .review-button-container .review-button:hover {
         background: #272727;
         color: white; }
-  .book .commentor {
-    text-align: right; }
+  .book li.review-item {
+    padding: 0.3em 0 1em 0; }
+    .book li.review-item p {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 0.5em 0 0.5em;
+      text-indent: -0.4em; }
+    .book li.review-item .commentor {
+      float: right;
+      padding-bottom: 1em; }
+    .book li.review-item::after {
+      content: "";
+      clear: both;
+      display: table;
+      border-bottom: rgba(0, 0, 0, 0.1) solid 1px; }
+  .book li.review-item:not(:last-of-type)::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 803px;
+    padding-top: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 805px; }
   .book .magazine {
     font-style: italic; }
 
@@ -1067,7 +1117,8 @@ header {
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-column-gap: 4em; }
+      grid-template-rows: auto;
+      grid-column-gap: 3em; }
     .about .info {
       grid-column-start: 1;
       grid-column-end: 4; } }
@@ -1092,7 +1143,9 @@ header {
     padding: 0;
     font-family: "SF Pro Text Regular"; }
     .about .contact address {
-      font-style: normal; }
+      font-style: normal;
+      position: sticky;
+      top: 1em; }
 
 #events {
   max-width: 1000px;
@@ -1110,16 +1163,18 @@ header {
     font-size: 18px; }
   #events p.location {
     font-family: "SF Pro Text Regular";
-    font-size: 15px; }
+    font-size: 15px;
+    max-width: 850px; }
   #events div.event-detail {
     margin-left: 3px;
-    padding-left: 1em;
+    padding: 0 1em;
     box-sizing: border-box; }
   #events div.event-container:not(:last-of-type)::after {
     content: "";
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
+    max-width: 803px;
     padding-top: 1em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   @media only screen and (min-width: 481px) {
@@ -1172,6 +1227,8 @@ header {
   text-align: center;
   padding: 20px 0 11px 0;
   margin-bottom: 1em; }
+  .footer p {
+    max-width: 100%; }
   .footer .icon-gap {
     display: inline-block;
     width: 10px; }
