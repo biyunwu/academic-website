@@ -65,11 +65,11 @@
         document.addEventListener('touchmove', function (e) {
             e.preventDefault()
         });
-        let canvasRibbon = document.getElementsByTagName('canvas')[0],
+        var canvasRibbon = document.getElementsByTagName('canvas')[0],
             ctx = canvasRibbon.getContext('2d'),
             dpr = window.devicePixelRatio || 1,
-            width,
-            height,
+            width = window.innerWidth,
+            height = window.innerHeight,
             RIBBON_WIDE = 90,
             path,
             math = Math,
@@ -77,20 +77,14 @@
             PI_2 = math.PI * 2,
             cos = math.cos,
             random = math.random;
-        updateData();
-
-        function updateData () {
-            width = window.innerWidth;
-            height = window.innerHeight;
-            ctx.clearRect(0, 0, width, height);
-            canvasRibbon.width = width * dpr;
-            canvasRibbon.height = height * dpr;
-            ctx.scale(dpr, dpr);
-            ctx.globalAlpha = 0.2;
-        }
+        ctx.clearRect(0, 0, width, height);
+        canvasRibbon.width = width * dpr;
+        canvasRibbon.height = height * dpr;
+        ctx.scale(dpr, dpr);
+        ctx.globalAlpha = 0.2;
 
         function init() {
-            updateData();
+            ctx.clearRect(0, 0, width, height);
             // RIBBON_WIDE = window.innerWidth <= 500 ? 90 : 161;
             path = [{x: 0, y: height * 0.7 + RIBBON_WIDE}, {x: 0, y: height * 0.7 - RIBBON_WIDE}];
             let status = checkStatus();
@@ -117,17 +111,17 @@
             ctx.lineTo(nextX, nextY);
             ctx.closePath();
             r -= PI_2 / -50;
-            ctx.fillStyle = '#' + (cos(r) * 127 + 128 << 16 | cos(r + PI_2 / 3) * 127 + 128 << 8 | cos(r + PI_2 / 3 * 2) * 127 + 128).toString(16);
-            if (ctx.fillStyle === "#000000") {ctx.fillStyle = "rgb(236, 133, 19)"} 
+            ctx.fillStyle = '#' + ((cos(r) * 127 + 128 << 16) | (cos(r + PI_2 / 3) * 127 + 128 << 8) | (cos(r + PI_2 / 3 * 2) * 127 + 128)).toString(16);
             ctx.fill();
             path[0] = path[1];
-            path[1] = {x: nextX, y: nextY}
+            path[1] = {x: nextX, y: nextY};
         }
 
         function geneY(y) {
             var temp = y + (random() * 2 - 1.1) * RIBBON_WIDE;
             return (temp > height || temp < 0) ? geneY(y) : temp
         }
+
         document.onclick = function(e) {if (e.target.classList.contains("nav-link")) {init()}};
         window.onresize = init;
         window.addEventListener("orientationchange", init);
