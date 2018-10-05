@@ -42,7 +42,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 }
 
 @mixin limitWidth {
-    max-width: 1000px;
+    max-width: 1050px;
     padding: 0 3%;
     margin: 0 auto;
 
@@ -97,9 +97,8 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     content: ""; // This is necessary for the pseudo element to work.
     display: block; // This will put the pseudo element on its own line. 
     margin: 0 auto; // Center the border
-    width: 80%;
-    max-width: 803px;
-    padding-top: 1em;
+    width: 50%;
+    padding-top: 2em;
     border-bottom: 1px solid $link-seperator-color;
 }
 
@@ -108,11 +107,11 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     color: white;
 }
 
-@mixin clearfix {
-    content: "";
-    clear: both;
-    display: table;
-}
+// @mixin clearfix {
+//     content: "";
+//     clear: both;
+//     display: table;
+// }
 
 @media only screen and (max-width: 500px) {
     p {
@@ -226,17 +225,18 @@ body {
             flex: 1;
             box-sizing: border-box;
             width: 100%;
+            padding-bottom: 2em;
             // max-width: 100vw;
             // background: white;
         }
     }
 
     // WCAG 2.1
-    p {
-        max-width: 80ch;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // p {
+    //     max-width: 80ch;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 }
 // Burger icon
 #burger {
@@ -366,41 +366,8 @@ header {
 // Book
 .book {
     @include limitWidth;
-    
-
-    @media only screen and (max-width: 374px) {
-        .book-text {
-            text-align: left !important;
-            word-break: normal !important;
-        }
-    }
 
     // The following two sets of media querries are modified based on the following querries which are commented out.
-    // @media only screen and (max-width: 500px) {
-    //     // Make the book cover smaller
-    //     .book-pic-container {
-    //         padding: 0 20%;
-    //     }
-
-    //     margin: 0 !important;
-    // }
-
-    // @media only screen and (min-width: 501px) { 
-    //     .book-pic-container {
-    //         width: 26%;
-    //         margin: 0.5em 1em 0 0 !important;
-    //         float: left;
-
-    //         .gap {
-    //             padding-right: 1em;
-    //         }
-    //     }
-
-    //     .book-introduction {
-    //         display: inline;
-    //     }
-    // }
-
     @media only screen and (max-width: 500px) {
         // Make the book cover smaller
         .book-pic-container {
@@ -410,9 +377,10 @@ header {
         margin: 0 !important;
     }
 
-    @media only screen and (min-width: 501px) and (max-width: 850px) { 
+    @media only screen and (min-width: 501px) { 
         .book-pic-container {
-            width: 35%;
+            width: 26%;
+            min-width: 190px;
             margin: 0.5em 1em 0 0 !important;
             float: left;
 
@@ -425,40 +393,65 @@ header {
             display: inline;
         }
     }
+
+    // @media only screen and (max-width: 500px) {
+    //     // Make the book cover smaller
+    //     .book-pic-container {
+    //         padding: 0 20%;
+    //     }
+
+    //     margin: 0 !important;
+    // }
+
+    // @media only screen and (min-width: 501px) and (max-width: 850px) { 
+    //     .book-pic-container {
+    //         width: 35%;
+    //         margin: 0.5em 1em 0 0 !important;
+    //         float: left;
+
+    //         .gap {
+    //             padding-right: 1em;
+    //         }
+    //     }
+
+    //     .book-introduction {
+    //         display: inline;
+    //     }
+    // }
     
-    @media only screen and (min-width: 851px) { 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            grid-column-gap: 1em;
-        }
+    // @media only screen and (min-width: 851px) { 
+    //     .grid {
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr 1fr 1fr;
+    //         grid-template-rows: auto;
+    //         grid-column-gap: 1em;
+    //     }
 
-        .book-pic-container {
-            grid-column-start: 1;
-            grid-column-end: 2;
+    //     .book-pic-container {
+    //         grid-column-start: 1;
+    //         grid-column-end: 2;
 
-            .gap {
-                padding-right: 1em;
-            }
+    //         .gap {
+    //             padding-right: 1em;
+    //         }
 
-            .book-link {
-                width: 100%;
-                box-sizing: border-box;
-                margin-right: 2em;
-            }
-        }
+    //         .book-link {
+    //             width: 100%;
+    //             box-sizing: border-box;
+    //             margin-right: 2em;
+    //         }
+    //     }
 
-        .book-introduction {
-            grid-column-start: 2;
-            grid-column-end: 5;
-        }
+    //     .book-introduction {
+    //         grid-column-start: 2;
+    //         grid-column-end: 5;
+    //     }
     
-        .book-review {
-            grid-column-start: 1;
-            grid-column-end: 5;
-        }
-    }
+    //     .book-review {
+    //         grid-column-start: 1;
+    //         grid-column-end: 5;
+    //     }
+    // }
 
     .book-pic-container {
         margin-top: 18px;
@@ -552,16 +545,14 @@ header {
             // margin-bottom: 1.5em;
         }
 
-        &::after {
-            @include clearfix;
-            border-bottom: $link-seperator-color solid 1px;
-        }
+        // &::after {
+        //     @include clearfix;
+        //     border-bottom: $link-seperator-color solid 1px;
+        // }
     }
 
     li.review-item:not(:last-of-type)::after {
         @include blockSeperator;
-        width: 90%;
-        max-width: 805px;
     }
 
     .magazine {
@@ -579,6 +570,8 @@ header {
     // Make the image fixed in the container
     background-attachment: local;
     min-height: 300px;
+    // iMac 5K
+    max-width: 5120px;
 }
 
 // Papers
@@ -758,6 +751,7 @@ header {
 
         address {
             font-style: normal;
+            margin-bottom: 2em;
             position: sticky;
             top: 1em;
         }
@@ -782,7 +776,6 @@ header {
     p.location {
         font-family: $button-font;
         font-size: 15px;
-        max-width: 850px;
     }
 
     div.event-detail {
