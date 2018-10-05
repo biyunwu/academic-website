@@ -1,6 +1,6 @@
 const data = {
     buddhism: {
-        seoTitle: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind, by Tao Jiang`,
+        seoTitle: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind - Tao Jiang`,
         seoDescription: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind is a fascinating study of the subliminal mind across cultural boundaries. It proposes a new paradigm in comparative approach to ideas through contextualization and recontextualization.`,
         title: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind`,
         publisher: `University of Hawaii Press`,
@@ -41,7 +41,7 @@ const data = {
     },
 
     freud: {
-        seoTitle: 'The Reception and Rendition of Freud in China',
+        seoTitle: 'The Reception and Rendition of Freud in China - Tao Jiang',
         seoDescription: 'The Reception and Rendition of Freud in China explores the history, reception, and use of Freud and his theories in China, and makes an original and substantial contribution to our understanding of the Chinese people and their culture as well as to our appreciation of western attempts to understand the people and culture of China.',
         title: `The Reception and Rendition of Freud in China: China’s Freudian Slip`,
         publisher: `Routledge`,
@@ -56,7 +56,7 @@ const data = {
     },
 
     papers: {
-        seoTitle: 'Some papers by Tao Jiang',
+        seoTitle: 'Papers - Tao Jiang',
         seoDescription: 'Select papers by Tao Jiang on Buddhist philosophy, Chinese philosophy and comparative philosophy.',
         categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosophy'],
         shortCategories: ['Chinese Phil.', 'Buddhist Phil.', 'Comparative Phil.'],
@@ -123,7 +123,7 @@ const data = {
     },
 
     events: {
-        seoTitle: `Tao Jiang's events`,
+        seoTitle: `Events - Tao Jiang`,
         seoDescription: 'Notable public events featuring Tao Jiang',
         academic: [
             {
@@ -145,7 +145,7 @@ const data = {
     },
 
     about: {
-        seoTitle: `Tao Jiang's bio`,
+        seoTitle: `Bio - Tao Jiang`,
         seoDescription: `Tao Jiang's bio`,
         name: 'Tao Jiang',
         details: [
