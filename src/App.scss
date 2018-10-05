@@ -59,7 +59,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     // }
 
     @media only screen and (min-width: 1200px) {
-        padding: 1% 2% 0 2%;
+        padding: 1% 4% 0 4%;
     }
 
     // Prevent text overflow its parent container: https://stackoverflow.com/questions/5241369/word-wrap-a-link-so-it-doesnt-overflow-its-parent-div-width
@@ -84,7 +84,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 @mixin buttonStyle {
     text-align: center;
-    border: $button-color solid 2px;
+    border: $button-color solid 1px;
     cursor: pointer;
     color: $button-color;
     // background: white;
@@ -113,19 +113,19 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 //     display: table;
 // }
 
-@media only screen and (max-width: 500px) {
-    p {
-        text-align: left;
-        word-break: normal;
-    }
-}
+// @media only screen and (max-width: 500px) {
+//     p {
+//         text-align: left;
+//         word-break: normal;
+//     }
+// }
 
-@media only screen and (min-width: 501px) {
-    p {
-        text-align: justify;
-        word-break: keep-all;
-    }
-}
+// @media only screen and (min-width: 501px) {
+//     p {
+//         text-align: justify;
+//         word-break: keep-all;
+//     }
+// }
 
 html {
     /* Prevent font scaling in landscape while allowing user zoom */
@@ -232,11 +232,16 @@ body {
     }
 
     // WCAG 2.1
-    // p {
-    //     max-width: 80ch;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
+    p {
+        max-width: 80ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p {
+        // text-align: justify;
+        word-break: keep-all;
+    }
 }
 // Burger icon
 #burger {
@@ -368,32 +373,6 @@ header {
     @include limitWidth;
 
     // The following two sets of media querries are modified based on the following querries which are commented out.
-    @media only screen and (max-width: 500px) {
-        // Make the book cover smaller
-        .book-pic-container {
-            padding: 0 20%;
-        }
-
-        margin: 0 !important;
-    }
-
-    @media only screen and (min-width: 501px) { 
-        .book-pic-container {
-            width: 26.5%;
-            min-width: 190px;
-            margin: 0.5em 1em 0 0 !important;
-            float: left;
-
-            .gap {
-                padding-right: 1em;
-            }
-        }
-
-        .book-introduction {
-            display: inline;
-        }
-    }
-
     // @media only screen and (max-width: 500px) {
     //     // Make the book cover smaller
     //     .book-pic-container {
@@ -403,9 +382,10 @@ header {
     //     margin: 0 !important;
     // }
 
-    // @media only screen and (min-width: 501px) and (max-width: 850px) { 
+    // @media only screen and (min-width: 501px) { 
     //     .book-pic-container {
-    //         width: 35%;
+    //         width: 26.5%;
+    //         min-width: 190px;
     //         margin: 0.5em 1em 0 0 !important;
     //         float: left;
 
@@ -418,40 +398,68 @@ header {
     //         display: inline;
     //     }
     // }
+
+    @media only screen and (max-width: 500px) {
+        // Make the book cover smaller
+        .book-pic-container {
+            padding: 0 20%;
+        }
+
+        margin: 0 !important;
+    }
+
+    @media only screen and (min-width: 501px) and (max-width: 850px) { 
+        .book-pic-container {
+            width: 35%;
+            margin: 0.5em 1em 0 0 !important;
+            float: left;
+
+            .gap {
+                padding-right: 1em;
+            }
+        }
+
+        .book-introduction {
+            display: inline;
+        }
+    }
     
-    // @media only screen and (min-width: 851px) { 
-    //     .grid {
-    //         display: grid;
-    //         grid-template-columns: 1fr 1fr 1fr 1fr;
-    //         grid-template-rows: auto;
-    //         grid-column-gap: 1em;
-    //     }
+    @media only screen and (min-width: 851px) { 
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-column-gap: 1em;
+        }
 
-    //     .book-pic-container {
-    //         grid-column-start: 1;
-    //         grid-column-end: 2;
+        .book-pic-container {
+            max-height: 500px;
+            @include sticky;
+            top: 2em;
+            grid-column-start: 1;
+            grid-column-end: 2;
 
-    //         .gap {
-    //             padding-right: 1em;
-    //         }
+            .gap {
+                padding-right: 1em;
+            }
 
-    //         .book-link {
-    //             width: 100%;
-    //             box-sizing: border-box;
-    //             margin-right: 2em;
-    //         }
-    //     }
+            .book-link {
+                width: 100%;
+                box-sizing: border-box;
+                margin-right: 2em;
+            }
+        }
 
-    //     .book-introduction {
-    //         grid-column-start: 2;
-    //         grid-column-end: 5;
-    //     }
+        .book-introduction {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
     
-    //     .book-review {
-    //         grid-column-start: 1;
-    //         grid-column-end: 5;
-    //     }
-    // }
+        .book-review {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+    }
 
     .book-pic-container {
         margin-top: 18px;
@@ -609,6 +617,7 @@ header {
             @include sticky;
             margin-top: 1em;
             text-align: center !important;
+            background: white;
             
 
             h2 {
@@ -761,6 +770,11 @@ header {
 // Events
 #events {
     @include limitWidth;
+
+    // Temporarily override the WCAG 80 characters limitation
+    p {
+        max-width: 100%;
+    }
 
     h3 {
         font-family: $nav-link-font;
