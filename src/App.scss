@@ -96,9 +96,9 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 @mixin blockSeperator {
     content: ""; // This is necessary for the pseudo element to work.
     display: block; // This will put the pseudo element on its own line. 
-    margin: 0 auto; // Center the border
-    width: 50%;
     padding-top: 2em;
+    margin: 0 auto 1em auto; // Center the border
+    width: 50%;
     border-bottom: 1px solid $link-seperator-color;
 }
 
@@ -379,7 +379,7 @@ header {
 
     @media only screen and (min-width: 501px) { 
         .book-pic-container {
-            width: 26%;
+            width: 26.5%;
             min-width: 190px;
             margin: 0.5em 1em 0 0 !important;
             float: left;
@@ -786,6 +786,8 @@ header {
 
     div.event-container:not(:last-of-type)::after {
         @include blockSeperator;
+        margin-bottom: 3em;
+        // padding-top: 0;
     }
 
     @media only screen and (min-width: 481px) {

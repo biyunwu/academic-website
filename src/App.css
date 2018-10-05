@@ -886,7 +886,7 @@ header {
         padding: 0 20%; } }
   @media only screen and (min-width: 501px) {
     .book .book-pic-container {
-      width: 26%;
+      width: 26.5%;
       min-width: 190px;
       margin: 0.5em 1em 0 0 !important;
       float: left; }
@@ -970,9 +970,9 @@ header {
   .book li.review-item:not(:last-of-type)::after {
     content: "";
     display: block;
-    margin: 0 auto;
-    width: 50%;
     padding-top: 2em;
+    margin: 0 auto 1em auto;
+    width: 50%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .book .magazine {
     font-style: italic; }
@@ -1138,10 +1138,11 @@ header {
   #events div.event-container:not(:last-of-type)::after {
     content: "";
     display: block;
-    margin: 0 auto;
-    width: 50%;
     padding-top: 2em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    margin: 0 auto 1em auto;
+    width: 50%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 3em; }
   @media only screen and (min-width: 481px) {
     #events div.event-container {
       margin: 2em 0; }
