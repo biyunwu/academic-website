@@ -785,9 +785,7 @@ body {
       width: 100%;
       padding-bottom: 2em; }
   body p {
-    max-width: 80ch;
-    margin-left: auto;
-    margin-right: auto; }
+    max-width: 80ch; }
   body p {
     word-break: keep-all; }
 
@@ -869,12 +867,12 @@ header {
       color: #000000; }
 
 .book {
-  max-width: 1050px;
+  max-width: 1200px;
   padding: 0 3%;
   margin: 0 auto; }
   @media only screen and (min-width: 1200px) {
     .book {
-      padding: 1% 4% 0 4%; } }
+      padding-top: 1em; } }
   @media only screen and (max-width: 500px) {
     .book {
       margin: 0 !important; }
@@ -895,6 +893,9 @@ header {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: auto;
       grid-column-gap: 1em; }
+    .book h2.bookname {
+      grid-column-start: 1;
+      grid-column-end: 5; }
     .book .book-pic-container {
       max-height: 500px;
       position: sticky;
@@ -917,7 +918,8 @@ header {
   .book .book-pic-container {
     margin-top: 18px;
     margin: 1.5em 0 0 0;
-    text-align: center; }
+    text-align: center;
+    min-width: 190px; }
     .book .book-pic-container .book-img {
       display: block;
       max-width: 100%;
@@ -979,13 +981,9 @@ header {
         color: white; }
   .book li.review-item {
     padding: 0.3em 0 1em 0; }
-    .book li.review-item p {
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 0.5em 0 0.5em;
-      text-indent: -0.4em; }
     .book li.review-item .commentor {
-      float: right;
+      font-family: "SF Pro Text Light";
+      font-size: 120%;
       padding-bottom: 1em; }
   .book li.review-item:not(:last-of-type)::after {
     content: "";
@@ -1006,14 +1004,14 @@ header {
   max-width: 5120px; }
 
 #papers-div {
-  max-width: 1050px;
+  max-width: 1200px;
   padding: 0 3%;
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
   @media only screen and (min-width: 1200px) {
     #papers-div {
-      padding: 1% 4% 0 4%; } }
+      padding-top: 1em; } }
   @media only screen and (min-width: 780px) {
     #papers-div {
       display: grid;
@@ -1065,7 +1063,7 @@ header {
       padding: 0.5em 0;
       margin: 0.5em 0; }
   #papers-div ul {
-    padding-left: 20px;
+    padding: 0 20px;
     line-height: 1.58;
     letter-spacing: -0.003em; }
     #papers-div ul li p {
@@ -1085,13 +1083,13 @@ header {
       height: 20px; }
 
 .about {
-  max-width: 1050px;
+  max-width: 1200px;
   padding: 0 3%;
   margin: 0 auto;
   font-size: 18px; }
   @media only screen and (min-width: 1200px) {
     .about {
-      padding: 1% 4% 0 4%; } }
+      padding-top: 1em; } }
   @media only screen and (max-width: 480px) {
     .about .pic-container {
       text-align: center; }
@@ -1136,12 +1134,12 @@ header {
       top: 1em; }
 
 #events {
-  max-width: 1050px;
+  max-width: 1200px;
   padding: 0 3%;
   margin: 0 auto; }
   @media only screen and (min-width: 1200px) {
     #events {
-      padding: 1% 4% 0 4%; } }
+      padding-top: 1em; } }
   #events p {
     max-width: 100%; }
   #events h3 {

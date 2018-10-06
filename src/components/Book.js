@@ -40,17 +40,25 @@ export default class Book extends PureComponent {
                 <ul className='more-book-review'>
                     {reviews.map(review => 
                         <li key={review.reviewer} className='review-item'>
-                            <p className='book-text'>
+                            {/* <p className='book-text'>
                                 {review.review}
                                 <br/>
                                 <br/>
                                 <span className={review.magazine? 'commentor magazine' : 'commentor'}>
                                     {'– ' + review.reviewer}
                                 </span>
-                            </p>
+                            </p> */}
                             {/* <p className={review.magazine? 'commentor magazine' : 'commentor'}>
                                 {'– ' + review.reviewer}
                             </p> */}
+                            <p className='book-text'>
+                                <span className={review.magazine? 'commentor magazine' : 'commentor'}>
+                                    {review.reviewer + ':'}
+                                </span>
+                                <br/>
+                                <br/>
+                                {review.review}
+                            </p>
                         </li>
                     )}
                 </ul>
@@ -61,10 +69,10 @@ export default class Book extends PureComponent {
                     <title>{seoTitle}</title>
                     <meta name="description" content={seoDescription} />
                 </Helmet>
-                <h2>
-                    {title}
-                </h2>
                 <div className='grid'>
+                    <h2 className='bookname'>
+                        {title}
+                    </h2>
                     <div className='book-pic-container'>
                         <div className='gap'>
                             <img className='book-img' 

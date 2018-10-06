@@ -42,7 +42,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 }
 
 @mixin limitWidth {
-    max-width: 1050px;
+    max-width: 1200px;
     padding: 0 3%;
     margin: 0 auto;
 
@@ -59,7 +59,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     // }
 
     @media only screen and (min-width: 1200px) {
-        padding: 1% 4% 0 4%;
+        padding-top: 1em;
     }
 
     // Prevent text overflow its parent container: https://stackoverflow.com/questions/5241369/word-wrap-a-link-so-it-doesnt-overflow-its-parent-div-width
@@ -234,8 +234,8 @@ body {
     // WCAG 2.1
     p {
         max-width: 80ch;
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
     }
 
     p {
@@ -432,6 +432,11 @@ header {
             grid-column-gap: 1em;
         }
 
+        h2.bookname {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
         .book-pic-container {
             max-height: 500px;
             @include sticky;
@@ -465,6 +470,7 @@ header {
         margin-top: 18px;
         margin: 1.5em 0 0 0;
         text-align: center;
+        min-width: 190px;
         
         .book-img{
             display: block;
@@ -538,17 +544,11 @@ header {
     li.review-item {
         padding: 0.3em 0 1em 0;
 
-        p{
-            margin-left: auto;
-            margin-right: auto;
-            // To make some space before the text which are not in the first line of the paragraph
-            padding: 0 0.5em 0 0.5em;
-            text-indent: -0.4em;
-        }
-
         .commentor {
             // text-align: right;
-            float: right;
+            // float: right;
+            font-family: $nav-link-font;
+            font-size: 120%;
             padding-bottom: 1em;
             // margin-bottom: 1.5em;
         }
@@ -664,7 +664,7 @@ header {
     }
 
     ul {
-        padding-left: 20px;
+        padding: 0 20px;
         @include justifyText;
 
         li {
