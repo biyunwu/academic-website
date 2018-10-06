@@ -74,7 +74,7 @@ class App extends Component {
         const fixedStyle =  isSidebarOpen ? {position: 'fixed'} : {}
 
         return (
-            <div>
+            <React.Fragment>
                 {isMobileDevice &&
                     <React.Fragment>
                         <button id='burger' className={menuClassName} type="button"
@@ -143,7 +143,7 @@ class App extends Component {
                     )}/>
                     <Footer />
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
