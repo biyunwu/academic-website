@@ -874,8 +874,8 @@ header {
       padding-top: 1em; } }
   @media only screen and (max-width: 500px) {
     .book p {
-      padding-left: 20px;
-      padding-right: 20px; } }
+      padding-left: 15px;
+      padding-right: 15px; } }
   @media only screen and (max-width: 500px) {
     .book {
       margin: 0 !important; }
@@ -1095,8 +1095,8 @@ header {
       padding-top: 1em; } }
   @media only screen and (max-width: 500px) {
     .about p {
-      padding-left: 20px;
-      padding-right: 20px; } }
+      padding-left: 15px;
+      padding-right: 15px; } }
   @media only screen and (max-width: 500px) {
     .about .pic-container {
       text-align: center; }
