@@ -785,8 +785,7 @@ body {
       width: 100%;
       padding-bottom: 2em; }
   body p {
-    max-width: 80ch; }
-  body p {
+    max-width: 80ch;
     word-break: keep-all; }
 
 #burger {
@@ -873,6 +872,10 @@ header {
   @media only screen and (min-width: 1200px) {
     .book {
       padding-top: 1em; } }
+  @media only screen and (max-width: 500px) {
+    .book p {
+      padding-left: 20px;
+      padding-right: 20px; } }
   @media only screen and (max-width: 500px) {
     .book {
       margin: 0 !important; }
@@ -1090,7 +1093,11 @@ header {
   @media only screen and (min-width: 1200px) {
     .about {
       padding-top: 1em; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 500px) {
+    .about p {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media only screen and (max-width: 500px) {
     .about .pic-container {
       text-align: center; }
     .about .info-pic {

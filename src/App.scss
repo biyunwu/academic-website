@@ -107,6 +107,16 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     color: white;
 }
 
+// Add padding to paragraph on mobile device
+@mixin addPaddingToParagraphOnMobileDevice {
+    p {
+        @media only screen and (max-width: 500px){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
 // @mixin clearfix {
 //     content: "";
 //     clear: both;
@@ -193,8 +203,8 @@ html {
 
 body {
     // For iPhone X and newer modles.
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
 
     // max-width: 1200px;
     // margin: 0 auto;
@@ -231,15 +241,9 @@ body {
         }
     }
 
-    // WCAG 2.1
     p {
+        // WCAG 2.1
         max-width: 80ch;
-        // margin-left: auto;
-        // margin-right: auto;
-    }
-
-    p {
-        // text-align: justify;
         word-break: keep-all;
     }
 }
@@ -371,6 +375,7 @@ header {
 // Book
 .book {
     @include limitWidth;
+    @include addPaddingToParagraphOnMobileDevice;
 
     // The following two sets of media querries are modified based on the following querries which are commented out.
     // @media only screen and (max-width: 500px) {
@@ -400,12 +405,12 @@ header {
     // }
 
     @media only screen and (max-width: 500px) {
+        margin: 0 !important;
+
         // Make the book cover smaller
         .book-pic-container {
             padding: 0 20%;
         }
-
-        margin: 0 !important;
     }
 
     @media only screen and (min-width: 501px) and (max-width: 850px) { 
@@ -699,9 +704,10 @@ header {
 // About
 .about {
     @include limitWidth;
+    @include addPaddingToParagraphOnMobileDevice;
     font-size: 18px;
 
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 500px) {
         .pic-container {
             text-align: center;
         }
