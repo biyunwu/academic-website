@@ -42,7 +42,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 }
 
 @mixin limitWidth {
-    max-width: 1200px;
+    max-width: 1100px;
     padding: 0 3%;
     margin: 0 auto;
 
@@ -179,19 +179,20 @@ html {
     }
 
     // For canvas animation
-    canvas {
-        position: fixed;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        left: 0; // For iPhone X to show ribbon from the very left even under the notch.
-        height: 100%;
-        width: 100%;
+    // canvas {
+    //     position: fixed;
+    //     z-index: -1;
+    //     padding: 0;
+    //     margin: 0;
+    //     top: -30%;
+    //     left: 0; // For iPhone X to show ribbon from the very left even under the notch.
+    //     height: 100%;
+    //     width: 100%;
 
-        // @media only screen and (max-width: 780px) {
-        //     padding-bottom: 21%;
-        // }
-    }
+    //     // @media only screen and (max-width: 780px) {
+    //     //     padding-bottom: 21%;
+    //     // }
+    // }
 
     // #main-header, main {
     //     background-color: rgba(255, 255, 255, 0.95);
@@ -434,7 +435,7 @@ header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: auto;
-            grid-column-gap: 1em;
+            grid-column-gap: 2em;
         }
 
         h2.bookname {

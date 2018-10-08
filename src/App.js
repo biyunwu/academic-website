@@ -109,38 +109,40 @@ class App extends Component {
                             backgroundImage = {BackgroundImage}
                         />
                     )}/>
-                    <Route path={pageLinks[1]} render={() => (
-                        // <Buddhism />
-                        <Book
-                            cover = {BuddhismCover}
-                            bookData = {data.buddhism}
-                        />
-                    )}/>
-                    <Route path={pageLinks[2]} render={() => (
-                        // <Freud />
-                        <Book
-                            cover = {FreudCover}
-                            bookData = {data.freud}
-                        />
-                    )}/>
-                    <Route path={pageLinks[3]} render={() => (
-                        <Papers
-                            papers = {data.papers}
-                            viewportWidth = {viewportWidth}
-                            maxMobileWidth = {maxMobileWidth}
-                        />
-                    )}/>
-                    <Route path={pageLinks[4]} render={() => (
-                        <Events
-                            events = {data.events}
-                        />
-                    )}/>
-                    <Route path={pageLinks[5]} render={() => (
-                        <About
-                            infoPic = {infoPic}
-                            about = {data.about}
-                        />
-                    )}/>
+                    <div style={{backgroundColor: 'white'}}>
+                        <Route path={pageLinks[1]} render={() => (
+                            // <Buddhism />
+                            <Book
+                                cover = {BuddhismCover}
+                                bookData = {data.buddhism}
+                            />
+                        )}/>
+                        <Route path={pageLinks[2]} render={() => (
+                            // <Freud />
+                            <Book
+                                cover = {FreudCover}
+                                bookData = {data.freud}
+                            />
+                        )}/>
+                        <Route path={pageLinks[3]} render={() => (
+                            <Papers
+                                papers = {data.papers}
+                                viewportWidth = {viewportWidth}
+                                maxMobileWidth = {maxMobileWidth}
+                            />
+                        )}/>
+                        <Route path={pageLinks[4]} render={() => (
+                            <Events
+                                events = {data.events}
+                            />
+                        )}/>
+                        <Route path={pageLinks[5]} render={() => (
+                            <About
+                                infoPic = {infoPic}
+                                about = {data.about}
+                            />
+                        )}/>
+                    </div>
                     <Footer />
                 </div>
             </React.Fragment>

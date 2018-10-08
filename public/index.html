@@ -53,14 +53,14 @@
             }(window.location))
         </script>
     </head>
-    <canvas aria-hidden = "true"></canvas>
+    <!-- <canvas aria-hidden = "true"></canvas> -->
     <body>
         <noscript>
         You need to enable JavaScript to run this app.
         </noscript>
         <div id="root"></div>
     </body>
-    <script>
+    <!-- <script>
         // The canvas animation is modified based on a rewriten code which is originated from Evan You's blog.
         // https://github.com/zproo/canvas-ribbon
         document.addEventListener('touchmove', function (e) {
@@ -84,6 +84,37 @@
         ctx.scale(dpr, dpr);
         ctx.globalAlpha = 0.2;
 
+        // var colors = [
+        //     // '#2f53fd',
+        //     // '#2362f9',
+        //     // '#1972f4',
+        //     // '#1082ec'
+        //     // '#10ec82',
+        //     // '#19f472',
+        //     // '#23f962',
+        //     // '#2ffd53',
+        //     // '#3bfe45',
+        //     // '#49fe37',
+        //     // '#58fc2b',
+        //     // '#68f71f',
+        //     // '#78f116'
+        //     // '#87e90e',
+        //     // '#97e008',
+        //     // '#19f472',
+        //     // '#23f962',
+        //     // '#2ffd53',
+        //     // '#3bfe45',
+        //     // '#49fe37',
+        //     // '#58fc2b',
+        //     // '#68f71f',
+        //     // '#78f116',
+        //     // '#87e90e',
+        //     // '#97e008',
+        //     // '#a7d403',
+        //     // '#b6c801'
+        // ]
+        var color = '#1082ec';
+
         function init() {
             ctx.clearRect(0, 0, width, height);
             // RIBBON_WIDE = window.innerWidth <= 500 ? 90 : 161;
@@ -91,7 +122,8 @@
             let status = checkStatus();
             function checkStatus() {
                 // Prevent canvas rendering in homepage.
-                return window.location.pathname !== '/' && path[1].x < width + RIBBON_WIDE;
+                // return window.location.pathname !== '/' && path[1].x < width + RIBBON_WIDE;
+                return path[1].x < width + RIBBON_WIDE;
             }
             function nextFrame() {
                 if (status) {
@@ -112,7 +144,8 @@
             ctx.lineTo(nextX, nextY);
             ctx.closePath();
             r -= PI_2 / -50;
-            ctx.fillStyle = '#' + ((cos(r) * 127 + 128 << 16) | (cos(r + PI_2 / 3) * 127 + 128 << 8) | (cos(r + PI_2 / 3 * 2) * 127 + 128)).toString(16);
+            // ctx.fillStyle = '#' + ((cos(r) * 127 + 128 << 16) | (cos(r + PI_2 / 3) * 127 + 128 << 8) | (cos(r + PI_2 / 3 * 2) * 127 + 128)).toString(16);
+            ctx.fillStyle = color;
             ctx.fill();
             path[0] = path[1];
             path[1] = {x: nextX, y: nextY};
@@ -127,5 +160,5 @@
         window.onresize = init;
         window.addEventListener("orientationchange", init);
         init();
-    </script>
+    </script> -->
 </html>
