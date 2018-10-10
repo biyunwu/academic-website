@@ -771,11 +771,13 @@ body {
     flex-direction: column;
     width: 100%;
     min-height: 100vh; }
-    body #app main {
+    body #app main#background-image, body #app div#maincontent-container {
       flex: 1;
       box-sizing: border-box;
       width: 100%;
       padding-bottom: 2em; }
+  body div#maincontent-container {
+    background: white; }
   body p {
     max-width: 80ch;
     word-break: keep-all; }

@@ -66,35 +66,37 @@ export default class Papers extends PureComponent {
         const papers = items.map((item, idx) => this.generatePaperInfo(item.title, item.tags, item.pathname, idx))
 
         return (
-            <main id='papers-div'>
-                <Helmet>
-                    <title>{seoTitle}</title>
-                    <meta name="description" content={seoDescription} />
-                </Helmet>
-                {
-                    viewportWidth >= widthLimiter &&
-                    <div className='options'>
-                        <h2>Categories</h2>
-                        <div className='sticky'>
-                            {tagLabels}
-                        </div>
-                    </div>
-                }
-                <div className='papers'>
-                    <h2>A Few Papers</h2>
+            <div id='maincontent-container'>
+                <main id='papers-div'>
+                    <Helmet>
+                        <title>{seoTitle}</title>
+                        <meta name="description" content={seoDescription} />
+                    </Helmet>
                     {
-                        viewportWidth < widthLimiter &&
+                        viewportWidth >= widthLimiter &&
                         <div className='options'>
+                            <h2>Categories</h2>
                             <div className='sticky'>
                                 {tagLabels}
                             </div>
                         </div>
                     }
-                    <ul>
-                        {papers}
-                    </ul>
-                </div>
-            </main>
+                    <div className='papers'>
+                        <h2>A Few Papers</h2>
+                        {
+                            viewportWidth < widthLimiter &&
+                            <div className='options'>
+                                <div className='sticky'>
+                                    {tagLabels}
+                                </div>
+                            </div>
+                        }
+                        <ul>
+                            {papers}
+                        </ul>
+                    </div>
+                </main>
+            </div>
         )
     }
 }

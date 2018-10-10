@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import * as Data from './data/Data'
 import Siderbar from './components/partials/Siderbar'
 import Header from './components/partials/Header';
@@ -104,45 +104,50 @@ class App extends Component {
                         themeColors = {pageThemeColors}
                         isMobileDevice = {isMobileDevice}
                     />
-                    <Route exact path='/' render={() => (
-                        <Home
-                            backgroundImage = {BackgroundImage}
-                        />
-                    )}/>
-                    <div style={{backgroundColor: 'white'}}>
-                        <Route path={pageLinks[1]} render={() => (
+                    <Switch>
+                        <Route exact path='/' render={() => (
+                            <Home
+                                backgroundImage = {BackgroundImage}
+                            />
+                        )}/>
+                        <Route exact path={pageLinks[1]} render={() => (
                             // <Buddhism />
                             <Book
                                 cover = {BuddhismCover}
                                 bookData = {data.buddhism}
                             />
                         )}/>
-                        <Route path={pageLinks[2]} render={() => (
+                        <Route exact path={pageLinks[2]} render={() => (
                             // <Freud />
                             <Book
                                 cover = {FreudCover}
                                 bookData = {data.freud}
                             />
                         )}/>
-                        <Route path={pageLinks[3]} render={() => (
+                        <Route exact path={pageLinks[3]} render={() => (
                             <Papers
                                 papers = {data.papers}
                                 viewportWidth = {viewportWidth}
                                 maxMobileWidth = {maxMobileWidth}
                             />
                         )}/>
-                        <Route path={pageLinks[4]} render={() => (
+                        <Route exact path={pageLinks[4]} render={() => (
                             <Events
                                 events = {data.events}
                             />
                         )}/>
-                        <Route path={pageLinks[5]} render={() => (
+                        <Route exact path={pageLinks[5]} render={() => (
                             <About
                                 infoPic = {infoPic}
                                 about = {data.about}
                             />
                         )}/>
-                    </div>
+                        <Route render={() => (
+                            <div id='maincontent-container'>
+                                <h1 style={{textAlign: 'center' , padding: '20%', verticalAlign: 'middle'}}>Page not found!</h1>
+                            </div>
+                        )}/>
+                    </Switch>
                     <Footer />
                 </div>
             </React.Fragment>

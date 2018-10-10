@@ -59,16 +59,18 @@ export default class Events extends PureComponent {
         // const publicEvents = pub.map((event, idx) => this.generateEventDetail(event, idx))
         const allEventsDetails = allEvents.map((event, idx) => this.generateEventDetail(event, idx))
         return (
-            <main id='events'>
-                <Helmet>
-                    <title>{seoTitle}</title>
-                    <meta name="description" content={seoDescription} />
-                </Helmet>
-                <h2>Some Events</h2>
-                {/* {academicEvents}
-                {publicEvents} */}
-                {allEventsDetails}
-            </main>
+            <div id='maincontent-container'>
+                <main id='events'>
+                    <Helmet>
+                        <title>{seoTitle}</title>
+                        <meta name="description" content={seoDescription} />
+                    </Helmet>
+                    <h2>Some Events</h2>
+                    {/* {academicEvents}
+                    {publicEvents} */}
+                    {allEventsDetails}
+                </main>
+            </div>
         )
     }
 }

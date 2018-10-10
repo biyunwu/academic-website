@@ -64,65 +64,67 @@ export default class Book extends PureComponent {
                 </ul>
 
         return (
-            <main className='book'>
-                <Helmet>
-                    <title>{seoTitle}</title>
-                    <meta name="description" content={seoDescription} />
-                </Helmet>
-                <div className='grid'>
-                    <h2 className='bookname'>
-                        {title}
-                    </h2>
-                    <div className='book-pic-container'>
-                        <div className='gap'>
-                            <img className='book-img' 
-                                src={cover} 
-                                alt={`The cover of '${title}'`}
-                            />
-                            <p className='publisher'>{publisher}</p>
-                            {/* <button>Read</button> */}
-                            <a className='book-link' target="_blank" href={bookLink} rel="noopener noreferrer">
-                                Available on Amazon
-                            </a>
+            <div id='maincontent-container'>
+                <main className='book'>
+                    <Helmet>
+                        <title>{seoTitle}</title>
+                        <meta name="description" content={seoDescription} />
+                    </Helmet>
+                    <div className='grid'>
+                        <h2 className='bookname'>
+                            {title}
+                        </h2>
+                        <div className='book-pic-container'>
+                            <div className='gap'>
+                                <img className='book-img' 
+                                    src={cover} 
+                                    alt={`The cover of '${title}'`}
+                                />
+                                <p className='publisher'>{publisher}</p>
+                                {/* <button>Read</button> */}
+                                <a className='book-link' target="_blank" href={bookLink} rel="noopener noreferrer">
+                                    Available on Amazon
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className='book-introduction'>
-                        {bookIntroduction && bookIntroduction.map((text, idx) =>        
-                            <ReactMarkdown
-                                className='book-text'
-                                key={`${title} introduction ${idx}`}
-                                source={text}
-                            />
+                        <div className='book-introduction'>
+                            {bookIntroduction && bookIntroduction.map((text, idx) =>        
+                                <ReactMarkdown
+                                    className='book-text'
+                                    key={`${title} introduction ${idx}`}
+                                    source={text}
+                                />
 
-                        )}
-                    </div>
-
-                    {reviews && 
-                        <div className='book-review'>
-                            <h2>Reviews</h2>
-                                {/* <p className='book-text'>
-                                    {primaryReview.review}
-                                </p>
-                                <p className='commentor magazine'>
-                                    {'– ' + primaryReview.reviewer}
-                                </p> */}
-                            {moreReviews}
+                            )}
                         </div>
+
+                        {reviews && 
+                            <div className='book-review'>
+                                <h2>Reviews</h2>
+                                    {/* <p className='book-text'>
+                                        {primaryReview.review}
+                                    </p>
+                                    <p className='commentor magazine'>
+                                        {'– ' + primaryReview.reviewer}
+                                    </p> */}
+                                {moreReviews}
+                            </div>
+                        }
+
+                    </div>
+                    {
+                        // primaryReview && otherReviews &&
+                        // <div className='review-button-container'>
+                        //     <button className='review-button'
+                        //         onClick={this.toggleReviewVisibility}
+                        //     >
+                        //         {buttonText}
+                        //     </button>
+                        // </div>
                     }
-
-                </div>
-                {
-                    // primaryReview && otherReviews &&
-                    // <div className='review-button-container'>
-                    //     <button className='review-button'
-                    //         onClick={this.toggleReviewVisibility}
-                    //     >
-                    //         {buttonText}
-                    //     </button>
-                    // </div>
-                }
-            </main>
+                </main>
+            </div>
         )
     }
 }
