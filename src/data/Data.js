@@ -45,7 +45,7 @@ const data = {
         seoDescription: 'The Reception and Rendition of Freud in China explores the history, reception, and use of Freud and his theories in China, and makes an original and substantial contribution to our understanding of the Chinese people and their culture as well as to our appreciation of western attempts to understand the people and culture of China.',
         title: `The Reception and Rendition of Freud in China: China’s Freudian Slip`,
         publisher: `Routledge`,
-        bookLink: `http://a.co/d/g77CGA7`,
+        bookLink: `http://a.co/d/6fCOxkL`,
         // bookCoverColor: 'rgb(11, 81, 120)',
         themeColor: '#DC3023',
         bookIntroduction: [
