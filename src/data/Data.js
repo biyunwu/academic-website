@@ -5,6 +5,7 @@ const data = {
         title: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind`,
         publisher: `University of Hawaii Press`,
         bookLink: `http://a.co/d/1nYnDJI`,
+        readLink: `https://tjiang888.github.io/buddhism`,
         themeColor: 'rgb(236, 133, 19)',
         bookIntroduction: [
             `Are there Buddhist conceptions of the unconscious? If so, are they more Freudian, Jungian, or something else? If not, can Buddhist conceptions be reconciled with the Freudian, Jungian, or other models? These are some of the questions that have motivated modern scholarship to approach *ālayavijñāna*, the storehouse consciousness, formulated in Yogācāra Buddhism as a subliminal reservoir of tendencies, habits, and future possibilities.`,
