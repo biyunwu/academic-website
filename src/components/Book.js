@@ -86,7 +86,7 @@ export default class Book extends PureComponent {
                                     Available on Amazon
                                 </a>
                                 {readLink &&
-                                    <a className='book-link' target="_blank" href={readLink} rel="noopener noreferrer">
+                                    <a className='book-link' href={readLink}>
                                         Read Online
                                     </a>}
                             </div>

@@ -13,6 +13,7 @@
     "react-ga": "^2.5.3",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.6.0",
+    "react-pdf": "^3.0.5",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "sitemap-generator": "^8.3.1"

@@ -8,6 +8,7 @@ import Book from './components/Book'
 import Papers from './components/Papers'
 import Events from './components/Events'
 import About from './components/About'
+import PdfViewer from './components/PdfViewer'
 import Footer from './components/partials/Footer'
 import BackgroundImage from './imgs/tj.jpg'
 import BuddhismCover from './imgs/buddism-cover.jpg'
@@ -140,6 +141,13 @@ class App extends Component {
                             <About
                                 infoPic = {infoPic}
                                 about = {data.about}
+                            />
+                        )}/>
+                        <Route exact path="/buddhism" render={() => (
+                            <PdfViewer
+                                title={data.buddhism.title}
+                                readKey={data.buddhism.readKey}
+                                chapters={data.buddhism.chapters}
                             />
                         )}/>
                         <Route render={() => (
