@@ -28,17 +28,19 @@ export default function Navbar (props) {
                         style={{height: "40px", margin:'20px auto'}}
                     />
                 </a> */}
-                <h2 style={{textAlign: "center"}}>{title}</h2>
+                <h2>{title}</h2>
                 <div>
-                    <p style={{textAlign: "center", fontFamily: "SF Pro Text Light", fontSize: "1.5rem"}}>Table of Contents</p>
-                    <ul style={{listStyle: "circle", fontFamily: "SF Pro Text Regular"}}>
+                    <p style={{fontFamily: "SF Pro Text Light", fontSize: "1.3rem"}}>Table of Contents</p>
+                    <ul style={{listStyle: "circle", padding: "0 1.4em", fontFamily: "SF Pro Text Regular"}}>
                         {chapters.map((chapter, idx) => 
-                            <li
+                            <li 
                                 key={chapter}
-                                onClick={e => {handleChapterChange.call(null, idx); updateSidebarStatus()}}
                                 style={{cursor: "pointer", margin: "0.5em 0"}}
                             >
-                                {chapter}
+                                <a
+                                    onClick={e => {handleChapterChange.call(null, idx); updateSidebarStatus()}}
+                                >{chapter}</a>
+
                             </li>
                         )}
                     </ul>

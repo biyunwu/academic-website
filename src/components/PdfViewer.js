@@ -40,7 +40,7 @@ export default class PdfViewer extends React.Component {
                         const base64 = basename + data[idx].content
                         decodedData.push(this.base64ToArrayBuffer(base64))
                     })
-                    console.log("Decoded Data: ", decodedData)
+                    // console.log("Decoded Data: ", decodedData)
                     // console.log(this);
                     return decodedData
                     // this.setState({data: decodedData})
@@ -73,11 +73,11 @@ export default class PdfViewer extends React.Component {
     }
 
     render() {
-        const { isTocShown, chapter, currChapterData } = this.state
+        const { isTocShown, data, chapter, currChapterData } = this.state
         const { title, chapters } = this.props
-        console.log("Chapter: ", chapter)
+        const reminderStyle = {textAlign: "center", color: "grey", margin:"0 1rem", paddingTop: "5rem", fontFamily: "SF Pro Text Light"}
         return (
-            <div id='maincontent-container' style={{margin: "0 auto"}}>
+            <div id='maincontent-container' className="pdf-container" style={currChapterData && {minWidth: "892px"}}>
                 <PdfNav
                     isTocShown={isTocShown}
                     title={title}
@@ -85,16 +85,29 @@ export default class PdfViewer extends React.Component {
                     updateSidebarStatus={this.updateSidebarStatus}
                     handleChapterChange={this.handleChapterChange}
                 />
-                <Pdf
-                    chapter={chapter}
-                    data={currChapterData}
-                    isTocShown={isTocShown}
-                />
-                {/* {!currChapterData &&
-                    <div style={{height: "100%", width: "100%", paddingTop: "40vh"}}>
-                        <h2 style={{textAlign: "center"}}>Select chapters from the menu icon at the top left corner.</h2>
+                {
+                    data
+                    ? 
+                    <div className="pdf" style={{width: "892px"}}>
+                        <Pdf
+                            chapter={chapter}
+                            data={currChapterData}
+                            isTocShown={isTocShown}
+                        />
+                        {/* {chapter > 0 && <a>Previous</a>}
+                        {chapter < chapters.length - 1 && <a>Next</a>} */}
                     </div>
-                } */}
+                    : 
+                    <div style={reminderStyle}>Fetching Data</div>
+                }
+                {
+                    data && !(chapter >=0)  &&
+                    <div style={reminderStyle}>
+                        <div>Choose a chapter to Read.</div>
+                        <div>The PDF may take several seconds to be displayed.</div>
+                        <div>For a better layout, please use laptop or desktop to open this page.</div> 
+                    </div>
+                }
             </div>
         )
     }

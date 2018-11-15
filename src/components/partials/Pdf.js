@@ -82,7 +82,7 @@ export default class Pdf extends Component {
                 <Document
                     file={{data: data}}
                     onLoadSuccess={this.onDocumentLoadSuccess}
-                    loading='Loading... Please wait.'
+                    // loading='Loading... Please wait.'
                 >
                     {/* Convert numPages to array which has elements from 1 to numPages */
                         Array.apply(null, Array(numPages)).map(function (_, i) {return i+1}).map(num => 
@@ -90,6 +90,7 @@ export default class Pdf extends Component {
                             key={num}
                             pageNumber={num}
                             scale={scale}
+                            loading='Loading... Please wait.'
                         />)
                     }
                 </Document>

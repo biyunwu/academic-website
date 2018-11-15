@@ -42,7 +42,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 }
 
 @mixin limitWidth {
-    max-width: 1100px;
+    max-width: 1110px;
     padding: 0 3%;
     margin: 0 auto;
 
@@ -165,7 +165,7 @@ html {
         text-decoration: none;
 
         &:hover {
-            color: rgb(0, 216, 208);
+            // color: rgb(0, 216, 208);
             text-decoration: underline;
         }
     }
@@ -871,6 +871,17 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.pdf-container {
+    // @include limitWidth;
+    background: white;
+    li {
+        color: $sidebarColor;
+    }
+    nav {
+        @include limitWidth;
     }
 }
 
