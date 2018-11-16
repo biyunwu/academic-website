@@ -1,6 +1,8 @@
 import React from 'react';
 import Pdf from './partials/Pdf'
 import PdfNav from './partials/PdfNav'
+// import Icon from 'antd'
+// import 'antd/lib/icon/style/index.less'
 
 // const chapters = [
 //     "Introduction",
@@ -83,38 +85,50 @@ export default class PdfViewer extends React.Component {
     render() {
         const { data, chapter, currChapterData, chapters, authors} = this.state
         const { title } = this.props
-        const reminderStyle = {color: "grey", fontFamily: "SF Pro Text Light"}
+        const reminderStyle = {
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            color: "grey",
+            fontFamily: "SF Pro Text Light"
+        }
         return (
-            <div id='maincontent-container' className="pdf-container">
-                {
-                    chapters &&
-                    <PdfNav
-                        // isTocShown={isTocShown}
-                        title={title}
-                        hasData = {data ? true : false}
-                        chapter={chapter}
-                        chapters={chapters}
-                        authors = {authors}
-                        reminderStyle={reminderStyle}
-                        // updateSidebarStatus={this.updateSidebarStatus}
-                        handleChapterChange={this.handleChapterChange}
-                    />
-                }
-                {
-                    data
-                    ? 
-                    <div className="pdf" id="pdf">
-                        <Pdf
-                            chapter={chapter}
-                            data={currChapterData}
+            <div id='maincontent-container'>
+                <main className="pdf-container">
+                    {
+                        chapters &&
+                        <PdfNav
                             // isTocShown={isTocShown}
+                            title={title}
+                            hasData = {data ? true : false}
+                            chapter={chapter}
+                            chapters={chapters}
+                            authors = {authors}
+                            // updateSidebarStatus={this.updateSidebarStatus}
+                            handleChapterChange={this.handleChapterChange}
                         />
-                        {/* {chapter > 0 && <a>Previous</a>}
-                        {chapter < chapters.length - 1 && <a>Next</a>} */}
-                    </div>
-                    :
-                    <div style={reminderStyle}>Fetching Data...</div>
-                }
+                    }
+                    {
+                        data
+                        ? 
+                        <div className="pdf" id="pdf">
+                            <Pdf
+                                chapter={chapter}
+                                data={currChapterData}
+                                // isTocShown={isTocShown}
+                            />
+                            {/* {chapter > 0 && <a>Previous</a>}
+                            {chapter < chapters.length - 1 && <a>Next</a>} */}
+                        </div>
+                        :
+                        <div style={reminderStyle}>
+                            {/* <Icon type="loading" /> */}
+                            Fetching Data...
+                        </div>
+                    }
+                </main>
             </div>
         )
     }

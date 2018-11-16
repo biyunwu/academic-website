@@ -131,7 +131,8 @@ body {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
   font-family: "medium-content-serif-font";
-  color: rgba(0, 0, 0, 0.84); }
+  color: rgba(0, 0, 0, 0.84);
+  background: none; }
   body h2 {
     font-family: "SF Pro Text Light";
     font-size: 26px;
@@ -240,9 +241,6 @@ header {
   max-width: 1110px;
   padding: 0 3%;
   margin: 0 auto; }
-  @media only screen and (min-width: 1200px) {
-    .book {
-      padding-top: 1em; } }
   @media only screen and (max-width: 500px) {
     .book p {
       padding-left: 15px;
@@ -383,9 +381,6 @@ header {
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.84);
   font-size: 18px; }
-  @media only screen and (min-width: 1200px) {
-    #papers-div {
-      padding-top: 1em; } }
   @media only screen and (min-width: 780px) {
     #papers-div {
       display: grid;
@@ -461,9 +456,6 @@ header {
   padding: 0 3%;
   margin: 0 auto;
   font-size: 18px; }
-  @media only screen and (min-width: 1200px) {
-    .about {
-      padding-top: 1em; } }
   @media only screen and (max-width: 500px) {
     .about p {
       padding-left: 15px;
@@ -515,9 +507,6 @@ header {
   max-width: 1110px;
   padding: 0 3%;
   margin: 0 auto; }
-  @media only screen and (min-width: 1200px) {
-    #events {
-      padding-top: 1em; } }
   #events p {
     max-width: 100%; }
   #events h3 {
@@ -589,21 +578,16 @@ header {
   padding: 0 3%;
   margin: 0 auto;
   background: white; }
-  @media only screen and (min-width: 1200px) {
-    .pdf-container {
-      padding-top: 1em; } }
   .pdf-container li {
-    color: rgba(0, 0, 0, 0.45); }
+    color: rgba(0, 0, 0, 0.45);
+    margin: 1em 0; }
   .pdf-container nav {
     max-width: 1110px;
     padding: 0 3%;
     margin: 0 auto; }
-    @media only screen and (min-width: 1200px) {
-      .pdf-container nav {
-        padding-top: 1em; } }
   .pdf-container #pdf-remainder {
-    padding: 1em;
-    background-color: rgba(245, 245, 245, 0.7); }
+    padding: 0.5em 1em;
+    background-color: #f5f5f5; }
     .pdf-container #pdf-remainder p {
       margin: 5px 0;
       font-size: 15px; }

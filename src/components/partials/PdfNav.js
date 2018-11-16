@@ -8,7 +8,8 @@ export default function Navbar (props) {
         return currAnthor? ' ' + currAnthor : ''
     }
 
-    const {title, hasData, chapters, chapter, authors, reminderStyle, handleChapterChange} = props
+    const {title, hasData, chapters, chapter, authors, handleChapterChange} = props
+    const reminderStyle = {color: "grey", fontFamily: "SF Pro Text Light"}
     // Refer to Hamburgers library: https://github.com/jonsuh/hamburgers
     // const menuBaseClassName = "hamburger hamburger--collapse"
     // const menuClassName = isTocShown ? menuBaseClassName.concat(" is-active") : menuBaseClassName
@@ -40,21 +41,22 @@ export default function Navbar (props) {
                     hasData && !(chapter >=0)  &&
                     <div id='pdf-remainder' style={reminderStyle}>
                         <p>Choose a chapter to read. The PDF may take several seconds to be displayed.</p>
-                        <p>For a better layout, please use laptop or desktop to open this page.</p> 
+                        <p>For performance and layout reasons, the book may not be rendered correctly.</p>
+                        <p>Please use laptop or desktop to open this page.</p> 
                     </div>
                 }
                 <div>
                     <p style={{fontFamily: "SF Pro Text Light", fontSize: "1.3rem"}}>Table of Contents</p>
                     <ul style={{listStyle: "circle", padding: "0 1.4em", fontFamily: "SF Pro Text Regular"}}>
-                        {chapters.map((chapter, idx) => 
+                        {chapters.map((chapterTitle, idx) => 
                             <li 
-                                key={chapter}
-                                style={{margin: "1em 0"}}
+                                key={chapterTitle}
                             >   
                                 <a
                                     onClick={e => {handleChapterChange.call(null, idx)}}
                                     href="#pdf"
-                                >{chapter}</a>
+                                    style={chapter === idx ? {textDecoration: "underline"} : {}}
+                                >{chapterTitle}</a>
                                 {generateAuthor(authors[idx])}
                             </li>
                         )}

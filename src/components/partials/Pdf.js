@@ -71,7 +71,8 @@ export default class Pdf extends Component {
 
     render() {
         const { scale, numPages } = this.state;
-        const data = this.props.data;
+        const { data } = this.props;
+        // console.log(viewportWidth)
         // Prevent content form scolling when menu bar is open.
         // this.props.isTocShown
         //     ? document.getElementsByTagName("body")[0].style.overflow = "hidden"

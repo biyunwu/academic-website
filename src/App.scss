@@ -58,9 +58,9 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     //     }
     // }
 
-    @media only screen and (min-width: 1200px) {
-        padding-top: 1em;
-    }
+    // @media only screen and (min-width: 1200px) {
+    //     padding-top: 1em;
+    // }
 
     // Prevent text overflow its parent container: https://stackoverflow.com/questions/5241369/word-wrap-a-link-so-it-doesnt-overflow-its-parent-div-width
     // white-space: pre-wrap; /* css-3 */    
@@ -211,6 +211,7 @@ body {
     // margin: 0 auto;
     font-family: $main-text-font;
     color: $main-text-color;
+    background: none;
 
     h2 {
         font-family: $nav-link-font;
@@ -880,6 +881,7 @@ header {
 
     li {
         color: $navlink-color;
+        margin: 1em 0;
     }
 
     nav {
@@ -887,8 +889,10 @@ header {
     }
 
     #pdf-remainder {
-        padding: 1em;
-        background-color: rgba($background-color, .7);
+        padding: 0.5em 1em;
+        // background-color: rgba($background-color, .7);
+        background-color: $background-color;
+
         p {
             margin: 5px 0;
             font-size: 15px;
