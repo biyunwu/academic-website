@@ -147,7 +147,14 @@ class App extends Component {
                             <PdfViewer
                                 title={data.buddhism.title}
                                 readKey={data.buddhism.readKey}
-                                chapters={data.buddhism.chapters}
+                                // chapters={data.buddhism.chapters}
+                            />
+                        )}/>
+                        <Route exact path="/freud" render={() => (
+                            <PdfViewer
+                                title={data.freud.title}
+                                readKey={data.freud.readKey}
+                                // chapters={data.buddhism.chapters}
                             />
                         )}/>
                         <Route render={() => (

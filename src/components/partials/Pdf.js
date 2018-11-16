@@ -80,6 +80,7 @@ export default class Pdf extends Component {
             data &&
             <div>
                 <Document
+                    className='pdf-canvas'
                     file={{data: data}}
                     onLoadSuccess={this.onDocumentLoadSuccess}
                     // loading='Loading... Please wait.'

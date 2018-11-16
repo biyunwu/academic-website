@@ -585,9 +585,15 @@ header {
     height: 100%; }
 
 .pdf-container {
+  max-width: 1110px;
+  padding: 0 3%;
+  margin: 0 auto;
   background: white; }
+  @media only screen and (min-width: 1200px) {
+    .pdf-container {
+      padding-top: 1em; } }
   .pdf-container li {
-    color: #ec8513; }
+    color: rgba(0, 0, 0, 0.45); }
   .pdf-container nav {
     max-width: 1110px;
     padding: 0 3%;
@@ -595,6 +601,8 @@ header {
     @media only screen and (min-width: 1200px) {
       .pdf-container nav {
         padding-top: 1em; } }
+  .pdf-container .pdf-canvas {
+    min-height: 600px; }
 
 .footer {
   font-family: "SF Pro Text Light";

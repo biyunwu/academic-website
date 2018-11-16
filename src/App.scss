@@ -875,13 +875,19 @@ header {
 }
 
 .pdf-container {
-    // @include limitWidth;
+    @include limitWidth;
     background: white;
+
     li {
-        color: $sidebarColor;
+        color: $navlink-color;
     }
+
     nav {
         @include limitWidth;
+    }
+
+    .pdf-canvas {
+        min-height: 600px;
     }
 }
 

@@ -1,7 +1,14 @@
 import React from 'react'
 
 export default function Navbar (props) {
-    const {isTocShown, title, chapters, updateSidebarStatus, handleChapterChange} = props
+    // const generateChapterTitle = (currChapterTitle, currAnthor) => {
+    //     return currAnthor? `${currAnthor}: ${currChapterTitle}` : currChapterTitle
+    // }
+    const generateAuthor = (currAnthor) => {
+        return currAnthor? ' ' + currAnthor : ''
+    }
+
+    const {title, hasData, chapters, chapter, authors, reminderStyle, handleChapterChange} = props
     // Refer to Hamburgers library: https://github.com/jonsuh/hamburgers
     // const menuBaseClassName = "hamburger hamburger--collapse"
     // const menuClassName = isTocShown ? menuBaseClassName.concat(" is-active") : menuBaseClassName
@@ -29,18 +36,26 @@ export default function Navbar (props) {
                     />
                 </a> */}
                 <h2>{title}</h2>
+                {
+                    hasData && !(chapter >=0)  &&
+                    <div id='pdf-remainder' style={reminderStyle}>
+                        <p>Choose a chapter to read. The PDF may take several seconds to be displayed.</p>
+                        <p>For a better layout, please use laptop or desktop to open this page.</p> 
+                    </div>
+                }
                 <div>
                     <p style={{fontFamily: "SF Pro Text Light", fontSize: "1.3rem"}}>Table of Contents</p>
                     <ul style={{listStyle: "circle", padding: "0 1.4em", fontFamily: "SF Pro Text Regular"}}>
                         {chapters.map((chapter, idx) => 
                             <li 
                                 key={chapter}
-                                style={{cursor: "pointer", margin: "0.5em 0"}}
-                            >
+                                style={{margin: "1em 0"}}
+                            >   
                                 <a
-                                    onClick={e => {handleChapterChange.call(null, idx); updateSidebarStatus()}}
+                                    onClick={e => {handleChapterChange.call(null, idx)}}
+                                    href="#pdf"
                                 >{chapter}</a>
-
+                                {generateAuthor(authors[idx])}
                             </li>
                         )}
                     </ul>

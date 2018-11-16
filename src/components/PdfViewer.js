@@ -16,8 +16,10 @@ import PdfNav from './partials/PdfNav'
 
 export default class PdfViewer extends React.Component {
     state = {
-        isTocShown: true,
-        chapters: this.props.chapters,
+        // isTocShown: true,
+        // chapters: this.props.chapters,
+        chapters: null,
+        authors: null,
         chapter: undefined,
         data: null,
         currChapterData: null
@@ -29,31 +31,37 @@ export default class PdfViewer extends React.Component {
             response => {
                 if (response.status !== 200) {
                     console.log('Looks like there was a problem. Status Code: ' +
-                    response.status);
-                    return;
+                    response.status)
+                    return
                 }
                 // Examine the text in the response
                 response.json().then((data) => {
-                    const decodedData = [];
+                    const decodedData = []
+                    const chapters = []
+                    const authors = []
                     const basename = `JVBERi0xLj`
-                    this.state.chapters.forEach((c, idx) => {
+                    // this.state.chapters.forEach((c, idx) => {
+                    //     const base64 = basename + data[idx].content
+                    //     decodedData.push(this.base64ToArrayBuffer(base64))
+                    // })
+                    data.forEach((d, idx) => {
                         const base64 = basename + data[idx].content
                         decodedData.push(this.base64ToArrayBuffer(base64))
+                        chapters.push(d.title)
+                        const author = d.author
+                        author ? authors.push(author) : authors.push(undefined)
                     })
-                    // console.log("Decoded Data: ", decodedData)
-                    // console.log(this);
-                    return decodedData
-                    // this.setState({data: decodedData})
-                }).then(data => this.setState({data: data}))
+                    return [decodedData, chapters, authors]
+                }).then(dataArr => this.setState({data: dataArr[0], chapters: dataArr[1], authors: dataArr[2]}))
             })
         .catch(function(err) {
             console.log('Fetch Error :-S', err);
         });
     }
 
-    updateSidebarStatus = () => {
-        this.setState(prevState => ({isTocShown: !prevState.isTocShown}))
-    }
+    // updateSidebarStatus = () => {
+    //     this.setState(prevState => ({isTocShown: !prevState.isTocShown}))
+    // }
 
     handleChapterChange = (chapter) => {
         const data = this.state.data
@@ -73,40 +81,39 @@ export default class PdfViewer extends React.Component {
     }
 
     render() {
-        const { isTocShown, data, chapter, currChapterData } = this.state
-        const { title, chapters } = this.props
-        const reminderStyle = {textAlign: "center", color: "grey", margin:"0 1rem", paddingTop: "5rem", fontFamily: "SF Pro Text Light"}
+        const { data, chapter, currChapterData, chapters, authors} = this.state
+        const { title } = this.props
+        const reminderStyle = {color: "grey", fontFamily: "SF Pro Text Light"}
         return (
-            <div id='maincontent-container' className="pdf-container" style={currChapterData && {minWidth: "892px"}}>
-                <PdfNav
-                    isTocShown={isTocShown}
-                    title={title}
-                    chapters={chapters}
-                    updateSidebarStatus={this.updateSidebarStatus}
-                    handleChapterChange={this.handleChapterChange}
-                />
+            <div id='maincontent-container' className="pdf-container">
+                {
+                    chapters &&
+                    <PdfNav
+                        // isTocShown={isTocShown}
+                        title={title}
+                        hasData = {data ? true : false}
+                        chapter={chapter}
+                        chapters={chapters}
+                        authors = {authors}
+                        reminderStyle={reminderStyle}
+                        // updateSidebarStatus={this.updateSidebarStatus}
+                        handleChapterChange={this.handleChapterChange}
+                    />
+                }
                 {
                     data
                     ? 
-                    <div className="pdf" style={{width: "892px"}}>
+                    <div className="pdf" id="pdf">
                         <Pdf
                             chapter={chapter}
                             data={currChapterData}
-                            isTocShown={isTocShown}
+                            // isTocShown={isTocShown}
                         />
                         {/* {chapter > 0 && <a>Previous</a>}
                         {chapter < chapters.length - 1 && <a>Next</a>} */}
                     </div>
-                    : 
-                    <div style={reminderStyle}>Fetching Data</div>
-                }
-                {
-                    data && !(chapter >=0)  &&
-                    <div style={reminderStyle}>
-                        <div>Choose a chapter to Read.</div>
-                        <div>The PDF may take several seconds to be displayed.</div>
-                        <div>For a better layout, please use laptop or desktop to open this page.</div> 
-                    </div>
+                    :
+                    <div style={reminderStyle}>Fetching Data...</div>
                 }
             </div>
         )
