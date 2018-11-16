@@ -24,9 +24,10 @@ export default class PdfViewer extends React.Component {
         authors: null,
         chapter: undefined,
         data: null,
-        currChapterData: null
+        currChapterData: null,
+        hasError: false
     }
-
+    
     componentDidMount () {
         fetch(`https://freud-viewer.herokuapp.com/${this.props.readKey}`)
         .then(
@@ -56,7 +57,8 @@ export default class PdfViewer extends React.Component {
                     return [decodedData, chapters, authors]
                 }).then(dataArr => this.setState({data: dataArr[0], chapters: dataArr[1], authors: dataArr[2]}))
             })
-        .catch(function(err) {
+        .catch(err => {
+            this.setState({hasError: true})
             console.log('Fetch Error :-S', err);
         });
     }
@@ -83,7 +85,7 @@ export default class PdfViewer extends React.Component {
     }
 
     render() {
-        const { data, chapter, currChapterData, chapters, authors} = this.state
+        const { data, chapter, currChapterData, chapters, authors, hasError} = this.state
         const { title } = this.props
         const reminderStyle = {
             position: 'absolute',
@@ -124,8 +126,8 @@ export default class PdfViewer extends React.Component {
                         </div>
                         :
                         <div style={reminderStyle}>
+                            {hasError ? 'Communication failed.' : 'Fetching Data...'}
                             {/* <Icon type="loading" /> */}
-                            Fetching Data...
                         </div>
                     }
                 </main>
