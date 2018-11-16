@@ -609,6 +609,8 @@ header {
       font-size: 15px; }
   .pdf-container .pdf-canvas {
     min-height: 600px; }
+    .pdf-container .pdf-canvas canvas.react-pdf__Page__canvas {
+      margin: 0 auto; }
 
 .footer {
   font-family: "SF Pro Text Light";

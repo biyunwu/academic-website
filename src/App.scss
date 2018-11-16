@@ -897,6 +897,11 @@ header {
 
     .pdf-canvas {
         min-height: 600px;
+
+        // Align PDF canvas and text layer
+        canvas.react-pdf__Page__canvas {
+            margin: 0 auto;
+        }
     }
 }
 
