@@ -601,6 +601,12 @@ header {
     @media only screen and (min-width: 1200px) {
       .pdf-container nav {
         padding-top: 1em; } }
+  .pdf-container #pdf-remainder {
+    padding: 1em;
+    background-color: rgba(245, 245, 245, 0.7); }
+    .pdf-container #pdf-remainder p {
+      margin: 5px 0;
+      font-size: 15px; }
   .pdf-container .pdf-canvas {
     min-height: 600px; }
 
