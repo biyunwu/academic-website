@@ -1,6 +1,7 @@
 import React from 'react';
 import Pdf from './partials/Pdf'
 import PdfNav from './partials/PdfNav'
+import throttle from "lodash.throttle"
 // import Icon from 'antd'
 // import 'antd/lib/icon/style/index.less'
 
@@ -18,17 +19,18 @@ import PdfNav from './partials/PdfNav'
 
 export default class PdfViewer extends React.Component {
     state = {
-        // isTocShown: true,
-        // chapters: this.props.chapters,
         chapters: null,
         authors: null,
         chapter: undefined,
         data: null,
         currChapterData: null,
-        hasError: false
+        hasError: false,
+        width: null
     }
     
     componentDidMount () {
+        this.setDivSize()
+        window.addEventListener("resize", throttle(this.setDivSize, 300))
         fetch(`https://freud-viewer.herokuapp.com/${this.props.readKey}`)
         .then(
             response => {
@@ -63,9 +65,13 @@ export default class PdfViewer extends React.Component {
         });
     }
 
-    // updateSidebarStatus = () => {
-    //     this.setState(prevState => ({isTocShown: !prevState.isTocShown}))
-    // }
+    componentWillUnmount () {
+        window.removeEventListener("resize", throttle(this.setDivSize, 300))
+    }
+
+    setDivSize = () => {
+        this.setState({width: this.pdfWrapper.getBoundingClientRect().width})
+    }
 
     handleChapterChange = (chapter) => {
         const data = this.state.data
@@ -85,7 +91,7 @@ export default class PdfViewer extends React.Component {
     }
 
     render() {
-        const { data, chapter, currChapterData, chapters, authors, hasError} = this.state
+        const { data, chapter, currChapterData, chapters, authors, hasError, width} = this.state
         const { title } = this.props
         const reminderStyle = {
             position: 'absolute',
@@ -98,17 +104,15 @@ export default class PdfViewer extends React.Component {
         }
         return (
             <div id='maincontent-container'>
-                <main className="pdf-container">
+                <main className="pdf-container" id="pdfWrapper" ref={(ref) => this.pdfWrapper = ref}>
                     {
                         chapters &&
                         <PdfNav
-                            // isTocShown={isTocShown}
                             title={title}
                             hasData = {data ? true : false}
                             chapter={chapter}
                             chapters={chapters}
                             authors = {authors}
-                            // updateSidebarStatus={this.updateSidebarStatus}
                             handleChapterChange={this.handleChapterChange}
                         />
                     }
@@ -119,7 +123,7 @@ export default class PdfViewer extends React.Component {
                             <Pdf
                                 chapter={chapter}
                                 data={currChapterData}
-                                // isTocShown={isTocShown}
+                                width={width}
                             />
                             {/* {chapter > 0 && <a>Previous</a>}
                             {chapter < chapters.length - 1 && <a>Next</a>} */}
