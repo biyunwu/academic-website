@@ -8,7 +8,7 @@ export default function Navbar (props) {
         return currAnthor? ' ' + currAnthor : ''
     }
 
-    const {hasData, chapters, chapter, authors, handleChapterChange} = props
+    const {chapters, chapter, authors, handleChapterChange} = props
     const reminderStyle = {color: "grey", fontFamily: "SF Pro Text Light"}
     // Refer to Hamburgers library: https://github.com/jonsuh/hamburgers
     // const menuBaseClassName = "hamburger hamburger--collapse"
@@ -41,7 +41,7 @@ export default function Navbar (props) {
                     // hasData && !(chapter >=0)  &&
                     <div id='pdf-remainder' style={reminderStyle}>
                         <p>The text layer of the PDF is turned off by default due to performance consideration.</p>
-                        <p>If you need to copy the text in the PDF file, please enable the text layer.</p>
+                        <p>If you are a screen reader user or need to copy the text in the PDF file, please enable the text layer.</p>
                         <p>For better performance, please use laptop or desktop to open this page.</p>
                     </div>
                 }

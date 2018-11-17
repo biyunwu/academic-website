@@ -890,11 +890,14 @@ header {
         button#toggle-switch{
             @include buttonStyle;
             background: white;
-            width: 135px;
+            width: 145px;
             min-height: 35px;
             margin: 0 0 1em 0;
-            &:hover {
-                @include buttonHoverStyle;
+
+            @media only screen and (min-width: 700px) {
+                &:hover {
+                    @include buttonHoverStyle;
+                }
             }
         }
     }

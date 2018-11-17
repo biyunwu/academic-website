@@ -592,12 +592,13 @@ header {
     font-size: 14px;
     transition: background 0.2s, color 0.2s;
     background: white;
-    width: 135px;
+    width: 145px;
     min-height: 35px;
     margin: 0 0 1em 0; }
-    .pdf-container div#switch-container button#toggle-switch:hover {
-      background: #272727;
-      color: white; }
+    @media only screen and (min-width: 700px) {
+      .pdf-container div#switch-container button#toggle-switch:hover {
+        background: #272727;
+        color: white; } }
   .pdf-container #pdf-remainder {
     padding: 0.5em 1em;
     background-color: #f5f5f5; }

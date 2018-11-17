@@ -124,7 +124,6 @@ export default class PdfViewer extends React.Component {
                     {
                         chapters &&
                         <PdfNav
-                            hasData = {data ? true : false}
                             chapter={chapter}
                             chapters={chapters}
                             authors = {authors}
