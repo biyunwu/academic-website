@@ -8,7 +8,7 @@ export default function Navbar (props) {
         return currAnthor? ' ' + currAnthor : ''
     }
 
-    const {title, hasData, chapters, chapter, authors, handleChapterChange} = props
+    const {hasData, chapters, chapter, authors, handleChapterChange} = props
     const reminderStyle = {color: "grey", fontFamily: "SF Pro Text Light"}
     // Refer to Hamburgers library: https://github.com/jonsuh/hamburgers
     // const menuBaseClassName = "hamburger hamburger--collapse"
@@ -36,17 +36,17 @@ export default function Navbar (props) {
                         style={{height: "40px", margin:'20px auto'}}
                     />
                 </a> */}
-                <h2>{title}</h2>
+                {/* <h2>{title}</h2> */}
                 {
-                    hasData && !(chapter >=0)  &&
+                    // hasData && !(chapter >=0)  &&
                     <div id='pdf-remainder' style={reminderStyle}>
-                        <p>Choose a chapter to read. The PDF may take several seconds to be displayed.</p>
-                        <p>For performance and layout reasons, the book may not be rendered correctly.</p>
-                        <p>Please use laptop or desktop to open this page.</p> 
+                        <p>The text layer of the PDF is turned off by default due to performance consideration.</p>
+                        <p>If you need to copy the text in the PDF file, please enable the text layer.</p>
+                        <p>For better performance, please use laptop or desktop to open this page.</p>
                     </div>
                 }
                 <div>
-                    <p style={{fontFamily: "SF Pro Text Light", fontSize: "1.3rem"}}>Table of Contents</p>
+                    <p style={{fontFamily: "SF Pro Text Light", minWidth:'100%', fontSize: "1.3rem"}}>Table of Contents</p>
                     <ul style={{listStyle: "circle", padding: "0 1.4em", fontFamily: "SF Pro Text Regular"}}>
                         {chapters.map((chapterTitle, idx) => 
                             <li 

@@ -583,10 +583,21 @@ header {
   .pdf-container li {
     color: rgba(0, 0, 0, 0.45);
     margin: 1em 0; }
-  .pdf-container nav {
-    max-width: 1110px;
-    padding: 0 3%;
-    margin: 0 auto; }
+  .pdf-container div#switch-container button#toggle-switch {
+    text-align: center;
+    border: #272727 solid 1px;
+    cursor: pointer;
+    color: #272727;
+    font-family: "SF Pro Text Regular";
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+    background: white;
+    width: 135px;
+    min-height: 35px;
+    margin: 0 0 1em 0; }
+    .pdf-container div#switch-container button#toggle-switch:hover {
+      background: #272727;
+      color: white; }
   .pdf-container #pdf-remainder {
     padding: 0.5em 1em;
     background-color: #f5f5f5; }

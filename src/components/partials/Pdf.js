@@ -18,7 +18,7 @@ export default class Pdf extends Component {
 
     render() {
         const { numPages } = this.state;
-        const { data, width } = this.props;
+        const { data, width, isTextLayerEnable } = this.props;
         // pagwWidth is determined by maincontent div's padding property which is "padiing: 0 3%"
         const pageWidth = width*0.94 
         return (
@@ -28,7 +28,6 @@ export default class Pdf extends Component {
                     className='pdf-canvas'
                     file={{data: data}}
                     onLoadSuccess={this.onDocumentLoadSuccess}
-                    loading='Loading...'
                 >
                     {/* Convert numPages to array which has elements from 1 to numPages */
                         Array.apply(null, Array(numPages)).map(function (_, i) {return i+1}).map(num => 
@@ -37,6 +36,8 @@ export default class Pdf extends Component {
                             pageNumber={num}
                             // scale={scale}
                             width={pageWidth}
+                            loading='Loading...'
+                            renderTextLayer={isTextLayerEnable}
                         />)
                     }
                 </Document>

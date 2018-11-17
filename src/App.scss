@@ -886,8 +886,17 @@ header {
         margin: 1em 0;
     }
 
-    nav {
-        @include limitWidth;
+    div#switch-container {
+        button#toggle-switch{
+            @include buttonStyle;
+            background: white;
+            width: 135px;
+            min-height: 35px;
+            margin: 0 0 1em 0;
+            &:hover {
+                @include buttonHoverStyle;
+            }
+        }
     }
 
     #pdf-remainder {

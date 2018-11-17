@@ -25,7 +25,8 @@ export default class PdfViewer extends React.Component {
         data: null,
         currChapterData: null,
         hasError: false,
-        width: null
+        width: null,
+        isTextLayerEnable: false
     }
     
     componentDidMount () {
@@ -80,6 +81,10 @@ export default class PdfViewer extends React.Component {
         } 
     }
 
+    toggleTextLayer = () => {
+        this.setState({isTextLayerEnable: !this.state.isTextLayerEnable})
+    }
+
     base64ToArrayBuffer = (base64) => {
         const raw =  window.atob(base64);
         const rawLength = raw.length;
@@ -91,7 +96,7 @@ export default class PdfViewer extends React.Component {
     }
 
     render() {
-        const { data, chapter, currChapterData, chapters, authors, hasError, width} = this.state
+        const { data, chapter, currChapterData, chapters, authors, hasError, width, isTextLayerEnable} = this.state
         const { title } = this.props
         const reminderStyle = {
             position: 'absolute',
@@ -105,10 +110,20 @@ export default class PdfViewer extends React.Component {
         return (
             <div id='maincontent-container'>
                 <main className="pdf-container" id="pdfWrapper" ref={(ref) => this.pdfWrapper = ref}>
+                    <h2>{title}</h2>
+                    {
+                        chapters &&
+                        <div id='switch-container'>
+                            <button id="toggle-switch"
+                                onClick={this.toggleTextLayer}
+                            >
+                                {isTextLayerEnable? 'Diable Text Layer' : 'Enable Text Layer'}
+                            </button>
+                        </div>
+                    }
                     {
                         chapters &&
                         <PdfNav
-                            title={title}
                             hasData = {data ? true : false}
                             chapter={chapter}
                             chapters={chapters}
@@ -124,6 +139,7 @@ export default class PdfViewer extends React.Component {
                                 chapter={chapter}
                                 data={currChapterData}
                                 width={width}
+                                isTextLayerEnable={isTextLayerEnable}
                             />
                             {/* {chapter > 0 && <a>Previous</a>}
                             {chapter < chapters.length - 1 && <a>Next</a>} */}
