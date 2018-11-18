@@ -2,6 +2,7 @@ import React from 'react';
 import Pdf from './partials/Pdf'
 import PdfNav from './partials/PdfNav'
 import throttle from "lodash.throttle"
+import { Helmet } from "react-helmet"
 // import Icon from 'antd'
 // import 'antd/lib/icon/style/index.less'
 
@@ -31,7 +32,7 @@ export default class PdfViewer extends React.Component {
     
     componentDidMount () {
         this.setDivSize()
-        window.addEventListener("resize", throttle(this.setDivSize, 300))
+        window.addEventListener("resize", throttle(this.setDivSize, 500))
         fetch(`https://freud-viewer.herokuapp.com/${this.props.readKey}`)
         .then(
             response => {
@@ -67,7 +68,7 @@ export default class PdfViewer extends React.Component {
     }
 
     componentWillUnmount () {
-        window.removeEventListener("resize", throttle(this.setDivSize, 300))
+        window.removeEventListener("resize", throttle(this.setDivSize, 500))
     }
 
     setDivSize = () => {
@@ -109,6 +110,10 @@ export default class PdfViewer extends React.Component {
         }
         return (
             <div id='maincontent-container'>
+                <Helmet>
+                    <title>{title}</title>
+                    <meta name="description" content={'Read Online: ' + title} />
+                    </Helmet>
                 <main className="pdf-container" id="pdfWrapper" ref={(ref) => this.pdfWrapper = ref}>
                     <h2>{title}</h2>
                     {
@@ -117,7 +122,7 @@ export default class PdfViewer extends React.Component {
                             <button id="toggle-switch"
                                 onClick={this.toggleTextLayer}
                             >
-                                {isTextLayerEnable? 'Diable Text Layer' : 'Enable Text Layer'}
+                                {isTextLayerEnable? 'Disable Text Layer' : 'Enable Text Layer'}
                             </button>
                         </div>
                     }
