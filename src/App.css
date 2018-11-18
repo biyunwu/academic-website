@@ -592,10 +592,10 @@ header {
     font-size: 14px;
     transition: background 0.2s, color 0.2s;
     background: white;
-    width: 145px;
+    width: 150px;
     min-height: 35px;
     margin: 0 0 1em 0; }
-    @media only screen and (min-width: 700px) {
+    @media only screen and (min-width: 900px) {
       .pdf-container div#switch-container button#toggle-switch:hover {
         background: #272727;
         color: white; } }

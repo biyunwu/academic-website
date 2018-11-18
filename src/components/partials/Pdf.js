@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Page } from 'react-pdf'
 import { Document } from 'react-pdf/dist/entry.webpack'
 

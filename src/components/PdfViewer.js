@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Pdf from './partials/Pdf'
 import PdfNav from './partials/PdfNav'
 import throttle from "lodash.throttle"
@@ -18,7 +18,7 @@ import { Helmet } from "react-helmet"
 // ]
 // const title = 'Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind'
 
-export default class PdfViewer extends React.Component {
+export default class PdfViewer extends Component {
     state = {
         chapters: null,
         authors: null,
@@ -32,7 +32,7 @@ export default class PdfViewer extends React.Component {
     
     componentDidMount () {
         this.setDivSize()
-        window.addEventListener("resize", throttle(this.setDivSize, 500))
+        window.addEventListener("resize", throttle(this.setDivSize, 300))
         fetch(`https://freud-viewer.herokuapp.com/${this.props.readKey}`)
         .then(
             response => {
@@ -68,7 +68,7 @@ export default class PdfViewer extends React.Component {
     }
 
     componentWillUnmount () {
-        window.removeEventListener("resize", throttle(this.setDivSize, 500))
+        window.removeEventListener("resize", throttle(this.setDivSize, 300))
     }
 
     setDivSize = () => {
