@@ -237,7 +237,9 @@ header {
       header .nav-item .nav-link:hover {
         color: rgba(0, 0, 0, 0.84); }
     header .nav-item .active {
-      color: #000000; }
+      color: #ec8513; }
+      header .nav-item .active:hover {
+        color: #ec8513; }
 
 .book {
   max-width: 1110px;
@@ -462,6 +464,8 @@ header {
     .about p {
       padding-left: 15px;
       padding-right: 15px; } }
+  .about p {
+    margin-left: 0; }
   @media only screen and (max-width: 500px) {
     .about .pic-container {
       text-align: center; }
@@ -607,6 +611,8 @@ header {
       font-size: 15px; }
   .pdf-container .pdf-canvas {
     min-height: 600px; }
+    .pdf-container .pdf-canvas canvas.react-pdf__Page__canvas {
+      margin: 0 auto; }
 
 .footer {
   font-family: "SF Pro Text Light";

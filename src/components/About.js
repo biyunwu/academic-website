@@ -45,7 +45,7 @@ export default class About extends PureComponent {
                         <h2>Contact Info</h2>
                         <address>
                             <p>Rutgers University</p>
-                            <p>70 Lipman Drive<br/>Loree Hall<br/>Room 140<br/>New Brunswick<br/>NJ 08901-8525</p>
+                            <p>70 Lipman Drive<br/>Loree Hall<br/>Room 140<br/>New Brunswick<br/>NJ 08901-8525<br/>United States</p>
                             <p><a href='mailto:tjiang@rutgers.edu'>tjiang@rutgers.edu</a></p>
                         </address>
                     </div>

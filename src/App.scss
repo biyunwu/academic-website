@@ -375,7 +375,11 @@ header {
         }
 
         .active {
-            color: $active-link-color;
+            // color: $active-link-color;
+            color: $sidebarColor;
+            &:hover {
+                color: $sidebarColor;
+            }
         }
     }
 }
@@ -714,6 +718,10 @@ header {
     @include limitWidth;
     @include addPaddingToParagraphOnMobileDevice;
     font-size: 18px;
+    
+    p {
+        margin-left: 0;
+    }
 
     @media only screen and (max-width: 500px) {
         .pic-container {
