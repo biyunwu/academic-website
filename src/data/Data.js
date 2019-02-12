@@ -79,7 +79,7 @@ const data = {
         themeColor: 'rgb(236, 133, 19)',
         items: [
             {
-                title: `“Character Is the Way: The Path to Spiritual Freedom in the *Linji Lu*” in *Dao Caompanion to Chinese Buddhist Philosophy*, edited by Youru Wang and Sandra Wawrytko, Springer, 2019`,
+                title: `“Character Is the Way: The Path to Spiritual Freedom in the *Linji Lu*” in *Dao Companion to Chinese Buddhist Philosophy*, edited by Youru Wang and Sandra Wawrytko, Springer, 2019`,
                 tags: [0, 1],
                 pathname: 'Character_is_the_Way_Path_to_Spiritual_Freedom_in_the_Linji_Lu.pdf'
             },{
