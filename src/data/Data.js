@@ -79,7 +79,7 @@ const data = {
         themeColor: 'rgb(236, 133, 19)',
         items: [
             {
-                title: `“Character Is the Way: The Path to Spiritual Freedom in the *Linji Lu*” in *Dao Companion to Chinese Buddhist Philosophy*, edited by Youru Wang and Sandra Wawrytko, Springer, 2019`,
+                title: `“Character Is the Way: The Path to Spiritual Freedom in the *Linji Lu*” in *Dao Companion to Chinese Buddhist Philosophy*, edited by Youru Wang and Sandra Wawrytko, Springer, 2018`,
                 tags: [0, 1],
                 pathname: 'Character_is_the_Way_Path_to_Spiritual_Freedom_in_the_Linji_Lu.pdf'
             },{
@@ -149,7 +149,7 @@ const data = {
             {
                 location: 'Rutgers University, New Brunswick, NJ',
                 subject: 'Chinese Philosophy Project',
-                introduction: `In order to promote a better understanding of Chinese philosophy, Tao Jiang launched the Rutgers Workshop on Chinese Philosophy (RWCP) in 2012 with Stephen Angle (Wesleyan) and Ruth Chang (Rutgers) (Dean Zimmerman took over from Ruth Chang as a co-director in 2018 when Change moves to Oxford). RWCP is designed to build a bridge between Chinese philosophy and Western analytic philosophy, promoting critical engagement and constructive dialogue between the two sides, with the hope of bringing the study of Chinese philosophy into the mainstream of philosophical discourse within the Western academy. It is run every other April. [Click here](https://rccs.rutgers.edu/news/159-fourth-rutgers-workshop-on-chinese-philosophy-rwcp#!IMG_1460) to the most recent meeting.`
+                introduction: `In order to promote a better understanding of Chinese philosophy, Tao Jiang launched the Rutgers Workshop on Chinese Philosophy (RWCP) in 2013 with Stephen Angle (Wesleyan) and Ruth Chang (Rutgers) (Dean Zimmerman took over from Ruth Chang as a co-director in 2018 when Chang moved to Oxford). RWCP is designed to build a bridge between Chinese philosophy and Western analytic philosophy, promoting critical engagement and constructive dialogue between the two sides, with the hope of bringing the study of Chinese philosophy into the mainstream of philosophical discourse within the Western academy. It is run every other April. [Click here](https://rccs.rutgers.edu/events/events-list/icalrepeat.detail/2020/04/17/2230/-/chinese-philosophy-and-virtue-epistemology-fifth-rutgers-workshop-on-chinese-philosophy) for info about the upcoming workshop.`
 
             }
         ],
