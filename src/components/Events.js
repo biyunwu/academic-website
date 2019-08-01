@@ -53,8 +53,9 @@ export default class Events extends PureComponent {
     }
 
     render () {
-        const {seoTitle, seoDescription, academic, pub} = this.props.events
-        const allEvents = academic.concat(pub)
+        const {seoTitle, seoDescription, academic, pub_2, pub_1} = this.props.events
+        const allEvents = academic.concat(pub_2).concat(pub_1)
+        // const allEvents = academic.concat(pub)
         // const academicEvents = academic.map((event, idx) => this.generateEventDetail(event, idx))
         // const publicEvents = pub.map((event, idx) => this.generateEventDetail(event, idx))
         const allEventsDetails = allEvents.map((event, idx) => this.generateEventDetail(event, idx))
