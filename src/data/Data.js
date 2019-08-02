@@ -156,8 +156,8 @@ const data = {
         pub_2: [
             {
                 location: 'Mt. Jiuhua, China',
-                subject: 'Interviewed by Hong Kong iFeng News (鳳凰網)',
-                introduction: 'On July 20, 2019, Tao Jiang was interviewed in Mt. Jiuhua by iFeng News 鳳凰網, the well-known non-government news channel in China headquartered in Hong Kong. The interview focused on conceptions of freedom and their place in Chinese politics prior to the modern period. [Here is the link](https://guoxue.ifeng.com/c/7oXIeFmDwky) to the transcript of the entire interview. [Here](https://mp.weixin.qq.com/s/elyJ6CIEZBhHxU6Y81Dhbg) is an illustrated version of the interview. Jiang was there to participate in a forum on Chan Buddhism and Chinese Culture, held on July 21, 2019, which has received extensive coverages from [iFeng News](https://guoxue.ifeng.com/c/7oYxlP7MTdw).'
+                subject: 'Interview with Hong Kong iFeng News (鳳凰網)',
+                introduction: 'On July 20, 2019, Tao Jiang was interviewed in Mt. Jiuhua by iFeng News 鳳凰網, the well-known non-government news channel headquartered in Hong Kong. The conversation focused on conceptions of freedom and their place in Chinese politics prior to the modern period. The content is loosely based on Jiang‘s article “[Isaiah Berlin‘s Challenge to the Zhuangzian Freedom](https://raw.github.com/biyunwu/academic-web/master/src/data/papers/Zhuangzi_and_Berlin_on_freedom_JCP.pdf),” published in *Journal of Chinese Philosophy* in 2012. [Here](https://guoxue.ifeng.com/c/7oXIeFmDwky) is the interview and [here](https://mp.weixin.qq.com/s/elyJ6CIEZBhHxU6Y81Dhbg) is an illustrated version of the interview. Jiang was in Mt. Jiuhua to participate in a forum on Chan Buddhism and Chinese Culture, held on July 21, 2019, which has received extensive coverages from [iFeng News](https://guoxue.ifeng.com/c/7oYxlP7MTdw).'
             }
         ],
         pub_1: [
