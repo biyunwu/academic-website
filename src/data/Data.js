@@ -73,8 +73,8 @@ const data = {
     papers: {
         seoTitle: 'Papers - Tao Jiang',
         seoDescription: 'Select papers by Tao Jiang on Buddhist philosophy, Chinese philosophy and comparative philosophy.',
-        categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Comparative Philosophy'],
-        shortCategories: ['Chinese Phil.', 'Buddhist Phil.', 'Comparative Phil.'],
+        categories: ['Chinese Philosophy', 'Buddhist Philosophy', 'Cross-Cultural Philosophy'],
+        shortCategories: ['Chinese Phil.', 'Buddhist Phil.', 'Cross-Cultural Phil.'],
         // themeColor: 'rgb(0, 216, 208)',
         themeColor: 'rgb(236, 133, 19)',
         items: [
@@ -103,6 +103,10 @@ const data = {
                 title: `“Isaiah Berlin’s Challenge to the Zhuangzian Freedom,” *Journal of Chinese Philosophy* 2012`,
                 tags: [0,2],
                 pathname: 'Zhuangzi_and_Berlin_on_freedom_JCP.pdf'
+            },{
+                title: `"Two Notions of Freedom in Classical Chinese Thought: The Concept of *Hua* 化 in the *Zhuangzi* and the *Xunzi*," *Dao: A Journal of Comparative Philosophy* 10, 2011`,
+                tags: [0],
+                pathname: 'Two_notions_of_freedom-Dao.pdf'
             },{
                 title: `“Linji and William James on Mortality: Two Visions of Pragmatism,” in *Mortality in Traditional China*, edited by Amy Olberding and Philip J. Ivanhoe. SUNY, 2011`,
                 tags: [0,1,2],
@@ -154,7 +158,7 @@ const data = {
             {
                 location: 'Rutgers University, New Brunswick, NJ',
                 subject: 'Chinese Philosophy Project',
-                introduction: `In order to promote a better understanding of Chinese philosophy, Tao Jiang launched the Rutgers Workshop on Chinese Philosophy (RWCP) in 2012 with Stephen Angle (Wesleyan) and Ruth Chang (Rutgers) (Dean Zimmerman took over from Ruth Chang as a co-director in 2018 when Chang moved to Oxford). RWCP is designed to build a bridge between Chinese philosophy and Western analytic philosophy, promoting critical engagement and constructive dialogue between the two sides, with the hope of bringing the study of Chinese philosophy into the mainstream of philosophical discourse within the Western academy. It is run every other April. The 2020 workshop, [Virtue Epistemology and Chinese Philosophy](https://rccs.rutgers.edu/events/events-list/icalrepeat.detail/2020/04/17/2230/-/chinese-philosophy-and-virtue-epistemology-fifth-rutgers-workshop-on-chinese-philosophy), is postponed to April 2021 due to Coronavirus pandemic.`
+                introduction: `In order to promote a better understanding of Chinese philosophy, Tao Jiang launched the Rutgers Workshop on Chinese Philosophy (RWCP) in 2012 with Stephen Angle (Wesleyan) and Ruth Chang (Rutgers) (Dean Zimmerman took over from Ruth Chang as a co-director in 2018 when Chang moved to Oxford). RWCP is designed to build a bridge between Chinese philosophy and Western analytic philosophy, promoting critical engagement and constructive dialogue between the two sides, with the hope of bringing the study of Chinese philosophy into the mainstream of philosophical discourse within the Western academy. It is run every other April. The 2020 workshop, [Virtue Epistemology and Chinese Philosophy](https://rccs.rutgers.edu/events/events-list/icalrepeat.detail/2020/04/17/2230/-/chinese-philosophy-and-virtue-epistemology-fifth-rutgers-workshop-on-chinese-philosophy), is postponed until April 16, 2021 due to the Coronavirus pandemic.`
 
             }
         ],
