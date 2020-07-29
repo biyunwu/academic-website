@@ -161,7 +161,7 @@ html {
     }
     
     a {
-        color: rgb(236, 133, 19);
+        color: $sidebarColor;
         text-decoration: none;
 
         &:hover {
@@ -169,6 +169,7 @@ html {
             text-decoration: underline;
         }
     }
+
     button {
         background: none;
 
@@ -688,6 +689,15 @@ header {
             p {
                 margin: 0 0 0 0.5em;
                 text-indent: -0.4em;
+            }
+
+            a.paper-title {
+                color: $main-text-color;
+                text-decoration: none;
+
+                &:hover {
+                    color: $sidebarColor;
+                }
             }
 
             div.indent {

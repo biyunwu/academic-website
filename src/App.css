@@ -442,6 +442,11 @@ header {
     #papers-div ul li p {
       margin: 0 0 0 0.5em;
       text-indent: -0.4em; }
+    #papers-div ul li a.paper-title {
+      color: rgba(0, 0, 0, 0.84);
+      text-decoration: none; }
+      #papers-div ul li a.paper-title:hover {
+        color: #ec8513; }
     #papers-div ul li div.indent {
       margin: 0.2em 0 2em 0.5em; }
     #papers-div ul li span.tag-container {
