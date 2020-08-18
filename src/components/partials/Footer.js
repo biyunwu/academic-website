@@ -44,21 +44,21 @@ export default class Header extends Component {
 
         return (
             <footer className='footer'>
-                    
-                    <a href='mailto:tjiang@rutgers.edu'>
-                        Email
-                    </a>
+                    <div>
+                        <a href='mailto:tjiang@rutgers.edu'>
+                            Email
+                        </a>
 
 
-                    <span className='icon-gap'></span>
-                    <a href='https://rccs.rutgers.edu/people/director' target='_blank' rel='noopener noreferrer'>
-                        Rutgers
-                    </a>
-                    <span className='icon-gap'></span>
-                    <a href='https://www.linkedin.com/in/tao-jiang-bb80b837/' target='_blank' rel='noopener noreferrer'>
-                        LinkedIn
-                    </a>
-
+                        <span className='icon-gap'></span>
+                        <a href='https://rccs.rutgers.edu/people/director' target='_blank' rel='noopener noreferrer'>
+                            Rutgers
+                        </a>
+                        <span className='icon-gap'></span>
+                        <a href='https://www.linkedin.com/in/tao-jiang-bb80b837/' target='_blank' rel='noopener noreferrer'>
+                            LinkedIn
+                        </a>
+                    </div>
                     {copyright}
                     <p className='footer-text'>Created by <a id='developer' href='https://biyunwu.com' target='_blank' rel="noopener noreferrer">Biyun Wu</a></p>
             </footer>

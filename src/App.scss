@@ -2,10 +2,10 @@ $font-path: './fonts/';
 @import './fonts/medium-content-sans-serif-font';
 @import './fonts/medium-content-serif-font';
 
-$sidebarColor: rgb(236, 133, 19);
+$themeColor: rgb(236, 133, 19);
 $background-color: #f5f5f5;
-$navlink-color: rgba(0,0,0,0.45);
-$link-seperator-color: rgba(0,0,0,0.1);
+$navLinkColor: rgba(0,0,0,0.45);
+$link-separator-color: rgba(0,0,0,0.1);
 // $border-color: #dddddd;
 $border-color: rgba(0,0,0,0.1);
 $main-text-color : rgba(0,0,0,.84);
@@ -24,7 +24,7 @@ $hamburger-padding-y           : 16px;
 $hamburger-layer-width         : 30px;
 $hamburger-layer-height        : 1px;
 $hamburger-layer-spacing       : 6px;
-$hamburger-layer-color         : $sidebarColor;
+$hamburger-layer-color         : $themeColor;
 $hamburger-layer-border-radius : 0px;
 $hamburger-hover-opacity       : 1;
 $hamburger-active-layer-color  : $main-text-color;
@@ -99,7 +99,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     padding-top: 2em;
     margin: 0 auto 1em auto; // Center the border
     width: 50%;
-    border-bottom: 1px solid $link-seperator-color;
+    border-bottom: 1px solid $link-separator-color;
 }
 
 @mixin buttonHoverStyle {
@@ -153,7 +153,7 @@ html {
     background-color: $html-background-color;
 
     * ::selection {
-        background: $link-seperator-color;
+        background: $link-separator-color;
     }
 
     img::selection {
@@ -161,7 +161,7 @@ html {
     }
     
     a {
-        color: $sidebarColor;
+        color: $themeColor;
         text-decoration: none;
 
         &:hover {
@@ -204,7 +204,7 @@ html {
 }
 
 body {
-    // For iPhone X and newer modles.
+    // For iPhone X and newer models.
         padding-left: env(safe-area-inset-left);
         padding-right: env(safe-area-inset-right);
 
@@ -220,7 +220,7 @@ body {
         font-weight: 500;
         line-height: 40px;
         font-style: normal;
-        border-bottom: $link-seperator-color 1px solid;
+        border-bottom: $link-separator-color 1px solid;
 
         @media only screen and (min-width: 501px) {
             padding-top: 10px;
@@ -250,7 +250,8 @@ body {
 
     p {
         // WCAG 2.1
-        max-width: 80ch;
+        // max-width: 80ch !important;
+        max-width: 70em !important;
         word-break: keep-all;
         margin-left: auto;
         margin-right: auto;
@@ -289,7 +290,7 @@ body {
     top: 0;
     left: 0;
 
-    background-color: $sidebarColor;
+    background-color: $themeColor;
     overflow-x: hidden;
     transition: 0.3s;
 
@@ -317,7 +318,7 @@ body {
         // border-top: $border-color solid 1px;
 
         #developer {
-            color: $navlink-color;
+            color: $navLinkColor;
         }
 
         &:hover {
@@ -331,7 +332,7 @@ body {
 // Header
 header {
     text-align: center;
-    color: $navlink-color;
+    color: $navLinkColor;
     // border-bottom: $border-color solid 1px;
     padding: 40px 0 30px 0;
 
@@ -354,7 +355,7 @@ header {
 
         .link-seperator {
         padding: 0 7px;
-        color: $link-seperator-color;
+        color: $link-separator-color;
         }
     }
 
@@ -364,7 +365,7 @@ header {
         line-height: 1.8em;
 
         .nav-link {
-        color: $navlink-color;
+        color: $navLinkColor;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -377,9 +378,9 @@ header {
 
         .active {
             // color: $active-link-color;
-            color: $sidebarColor;
+            color: $themeColor;
             &:hover {
-                color: $sidebarColor;
+                color: $themeColor;
             }
         }
     }
@@ -696,7 +697,7 @@ header {
                 text-decoration: none;
 
                 &:hover {
-                    color: $sidebarColor;
+                    color: $themeColor;
                 }
             }
 
@@ -804,9 +805,9 @@ header {
     @include limitWidth;
 
     // Temporarily override the WCAG 80 characters limitation
-    p {
-        max-width: 100%;
-    }
+    // p {
+    //     max-width: 100%;
+    // }
 
     h3 {
         font-family: $nav-link-font;
@@ -900,7 +901,7 @@ header {
     background: white;
 
     li {
-        color: $navlink-color;
+        color: $navLinkColor;
         margin: 1em 0;
     }
 
@@ -945,15 +946,15 @@ header {
     font-family: $nav-link-font;
     font-size: 11px;
     text-transform: uppercase;
-    color: $navlink-color;
+    color: $navLinkColor;
     text-align: center;
     // border-top: $border-color solid 1px;
     padding: 20px 0 11px 0;
     margin-bottom: 1em;
 
-    p {
-        max-width: 100%;
-    }
+    // p {
+    //     max-width: 100%;
+    // }
 
     .icon-gap {
         display: inline-block;
@@ -965,16 +966,17 @@ header {
     }
 
     &:hover {
-        color: $main-text-color;
+        // color: $main-text-color;
 
         a {
-            color: $main-text-color;
-            text-decoration: underline;
+            // color: $main-text-color;
+            // text-decoration: underline;
+            color: $themeColor;
         }
     }
 
     a {
-        color: $navlink-color;
+        color: $navLinkColor;
         cursor: pointer;
         text-decoration: none;
     }

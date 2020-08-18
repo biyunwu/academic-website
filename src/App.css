@@ -157,7 +157,7 @@ body {
   body div#maincontent-container {
     background: white; }
   body p {
-    max-width: 80ch;
+    max-width: 70em !important;
     word-break: keep-all;
     margin-left: auto;
     margin-right: auto; }
@@ -518,8 +518,6 @@ header {
   max-width: 1110px;
   padding: 0 3%;
   margin: 0 auto; }
-  #events p {
-    max-width: 100%; }
   #events h3 {
     font-family: "SF Pro Text Light";
     font-size: 22px;
@@ -627,18 +625,13 @@ header {
   text-align: center;
   padding: 20px 0 11px 0;
   margin-bottom: 1em; }
-  .footer p {
-    max-width: 100%; }
   .footer .icon-gap {
     display: inline-block;
     width: 10px; }
   .footer .icon {
     height: 18px; }
-  .footer:hover {
-    color: rgba(0, 0, 0, 0.84); }
-    .footer:hover a {
-      color: rgba(0, 0, 0, 0.84);
-      text-decoration: underline; }
+  .footer:hover a {
+    color: #ec8513; }
   .footer a {
     color: rgba(0, 0, 0, 0.45);
     cursor: pointer;
