@@ -48,8 +48,6 @@ export default class Header extends Component {
                         <a href='mailto:tjiang@rutgers.edu'>
                             Email
                         </a>
-
-
                         <span className='icon-gap'></span>
                         <a href='https://rccs.rutgers.edu/people/director' target='_blank' rel='noopener noreferrer'>
                             Rutgers
