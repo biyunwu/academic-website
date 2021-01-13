@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import * as Data from './data/Data'
-import Siderbar from './components/partials/Siderbar'
+import SideBar from './components/partials/SideBar'
 import Header from './components/partials/Header';
 import Home from './components/Home'
 import Book from './components/Book'
@@ -11,13 +11,14 @@ import About from './components/About'
 import PdfViewer from './components/PdfViewer'
 import Footer from './components/partials/Footer'
 import BackgroundImage from './imgs/tj.jpg'
-import BuddhismCover from './imgs/buddism-cover.jpg'
+import CoverPlaceHolder from './imgs/cover_place_holder.jpg'
+import BuddhismCover from './imgs/buddhism-cover.jpg'
 import FreudCover from './imgs/freud.jpg'
 import infoPic from './imgs/about.JPG'
 import './App.css'
 
 const links = 
-    ['home', 'buddhism and psychology', 'freud in china', 'papers', 'Events', 'about']
+    ['home', 'origin of chinese phil', 'buddhism & psychology', 'freud in china', 'papers', 'Events', 'about']
     .map(ele => ele.toLowerCase())
 
 const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
@@ -89,7 +90,7 @@ class App extends Component {
                         </button>
                         <div id='sidebar' style={sidebarStyle}>
                             <Header isMobileDevice = {true} isSidebarOpen = {true}/>
-                            <Siderbar
+                            <SideBar
                                 links = {links}
                                 themeColors = {pageThemeColors}
                                 closeSidebar = {this.updateSidebarStatus}
@@ -112,32 +113,39 @@ class App extends Component {
                             />
                         )}/>
                         <Route exact path={pageLinks[1]} render={() => (
+                            // Origin of Chinese Philosophy
+                            <Book
+                                cover = {CoverPlaceHolder}
+                                bookData = {data.chinese_phil}
+                            />
+                        )}/>
+                        <Route exact path={pageLinks[2]} render={() => (
                             // <Buddhism />
                             <Book
                                 cover = {BuddhismCover}
                                 bookData = {data.buddhism}
                             />
                         )}/>
-                        <Route exact path={pageLinks[2]} render={() => (
+                        <Route exact path={pageLinks[3]} render={() => (
                             // <Freud />
                             <Book
                                 cover = {FreudCover}
                                 bookData = {data.freud}
                             />
                         )}/>
-                        <Route exact path={pageLinks[3]} render={() => (
+                        <Route exact path={pageLinks[4]} render={() => (
                             <Papers
                                 papers = {data.papers}
                                 viewportWidth = {viewportWidth}
                                 maxMobileWidth = {maxMobileWidth}
                             />
                         )}/>
-                        <Route exact path={pageLinks[4]} render={() => (
+                        <Route exact path={pageLinks[5]} render={() => (
                             <Events
                                 events = {data.events}
                             />
                         )}/>
-                        <Route exact path={pageLinks[5]} render={() => (
+                        <Route exact path={pageLinks[6]} render={() => (
                             <About
                                 infoPic = {infoPic}
                                 about = {data.about}
