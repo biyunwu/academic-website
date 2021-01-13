@@ -15,33 +15,13 @@ const data = {
             `However, we also witness some rather drastically different proposals about how humans should respond to the Laoist conception of Heaven among the last group of thinkers. Laozi still advocated sagely emulation of Heaven, similar to Confucius and Mozi, even though the Laoist Heaven was indifferent to human affairs unlike the Heaven of Confucius, Mozi and Mencius. By contrast, Xunzi elevated the ancient sage-kings to be the partners of Heaven, instead of simply its followers or emulators and made sage-kings the new foundation of the ritual system, almost in defiance of the increasingly naturalist Heaven that did not particularly care about human affairs. In the hands of *fajia* thinkers like Shen Dao and Han Feizi, Heaven would be further transformed from a supernatural *agent*, albeit uncaring about human affairs, to a naturalist *system* and they advocated modeling a political system after such a new model of Heaven, with fixed standards and impartial enforcement of standards, laws, and regulations. In so doing, the *fajia* thinkers sought to reduce the role of any single person in governance, including the ruler, who is partial to, and hence can be easily manipulated by, those in their proximity.`,
             `The book concludes by a short reflection on the tragic fate of the Zhuangist idea of personal freedom in Chinese intellectual and political history. More specifically, it scrutinizes the widely shared premise of self-cultivation, what I call the “regime of self-cultivation” in Chinese moral-political philosophy, among most classical thinkers including Zhuangzi, and explores its constraint on the development of personal freedom in the mainstream moral-political discourse as well as in the building of political institutions. Interestingly, in this respect, it was the *fajia* thinkers who built their theories on the givenness of ordinary human dispositions, instead of the promissory note of personal transformation. I will reflect on a path that was not taken in Chinese history, i.e., the integration of the Zhuangist idea of personal freedom into the mainstream moral-political project in conceptualizing a polity that can accommodate the ideal of personal freedom institutionally.`
         ],
-        // reviews: [
-        //     {
-        //         review: `“The wonderful sense of conclusion that Jiang brings to the reader is conveyed in the idea that there is much to be learned through interdisciplinary discussion. Jiang emphasizes that this discussion cannot take place at a shallow level, as very little new knowledge can be gained thereby. The point is made that we must learn to engage with different disciplines through what he calls ‘‘context and dialogue.’’ Overall, Jiang’s main argument for the importance of creating a new methodology for cross-disciplinary research in this way is presented very successfully.”`,
-        //         reviewer: 'Philosophy East & West',
-        //         magazine: true
-        //     },
-        //     {
-        //         review: `“Jiang’s book succeeds on three levels: first, it offers an exceptionally clear introduction to Yogācāra Buddhism; second, it illuminates one very general and important difference between the models of mind in Buddhism and western psychology; and finally, it provides the right methodological cue for scholars engaged in comparative philosophical work. One leaves this book convinced that synthetic dialogue between Buddhism and modern psychology is possible, but that it will falter without adequate analysis of the paradigmatic differences that shape their respective projects.”`,
-        //         reviewer: 'H-Net Reviews',
-        //         magazine: false
-        //     },
-        //     {
-        //         review: `“Jiang’s work … is a cautious reminder about the potential dangers of comparison that is helpful in the current academic climate, where comparative approaches are so popular. All who undertake comparative endeavors (even those who are not interested in Yogācāra Buddhism) should read Jiang’s book.”`,
-        //         reviewer: 'Buddhist-Christian Studies',
-        //         magazine: true
-        //     },
-        //     {
-        //         review: `“Contexts and Dialogue rewards readers with useful and yet succinct introductions to the work of three seminal thinkers, and convincingly expands the methodological horizons of comparative philosophy.”`,
-        //         reviewer: 'Journal of Chinese Philosophy',
-        //         magazine: true
-        //     },
-        //     {
-        //         review: `“Jiang’s stimulating work will appeal to a wide audience. He has succeeded in balancing the needs of various readers along with methodological issues and in so doing stayed focused on his primary goals. Overall, the work is a great success, points to new possibilities for dialogue between these viewpoints specifically, and attempts at cross-cultural study more generally.”`,
-        //         reviewer: 'Dao',
-        //         magazine: true
-        //     }
-        // ],
+        reviews: [
+            {
+                review: `“I recommend publication of this coherent and sweeping narrative of the development of moral and political philosophy in the classical period of Chinese philosophy.  It identifies an arc of development that is insightfully plausible most of the time and constructively controversial and provocative at other times. The book is based on a very broad range of work in both sinology and philosophy, and is presented in clear and engaging fashion.”`,
+                reviewer: 'From an anonymous reviewer arranged by Oxford University Press',
+                magazine: false
+            }
+        ]
         // readLink: `/buddhism`,
         // readKey: `freud`
     },
