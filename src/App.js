@@ -18,7 +18,7 @@ import infoPic from './imgs/about.JPG'
 import './App.css'
 
 const links = 
-    ['home', 'origin of chinese phil', 'buddhism & psychology', 'freud in china', 'papers', 'Events', 'about']
+    ['home', 'origins of chinese phil', 'buddhism & psychology', 'freud in china', 'papers', 'Events', 'about']
     .map(ele => ele.toLowerCase())
 
 const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
