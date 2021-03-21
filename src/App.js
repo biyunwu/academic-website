@@ -11,7 +11,7 @@ import About from './components/About'
 import PdfViewer from './components/PdfViewer'
 import Footer from './components/partials/Footer'
 import BackgroundImage from './imgs/tj.jpg'
-import CoverPlaceHolder from './imgs/cover_place_holder.jpg'
+import ChinesePhilCover from './imgs/cover_chinese_phil.jpg'
 import BuddhismCover from './imgs/buddhism-cover.jpg'
 import FreudCover from './imgs/freud.jpg'
 import infoPic from './imgs/about.JPG'
@@ -115,7 +115,7 @@ class App extends Component {
                         <Route exact path={pageLinks[1]} render={() => (
                             // Origin of Chinese Philosophy
                             <Book
-                                cover = {CoverPlaceHolder}
+                                cover = {ChinesePhilCover}
                                 bookData = {data.chinese_phil}
                             />
                         )}/>
