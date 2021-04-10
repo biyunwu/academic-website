@@ -17,7 +17,7 @@ export default class Book extends PureComponent {
 
     render () {
         const {bookData, cover} = this.props
-        const {seoTitle, seoDescription, title, publisher, bookLink, readLink, bookIntroduction, reviews} = bookData
+        const {seoTitle, seoDescription, title, publisher, bookLink, preOrderLink, readLink, bookIntroduction, reviews} = bookData
         // const {reviewHidden} = this.state
         // const buttonText = reviewHidden? 'More Reviews' : 'Fewer Review'
 
@@ -85,6 +85,10 @@ export default class Book extends PureComponent {
                                 {bookLink && 
                                     <a className='book-link' target="_blank" href={bookLink} rel="noopener noreferrer">
                                         Available on Amazon
+                                    </a>}
+                                {preOrderLink && 
+                                    <a className='book-link' target="_blank" href={preOrderLink} rel="noopener noreferrer">
+                                        Preoder
                                     </a>}
                                 {readLink &&
                                     <a className='book-link' href={readLink}>
