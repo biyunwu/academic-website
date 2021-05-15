@@ -15,6 +15,8 @@ export default class Book extends PureComponent {
     //     this.state.reviewHidden ? this.setState({reviewHidden: false}) : this.setState({reviewHidden: true})
     // }
 
+    // LinkRenderer = (props) => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
+
     render () {
         const {bookData, cover} = this.props
         const {seoTitle, seoDescription, title, publisher, bookLink, preOrderLink, readLink, bookIntroduction, reviews} = bookData
@@ -52,11 +54,15 @@ export default class Book extends PureComponent {
                                 {'– ' + review.reviewer}
                             </p> */}
                             <p className='book-text'>
-                                <span className={review.magazine? 'commentor magazine' : 'commentor'}>
+                                {/* <span className={review.magazine? 'commentor magazine' : 'commentor'}>
                                     {review.reviewer + ':'}
-                                </span>
-                                <br/>
-                                <br/>
+                                </span> */}
+                                <ReactMarkdown 
+                                    className={review.magazine? 'commentor magazine' : 'commentor'}
+                                    key={review.reviewer}
+                                    source={review.reviewer + ' :'}
+                                    linkTarget="_blank">
+                                </ReactMarkdown>
                                 {review.review}
                             </p>
                         </li>

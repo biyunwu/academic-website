@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { Follow } from "react-twitter-widgets";
 import {Helmet} from "react-helmet"
 
 export default class About extends PureComponent {
@@ -47,6 +48,7 @@ export default class About extends PureComponent {
                             <p>Rutgers University</p>
                             <p>64 College Ave<br/>New Brunswick<br/>NJ 08901<br/>United States</p>
                             <p><a href='mailto:tjiang@rutgers.edu'>tjiang@rutgers.edu</a></p>
+                            <Follow username="TaoJiangScholar" options={{ dnt: true}} />
                         </address>
                     </div>
                 </main>

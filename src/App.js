@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Book from './components/Book'
 import Papers from './components/Papers'
 import Events from './components/Events'
+import SocialMedia from './components/SocialMedia'
 import About from './components/About'
 import PdfViewer from './components/PdfViewer'
 import Footer from './components/partials/Footer'
@@ -18,7 +19,7 @@ import infoPic from './imgs/about.JPG'
 import './App.css'
 
 const links = 
-    ['home', 'origins of chinese phil', 'buddhism & psychology', 'freud in china', 'papers', 'Events', 'about']
+    ['home', 'origins of chinese phil', 'buddhism & psychology', 'freud in china', 'papers', 'Events', 'Twitter', 'about']
     .map(ele => ele.toLowerCase())
 
 const pageLinks = links.map(link => '/' + link.replace(/ /g, "_"))
@@ -146,6 +147,9 @@ class App extends Component {
                             />
                         )}/>
                         <Route exact path={pageLinks[6]} render={() => (
+                            <SocialMedia/>
+                        )}/>
+                        <Route exact path={pageLinks[7]} render={() => (
                             <About
                                 infoPic = {infoPic}
                                 about = {data.about}
