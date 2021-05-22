@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { addBackToTop } from 'vanilla-back-to-top'
+// import { addBackToTop } from 'vanilla-back-to-top'
 import * as Data from './data/Data'
 import SideBar from './components/partials/SideBar'
 import Header from './components/partials/Header';
@@ -79,6 +79,12 @@ class App extends Component {
 
         return (
             <React.Fragment>
+                {/* {addBackToTop({
+                    diameter: 50,
+                    backgroundColor: 'rgba(255,255,255,0.3)', // transparent
+                    innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
+                    textColor: 'rgb(236, 133, 19)'
+                })} */}
                 {isMobileDevice &&
                     <React.Fragment>
                         <button id='burger' className={menuClassName} type="button"
@@ -98,7 +104,7 @@ class App extends Component {
                                 closeSidebar = {this.updateSidebarStatus}
                             />
                             {/* <button onClick = {this.updateSidebarStatus}>Close</button> */}
-                            <Footer isMobileDevice = {isMobileDevice}/>
+                            {/* <Footer isMobileDevice = {isMobileDevice}/> */}
                         </div>
                     </React.Fragment>
                 }
@@ -176,12 +182,6 @@ class App extends Component {
                             </div>
                         )}/>
                     </Switch>
-                    {addBackToTop({
-                        diameter: 50,
-                        backgroundColor: 'rgba(255,255,255,0.3)', // transparent
-                        innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
-                        textColor: 'rgb(236, 133, 19)'
-                    })}
                     <Footer />
                 </div>
             </React.Fragment>
