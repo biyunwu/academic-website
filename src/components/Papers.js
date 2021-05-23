@@ -28,9 +28,7 @@ export default class Papers extends PureComponent {
         return (
             <li key={idx}>
                 <a className='paper-title' href={hostPath + pathname}>
-                    <ReactMarkdown
-                        source={title}
-                    />
+                    <ReactMarkdown children={title} />
                 </a>
                 <div className='indent'>
                     <a href={hostPath + pathname} target='_blank' rel='noopener noreferrer'>
@@ -46,8 +44,8 @@ export default class Papers extends PureComponent {
 
     getTags = (tags, classname) =>
         tags.length > 1
-        ? tags.map((num, idx) => <span className='tag' style={{background: tagColors[num]}} key={classname || idx}></span>)
-        : <span className='tag' style={{background: tagColors[tags]}}></span>
+        ? tags.map((num, idx) => <span className='tag' style={{background: tagColors[num]}} key={classname || idx}/>)
+        : <span className='tag' style={{background: tagColors[tags]}}/>
 
     getTagLabel = (category, idx) => 
         <div className='tag-label-container' key={category}>

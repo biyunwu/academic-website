@@ -9,7 +9,7 @@ export default class About extends PureComponent {
     }
 
     // Helper method
-    LinkRenderer = (props) => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
+    // LinkRenderer = (props) => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
     
     render () {
         const {infoPic, about} = this.props
@@ -19,8 +19,9 @@ export default class About extends PureComponent {
             <ReactMarkdown
                 className='detail-info'
                 key={`detail${idx}`}
-                source={detail}
-                renderers={{link: this.LinkRenderer}}
+                children={detail}
+                // renderers={{link: this.LinkRenderer}}
+                linkTarget="_blank"
             />
         )
 
@@ -39,7 +40,7 @@ export default class About extends PureComponent {
                         <div>
                             {detailsContent}
                         </div>
-                        <div className='clear'></div>
+                        <div className='clear'/>
                         {/* <div className='clear'></div> */}
                     </div>
                     <div className='contact'>
@@ -48,7 +49,7 @@ export default class About extends PureComponent {
                             <p>Rutgers University</p>
                             <p>64 College Ave<br/>New Brunswick<br/>NJ 08901<br/>United States</p>
                             <p><a href='mailto:tjiang@rutgers.edu'>tjiang@rutgers.edu</a></p>
-                            <Follow username="TaoJiangScholar" options={{ dnt: true}} />
+                            <Follow username="TaoJiangScholar" options={{ dnt: true, showCount: false, size: "large" }}/>
                         </address>
                     </div>
                 </main>

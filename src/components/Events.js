@@ -23,7 +23,7 @@ export default class Events extends PureComponent {
                 </p>
                 <ReactMarkdown
                     className='introduction'
-                    source={event.introduction}
+                    children={event.introduction}
                     renderers={{link: this.LinkRenderer}}
                     // linkTarget = '_blank'
                 />
@@ -31,7 +31,7 @@ export default class Events extends PureComponent {
                     <div>
                         {/* {this.state.videoToShowIdx === idx && */}
                             <div className='video-container'>
-                                <div dangerouslySetInnerHTML={{ __html: event.videoLink }}></div>
+                                <div dangerouslySetInnerHTML={{__html: event.videoLink}}/>
                                 {/* <video controls>
                                     <source src={event.videoLink} type="video/mp4" />
                                     <p>Your browser doesn't support HTML5 video.</p>
@@ -46,11 +46,11 @@ export default class Events extends PureComponent {
         
     LinkRenderer = (props) => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
 
-    updateVideoToShowidx = (buttonIdx) => {
-        buttonIdx === this.state.videoToShowIdx
-        ? this.setState({videoToShowIdx: undefined})
-        : this.setState({videoToShowIdx: buttonIdx})
-    }
+    // updateVideoToShowidx = (buttonIdx) => {
+    //     buttonIdx === this.state.videoToShowIdx
+    //     ? this.setState({videoToShowIdx: undefined})
+    //     : this.setState({videoToShowIdx: buttonIdx})
+    // }
 
     render () {
         const {seoTitle, seoDescription, pub_3, academic, pub_2, pub_1} = this.props.events

@@ -5,7 +5,7 @@ import Logo from './../../imgs/logo.png'
 export default class Header extends Component {
     render() {
         const {links, themeColors, isMobileDevice, isSidebarOpen} = this.props
-        const navlinks = isMobileDevice
+        const navLinks = isMobileDevice
             ? ''
             :   <Navlinks
                     links={links}
@@ -19,7 +19,7 @@ export default class Header extends Component {
                         <img src={Logo} alt='logo'/>
                     </a>
                 </h1>
-                {navlinks}
+                {navLinks}
             </header>
         )
     }

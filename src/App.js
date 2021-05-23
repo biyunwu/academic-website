@@ -79,12 +79,6 @@ class App extends Component {
 
         return (
             <React.Fragment>
-                {/* {addBackToTop({
-                    diameter: 50,
-                    backgroundColor: 'rgba(255,255,255,0.3)', // transparent
-                    innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
-                    textColor: 'rgb(236, 133, 19)'
-                })} */}
                 {isMobileDevice &&
                     <React.Fragment>
                         <button id='burger' className={menuClassName} type="button"
@@ -93,7 +87,7 @@ class App extends Component {
                             style={fixedStyle}
                         >
                             <span className="hamburger-box">
-                                <span className="hamburger-inner"></span>
+                                <span className="hamburger-inner"/>
                             </span>
                         </button>
                         <div id='sidebar' style={sidebarStyle}>
@@ -103,8 +97,8 @@ class App extends Component {
                                 themeColors = {pageThemeColors}
                                 closeSidebar = {this.updateSidebarStatus}
                             />
-                            {/* <button onClick = {this.updateSidebarStatus}>Close</button> */}
-                            {/* <Footer isMobileDevice = {isMobileDevice}/> */}
+                             {/*<button onClick = {this.updateSidebarStatus}>Close</button>*/}
+                             <Footer isMobileDevice = {isMobileDevice}/>
                         </div>
                     </React.Fragment>
                 }

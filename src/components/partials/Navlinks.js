@@ -8,7 +8,7 @@ export default class NavLinks extends Component {
             <NavLink
                 to={this.getLink(link)}
                 // Only homepage use exact pathname
-                exact={idx===0 ? true : false}
+                exact={idx === 0}
                 className={isInSidebar? 'sidebar-link' : 'nav-link'}
                 activeClassName='active'
                 activeStyle={this.getLinkColor(link, themeColors)}
@@ -17,7 +17,7 @@ export default class NavLinks extends Component {
             >
                 {link}
             </NavLink>
-            { !isInSidebar && idx !== links.length -1 && <span className='link-seperator'>|</span>}
+            { !isInSidebar && idx !== links.length -1 && <span className='link-separator'>|</span>}
         </li>
     )
 

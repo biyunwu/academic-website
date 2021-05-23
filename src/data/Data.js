@@ -4,7 +4,7 @@ const data = {
         seoDescription: `Origins of Moral-Political Philosophy in Early China`,
         title: `Origins of Moral-Political Philosophy in Early China`,
         publisher: `Oxford University Press`,
-        preOrderLink: `https://global.oup.com/academic/product/origins-of-moral-political-philosophy-in-early-china-9780197611364?prevNumResPerPage=20&prevSortField=1&sortField=8&resultsPerPage=20&start=0&lang=en&cc=us`,
+        preOrderLink: `https://global.oup.com/academic/product/origins-of-moral-political-philosophy-in-early-china-9780197611364`,
         themeColor: 'rgb(236, 133, 19)',
         bookIntroduction: [
             `Forthcoming from Oxford University Press in August 2021.`,
@@ -14,17 +14,17 @@ const data = {
         ],
         reviews: [
             {
-                review: `“Jiang ranges over the entire foundational period of Chinese philosophy with effortless erudition, unfailing intellectual sympathy, and, above all, a brilliantly economical conception that shines a uniquely revealing and integrating light on all the major figures and schools of thought. The result is that rare kind of book which has the potential to change the way Chinese philosophy is viewed and practiced, and has all the scholarly and philosophical attributes that should make it a classic in due course.”`,
+                review: `>“Jiang ranges over the entire foundational period of Chinese philosophy with effortless erudition, unfailing intellectual sympathy, and, above all, a brilliantly economical conception that shines a uniquely revealing and integrating light on all the major figures and schools of thought. The result is that rare kind of book which has the potential to change the way Chinese philosophy is viewed and practiced, and has all the scholarly and philosophical attributes that should make it a classic in due course.”`,
                 reviewer: `Jiwei Ci, author of [*Democracy in China: The Coming Crisis*](https://www.hup.harvard.edu/catalog.php?isbn=9780674238183)`,
                 magazine: false
             },
             {
-                review: `“Tao JIANG in this hugely intelligent monograph provides his readers with an interpretive context twice. First, his project of rehearsing the story of the origins of Chinese moral-political philosophy is located within a state-of-the-art account of the politics of the Western academy and the best efforts of its Sinologists and philosophers to make sense of the complex textual narrative of pre-Qin China in all of its parts. Again, appealing to a cluster of seminal themes—humaneness, justice, and personal freedom—he recounts the way in which different philosophical voices advocated for their own disparate and competing models of structuring and construing personal, familial, and political relations within the overarching context of what are fundamentally different valorizations of the notion of Heaven.”`,
+                review: `>“Tao JIANG in this hugely intelligent monograph provides his readers with an interpretive context twice. First, his project of rehearsing the story of the origins of Chinese moral-political philosophy is located within a state-of-the-art account of the politics of the Western academy and the best efforts of its Sinologists and philosophers to make sense of the complex textual narrative of pre-Qin China in all of its parts. Again, appealing to a cluster of seminal themes—humaneness, justice, and personal freedom—he recounts the way in which different philosophical voices advocated for their own disparate and competing models of structuring and construing personal, familial, and political relations within the overarching context of what are fundamentally different valorizations of the notion of Heaven.”`,
                 reviewer: 'Roger T. Ames, Peking University',
                 magazine: false
             },
             {
-                review: `“I recommend publication of this coherent and sweeping narrative of the development of moral and political philosophy in the classical period of Chinese philosophy.  It identifies an arc of development that is insightfully plausible most of the time and constructively controversial and provocative at other times. The book is based on a very broad range of work in both sinology and philosophy, and is presented in clear and engaging fashion.”`,
+                review: `>“I recommend publication of this coherent and sweeping narrative of the development of moral and political philosophy in the classical period of Chinese philosophy.  It identifies an arc of development that is insightfully plausible most of the time and constructively controversial and provocative at other times. The book is based on a very broad range of work in both sinology and philosophy, and is presented in clear and engaging fashion.”`,
                 reviewer: 'Anonymous reviewer arranged by Oxford University Press',
                 magazine: false
             }
@@ -46,27 +46,27 @@ const data = {
         ],
         reviews: [
             {
-                review: `“The wonderful sense of conclusion that Jiang brings to the reader is conveyed in the idea that there is much to be learned through interdisciplinary discussion. Jiang emphasizes that this discussion cannot take place at a shallow level, as very little new knowledge can be gained thereby. The point is made that we must learn to engage with different disciplines through what he calls ‘‘context and dialogue.’’ Overall, Jiang’s main argument for the importance of creating a new methodology for cross-disciplinary research in this way is presented very successfully.”`,
+                review: `>“The wonderful sense of conclusion that Jiang brings to the reader is conveyed in the idea that there is much to be learned through interdisciplinary discussion. Jiang emphasizes that this discussion cannot take place at a shallow level, as very little new knowledge can be gained thereby. The point is made that we must learn to engage with different disciplines through what he calls ‘‘context and dialogue.’’ Overall, Jiang’s main argument for the importance of creating a new methodology for cross-disciplinary research in this way is presented very successfully.”`,
                 reviewer: 'Philosophy East & West',
                 magazine: true
             },
             {
-                review: `“Jiang’s book succeeds on three levels: first, it offers an exceptionally clear introduction to Yogācāra Buddhism; second, it illuminates one very general and important difference between the models of mind in Buddhism and western psychology; and finally, it provides the right methodological cue for scholars engaged in comparative philosophical work. One leaves this book convinced that synthetic dialogue between Buddhism and modern psychology is possible, but that it will falter without adequate analysis of the paradigmatic differences that shape their respective projects.”`,
+                review: `>“Jiang’s book succeeds on three levels: first, it offers an exceptionally clear introduction to Yogācāra Buddhism; second, it illuminates one very general and important difference between the models of mind in Buddhism and western psychology; and finally, it provides the right methodological cue for scholars engaged in comparative philosophical work. One leaves this book convinced that synthetic dialogue between Buddhism and modern psychology is possible, but that it will falter without adequate analysis of the paradigmatic differences that shape their respective projects.”`,
                 reviewer: 'H-Net Reviews',
                 magazine: false
             },
             {
-                review: `“Jiang’s work … is a cautious reminder about the potential dangers of comparison that is helpful in the current academic climate, where comparative approaches are so popular. All who undertake comparative endeavors (even those who are not interested in Yogācāra Buddhism) should read Jiang’s book.”`,
+                review: `>“Jiang’s work … is a cautious reminder about the potential dangers of comparison that is helpful in the current academic climate, where comparative approaches are so popular. All who undertake comparative endeavors (even those who are not interested in Yogācāra Buddhism) should read Jiang’s book.”`,
                 reviewer: 'Buddhist-Christian Studies',
                 magazine: true
             },
             {
-                review: `“Contexts and Dialogue rewards readers with useful and yet succinct introductions to the work of three seminal thinkers, and convincingly expands the methodological horizons of comparative philosophy.”`,
+                review: `>“Contexts and Dialogue rewards readers with useful and yet succinct introductions to the work of three seminal thinkers, and convincingly expands the methodological horizons of comparative philosophy.”`,
                 reviewer: 'Journal of Chinese Philosophy',
                 magazine: true
             },
             {
-                review: `“Jiang’s stimulating work will appeal to a wide audience. He has succeeded in balancing the needs of various readers along with methodological issues and in so doing stayed focused on his primary goals. Overall, the work is a great success, points to new possibilities for dialogue between these viewpoints specifically, and attempts at cross-cultural study more generally.”`,
+                review: `>“Jiang’s stimulating work will appeal to a wide audience. He has succeeded in balancing the needs of various readers along with methodological issues and in so doing stayed focused on his primary goals. Overall, the work is a great success, points to new possibilities for dialogue between these viewpoints specifically, and attempts at cross-cultural study more generally.”`,
                 reviewer: 'Dao',
                 magazine: true
             }
@@ -234,8 +234,8 @@ const data = {
             `I am a scholar of classical Chinese philosophy, Mahāyāna Buddhist philosophy, and cross-cultural philosophy. Currently, I am a professor in the [Department of Religion](http://religion.rutgers.edu/tao-jiang) and an associate member of the graduate faculty in the Department of Philosophy at Rutgers University, New Brunswick, New Jersey, US. `,
             `I grew up in the ancient city of [Chengdu](https://www.nytimes.com/2016/03/06/t-magazine/chengdu-china-travel-guide.html) in China’s southwest, “where the pace is slow, the food is spicy and there’s always time for a good gossip over a cup of tea.” As a boy, I often dreamt of an adventurous life in a faraway place, which probably explains why I came all the way to America to pursue my dream. Although America is far enough from China, an academic life devoted to philosophical inquiry does not sound like much of an adventure. Except it *is* an adventure: a genuine philosophical inquiry is an adventure of the mind in which that very inquisitive mind is its own limit. My approach to philosophy is to treat it as a way to study particular forms of intellectual and moral culture and the people who produce it.`,
             `I am the author of [*Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind*](/buddhism_&_psychology) and the co-editor of [*The Reception and Rendition of Freud in China: China’s Freudian Slip*](/freud_in_china). My [articles](/papers) have appeared in leading Asian and comparative philosophy journals and several major anthologies. My new book, [*Origins of Moral-Political Philosophy in Early China*](/origins_of_chinese_phil), will be published by Oxford University Press in 2021. I have also been working on several other book projects, including a new interpretation of Linji's Chan/Zen Buddhist philosophy, Buddha Nature in medieval Chinese intellectual history, and a comparative project on free will. `,
-            `I am Chair of the [Department of Religion](https://religion.rutgers.edu) and Director of the [Center for Chinese Studies](https://rccs.rutgers.edu) at Rutgers University. I also co-direct the [Rutgers Workshop on Chinese Philosophy](/events) and co-chair the [Neo-Confucian Studies Seminar](http://universityseminars.columbia.edu/seminars/neo-confucian-studies/) at Columbia University. I am currently the co-chair of the [Buddhist Philosophy Unit](https://papers.aarweb.org/pu/buddhist-philosophy-unit) under the American Academy of Religion annual meeting.`,
-            `I am married. We enjoy hanging out in coffee shops, museums, parks, and watching movies. We play tennis from time to time and love going to the US Open Tennis Championships. We support all effort dedicated to the saving of the world's wildlife. These amazing videos [“Hungry polar bear surprises a seal”] (https://www.youtube.com/watch?v=0mgnf6t9VEc), [“Elephant Calf Starves To Death Due To Drought”] (https://www.youtube.com/watch?v=RqeC6XB94zs) from the [BBC Earth series] (https://www.facebook.com/bbcearth) have opened up our eyes to the beauty, intelligence and misery of animal lives in the wilderness. Check them out, if you haven't, and your view about wildlife will never be the same again.`
+            `I am Chair of the [Department of Religion](https://religion.rutgers.edu) and Director of the [Center for Chinese Studies](https://rccs.rutgers.edu) at Rutgers University. I also co-direct the [Rutgers Workshop on Chinese Philosophy](/events) and co-chair the [Neo-Confucian Studies Seminar](https://universityseminars.columbia.edu/seminars/neo-confucian-studies/) at Columbia University. I am currently the co-chair of the [Buddhist Philosophy Unit](https://aar-conference.imis-inspire.com/a/page/ProgramUnits/buddhist-philosophy-unit) under the American Academy of Religion annual meeting.`,
+            `I am married. We enjoy hanging out in coffee shops, museums, parks, and watching movies. We play tennis from time to time and love going to the US Open Tennis Championships. We support all effort dedicated to the saving of the world's wildlife. These amazing videos [“Hungry polar bear surprises a seal”](https://www.youtube.com/watch?v=0mgnf6t9VEc), [“Elephant Calf Starves To Death Due To Drought”](https://www.youtube.com/watch?v=RqeC6XB94zs) from the [BBC Earth series](https://www.facebook.com/bbcearth) have opened up our eyes to the beauty, intelligence and misery of animal lives in the wilderness. Check them out, if you haven't, and your view about wildlife will never be the same again.`
         ]
     }
 }

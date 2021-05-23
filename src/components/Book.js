@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
+// import gfm from 'remark-gfm'
 import {Helmet} from "react-helmet"
 
 export default class Book extends PureComponent {
@@ -53,18 +54,27 @@ export default class Book extends PureComponent {
                             {/* <p className={review.magazine? 'commentor magazine' : 'commentor'}>
                                 {'– ' + review.reviewer}
                             </p> */}
-                            <p className='book-text'>
+                            <div className='book-text'>
                                 {/* <span className={review.magazine? 'commentor magazine' : 'commentor'}>
                                     {review.reviewer + ':'}
                                 </span> */}
                                 <ReactMarkdown 
                                     className={review.magazine? 'commentor magazine' : 'commentor'}
                                     key={review.reviewer}
-                                    source={review.reviewer + ' :'}
+                                    // remarkPlugins={[gfm]}
+                                    // children={review.reviewer + ':'}
+                                    children={review.reviewer}
                                     linkTarget="_blank">
                                 </ReactMarkdown>
-                                {review.review}
-                            </p>
+                                <ReactMarkdown
+                                    className="review-content"
+                                    key={review.review}
+                                    // remarkPlugins={[gfm]}
+                                    children={review.review}
+                                    linkTarget="_blank">
+                                </ReactMarkdown>
+                                {/*{review.review}*/}
+                            </div>
                         </li>
                     )}
                 </ul>
@@ -106,11 +116,10 @@ export default class Book extends PureComponent {
                         <div className='book-introduction'>
                             {bookIntroduction && bookIntroduction.map((text, idx) =>        
                                 <ReactMarkdown
-                                    className='book-text'
+                                    className='book-text book-intro-first-letter'
                                     key={`${title} introduction ${idx}`}
-                                    source={text}
+                                    children={text}
                                 />
-
                             )}
                         </div>
 

@@ -18,7 +18,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 16px 10px;
+  padding: 16px 16px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -111,7 +111,7 @@ html {
   text-rendering: optimizeLegibility;
   background-color: #f5f7f9; }
   html * ::selection {
-    background: rgba(0, 0, 0, 0.1); }
+    background: rgba(236, 133, 19, 0.15) !important; }
   html img::selection {
     background: none; }
   html a {
@@ -215,13 +215,12 @@ header {
     height: 40px; }
   header ul.nav {
     display: block;
-    padding: 0;
     margin: 0 0 10px 0;
     padding: 0 5px;
     font-family: "SF Pro Text Light";
     font-size: 14px;
     font-weight: 600; }
-    header ul.nav .link-seperator {
+    header ul.nav .link-separator {
       padding: 0 7px;
       color: rgba(0, 0, 0, 0.1); }
   header .nav-item {
@@ -275,7 +274,7 @@ header {
     .book .book-pic-container {
       max-height: 500px;
       position: sticky;
-      top: 0px;
+      top: 0;
       top: 2em;
       grid-column-start: 1;
       grid-column-end: 2; }
@@ -291,8 +290,13 @@ header {
     .book .book-review {
       grid-column-start: 2;
       grid-column-end: 5; } }
+  .book .book-intro-first-letter:first-of-type::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    color: #ec8513;
+    font-size: 2em;
+    margin-right: .05em; }
   .book .book-pic-container {
-    margin-top: 18px;
     margin: 1.5em 0 0 0;
     text-align: center;
     min-width: 190px; }
@@ -356,11 +360,10 @@ header {
         background: #272727;
         color: white; }
   .book li.review-item {
-    padding: 0.3em 0 1em 0; }
+    padding: 0.3em 0 0 0; }
     .book li.review-item .commentor {
       font-family: "SF Pro Text Light";
-      font-size: 120%;
-      padding-bottom: 1em; }
+      font-size: 120%; }
   .book li.review-item:not(:last-of-type)::after {
     content: "";
     display: block;
@@ -400,11 +403,11 @@ header {
       grid-row-start: 1; }
     #papers-div div.sticky {
       position: sticky;
-      top: 0px; } }
+      top: 0; } }
   @media only screen and (max-width: 779px) {
     #papers-div div.options {
       position: sticky;
-      top: 0px;
+      top: 0;
       margin-top: 1em;
       text-align: center !important;
       background: white; }
@@ -420,7 +423,6 @@ header {
       word-break: normal; } }
   #papers-div div.options {
     text-align: center;
-    text-align: left;
     width: 100%; }
   #papers-div div.tag-label-container {
     display: inline-block;
@@ -616,6 +618,17 @@ header {
     min-height: 600px; }
     .pdf-container .pdf-canvas canvas.react-pdf__Page__canvas {
       margin: 0 auto; }
+
+#back-to-top {
+  margin-bottom: env(safe-area-inset-bottom) !important; }
+
+blockquote {
+  text-indent: -0.45em; }
+
+@supports (hanging-punctuation: first) {
+  blockquote {
+    text-indent: 0;
+    hanging-punctuation: first; } }
 
 .footer {
   font-family: "SF Pro Text Light";

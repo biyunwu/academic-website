@@ -3,6 +3,7 @@ $font-path: './fonts/';
 @import './fonts/medium-content-serif-font';
 
 $themeColor: rgb(236, 133, 19);
+$selectionColor: rgba(236, 133, 19, 0.15);
 $background-color: #f5f5f5;
 $navLinkColor: rgba(0,0,0,0.45);
 $link-separator-color: rgba(0,0,0,0.1);
@@ -11,7 +12,7 @@ $border-color: rgba(0,0,0,0.1);
 $main-text-color : rgba(0,0,0,.84);
 $active-link-color: #000000;
 $button-color: #272727;
-$header-title-font: 'Nanum Brush Script', cursive;
+//$header-title-font: 'Nanum Brush Script', cursive;
 $nav-link-font: 'SF Pro Text Light';
 $main-title-font: 'medium-content-sans-serif-font';
 $main-text-font: 'medium-content-serif-font';
@@ -19,7 +20,7 @@ $button-font: 'SF Pro Text Regular';
 $html-background-color: rgb(245, 247, 249);
 
 // customized Burger icon settings should be done first. More details: https://github.com/jonsuh/hamburgers
-$hamburger-padding-x           : 10px;
+$hamburger-padding-x           : 16px;
 $hamburger-padding-y           : 16px;
 $hamburger-layer-width         : 30px;
 $hamburger-layer-height        : 1px;
@@ -79,7 +80,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 @mixin sticky {
     position: sticky;
-    top: 0px;
+    top: 0;
 }
 
 @mixin buttonStyle {
@@ -153,7 +154,8 @@ html {
     background-color: $html-background-color;
 
     * ::selection {
-        background: $link-separator-color;
+        //background: $link-separator-color !important;
+        background: $selectionColor !important;
     }
 
     img::selection {
@@ -291,6 +293,7 @@ body {
     left: 0;
 
     background-color: $themeColor;
+    //background-image: linear-gradient(25deg, rgb(176, 148, 93) 0%, $themeColor 100%);
     overflow-x: hidden;
     transition: 0.3s;
 
@@ -346,14 +349,13 @@ header {
 
     ul.nav {
         display: block;
-        padding: 0;
         margin: 0 0 10px 0;
         padding: 0 5px;
         font-family: $nav-link-font;
         font-size: 14px;
         font-weight: 600;
 
-        .link-seperator {
+        .link-separator {
         padding: 0 7px;
         color: $link-separator-color;
         }
@@ -485,8 +487,15 @@ header {
         }
     }
 
+    .book-intro-first-letter:first-of-type::first-letter {
+        -webkit-initial-letter: 2;
+                initial-letter: 2;
+        color: $themeColor;
+        font-size: 2em;
+        margin-right: .05em;
+    }
+
     .book-pic-container {
-        margin-top: 18px;
         margin: 1.5em 0 0 0;
         text-align: center;
         min-width: 190px;
@@ -514,6 +523,12 @@ header {
         font-size: 18px;
         @include justifyText;
     }
+
+    //p:first-of-type {
+    //    &::first-letter {
+    //        initial-letter: 2;
+    //    }
+    //}
 
     .book-review {
         margin-top: 1em;
@@ -561,20 +576,20 @@ header {
     }
 
     li.review-item {
-        padding: 0.3em 0 1em 0;
+        padding: 0.3em 0 0 0;
 
         .commentor {
             // text-align: right;
             // float: right;
             font-family: $nav-link-font;
             font-size: 120%;
-            padding-bottom: 1em;
+            //padding-bottom: 1em;
             // margin-bottom: 1.5em;
         }
 
         // &::after {
         //     @include clearfix;
-        //     border-bottom: $link-seperator-color solid 1px;
+        //     border-bottom: $link-separator-color solid 1px;
         // }
     }
 
@@ -659,7 +674,6 @@ header {
 
     div.options {
         text-align: center;
-        text-align: left;
         width: 100%;
     }
 
@@ -939,6 +953,22 @@ header {
         canvas.react-pdf__Page__canvas {
             margin: 0 auto;
         }
+    }
+}
+
+#back-to-top {
+    margin-bottom: env(safe-area-inset-bottom) !important;
+}
+
+blockquote {
+    text-indent: -0.45em;
+}
+
+// If there's support, erase the indent and use the property instead
+@supports ( hanging-punctuation: first) {
+    blockquote {
+        text-indent: 0;
+        hanging-punctuation: first;
     }
 }
 
