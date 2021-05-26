@@ -14,18 +14,18 @@ const data = {
         ],
         reviews: [
             {
-                review: `>“Jiang ranges over the entire foundational period of Chinese philosophy with effortless erudition, unfailing intellectual sympathy, and, above all, a brilliantly economical conception that shines a uniquely revealing and integrating light on all the major figures and schools of thought. The result is that rare kind of book which has the potential to change the way Chinese philosophy is viewed and practiced, and has all the scholarly and philosophical attributes that should make it a classic in due course.”`,
-                reviewer: `Jiwei Ci, author of [*Democracy in China: The Coming Crisis*](https://www.hup.harvard.edu/catalog.php?isbn=9780674238183)`,
-                magazine: false
-            },
-            {
                 review: `>“Tao JIANG in this hugely intelligent monograph provides his readers with an interpretive context twice. First, his project of rehearsing the story of the origins of Chinese moral-political philosophy is located within a state-of-the-art account of the politics of the Western academy and the best efforts of its Sinologists and philosophers to make sense of the complex textual narrative of pre-Qin China in all of its parts. Again, appealing to a cluster of seminal themes—humaneness, justice, and personal freedom—he recounts the way in which different philosophical voices advocated for their own disparate and competing models of structuring and construing personal, familial, and political relations within the overarching context of what are fundamentally different valorizations of the notion of Heaven.”`,
                 reviewer: 'Roger T. Ames, Peking University',
                 magazine: false
             },
             {
-                review: `>“I recommend publication of this coherent and sweeping narrative of the development of moral and political philosophy in the classical period of Chinese philosophy.  It identifies an arc of development that is insightfully plausible most of the time and constructively controversial and provocative at other times. The book is based on a very broad range of work in both sinology and philosophy, and is presented in clear and engaging fashion.”`,
-                reviewer: 'Anonymous reviewer arranged by Oxford University Press',
+                review: `>“Jiang ranges over the entire foundational period of Chinese philosophy with effortless erudition, unfailing intellectual sympathy, and, above all, a brilliantly economical conception that shines a uniquely revealing and integrating light on all the major figures and schools of thought. The result is that rare kind of book which has the potential to change the way Chinese philosophy is viewed and practiced, and has all the scholarly and philosophical attributes that should make it a classic in due course.”`,
+                reviewer: `Jiwei Ci, author of [*Democracy in China: The Coming Crisis*](https://www.hup.harvard.edu/catalog.php?isbn=9780674238183)`,
+                magazine: false
+            },
+            {
+                review: `>“Tao Jiang has provided a coherent and sweeping narrative of the development of moral and political philosophy in the classical period of Chinese philosophy. He integrates many plausible insights gleaned from sinology and philosophy to argue provocatively that the classical period can be understood in terms of a struggle to deal with conflicts between the values of humaneness (pertaining to the personal and familial realms) and of justice (pertaining to the political realm). This book is highly recommended both to specialists and to those with a more general interest in Chinese moral and political philosophy.”`,
+                reviewer: 'David Wang, Duke University',
                 magazine: false
             }
         ]
