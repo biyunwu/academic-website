@@ -487,14 +487,6 @@ header {
         }
     }
 
-    .book-intro-first-letter:first-of-type::first-letter {
-        -webkit-initial-letter: 2;
-                initial-letter: 2;
-        color: $themeColor;
-        font-size: 2em;
-        margin-right: .05em;
-    }
-
     .book-pic-container {
         margin: 1.5em 0 0 0;
         text-align: center;
@@ -1013,4 +1005,14 @@ blockquote {
     .footer-text {
         text-align: center;
     }
+}
+
+.bigger-first-letter:first-of-type > p::first-letter {
+    -webkit-initial-letter: 2;
+            initial-letter: 2;
+    color: $themeColor;
+    font-family: $button-font;
+    font-size: 2em;
+    margin-right: .1em;
+    margin-bottom: 0;
 }

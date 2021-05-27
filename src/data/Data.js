@@ -25,7 +25,7 @@ const data = {
             },
             {
                 review: `>“Tao Jiang has provided a coherent and sweeping narrative of the development of moral and political philosophy in the classical period of Chinese philosophy. He integrates many plausible insights gleaned from sinology and philosophy to argue provocatively that the classical period can be understood in terms of a struggle to deal with conflicts between the values of humaneness (pertaining to the personal and familial realms) and of justice (pertaining to the political realm). This book is highly recommended both to specialists and to those with a more general interest in Chinese moral and political philosophy.”`,
-                reviewer: 'David Wang, Duke University',
+                reviewer: 'David Wong, Duke University',
                 magazine: false
             }
         ]
@@ -37,7 +37,7 @@ const data = {
         seoDescription: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind is a fascinating study of the subliminal mind across cultural boundaries. It proposes a new paradigm in comparative approach to ideas through contextualization and recontextualization.`,
         title: `Contexts and Dialogue: Yogācāra Buddhism and Modern Psychology on the Subliminal Mind`,
         publisher: `University of Hawaii Press`,
-        bookLink: `http://a.co/d/1nYnDJI`,
+        bookLink: `https://a.co/d/1nYnDJI`,
         themeColor: 'rgb(236, 133, 19)',
         bookIntroduction: [
             `Are there Buddhist conceptions of the unconscious? If so, are they more Freudian, Jungian, or something else? If not, can Buddhist conceptions be reconciled with the Freudian, Jungian, or other models? These are some of the questions that have motivated modern scholarship to approach *ālayavijñāna*, the storehouse consciousness, formulated in Yogācāra Buddhism as a subliminal reservoir of tendencies, habits, and future possibilities.`,
@@ -90,7 +90,7 @@ const data = {
         seoDescription: 'The Reception and Rendition of Freud in China explores the history, reception, and use of Freud and his theories in China, and makes an original and substantial contribution to our understanding of the Chinese people and their culture as well as to our appreciation of western attempts to understand the people and culture of China.',
         title: `The Reception and Rendition of Freud in China: China’s Freudian Slip, edited by Tao Jiang and Philip J. Ivanhoe`,
         publisher: `Routledge`,
-        bookLink: `http://a.co/d/6fCOxkL`,
+        bookLink: `https://a.co/d/6fCOxkL`,
         // bookCoverColor: 'rgb(11, 81, 120)',
         // themeColor: '#DC3023',
         themeColor: 'rgb(236, 133, 19)',
@@ -227,8 +227,8 @@ const data = {
     },
 
     about: {
-        seoTitle: `Bio - Tao Jiang`,
-        seoDescription: `Tao Jiang's bio`,
+        seoTitle: `About - Tao Jiang`,
+        seoDescription: `Detail info about Tao Jiang`,
         name: 'Tao Jiang',
         details: [
             `I am a scholar of classical Chinese philosophy, Mahāyāna Buddhist philosophy, and cross-cultural philosophy. Currently, I am a professor in the [Department of Religion](http://religion.rutgers.edu/tao-jiang) and an associate member of the graduate faculty in the Department of Philosophy at Rutgers University, New Brunswick, New Jersey, US. `,

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Timeline } from 'react-twitter-widgets'
+import {Helmet} from "react-helmet";
 
 export default class SocialMedia extends PureComponent {
     styleObj = {
@@ -25,28 +26,33 @@ export default class SocialMedia extends PureComponent {
     
     render() {
         return (
-            // <blockquote className="twitter-tweet">
-            <blockquote style={this.styleObj}>
-                {/* Timeline (with options) */}
-                <Timeline
-                    dataSource={{
-                        sourceType: 'profile',
-                        screenName: 'TaoJiangScholar'
-                    }}
-                    renderError={_err =>
-                        <div>
-                            <p>Could not load Twitter content due to browser privacy setting or internet connection.</p>
-                            <p>Please check out <a href="https://twitter.com/taojiangscholar">Tao Jiang on Twitter</a></p>
-                        </div>
-                    }
-                    options={{
-                        chrome: "nofooter",
-                        // width: 600,
-                        // minHeight: 600,
-                        dnt: true
-                    }}
-                />
-            </blockquote>
+            <>
+                <Helmet>
+                    <title>Twitter - Tao Jiang</title>
+                    <meta name="description" content="Tao Jiang's Twitter timeline" />
+                </Helmet>
+                <blockquote style={this.styleObj}>
+                    {/* Timeline (with options) */}
+                    <Timeline
+                        dataSource={{
+                            sourceType: 'profile',
+                            screenName: 'TaoJiangScholar'
+                        }}
+                        renderError={_err =>
+                            <div style={{ fontSize: "large" }}>
+                                <p>Could not load Twitter content due to browser privacy setting or internet connection.</p>
+                                <p>Please check out <a href="https://twitter.com/taojiangscholar" target="_blank">Tao Jiang on Twitter</a>.</p>
+                            </div>
+                        }
+                        options={{
+                            chrome: "nofooter",
+                            // width: 600,
+                            // minHeight: 600,
+                            dnt: true
+                        }}
+                    />
+                </blockquote>
+            </>
         )
     }
 }

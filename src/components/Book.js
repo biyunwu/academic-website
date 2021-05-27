@@ -116,7 +116,7 @@ export default class Book extends PureComponent {
                         <div className='book-introduction'>
                             {bookIntroduction && bookIntroduction.map((text, idx) =>        
                                 <ReactMarkdown
-                                    className='book-text book-intro-first-letter'
+                                    className='book-text bigger-first-letter'
                                     key={`${title} introduction ${idx}`}
                                     children={text}
                                 />

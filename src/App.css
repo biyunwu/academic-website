@@ -290,12 +290,6 @@ header {
     .book .book-review {
       grid-column-start: 2;
       grid-column-end: 5; } }
-  .book .book-intro-first-letter:first-of-type::first-letter {
-    -webkit-initial-letter: 2;
-    initial-letter: 2;
-    color: #ec8513;
-    font-size: 2em;
-    margin-right: .05em; }
   .book .book-pic-container {
     margin: 1.5em 0 0 0;
     text-align: center;
@@ -651,3 +645,12 @@ blockquote {
     text-decoration: none; }
   .footer .footer-text {
     text-align: center; }
+
+.bigger-first-letter:first-of-type > p::first-letter {
+  -webkit-initial-letter: 2;
+  initial-letter: 2;
+  color: #ec8513;
+  font-family: "SF Pro Text Regular";
+  font-size: 2em;
+  margin-right: .1em;
+  margin-bottom: 0; }

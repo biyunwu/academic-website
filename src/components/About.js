@@ -17,7 +17,7 @@ export default class About extends PureComponent {
         const {name, details} = about
         const detailsContent = details.map((detail, idx) => 
             <ReactMarkdown
-                className='detail-info'
+                className='detail-info bigger-first-letter'
                 key={`detail${idx}`}
                 children={detail}
                 // renderers={{link: this.LinkRenderer}}
