@@ -46,10 +46,10 @@ export default class About extends PureComponent {
                     <div className='contact'>
                         <h2>Contact Info</h2>
                         <address>
-                            <p>Rutgers University</p>
-                            <p>64 College Ave<br/>New Brunswick<br/>NJ 08901<br/>United States</p>
-                            <p><a href='mailto:tjiang@rutgers.edu'>tjiang@rutgers.edu</a></p>
-                            <Follow username="TaoJiangScholar" options={{ dnt: true, showCount: false, size: "large" }}/>
+                            <p>FGV</p>
+                            <p>Praia de Botafogo 190/414<br/>Rio de Janeiro<br/>RJ 22253900<br/>Brazil</p>
+                            <p><a href='mailto:nnmiele@gmail.com'>nnmiele@gmail.com</a></p>
+                            <Follow username="mariannamiele" options={{ dnt: true, showCount: false, size: "large" }}/>
                         </address>
                     </div>
                 </main>
